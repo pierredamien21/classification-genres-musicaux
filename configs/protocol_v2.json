@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "name": "fma_v2_independent_evaluation",
+  "registered_on": "2026-11-08",
+  "status": "preregistered_before_audio_download",
+  "labels_path": "configs/labels.json",
+  "cohorts": {
+    "selection": "reports/v2/selection.json",
+    "cohorts_csv": "reports/v2/cohorts.csv",
+    "dev_folds_csv": "reports/v2/dev_folds.csv",
+    "power": "reports/v2/power.json",
+    "test": "64 tracks per in-domain genre from FMA medium/large, artists absent from FMA-small, one track per artist",
+    "out_of_domain": "up to 64 tracks per FMA genre outside the eight classes, same artist rules; Gospel probe",
+    "development": "7857 selected FMA-small tracks (V1 train, validation and test), 5 artist-grouped genre-stratified folds"
+  },
+  "audit_and_replacement": {
+    "checks": [
+      "zip CRC-32 and SHA-256 recorded at download",
+      "decode, duration, silence and level checks of music_genre.data.audit.audit_audio",
+      "exact PCM duplicate or Chromaprint near-duplicate of any development track or other cohort track"
+    ],
+    "rule": "a track failing any check is replaced by the next spare of the same role and genre in rank order; never after looking at predictions",
+    "no_spare_left": "the genre keeps fewer tracks; the shortfall is reported",
+    "listening_or_relabelling": "forbidden"
+  },
+  "systems": {
+    "v1_frozen": ["vit_block6_hpss", "vit", "vit_block6", "cnn20_seed42", "cnn20_seed43", "cnn20_seed44"],
+    "v2_candidates": "chosen in phase 3 by development cross-validation only",
+    "v2_selection_rule": "highest mean out-of-fold macro-F1 over the 5 folds; differences below 0.002 resolved by the lower median inference cost",
+    "excluded_pretraining": ["MusicFM checkpoints pretrained on FMA-large"]
+  },
+  "hypotheses": {
+    "H1": {"role": "primary", "question": "V1 replication: vit_block6_hpss minus vit (V1 exports, unchanged) on the V2 test", "alpha": 0.05},
+    "H2": {"role": "secondary", "question": "best audio-pretrained frozen probe minus vit_block6_hpss on the V2 test"},
+    "H3": {"role": "secondary", "question": "selected V2 system minus reinforced CNN (mean of 3 seeds) on the V2 test"},
+    "secondary_correction": "Holm over H2 and H3 at family alpha 0.05",
+    "test": "two-sided: the paired BCa bootstrap interval of the macro-F1 difference must exclude 0",
+    "known_power": "H1 has about 56 percent power for the V1 effect (+0.039); see reports/v2/power.json"
+  },
+  "metrics": {
+    "primary": "track macro-F1 on the V2 test, mean of window probabilities",
+    "secondary": ["accuracy", "per-genre F1", "confusion matrix"],
+    "intervals": "BCa bootstrap, 5000 replicates, seed 20261108, tracks resampled (one track per artist)",
+    "calibration": "temperature fitted on out-of-fold development predictions; ECE with 15 equal-width bins and Brier score on the V2 test",
+    "out_of_domain": "AUROC and FPR at 95 percent in-domain retention of the maximum calibrated probability; threshold fixed on out-of-fold development predictions; Gospel reported separately",
+    "robustness": "development out-of-fold macro-F1 under white noise SNR 30/20/10 dB, gain -6/+6 dB and MP3 64 kb/s"
+  },
+  "locks": [
+    "1: this protocol and the cohort lists, committed before any V2 audio download",
+    "2: audited audio hashes and final cohorts, before any V2 model is run on them",
+    "3: systems, weights, code and environment, before the single V2 test inference"
+  ],
+  "forbidden": [
+    "any model choice, threshold or hyperparameter using V2 test or out-of-domain audio",
+    "re-running the V2 test inference after lock 3 to change a decision",
+    "presenting V1 test results as independent of the V1 development"
+  ]
+}

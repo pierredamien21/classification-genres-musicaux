@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-08T14:56:21.719313+00:00",
+  "design": {
+    "per_genre": 64,
+    "genres": 8,
+    "one_track_per_artist": true
+  },
+  "replicates": 2000,
+  "seed": 20261108,
+  "power": 0.8,
+  "alpha_two_sided_holm_strictest": 0.016666666666666666,
+  "comparisons": {
+    "vit_block6_hpss - vit": {
+      "v1_test_difference": 0.03939736887034717,
+      "simulated_sd": 0.018761544766235864,
+      "minimum_detectable_difference": 0.06070487363365224
+    },
+    "vit_block6_hpss - vit_block6": {
+      "v1_test_difference": 0.01524117916163048,
+      "simulated_sd": 0.015716417328808803,
+      "minimum_detectable_difference": 0.05085205615030466
+    },
+    "vit_block6_hpss - cnn20_seed42": {
+      "v1_test_difference": 0.0495671314881766,
+      "simulated_sd": 0.021788544202464916,
+      "minimum_detectable_difference": 0.07049903613759022
+    }
+  },
+  "source": "V1 test predictions (already consumed); planning only",
+  "script_sha256": "d62d58c458ccdf736e88135255ef6f88c1c77f1590afcab3da0ecfef9cfbb87d"
+}

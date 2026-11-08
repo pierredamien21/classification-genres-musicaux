@@ -98,6 +98,11 @@ demandent des téléchargements. Abandonné : le décodage unique de la démo.
 
 **Sortie :** manifeste V2 verrouillé ; aucun modèle V2 encore entraîné.
 
+**En cours (8 novembre)** — [protocole préenregistré](PROTOCOLE_V2.md), [résumé 44](resumes/44_PROTOCOLE_V2.md).
+Ajustements : hors domaine plafonné par les artistes disponibles (340 et non 8 × 64) ;
+H1 seule primaire (puissance environ 56 %) ; téléchargement partiel par lectures HTTP
+`Range` (≈ 1 Go au lieu de 93 Go). Restent : téléchargement, audit, verrou 2.
+
 ## Phase 3 — Comparateurs manquants (≈ 1–2 semaines, surtout du calcul CPU)
 
 Chaque modèle commence par un benchmark sur 64 fenêtres pour estimer son coût.
