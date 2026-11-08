@@ -2,7 +2,9 @@
 
 Projet de portfolio : analyser le timbre, le rythme et l’harmonie, puis mesurer leur complémentarité avec les représentations d’un Vision Transformer.
 
-**Évaluation finale V1 terminée et vérifiée :** ViT bloc 6 + HPSS, sélectionné sur validation, atteint **macro-F1 0,5035 et accuracy 51,16 %** sur 778 morceaux test de 202 artistes. Gain apparié de macro-F1 sur ViT original : **+0,0394**, IC 95 % **[+0,0054 ; +0,0715]**. Validation : 0,5975 ; la baisse sur test reste une limite importante. Les comparaisons secondaires ne montrent pas de gain établi. 261 tests réussis. [Résultats, coûts et preuves](reports/EVALUATION_FINALE.md) · [Fiche du modèle](docs/FICHE_MODELE.md). Trois notebooks exécutés, démo locale et environnement utilisateur sont disponibles ; 271 tests réussis après livraison. Session utilisateur terminée et vérifiée le 7 novembre : CNN, trente époques, meilleure époque 26, macro-F1 validation 0,5707. [Conclusion générale](docs/CONCLUSION_PROJET.md) · [Prendre en main](docs/GUIDE_LIVRAISON.md). Réinstallation réseau sur une autre machine non testée.
+**Évaluation finale V1 terminée et vérifiée :** ViT bloc 6 + HPSS, sélectionné sur validation, atteint **macro-F1 0,5035 et accuracy 51,16 %** sur 778 morceaux test de 202 artistes. Gain apparié de macro-F1 sur ViT original : **+0,0394**, IC 95 % **[+0,0054 ; +0,0715]**. Validation : 0,5975 ; la baisse sur test reste une limite importante. Les comparaisons secondaires ne montrent pas de gain établi. [Résultats, coûts et preuves](reports/EVALUATION_FINALE.md) · [Fiche du modèle](docs/FICHE_MODELE.md) (instantané figé du 29 octobre, épinglé par les preuves V1 ; la démo locale a été livrée ensuite). Trois notebooks exécutés, démo locale et environnement utilisateur sont disponibles. Suite actuelle : 271 tests réussis (relancée le 8 novembre 2026). Session utilisateur terminée et vérifiée le 7 novembre : CNN, trente époques, meilleure époque 26, macro-F1 validation 0,5707. [Conclusion générale](docs/CONCLUSION_PROJET.md) · [Prendre en main](docs/GUIDE_LIVRAISON.md). Réinstallation réseau sur une autre machine non testée.
+
+**Versionnage et suite :** dépôt Git local depuis le 8 novembre 2026 ; l’étiquette `v1-final` fige la V1 livrée. [Critique du projet](docs/CRITIQUE_PROJET.md) · [Plan V2](docs/PLAN_V2.md), prévu, non lancé.
 
 **Pour reprendre rapidement :** lire [l’index des résumés](docs/resumes/INDEX.md), puis seulement la partie concernée. Chaque étape dispose d’un résumé mis à jour ; la règle est conservée dans [AGENTS.md](AGENTS.md).
 
@@ -59,11 +61,11 @@ src/music_genre/
   models/                 Références, CNN et adaptateurs de Transformers
   training/               Ajustement, sélection sur validation, reprise
   evaluation/             Métriques par morceau, incertitude, robustesse
-  inference/              Prédiction commune à la CLI et à la démo
+  inference/              Prédiction commune à la démo et aux scripts d’évaluation
   cli.py                  Entrée en ligne de commande ; doctor uniquement
 app/                      Interface Gradio locale vérifiée
 notebooks/                Analyse et fiches d’expériences pédagogiques
-tests/                    Tests audio et extraction ViT locale
+tests/                    Tests unitaires et contrats (271 réussis au 8 novembre)
 data/                     Données locales et caches, exclus de Git
 artifacts/                Poids téléchargés, checkpoints, exports
 runs/                     Configuration et résultats de chaque expérience
@@ -101,6 +103,7 @@ Après sélection de l’interpréteur, créer un environnement local :
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e .
 .\.venv\Scripts\python.exe -m music_genre doctor --root .
+git config core.hooksPath .githooks   # Ruff + tests avant chaque commit
 ```
 
 Le package de base ne dépend que de la bibliothèque standard. Les groupes `audio`, `ml`, `dev` et `benchmark` sont installés et vérifiés sur ce poste. Matplotlib est également validé pour les figures ; Jupyter et Gradio sont également vérifiés localement dans les environnements décrits par [le guide de livraison](docs/GUIDE_LIVRAISON.md). Pour reproduire les versions CPU utilisées, suivre [la procédure détaillée](docs/ENVIRONNEMENT.md), fondée sur le relevé des dépendances installées.
@@ -112,7 +115,7 @@ Le package de base ne dépend que de la bibliothèque standard. Les groupes `aud
 - Normalisations apprises sur train uniquement ; sélection sur validation.
 - Test réservé aux expériences finalisées.
 - Poids, données et sorties volumineuses hors du dépôt.
-- Une fonction de prédiction partagée par l’interface et la CLI.
+- Une fonction de prédiction partagée par la démo et les scripts d’évaluation ; la CLI n’a que `doctor` (commande `predict` prévue en phase 1 du plan V2).
 - Les gains supposés dans le plan sont des hypothèses, pas des résultats.
 
 **Bilan local terminé le 7 novembre :** [résultats de la session utilisateur](reports/SESSION_UTILISATEUR.md) et [conclusion](docs/CONCLUSION_PROJET.md). Aucun entraînement à relancer. La V1 reste figée ; cette expérience postérieure au test apporte un résultat de validation, sans nouvelle évaluation indépendante. Publication publique, vidéo et écoute annotée non réalisées.

@@ -142,7 +142,7 @@ officiel impossible, ce qui est aussi signalé.
 - **Pas de dépôt Git.** Le dossier a un `.gitignore` et la documentation parle de
   fichiers « exclus de Git », mais `git status` échoue. Les empreintes SHA-256
   prouvent qu'un fichier n'a pas changé ; elles ne remplacent pas l'historique.
-  C'est le premier point à corriger avant toute publication.
+  *Corrigé le 8 novembre : dépôt créé, étiquette `v1-final`.*
 - **Sur-ingénierie.** 9 500 lignes de scripts pour 2 300 lignes de bibliothèque.
   Quatre scripts `extract_vit*.py` et trois `train_*cnn*.py` sont presque des
   copies. Les variantes passent par des sous-classes qui vérifient des chaînes de
@@ -158,12 +158,17 @@ officiel impossible, ce qui est aussi signalé.
   pour un contenu du 7 novembre, et des lignes vides cassent son tableau ;
   plusieurs `__init__.py` disent encore « à implémenter ». Un relecteur de
   portfolio aura du mal à trouver l'essentiel.
+  *Précision du 8 novembre : la fiche du modèle et les `__init__.py` sont épinglés
+  par empreinte dans les preuves V1 (reçu du test, manifeste verrouillé). La fiche
+  est un instantané daté, pas une erreur ; ils restent inchangés jusqu'à une V2
+  verrouillée. README et index sont corrigés.*
 - **Principe non tenu.** Le README promet « une fonction de prédiction partagée
   par l'interface et la CLI », mais la [CLI](../src/music_genre/cli.py) n'a que
   `doctor`.
-- **Démo** ([app/main.py](../app/main.py)) : les fichiers envoyés s'accumulent dans
-  `data/interim/demo-uploads` sans nettoyage, et l'audio est décodé deux fois par
-  requête. Mineur pour un usage local.
+- **Démo** ([app/main.py](../app/main.py)) : l'audio est décodé deux fois par
+  requête. Mineur pour un usage local. *Correction du 8 novembre : une première
+  version de cette critique disait que les fichiers envoyés n'étaient jamais
+  nettoyés. C'est faux : `delete_cache=(600, 3600)` les purge.*
 - **Environnement** : Python x86-64 émulé sur Windows ARM64 et trois
   environnements virtuels distincts ; réinstallation sur une machine vierge non
   testée (reconnu).

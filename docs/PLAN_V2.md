@@ -40,12 +40,17 @@ la phase 7 sert de liste de contrôle.
 
 1. `git init`, premier commit des sources, configurations, docs et rapports légers ;
    étiquette `v1-final`. Les données et les poids restent hors dépôt.
-2. Corriger les incohérences relevées : nombre de tests du README, fiche du modèle
-   (« interface non livrée »), date et tableau de l'index, `__init__.py`
-   « à implémenter ».
-3. Hooks locaux : `pytest` et `ruff` avant chaque commit.
+2. Corriger les incohérences relevées dans les documents **non épinglés** : README
+   (nombre de tests, principe CLI), date, état et tableau de l'index.
+3. Hook versionné : `pytest` et `ruff` (sur `src`, `tests`, `scripts`, `app`) avant
+   chaque commit.
 
 **Sortie :** dépôt propre, 271 tests verts, aucune contradiction documentaire.
+
+**Réalisé le 8 novembre** ([résumé 42](resumes/42_FONDATIONS_V2.md)). Laissés
+volontairement intacts, car épinglés par empreinte dans les preuves V1 : la fiche du
+modèle, les `__init__.py` (docstrings « à implémenter ») et les notebooks (16
+avertissements Ruff). Ils changeront avec la V2 verrouillée.
 
 ## Phase 1 — Simplifier le code sans changer la V1 (≈ 3–4 jours)
 
@@ -54,12 +59,15 @@ la phase 7 sert de liste de contrôle.
 2. Un seul script d'entraînement CNN (base, extension, session utilisateur).
 3. Un pipeline unique : configuration → extraction → apprentissage → évaluation.
 4. Commande `music-genre predict fichier.mp3`, qui utilise la même fonction que la démo.
-5. Démo : décodage unique par requête, suppression des fichiers envoyés après analyse.
-6. Environnement : essai ARM64 natif mesuré par le benchmark existant ;
+5. Démo : décodage unique par requête (la purge des fichiers envoyés existe déjà).
+6. Docstrings des `__init__.py` à jour, dans le même changement que la refonte.
+7. Environnement : essai ARM64 natif mesuré par le benchmark existant ;
    dépendances verrouillées avec empreintes.
 
 **Preuve exigée :** les 9 exports V1 reproduisent leurs probabilités de validation à
-10⁻⁶ près avec le nouveau code. Sinon on n'avance pas.
+10⁻⁶ près avec le nouveau code. Sinon on n'avance pas. Les sources V1 épinglées
+restent consultables via l'étiquette `v1-final` ; les contrôles V1 se rejouent sur
+cette étiquette (par exemple dans un `git worktree`), pas sur le code refondu.
 
 ## Phase 2 — Protocole V2, verrouillé avant toute expérience (≈ 2 jours + téléchargement)
 
