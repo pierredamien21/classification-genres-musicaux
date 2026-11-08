@@ -1,2 +1,1 @@
-"""Log-Mel et descripteurs musicaux disponibles ; fusion à implémenter."""
-
+"""Représentations : log-Mel, HPSS, descripteurs musicaux, ViT gelé et fusion."""

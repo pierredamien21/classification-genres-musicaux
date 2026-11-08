@@ -1,2 +1,1 @@
-"""Extraction ViT gelée et export numérique du classifieur linéaire."""
-
+"""Modèles : ViT gelé tronquable, CNN de référence et classifieur linéaire exporté."""

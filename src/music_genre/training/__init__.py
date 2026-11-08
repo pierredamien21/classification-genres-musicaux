@@ -1,2 +1,1 @@
-"""Ajustement, sélection sur validation et reprise d'entraînement. Fonctionnalités à implémenter."""
-
+"""Lots, prédictions et points de reprise de l'entraînement CNN."""

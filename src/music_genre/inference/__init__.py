@@ -1,2 +1,1 @@
-"""Shared candidate inference; CLI and demo integrations remain separate tasks."""
-
+"""Prédiction commune aux neuf systèmes V1 : démo, CLI et scripts."""

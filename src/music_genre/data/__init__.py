@@ -1,2 +1,1 @@
-"""Données FMA, audit, manifeste et partitions. Fonctionnalités à implémenter."""
-
+"""Données FMA : audit technique, empreintes, revue et manifeste des partitions."""

@@ -1,2 +1,1 @@
-"""Agrégation et métriques par morceau ; robustesse et incertitudes finales à implémenter."""
-
+"""Métriques par morceau, bootstrap par artiste, robustesse et protocole d'évaluation verrouillé."""
