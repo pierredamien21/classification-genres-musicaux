@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "name": "vit_hpss_logistic_v1",
+  "seed": 42,
+  "c_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "max_iter": 2000,
+  "tolerance": 0.0001,
+  "solver": "lbfgs",
+  "class_weight": null,
+  "selection": "validation_track_macro_f1_tie_smaller_c",
+  "aggregation": "mean_window_probabilities",
+  "fit_scaler_on": "train_windows_only",
+  "test": "not_loaded_or_evaluated"
+}

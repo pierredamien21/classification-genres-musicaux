@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "music-genre-vit"
+version = "0.1.0"
+description = "Music genre classification with audio analysis and Vision Transformers"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+audio = ["numpy", "pandas", "scipy", "librosa", "soundfile"]
+ml = ["scikit-learn", "torch", "timm", "threadpoolctl"]
+demo = ["gradio"]
+notebooks = ["jupyterlab", "matplotlib"]
+dev = ["pytest", "ruff"]
+benchmark = ["psutil"]
+
+[project.scripts]
+music-genre = "music_genre.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+

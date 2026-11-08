@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "completed_tracks": 64,
+  "total_tracks": 64,
+  "elapsed_seconds": 447.8779352999991,
+  "benchmark": {
+    "tracks": 8,
+    "conditions_per_track": 3,
+    "track_ids": [
+      "146879",
+      "038891",
+      "080001",
+      "075399",
+      "040655",
+      "025668",
+      "128484",
+      "138060"
+    ],
+    "elapsed_seconds": 59.990120799979195,
+    "projected_panel_seconds": 479.92096639983356,
+    "budget_seconds": 7200,
+    "workers": 1,
+    "results_reused": true
+  },
+  "attempt": "data/interim/robustness-20261028T085957727313Z",
+  "test_evaluated": false,
+  "review_required": true
+}

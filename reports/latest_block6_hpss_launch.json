@@ -1,0 +1,10 @@
+{
+  "method": "tracked_exec_session",
+  "exec_session_id": 98986,
+  "pipeline_pid": 54312,
+  "date_local": "2026-10-28",
+  "stdout": "E:\\projet\\vision transformer\\data\\interim\\block6-hpss-active-20261028\\stdout.log",
+  "stderr": "E:\\projet\\vision transformer\\data\\interim\\block6-hpss-active-20261028\\stderr.log",
+  "status_file": "reports/VIT_BLOCK6_HPSS_PIPELINE.json",
+  "progress_file": "reports/VIT_BLOCK6_HPSS_PROGRESS.json"
+}

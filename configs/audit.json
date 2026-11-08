@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "max_seconds": 300,
+  "max_channels": 8,
+  "silence_rms_dbfs": -60,
+  "near_full_scale_threshold": 0.999,
+  "near_full_scale_review_fraction": 0.01,
+  "silence_review_fraction": 0.5,
+  "duration_review_min": 29,
+  "duration_review_max": 31,
+  "policy": "Technical thresholds fixed before full audit; review flags are not automatic exclusions."
+}

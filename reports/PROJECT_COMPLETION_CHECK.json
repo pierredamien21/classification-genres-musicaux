@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-07T22:01:10.213982+00:00",
+  "scope": "Completed user session, presentation outputs and local project conclusion",
+  "run": "runs/cnn_user-20261107T073012932719Z",
+  "scientific_test_V1_unchanged": true,
+  "user_training_relaunched": false,
+  "notebook_05_reexecuted_with_launch_disabled": true,
+  "notebook_00_prior_code_outputs_preserved": true,
+  "html_exports_checked": "content, embedded images and structure; not full browser rendering",
+  "local_document_links": "passed",
+  "artifacts_sha256": {
+    "notebooks/00_parcours_projet.html": "4287c81ba7bdfe4bc5bde4896549ae8d1cbc018196ef36cde02f86c6eaf4ef08",
+    "notebooks/00_parcours_projet.ipynb": "0327dfc853c28cfea92849ea4c59746d748687e6f265b0e6954b52d24605b613",
+    "notebooks/05_entrainement_utilisateur.html": "8e2628bd1d4c569bcc04576a158e7c625eda7122a7b7c162e731b5470428ade2",
+    "notebooks/05_entrainement_utilisateur.ipynb": "cf6c6df97dc1a56ebc636c97794e4f3f6407bfaea893310d6ca0c36d268b9f1f",
+    "reports/USER_SESSION_CHECK.json": "3f94c95fd944f0ffcc7e9237cf3222afe94e2b20522c20418e50cfb398ec3d63",
+    "reports/SESSION_UTILISATEUR.md": "b3902e88fe4fd3edbd03e9c1399a6135f1ba1937aae0ed6b4dc83742e6928e0f",
+    "docs/CONCLUSION_PROJET.md": "b342d0b8c36941b13297ebac221a22d56160f9a9e972853e2600311171a29342",
+    "reports/user-session-v1/learning_curves.png": "fdf0044445bd02a3905607a5b9979a02a607dfab3d98fc8d2f796bcbf818315c",
+    "reports/user-session-v1/learning_curves.svg": "24a70a88223e17f3075f34abd3c160672031bf5ac41a8560818b06c4c3dd09d8"
+  },
+  "limitations": [
+    "Fresh network reinstall, public deployment, recorded video and annotated listening not performed",
+    "Historical 271-test suite not rerun: no training or inference product logic changed; focused result verification performed",
+    "Single user seed evaluated on validation only; no new independent test estimate"
+  ]
+}

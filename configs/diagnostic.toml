@@ -1,0 +1,28 @@
+schema_version = 1
+status = "diagnostic_only_not_tuned"
+sample_count = 64
+seed = 42
+
+[audio]
+sample_rate = 16000
+window_seconds = 10.0
+start_seconds = 10.0
+
+[logmel]
+n_fft = 1024
+hop_length = 256
+n_mels = 128
+f_min = 0.0
+window = "hann"
+center = false
+power = 2.0
+amin = 1e-10
+# f_max = Nyquist ; échelle Slaney ; dB ref=1.0 ; pas de top_db relatif.
+
+[vit]
+directory = "artifacts/pretrained/vit_tiny"
+db_min = -80.0
+db_max = 20.0
+threads = 4
+# Plage fixe choisie pour le diagnostic, pas une normalisation ajustée sur FMA.
+# Resize carré bicubique, sans crop ; mean/std du checkpoint après répétition RGB.

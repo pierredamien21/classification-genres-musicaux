@@ -1,0 +1,9 @@
+{
+  "stdout": "E:\\projet\\vision transformer\\data\\interim\\block6-hpss-run-215ef55104f94d768bb21fa4f7950ed5\\stdout.log",
+  "stderr": "E:\\projet\\vision transformer\\data\\interim\\block6-hpss-run-215ef55104f94d768bb21fa4f7950ed5\\stderr.log",
+  "progress_file": "reports/VIT_BLOCK6_HPSS_PROGRESS.json",
+  "launcher_pid": 41284,
+  "status_file": "reports/VIT_BLOCK6_HPSS_PIPELINE.json",
+  "observed_result": "no_live_process_no_pipeline_status_empty_logs",
+  "observed_date_local": "2026-10-28"
+}

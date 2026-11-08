@@ -1,0 +1,9 @@
+{
+  "repo_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+  "revision": "7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106",
+  "sha256": {
+    "config.json": "e328e0f3717427f87898184cd8eba835526a8deaaba703b5066b307afea10e80",
+    "model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+    "README.md": "989d20e77ea71e4710ef2e990dece8176bc29882dec9000328539e1fa82b1db3"
+  }
+}

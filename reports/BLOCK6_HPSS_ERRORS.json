@@ -1,0 +1,379 @@
+{
+  "candidate_run": {
+    "folder": "runs/vit_block6_hpss-20261027T235406908805Z",
+    "report_sha256": "37fbacf53978bb76b67d37d51a1ba2bb95e477d8d3c6abe469ea306628e3182d"
+  },
+  "baseline": {
+    "folder": "data/manifests/baseline-20261020T142750008115Z",
+    "manifest_sha256": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+    "report_sha256": "f467d9d2441807fc5923bcfddc3fa4ff5730839936f4f4a375f8fe5eb113ba03"
+  },
+  "test_evaluated": false,
+  "validation_tracks": 780,
+  "validation_artists": 219,
+  "comparisons": {
+    "vit_hpss": {
+      "reference_run": {
+        "folder": "runs/vit_hpss-20261021T115423153046Z",
+        "report_sha256": "fb0708ab14b65de7b8a327141ffdad29c1abaafe73186b952bd54ba8ea6e405c"
+      },
+      "paired": {
+        "tracks": 780,
+        "both_correct": 422,
+        "corrected": 56,
+        "regressed": 44,
+        "both_wrong": 258,
+        "disagreements": 169
+      },
+      "by_genre": {
+        "Electronic": {
+          "tracks": 99,
+          "both_correct": 56,
+          "corrected": 12,
+          "regressed": 8,
+          "both_wrong": 23,
+          "disagreements": 26,
+          "reference_false_positives": 68,
+          "candidate_false_positives": 65
+        },
+        "Experimental": {
+          "tracks": 100,
+          "both_correct": 46,
+          "corrected": 9,
+          "regressed": 7,
+          "both_wrong": 38,
+          "disagreements": 27,
+          "reference_false_positives": 50,
+          "candidate_false_positives": 56
+        },
+        "Folk": {
+          "tracks": 99,
+          "both_correct": 68,
+          "corrected": 3,
+          "regressed": 5,
+          "both_wrong": 23,
+          "disagreements": 14,
+          "reference_false_positives": 25,
+          "candidate_false_positives": 28
+        },
+        "Hip-Hop": {
+          "tracks": 100,
+          "both_correct": 71,
+          "corrected": 6,
+          "regressed": 0,
+          "both_wrong": 23,
+          "disagreements": 7,
+          "reference_false_positives": 34,
+          "candidate_false_positives": 33
+        },
+        "Instrumental": {
+          "tracks": 93,
+          "both_correct": 42,
+          "corrected": 8,
+          "regressed": 12,
+          "both_wrong": 31,
+          "disagreements": 29,
+          "reference_false_positives": 36,
+          "candidate_false_positives": 43
+        },
+        "International": {
+          "tracks": 98,
+          "both_correct": 66,
+          "corrected": 4,
+          "regressed": 5,
+          "both_wrong": 23,
+          "disagreements": 15,
+          "reference_false_positives": 25,
+          "candidate_false_positives": 20
+        },
+        "Pop": {
+          "tracks": 94,
+          "both_correct": 8,
+          "corrected": 5,
+          "regressed": 4,
+          "both_wrong": 77,
+          "disagreements": 31,
+          "reference_false_positives": 41,
+          "candidate_false_positives": 31
+        },
+        "Rock": {
+          "tracks": 97,
+          "both_correct": 65,
+          "corrected": 9,
+          "regressed": 3,
+          "both_wrong": 20,
+          "disagreements": 20,
+          "reference_false_positives": 35,
+          "candidate_false_positives": 26
+        }
+      },
+      "artist_counts": {
+        "corrected": {
+          "201": 1,
+          "306": 1,
+          "330": 1,
+          "458": 1,
+          "1917": 3,
+          "3375": 1,
+          "2882": 1,
+          "4140": 1,
+          "7270": 1,
+          "7325": 1,
+          "7357": 1,
+          "8681": 2,
+          "9279": 1,
+          "9454": 4,
+          "11989": 1,
+          "12003": 1,
+          "12277": 1,
+          "12721": 1,
+          "13493": 2,
+          "14476": 1,
+          "12271": 2,
+          "3936": 1,
+          "16856": 1,
+          "18244": 1,
+          "17927": 2,
+          "19302": 1,
+          "19918": 1,
+          "19948": 1,
+          "11939": 2,
+          "3578": 1,
+          "21016": 1,
+          "21020": 1,
+          "21106": 1,
+          "21128": 1,
+          "1860": 2,
+          "13625": 1,
+          "21581": 1,
+          "21803": 4,
+          "19822": 1,
+          "21947": 1,
+          "22765": 1,
+          "22795": 1
+        },
+        "regressed": {
+          "122": 1,
+          "1346": 1,
+          "7135": 1,
+          "7270": 3,
+          "7797": 1,
+          "9279": 2,
+          "7561": 1,
+          "458": 1,
+          "11989": 2,
+          "12277": 1,
+          "13153": 1,
+          "13534": 1,
+          "15217": 1,
+          "16245": 1,
+          "14783": 1,
+          "16875": 1,
+          "17285": 1,
+          "17349": 1,
+          "3936": 1,
+          "16993": 1,
+          "18706": 1,
+          "19034": 1,
+          "19125": 1,
+          "11939": 1,
+          "3578": 2,
+          "21020": 1,
+          "21106": 1,
+          "21803": 9,
+          "21947": 2,
+          "21957": 1
+        }
+      }
+    },
+    "vit_block6": {
+      "reference_run": {
+        "folder": "runs/vit_block6-20261021T062701855205Z",
+        "report_sha256": "27dfbf40411926c918eca4daa8b0f512b80f9f64f204d761a8c1e65945f0db3b"
+      },
+      "paired": {
+        "tracks": 780,
+        "both_correct": 419,
+        "corrected": 59,
+        "regressed": 40,
+        "both_wrong": 262,
+        "disagreements": 160
+      },
+      "by_genre": {
+        "Electronic": {
+          "tracks": 99,
+          "both_correct": 59,
+          "corrected": 9,
+          "regressed": 7,
+          "both_wrong": 24,
+          "disagreements": 22,
+          "reference_false_positives": 69,
+          "candidate_false_positives": 65
+        },
+        "Experimental": {
+          "tracks": 100,
+          "both_correct": 46,
+          "corrected": 9,
+          "regressed": 4,
+          "both_wrong": 41,
+          "disagreements": 23,
+          "reference_false_positives": 58,
+          "candidate_false_positives": 56
+        },
+        "Folk": {
+          "tracks": 99,
+          "both_correct": 65,
+          "corrected": 6,
+          "regressed": 4,
+          "both_wrong": 24,
+          "disagreements": 19,
+          "reference_false_positives": 31,
+          "candidate_false_positives": 28
+        },
+        "Hip-Hop": {
+          "tracks": 100,
+          "both_correct": 75,
+          "corrected": 2,
+          "regressed": 3,
+          "both_wrong": 20,
+          "disagreements": 5,
+          "reference_false_positives": 27,
+          "candidate_false_positives": 33
+        },
+        "Instrumental": {
+          "tracks": 93,
+          "both_correct": 39,
+          "corrected": 11,
+          "regressed": 11,
+          "both_wrong": 32,
+          "disagreements": 30,
+          "reference_false_positives": 42,
+          "candidate_false_positives": 43
+        },
+        "International": {
+          "tracks": 98,
+          "both_correct": 64,
+          "corrected": 6,
+          "regressed": 6,
+          "both_wrong": 22,
+          "disagreements": 17,
+          "reference_false_positives": 25,
+          "candidate_false_positives": 20
+        },
+        "Pop": {
+          "tracks": 94,
+          "both_correct": 8,
+          "corrected": 5,
+          "regressed": 4,
+          "both_wrong": 77,
+          "disagreements": 22,
+          "reference_false_positives": 48,
+          "candidate_false_positives": 31
+        },
+        "Rock": {
+          "tracks": 97,
+          "both_correct": 63,
+          "corrected": 11,
+          "regressed": 1,
+          "both_wrong": 22,
+          "disagreements": 22,
+          "reference_false_positives": 21,
+          "candidate_false_positives": 26
+        }
+      },
+      "artist_counts": {
+        "corrected": {
+          "330": 1,
+          "458": 3,
+          "1917": 3,
+          "2882": 1,
+          "4967": 1,
+          "7270": 1,
+          "8681": 1,
+          "7561": 1,
+          "9279": 2,
+          "10023": 1,
+          "9454": 2,
+          "11472": 1,
+          "11989": 1,
+          "12003": 1,
+          "12420": 1,
+          "12277": 1,
+          "12721": 2,
+          "13215": 1,
+          "14476": 1,
+          "12271": 2,
+          "16527": 2,
+          "18244": 1,
+          "16993": 1,
+          "17927": 1,
+          "18846": 1,
+          "18953": 1,
+          "19034": 1,
+          "19392": 1,
+          "19780": 1,
+          "20131": 1,
+          "11939": 2,
+          "20860": 1,
+          "1860": 3,
+          "21581": 1,
+          "21803": 8,
+          "19822": 1,
+          "21947": 3,
+          "22795": 1
+        },
+        "regressed": {
+          "122": 1,
+          "334": 1,
+          "3967": 1,
+          "6416": 1,
+          "7135": 1,
+          "7270": 1,
+          "7797": 1,
+          "9279": 1,
+          "11989": 1,
+          "13454": 1,
+          "13493": 1,
+          "13534": 1,
+          "13546": 1,
+          "14348": 1,
+          "13910": 2,
+          "12271": 1,
+          "15763": 2,
+          "16245": 1,
+          "17285": 1,
+          "3936": 1,
+          "18706": 1,
+          "19034": 1,
+          "11939": 4,
+          "3578": 1,
+          "21106": 1,
+          "21803": 6,
+          "21947": 2,
+          "21957": 1,
+          "20475": 1
+        }
+      }
+    }
+  },
+  "all_three_wrong_by_genre": {
+    "Electronic": 20,
+    "Experimental": 38,
+    "Folk": 21,
+    "Hip-Hop": 20,
+    "Instrumental": 24,
+    "International": 21,
+    "Pop": 74,
+    "Rock": 20
+  },
+  "changed_tracks": {
+    "path": "reports/BLOCK6_HPSS_CHANGED_TRACKS.csv",
+    "sha256": "b24107ba06cd8485b7d06f3d0a2535cbc7a9bf7ae4f77ec6df28f9f2f7200834"
+  },
+  "sources": {
+    "scripts/analyze_block6_hpss_errors.py": "fcdefcaa770d18486a1b923b12c19d1a7e3b0d95e25eb56d47af48985981e192",
+    "scripts/compare_vit_baseline.py": "c67795c484db54bfba9bc3c0260128d3fcf7e3d6971c55c5788ab98abe11998d",
+    "src/music_genre/evaluation/errors.py": "28041bc485a45b4b9a3da811fa00dde46ee2fa23c64566b05baa7afd2a37267b",
+    "src/music_genre/evaluation/metrics.py": "05f51dd60d503b2b359637c3a0490783a1133a88b1f34aaf8819261528880075"
+  }
+}

@@ -1,0 +1,2352 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "tracks": [
+    {
+      "track_id": "064630",
+      "stratum": "hiphop_hpss_correction",
+      "true_label": "Hip-Hop",
+      "source_sha256": "46005839d64cb6eed4c196f5799a29321bf3202e1d98c6de962a34239491029a",
+      "duration_seconds": 30.00275,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -10.053922104060257,
+          "valid_peak_abs": 0.9844958782196045,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.011341941318327975,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.007310088424437299
+          ],
+          "channels_above_db_range_fraction": [
+            0.011341941318327975,
+            0.0066695136655948555,
+            0.003378717845659164
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -10.680137596283316,
+          "valid_peak_abs": 0.9849393367767334,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.007485932475884244,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.011781551446945338
+          ],
+          "channels_above_db_range_fraction": [
+            0.007485932475884244,
+            0.0034917604501607715,
+            0.002926547427652733
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -10.380899771467124,
+          "valid_peak_abs": 0.9854222536087036,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.009369975884244373,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.008578677652733119
+          ],
+          "channels_above_db_range_fraction": [
+            0.009369975884244373,
+            0.004986434887459807,
+            0.003278235530546624
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Pop",
+            "International",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.18608905516004687,
+            0.10710835752496939,
+            0.4077086257173282
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Hip-Hop",
+            "Hip-Hop",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.7456567669240962,
+            0.409242738780195,
+            0.8035736045832869
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Hip-Hop",
+            "Electronic",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.7066268648531665,
+            0.16766931754160005,
+            0.632079688794841
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        }
+      },
+      "figure": {
+        "path": "reports/figures/audio-diagnostic-20261025T231532303942Z/064630.png",
+        "sha256": "8156fb81f4f30be5c227eca8cad91efdd1196610a4540829ea685c32d9c0dafd"
+      }
+    },
+    {
+      "track_id": "075745",
+      "stratum": "hiphop_hpss_correction",
+      "true_label": "Hip-Hop",
+      "source_sha256": "62cd8a4ed33a340ec2b35ae8b08dee44fc9d71695b578e5752ebbc042b396105",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -11.136724050323245,
+          "valid_peak_abs": 0.9890158176422119,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.011354501607717041,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0017081993569131833
+          ],
+          "channels_above_db_range_fraction": [
+            0.011354501607717041,
+            0.007686897106109325,
+            0.0006656953376205787
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -11.005174885810678,
+          "valid_peak_abs": 0.992641031742096,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.012170920418006432,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.00042704983922829584
+          ],
+          "channels_above_db_range_fraction": [
+            0.012170920418006432,
+            0.008289790996784566,
+            0.0004647307073954984
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -10.723757251214824,
+          "valid_peak_abs": 0.9959201812744141,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.01359023311897106,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0006782556270096464
+          ],
+          "channels_above_db_range_fraction": [
+            0.01359023311897106,
+            0.008503315916398713,
+            0.0004647307073954984
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "International",
+            "Hip-Hop",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.20045412661138198,
+            0.2803023932198855,
+            0.3025482862560717
+          ],
+          "track_label": "International",
+          "max_probability_error": 1.6653345369377348e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "International",
+            "Folk",
+            "Folk"
+          ],
+          "window_true_probabilities": [
+            0.09263870540418324,
+            0.16301004569911112,
+            0.1442333160459256
+          ],
+          "track_label": "International",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Hip-Hop",
+            "International",
+            "International"
+          ],
+          "window_true_probabilities": [
+            0.5929661295011747,
+            0.312778798326093,
+            0.2596166963957659
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "005191",
+      "stratum": "pop_rescued_block6",
+      "true_label": "Pop",
+      "source_sha256": "aad21f8753f4870444050f1ef2aacf67c2b0fd33693fa35505fc0fb5482168b2",
+      "duration_seconds": 30.00275,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -17.21890235223087,
+          "valid_peak_abs": 0.7833424210548401,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.00013816318327974277,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0072975281350482315,
+            0.0
+          ],
+          "channels_above_db_range_fraction": [
+            0.00013816318327974277,
+            6.280144694533762e-05,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -17.592981882889614,
+          "valid_peak_abs": 0.7303183674812317,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 7.536173633440515e-05,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.002085008038585209,
+            0.0005526527331189711
+          ],
+          "channels_above_db_range_fraction": [
+            7.536173633440515e-05,
+            6.280144694533762e-05,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -18.229294032316496,
+          "valid_peak_abs": 0.711615800857544,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0003642483922829582,
+          "channels_below_db_range_fraction": [
+            0.0,
+            8.792202572347267e-05,
+            0.0014695538585209004
+          ],
+          "channels_above_db_range_fraction": [
+            0.0003642483922829582,
+            0.0003516881028938907,
+            0.0
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Rock",
+            "Rock",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.0881194180450397,
+            0.30227898792901314,
+            0.36234304547320867
+          ],
+          "track_label": "Rock",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Pop",
+            "Pop",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.5005600992622069,
+            0.4438251355027226,
+            0.5235590097907725
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Rock",
+            "Rock",
+            "Rock"
+          ],
+          "window_true_probabilities": [
+            0.2329681192013666,
+            0.15801321595955028,
+            0.23775185917738068
+          ],
+          "track_label": "Rock",
+          "max_probability_error": 2.7755575615628914e-17,
+          "max_embedding_error": 0.0
+        }
+      },
+      "figure": {
+        "path": "reports/figures/audio-diagnostic-20261025T231532303942Z/005191.png",
+        "sha256": "5babc2b6f2c94c4b60d9b2f846105af497dbd52156d17a1dbb190bc693be8c9b"
+      }
+    },
+    {
+      "track_id": "070424",
+      "stratum": "pop_rescued_block6",
+      "true_label": "Pop",
+      "source_sha256": "af7740c013b32cb2e4b87587455c00ad362b912abc30f844d9e9443cd6450dcd",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -11.449245215246524,
+          "valid_peak_abs": 1.0182628631591797,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.008942926045016078,
+          "channels_below_db_range_fraction": [
+            0.0,
+            1.2560289389067524e-05,
+            0.00028888665594855304
+          ],
+          "channels_above_db_range_fraction": [
+            0.008942926045016078,
+            0.005112037781350482,
+            0.0008917805466237942
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -10.249922736098878,
+          "valid_peak_abs": 1.0094664096832275,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.013565112540192926,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            1.2560289389067524e-05
+          ],
+          "channels_above_db_range_fraction": [
+            0.013565112540192926,
+            0.00796322347266881,
+            0.001821241961414791
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -11.60387316461576,
+          "valid_peak_abs": 1.0032970905303955,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.009797025723472668,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.00010048231511254019,
+            0.0009797025723472668
+          ],
+          "channels_above_db_range_fraction": [
+            0.009797025723472668,
+            0.0063429461414791,
+            0.0014193127009646301
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Hip-Hop",
+            "International",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.10889138042753232,
+            0.3072852296371966,
+            0.32139782228223096
+          ],
+          "track_label": "International",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "International",
+            "Rock",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.11959590164609477,
+            0.3153663922097171,
+            0.4923956844071919
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "International",
+            "International",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.06374206015549792,
+            0.2053503289518419,
+            0.44134447023900913
+          ],
+          "track_label": "International",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "012527",
+      "stratum": "pop_rescued_block6",
+      "true_label": "Pop",
+      "source_sha256": "915974eaa0df9a6864218b785fcbf3e1e8ef8e276d90f2f3549e8364ce846114",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -20.9889122427912,
+          "valid_peak_abs": 0.440714955329895,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0005024115755627009,
+          "above_db_range_fraction": 0.00011304260450160771,
+          "channels_below_db_range_fraction": [
+            0.0005024115755627009,
+            0.0036801647909967847,
+            0.010186394694533762
+          ],
+          "channels_above_db_range_fraction": [
+            0.00011304260450160771,
+            0.0,
+            2.5120578778135048e-05
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -21.58052811435933,
+          "valid_peak_abs": 0.4417637586593628,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0006154541800643087,
+          "above_db_range_fraction": 0.00010048231511254019,
+          "channels_below_db_range_fraction": [
+            0.0006154541800643087,
+            0.0037178456591639873,
+            0.007912982315112541
+          ],
+          "channels_above_db_range_fraction": [
+            0.00010048231511254019,
+            0.0,
+            3.7680868167202575e-05
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -21.833863280312315,
+          "valid_peak_abs": 0.44014859199523926,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0003014469453376206,
+          "above_db_range_fraction": 0.00010048231511254019,
+          "channels_below_db_range_fraction": [
+            0.0003014469453376206,
+            0.0025748593247588423,
+            0.00410721463022508
+          ],
+          "channels_above_db_range_fraction": [
+            0.00010048231511254019,
+            0.0,
+            2.5120578778135048e-05
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Pop",
+            "Folk",
+            "Folk"
+          ],
+          "window_true_probabilities": [
+            0.2747160305976394,
+            0.24921212750631994,
+            0.2106276638728847
+          ],
+          "track_label": "Folk",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Pop",
+            "Pop",
+            "Instrumental"
+          ],
+          "window_true_probabilities": [
+            0.3131771261951236,
+            0.38881741053772967,
+            0.20090885988259033
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 1.3877787807814457e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Pop",
+            "Folk",
+            "Folk"
+          ],
+          "window_true_probabilities": [
+            0.2894296869877645,
+            0.10934055496768022,
+            0.14150205484603287
+          ],
+          "track_label": "Folk",
+          "max_probability_error": 2.7755575615628914e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "089195",
+      "stratum": "hiphop_hpss_regression",
+      "true_label": "Hip-Hop",
+      "source_sha256": "21810aa8f27a994b9ea69d82df6dfcdf24bcf4ea450f4b141f2e2739cc982df8",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -8.055292514266055,
+          "valid_peak_abs": 0.9834321141242981,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.02105104501607717,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0004144895498392283
+          ],
+          "channels_above_db_range_fraction": [
+            0.02105104501607717,
+            0.01410520498392283,
+            0.000766177652733119
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -7.0421991393194885,
+          "valid_peak_abs": 1.0068658590316772,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.024417202572347266,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.00038936897106109326
+          ],
+          "channels_above_db_range_fraction": [
+            0.024417202572347266,
+            0.016102290996784566,
+            0.0009922628617363345
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -7.311801575230788,
+          "valid_peak_abs": 1.0153803825378418,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.023990152733118972,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0005526527331189711
+          ],
+          "channels_above_db_range_fraction": [
+            0.023990152733118972,
+            0.016667504019292605,
+            0.0009294614147909968
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Hip-Hop",
+            "Hip-Hop",
+            "Experimental"
+          ],
+          "window_true_probabilities": [
+            0.21275715939736964,
+            0.3898072545740202,
+            0.20137951182955283
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Hip-Hop",
+            "Hip-Hop",
+            "Experimental"
+          ],
+          "window_true_probabilities": [
+            0.21935751012242719,
+            0.3915617887300153,
+            0.08719104190213668
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Experimental",
+            "Experimental",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.1456452174902764,
+            0.2981436808586939,
+            0.0804693364715888
+          ],
+          "track_label": "Experimental",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        }
+      },
+      "figure": {
+        "path": "reports/figures/audio-diagnostic-20261025T231532303942Z/089195.png",
+        "sha256": "cbda038b45a18110cd1ebc6c7d0db3972248b73f710493d58a84eeec520af420"
+      }
+    },
+    {
+      "track_id": "113031",
+      "stratum": "hiphop_hpss_regression",
+      "true_label": "Hip-Hop",
+      "source_sha256": "8e266589bd54a775f1da0375c7aa2d0e327fc814d6b940a41901ba582c1a3f18",
+      "duration_seconds": 30.00275,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -17.237973600874877,
+          "valid_peak_abs": 0.6507856845855713,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0004898512861736334,
+          "channels_below_db_range_fraction": [
+            0.0,
+            1.2560289389067524e-05,
+            0.0016202773311897107
+          ],
+          "channels_above_db_range_fraction": [
+            0.0004898512861736334,
+            0.0001507234726688103,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -16.580657470835412,
+          "valid_peak_abs": 0.9998778104782104,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0014444332797427654,
+          "channels_below_db_range_fraction": [
+            0.0,
+            7.536173633440515e-05,
+            0.0010801848874598071
+          ],
+          "channels_above_db_range_fraction": [
+            0.0014444332797427654,
+            0.0006531350482315112,
+            1.2560289389067524e-05
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -12.597057066156292,
+          "valid_peak_abs": 0.9754937291145325,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.007310088424437299,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "channels_above_db_range_fraction": [
+            0.007310088424437299,
+            0.004609626205787781,
+            7.536173633440515e-05
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Hip-Hop",
+            "Electronic",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.23849661549346024,
+            0.061535547337126156,
+            0.4897778084065007
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 2.7755575615628914e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Hip-Hop",
+            "Experimental",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.33399624827231744,
+            0.07175861436000924,
+            0.7838822095098531
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 1.3877787807814457e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Experimental",
+            "Experimental",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.15077256081912865,
+            0.03688108090618769,
+            0.5308587711601441
+          ],
+          "track_label": "Experimental",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "051261",
+      "stratum": "pop_hpss_correct",
+      "true_label": "Pop",
+      "source_sha256": "83f88ceeae5c379a66a63e1cb4af7b990c53f84c1c47d841b23eb31cc02ad68d",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -22.865061890527212,
+          "valid_peak_abs": 0.3290102183818817,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 3.7680868167202575e-05,
+          "above_db_range_fraction": 0.0,
+          "channels_below_db_range_fraction": [
+            3.7680868167202575e-05,
+            8.792202572347267e-05,
+            0.0037178456591639873
+          ],
+          "channels_above_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -20.48766235603707,
+          "valid_peak_abs": 0.5026885271072388,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0013690715434083601,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0005652130225080386,
+            0.007310088424437299
+          ],
+          "channels_above_db_range_fraction": [
+            0.0013690715434083601,
+            0.0,
+            0.0012811495176848875
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -19.54923998525351,
+          "valid_peak_abs": 0.5023537278175354,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 1.2560289389067524e-05,
+          "above_db_range_fraction": 0.0017081993569131833,
+          "channels_below_db_range_fraction": [
+            1.2560289389067524e-05,
+            6.280144694533762e-05,
+            0.006430868167202572
+          ],
+          "channels_above_db_range_fraction": [
+            0.0017081993569131833,
+            8.792202572347267e-05,
+            0.0012560289389067524
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Experimental",
+            "Electronic",
+            "Electronic"
+          ],
+          "window_true_probabilities": [
+            0.18647721754630503,
+            0.029515686131629998,
+            0.07250186880246655
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 2.7755575615628914e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Experimental",
+            "Electronic",
+            "Electronic"
+          ],
+          "window_true_probabilities": [
+            0.12098171704588098,
+            0.17696308444115916,
+            0.050417667393256295
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 2.7755575615628914e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Experimental",
+            "Pop",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.17211212769420406,
+            0.4079043653595791,
+            0.4667316847339755
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 1.6653345369377348e-16,
+          "max_embedding_error": 0.0
+        }
+      },
+      "figure": {
+        "path": "reports/figures/audio-diagnostic-20261025T231532303942Z/051261.png",
+        "sha256": "1e207750ce3f6cb045238990b722053d39bd3d88df14e130433c680f0bec3f77"
+      }
+    },
+    {
+      "track_id": "104780",
+      "stratum": "pop_hpss_correct",
+      "true_label": "Pop",
+      "source_sha256": "98818fb358705515c97eb8eac0113b06a0edb428f05bdf390454b90aea4fe798",
+      "duration_seconds": 30.00275,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -16.961120423836967,
+          "valid_peak_abs": 0.942695140838623,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.00012560289389067523,
+          "above_db_range_fraction": 0.0011053054662379421,
+          "channels_below_db_range_fraction": [
+            0.00012560289389067523,
+            0.0003642483922829582,
+            0.00918157154340836
+          ],
+          "channels_above_db_range_fraction": [
+            0.0011053054662379421,
+            0.0008415393890675242,
+            0.00011304260450160771
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -16.011604291891537,
+          "valid_peak_abs": 0.986850380897522,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0003642483922829582,
+          "above_db_range_fraction": 0.0014444332797427654,
+          "channels_below_db_range_fraction": [
+            0.0003642483922829582,
+            0.0010173834405144695,
+            0.013539991961414791
+          ],
+          "channels_above_db_range_fraction": [
+            0.0014444332797427654,
+            0.0011555466237942122,
+            5.0241157556270096e-05
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -17.76751840392849,
+          "valid_peak_abs": 0.8619437217712402,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.00021352491961414792,
+          "above_db_range_fraction": 0.0008792202572347267,
+          "channels_below_db_range_fraction": [
+            0.00021352491961414792,
+            0.0010927451768488745,
+            0.02044815112540193
+          ],
+          "channels_above_db_range_fraction": [
+            0.0008792202572347267,
+            0.0006656953376205787,
+            1.2560289389067524e-05
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Pop",
+            "Folk",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.34628660705515596,
+            0.10963413501346098,
+            0.22567216122430334
+          ],
+          "track_label": "Folk",
+          "max_probability_error": 6.938893903907228e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Folk",
+            "Folk",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.16226359204986476,
+            0.1776090432309409,
+            0.3158734744787578
+          ],
+          "track_label": "Folk",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Pop",
+            "Pop",
+            "Electronic"
+          ],
+          "window_true_probabilities": [
+            0.4012817058168202,
+            0.4377217709510405,
+            0.14564059802089874
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "045128",
+      "stratum": "pop_hpss_correct",
+      "true_label": "Pop",
+      "source_sha256": "acc108203cba737a8a2a093288bb904dd05bd2b6cfd8b88552aaeca4ae7fd4f6",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -14.071521278235956,
+          "valid_peak_abs": 0.7476343512535095,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.002826065112540193,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            2.5120578778135048e-05
+          ],
+          "channels_above_db_range_fraction": [
+            0.002826065112540193,
+            0.002135249196141479,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -14.335096318039543,
+          "valid_peak_abs": 0.723141074180603,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.002800944533762058,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0001507234726688103
+          ],
+          "channels_above_db_range_fraction": [
+            0.002800944533762058,
+            0.0021226889067524116,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -14.268570194308142,
+          "valid_peak_abs": 0.768409788608551,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.002800944533762058,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0001507234726688103
+          ],
+          "channels_above_db_range_fraction": [
+            0.002800944533762058,
+            0.0021729300643086816,
+            0.0
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Pop",
+            "Pop",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.4856873597929432,
+            0.49793680619193537,
+            0.49739638607019643
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Pop",
+            "Pop",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.5440065312224815,
+            0.5700899350726724,
+            0.5142830181216876
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Pop",
+            "Pop",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.2858789658317874,
+            0.301670811532423,
+            0.32478884996996027
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 4.163336342344337e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "086680",
+      "stratum": "hiphop_both_wrong",
+      "true_label": "Hip-Hop",
+      "source_sha256": "c72323fd24f3937e82e48cc5b94761c7723579420e830d08c01c83fabace678e",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -9.956775008258473,
+          "valid_peak_abs": 1.0367487668991089,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.010776728295819936,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.00022608520900321542
+          ],
+          "channels_above_db_range_fraction": [
+            0.010776728295819936,
+            0.006757435691318328,
+            0.0010550643086816721
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -10.696838635958088,
+          "valid_peak_abs": 1.0719213485717773,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.009859827170418006,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.002612540192926045
+          ],
+          "channels_above_db_range_fraction": [
+            0.009859827170418006,
+            0.007900422025723473,
+            0.00020096463022508038
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -10.170848464265807,
+          "valid_peak_abs": 1.077771782875061,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 7.536173633440515e-05,
+          "above_db_range_fraction": 0.011291700160771705,
+          "channels_below_db_range_fraction": [
+            7.536173633440515e-05,
+            0.0003391278135048232,
+            0.00639318729903537
+          ],
+          "channels_above_db_range_fraction": [
+            0.011291700160771705,
+            0.007058882636655948,
+            0.0011304260450160772
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Rock",
+            "Rock",
+            "International"
+          ],
+          "window_true_probabilities": [
+            0.029521207971956065,
+            0.007101018547922825,
+            0.1502264079309192
+          ],
+          "track_label": "Rock",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Rock",
+            "Electronic",
+            "Rock"
+          ],
+          "window_true_probabilities": [
+            0.06625119568006989,
+            0.006416076096080513,
+            0.016181901491770533
+          ],
+          "track_label": "Rock",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Pop",
+            "Rock",
+            "International"
+          ],
+          "window_true_probabilities": [
+            0.03167902149241523,
+            0.003101992433617651,
+            0.04695709762207722
+          ],
+          "track_label": "Rock",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        }
+      },
+      "figure": {
+        "path": "reports/figures/audio-diagnostic-20261025T231532303942Z/086680.png",
+        "sha256": "a2657e199de37e192fe4da30cac9f5977d467502591d1a2e27b72c9d369e7514"
+      }
+    },
+    {
+      "track_id": "070773",
+      "stratum": "hiphop_both_wrong",
+      "true_label": "Hip-Hop",
+      "source_sha256": "b8fb07ebd18e8182554724901bb2e4d1cfea9d71ae68c4689d2480e173deb2fb",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -13.40303957149075,
+          "valid_peak_abs": 0.8901327848434448,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.004835711414790997,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0010801848874598071
+          ],
+          "channels_above_db_range_fraction": [
+            0.004835711414790997,
+            0.0032531149517684888,
+            0.0006405747588424437
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -13.831020707536526,
+          "valid_peak_abs": 0.8758065104484558,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.004245377813504823,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "channels_above_db_range_fraction": [
+            0.004245377813504823,
+            0.0024241358520900322,
+            0.0008415393890675242
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -12.935752257507387,
+          "valid_peak_abs": 1.05045485496521,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.00018840434083601285,
+          "above_db_range_fraction": 0.0053130024115755625,
+          "channels_below_db_range_fraction": [
+            0.00018840434083601285,
+            0.0008540996784565917,
+            0.006229903536977492
+          ],
+          "channels_above_db_range_fraction": [
+            0.0053130024115755625,
+            0.0032405546623794214,
+            0.0013313906752411575
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Hip-Hop",
+            "Electronic",
+            "Electronic"
+          ],
+          "window_true_probabilities": [
+            0.500992936501534,
+            0.174574576433211,
+            0.21410392710454917
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Electronic",
+            "Electronic",
+            "Electronic"
+          ],
+          "window_true_probabilities": [
+            0.30114653725901674,
+            0.3237562643673939,
+            0.2115606147880433
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Electronic",
+            "International",
+            "Electronic"
+          ],
+          "window_true_probabilities": [
+            0.186474334824557,
+            0.09917066955396961,
+            0.2527758999930777
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "014363",
+      "stratum": "hiphop_both_wrong",
+      "true_label": "Hip-Hop",
+      "source_sha256": "ca41921d11838b637d78db4082c2020b0bcf6f641f6aef030832022842dc47bc",
+      "duration_seconds": 30.00275,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -10.561009272495614,
+          "valid_peak_abs": 1.0084948539733887,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 1.2560289389067524e-05,
+          "above_db_range_fraction": 0.012723573151125402,
+          "channels_below_db_range_fraction": [
+            1.2560289389067524e-05,
+            1.2560289389067524e-05,
+            0.012145799839228295
+          ],
+          "channels_above_db_range_fraction": [
+            0.012723573151125402,
+            0.010764168006430869,
+            0.0003768086816720257
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -9.964022673164557,
+          "valid_peak_abs": 1.0219565629959106,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.014168006430868168,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0034917604501607715
+          ],
+          "channels_above_db_range_fraction": [
+            0.014168006430868168,
+            0.011266579581993568,
+            0.00025120578778135047
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -9.696864650740336,
+          "valid_peak_abs": 1.0358209609985352,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.015939007234726688,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0032907958199356914
+          ],
+          "channels_above_db_range_fraction": [
+            0.015939007234726688,
+            0.012221161575562701,
+            0.00040192926045016077
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Hip-Hop",
+            "Electronic",
+            "Electronic"
+          ],
+          "window_true_probabilities": [
+            0.4932397565968011,
+            0.183473011371131,
+            0.3182521606863831
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Hip-Hop",
+            "Hip-Hop",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.6843657076286911,
+            0.6248661258319542,
+            0.814571058663445
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Hip-Hop",
+            "Electronic",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.49721363944853325,
+            0.24101289600545364,
+            0.5208755673023677
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 1.6653345369377348e-16,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "009560",
+      "stratum": "pop_false_positive",
+      "true_label": "Rock",
+      "source_sha256": "668a3c247083703bc13ca7ed24a78c8baad442b1db061922e62caf2a44aadf0c",
+      "duration_seconds": 30.00275,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -12.687430601256446,
+          "valid_peak_abs": 0.9300671219825745,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.00011304260450160771,
+          "above_db_range_fraction": 0.005966137459807074,
+          "channels_below_db_range_fraction": [
+            0.00011304260450160771,
+            0.0011429863344051448,
+            0.013414389067524115
+          ],
+          "channels_above_db_range_fraction": [
+            0.005966137459807074,
+            0.004458902733118971,
+            7.536173633440515e-05
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -12.3177687335088,
+          "valid_peak_abs": 0.9960808157920837,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 1.2560289389067524e-05,
+          "above_db_range_fraction": 0.006631832797427652,
+          "channels_below_db_range_fraction": [
+            1.2560289389067524e-05,
+            0.0006782556270096464,
+            0.0037806471061093247
+          ],
+          "channels_above_db_range_fraction": [
+            0.006631832797427652,
+            0.004396101286173634,
+            0.00020096463022508038
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -11.121529968463813,
+          "valid_peak_abs": 0.9764462113380432,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.008842443729903537,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            5.0241157556270096e-05
+          ],
+          "channels_above_db_range_fraction": [
+            0.008842443729903537,
+            0.0060414991961414794,
+            2.5120578778135048e-05
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Folk",
+            "Folk",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.05969962651042795,
+            0.17978312956031273,
+            0.1210854948091329
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Folk",
+            "Pop",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.042320007912688,
+            0.1729798619570333,
+            0.10475268484681617
+          ],
+          "track_label": "Folk",
+          "max_probability_error": 9.71445146547012e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Folk",
+            "Pop",
+            "Rock"
+          ],
+          "window_true_probabilities": [
+            0.10284466003713588,
+            0.12295584241956366,
+            0.42962564419180965
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 1.1102230246251565e-16,
+          "max_embedding_error": 0.0
+        }
+      },
+      "figure": {
+        "path": "reports/figures/audio-diagnostic-20261025T231532303942Z/009560.png",
+        "sha256": "814a3f6510430ab1e408bb32be5ce5bca7d2e50aa83a604073900530378621f7"
+      }
+    },
+    {
+      "track_id": "148215",
+      "stratum": "pop_false_positive",
+      "true_label": "Folk",
+      "source_sha256": "2aedfa505274af3153fcf906f60b1069f08b458da1916c4579d98df4566c914d",
+      "duration_seconds": 30.00275,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -15.183938585732363,
+          "valid_peak_abs": 0.8803129196166992,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0018589228295819936,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.01080184887459807,
+            0.0
+          ],
+          "channels_above_db_range_fraction": [
+            0.0018589228295819936,
+            0.0012309083601286174,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -14.754166066496786,
+          "valid_peak_abs": 0.9189430475234985,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0020975683279742764,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.010437600482315113,
+            0.0
+          ],
+          "channels_above_db_range_fraction": [
+            0.0020975683279742764,
+            0.0014569935691318328,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -14.571602909169748,
+          "valid_peak_abs": 0.9359647035598755,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.003994172025723473,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.009269493569131832,
+            2.5120578778135048e-05
+          ],
+          "channels_above_db_range_fraction": [
+            0.003994172025723473,
+            0.0033410369774919614,
+            0.0
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Pop",
+            "Hip-Hop",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.1609997063946846,
+            0.06628365550104148,
+            0.02985589194754872
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 1.734723475976807e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "International",
+            "Electronic",
+            "Hip-Hop"
+          ],
+          "window_true_probabilities": [
+            0.13345949792284523,
+            0.053409811496299676,
+            0.02823367192136942
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Rock",
+            "Pop",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.06856759273470893,
+            0.24922174634254307,
+            0.012226439459239728
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 4.163336342344337e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "126586",
+      "stratum": "pop_false_positive",
+      "true_label": "Instrumental",
+      "source_sha256": "35b77e70ee7be32b9329c01bf31dee5210f80e524ac6afb478598c1c7ceeb1ba",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -13.578366736654763,
+          "valid_peak_abs": 1.03999662399292,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0021226889067524116,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "channels_above_db_range_fraction": [
+            0.0021226889067524116,
+            0.0006280144694533762,
+            3.7680868167202575e-05
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -13.145879870371154,
+          "valid_peak_abs": 1.020134449005127,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0031777532154340835,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0006154541800643087
+          ],
+          "channels_above_db_range_fraction": [
+            0.0031777532154340835,
+            0.0009922628617363345,
+            0.00012560289389067523
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -13.129936731053633,
+          "valid_peak_abs": 1.0403633117675781,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.00380576768488746,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0009169011254019293
+          ],
+          "channels_above_db_range_fraction": [
+            0.00380576768488746,
+            0.0011932274919614148,
+            6.280144694533762e-05
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Pop",
+            "Pop",
+            "Rock"
+          ],
+          "window_true_probabilities": [
+            0.145861219440155,
+            0.17753111889745823,
+            0.24955393999048728
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 2.7755575615628914e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Folk",
+            "Pop",
+            "Electronic"
+          ],
+          "window_true_probabilities": [
+            0.16691498739048474,
+            0.04662357701620501,
+            0.0790987834467454
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Electronic",
+            "Pop",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.053740375748386096,
+            0.21754624240739157,
+            0.22685890424267857
+          ],
+          "track_label": "Pop",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "120201",
+      "stratum": "pop_shared_vit_error",
+      "true_label": "Pop",
+      "source_sha256": "cef0eb3bce839ad72d4ecdffe186f0bcb1fc4114d7207605f02da4038e28c60a",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -12.194161358636691,
+          "valid_peak_abs": 0.9623251557350159,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.008955486334405145,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0003391278135048232
+          ],
+          "channels_above_db_range_fraction": [
+            0.008955486334405145,
+            0.00375552652733119,
+            0.0008038585209003215
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -13.850293270104563,
+          "valid_peak_abs": 0.9805845022201538,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0072975281350482315,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.00013816318327974277,
+            0.005099477491961415
+          ],
+          "channels_above_db_range_fraction": [
+            0.0072975281350482315,
+            0.004986434887459807,
+            0.00023864549839228296
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -13.084677364680159,
+          "valid_peak_abs": 0.9828312397003174,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.006732315112540193,
+          "channels_below_db_range_fraction": [
+            0.0,
+            5.0241157556270096e-05,
+            0.00028888665594855304
+          ],
+          "channels_above_db_range_fraction": [
+            0.006732315112540193,
+            0.00410721463022508,
+            0.0003516881028938907
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Rock",
+            "Hip-Hop",
+            "Instrumental"
+          ],
+          "window_true_probabilities": [
+            0.1945012229938675,
+            0.16331395121954956,
+            0.19714510685744632
+          ],
+          "track_label": "Rock",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "International",
+            "Hip-Hop",
+            "Instrumental"
+          ],
+          "window_true_probabilities": [
+            0.08651543349941068,
+            0.10775797027819935,
+            0.159067061253502
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Pop",
+            "Hip-Hop",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.3084556126746845,
+            0.05357886255412689,
+            0.33100381220707764
+          ],
+          "track_label": "Hip-Hop",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        }
+      },
+      "figure": {
+        "path": "reports/figures/audio-diagnostic-20261025T231532303942Z/120201.png",
+        "sha256": "6b6f08bb6d73ab5be207fee33da4c16ed3318ceb9c2080e07f6b4cdad860be14"
+      }
+    },
+    {
+      "track_id": "128484",
+      "stratum": "pop_shared_vit_error",
+      "true_label": "Pop",
+      "source_sha256": "4f5a46928c6c3943c4ea1752c7882070153143125b4621f16c5b2b5dee9b5036",
+      "duration_seconds": 30.00275,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -11.639239313813386,
+          "valid_peak_abs": 0.947939395904541,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.010914891479099678,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.00018840434083601285
+          ],
+          "channels_above_db_range_fraction": [
+            0.010914891479099678,
+            0.008603798231511254,
+            0.0004144895498392283
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -13.49027988465644,
+          "valid_peak_abs": 0.9413238167762756,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.006455988745980707,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.00038936897106109326,
+            0.00025120578778135047
+          ],
+          "channels_above_db_range_fraction": [
+            0.006455988745980707,
+            0.005300442122186495,
+            0.00013816318327974277
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -23.2416858883201,
+          "valid_peak_abs": 0.42155081033706665,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 3.7680868167202575e-05,
+          "above_db_range_fraction": 0.0,
+          "channels_below_db_range_fraction": [
+            3.7680868167202575e-05,
+            0.006970960610932476,
+            0.001582596463022508
+          ],
+          "channels_above_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Electronic",
+            "International",
+            "International"
+          ],
+          "window_true_probabilities": [
+            0.03744335146296718,
+            0.11329515549339098,
+            0.16527140730582524
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 1.942890293094024e-16,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Electronic",
+            "Electronic",
+            "Experimental"
+          ],
+          "window_true_probabilities": [
+            0.042156594808075744,
+            0.16245603538859893,
+            0.22766651147061295
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 8.326672684688674e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Electronic",
+            "Electronic",
+            "Pop"
+          ],
+          "window_true_probabilities": [
+            0.056194679263235445,
+            0.10535565272949472,
+            0.28232542804462957
+          ],
+          "track_label": "Electronic",
+          "max_probability_error": 2.7755575615628914e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    },
+    {
+      "track_id": "061736",
+      "stratum": "pop_shared_vit_error",
+      "true_label": "Pop",
+      "source_sha256": "e40c5dadb7d4562aee9b8fe6ccc4be59a772a797fa487f38826f8f9cae10c990",
+      "duration_seconds": 29.976625,
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "windows": [
+        {
+          "start_seconds": 0.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -22.69225721649381,
+          "valid_peak_abs": 0.4921417236328125,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.000816418810289389
+          ],
+          "channels_above_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 10.0,
+          "valid_seconds": 10.0,
+          "padded_seconds": 0.0,
+          "valid_rms_dbfs": -21.600394806061757,
+          "valid_peak_abs": 0.5157307386398315,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 1.2560289389067524e-05,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0008792202572347267
+          ],
+          "channels_above_db_range_fraction": [
+            1.2560289389067524e-05,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start_seconds": 20.0,
+          "valid_seconds": 9.976625,
+          "padded_seconds": 0.023375,
+          "valid_rms_dbfs": -22.76942200457288,
+          "valid_peak_abs": 0.5794356465339661,
+          "max_cache_error_db": 0.0,
+          "below_db_range_fraction": 0.0,
+          "above_db_range_fraction": 0.0,
+          "channels_below_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0018086816720257234
+          ],
+          "channels_above_db_range_fraction": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "predictions": {
+        "vit": {
+          "window_labels": [
+            "Experimental",
+            "Experimental",
+            "Experimental"
+          ],
+          "window_true_probabilities": [
+            0.14623721002106146,
+            0.11971681591556071,
+            0.15691537106684236
+          ],
+          "track_label": "Experimental",
+          "max_probability_error": 4.85722573273506e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_block6": {
+          "window_labels": [
+            "Experimental",
+            "Experimental",
+            "Experimental"
+          ],
+          "window_true_probabilities": [
+            0.03564252403061362,
+            0.09046441743910948,
+            0.0762875781667745
+          ],
+          "track_label": "Experimental",
+          "max_probability_error": 5.551115123125783e-17,
+          "max_embedding_error": 0.0
+        },
+        "vit_hpss": {
+          "window_labels": [
+            "Experimental",
+            "Experimental",
+            "Experimental"
+          ],
+          "window_true_probabilities": [
+            0.11272219201186101,
+            0.129279730451991,
+            0.15907617443483923
+          ],
+          "track_label": "Experimental",
+          "max_probability_error": 2.7755575615628914e-17,
+          "max_embedding_error": 0.0
+        }
+      }
+    }
+  ],
+  "review": {
+    "report": "reports/VALIDATION_ERRORS.json",
+    "report_sha256": "b7146de77971edd9fffc47de3da37ff6a388beb0d5b73ddaf858a85c6eb68e6f"
+  },
+  "review_queue_sha256": "1eb9cedf2adadb0fbcede94540b1cf88131bb14e26b9e2e8660454e95ac12490",
+  "settings": {
+    "schema_version": 1,
+    "split": "validation",
+    "selection": "all tracks in the existing error-review queue; no new sampling",
+    "models": [
+      "vit",
+      "vit_block6",
+      "vit_hpss"
+    ],
+    "logmel_absolute_tolerance_db": 0.0001,
+    "embedding_absolute_tolerance": 0.0001,
+    "probability_absolute_tolerance": 1e-05,
+    "plots": "first existing queue track in each review stratum",
+    "test": "not_loaded_or_evaluated"
+  },
+  "config_sha256": "d83da593585eb750f23ddb1edb2752d2b27f5a9ddf413cec92f137c4b4de18af",
+  "caches": {
+    "cnn_logmel": {
+      "folder": "data/features/cnn-logmel-b08e2e3768c5c4d6",
+      "report_sha256": "8fe857bbce9371ebe2eafe2d2ae21ea9c3b1ebd07686b1c7c7744a0f7c68c5e0"
+    },
+    "vit": {
+      "folder": "data/features/vit-ab0098008b9f3d2b",
+      "report_sha256": "f8d417a13e9b635673e0417edb1cd58b14f16ff821848cec31325e4546be0812"
+    },
+    "vit_block6": {
+      "folder": "data/features/vit-block6-8f862946e898652d",
+      "report_sha256": "02ac9c5ed3e3d24c1b514f7206456040b7afde15ff7200a391cf95aa410ad9c7"
+    },
+    "vit_hpss": {
+      "folder": "data/features/vit-hpss-b2979b40f817b603",
+      "report_sha256": "ba7d083056c0d7f1c67f3e1c0d61443451c31d8948b6b8622f1afab09fca0dd1"
+    }
+  },
+  "runs": {
+    "vit": {
+      "folder": "runs/vit-20261020T201146743988Z",
+      "report_sha256": "d0322aeaaba291ca0507ba7b4ef831bdc137ebb381e8dac57540ffe89acfb286"
+    },
+    "vit_block6": {
+      "folder": "runs/vit_block6-20261021T062701855205Z",
+      "report_sha256": "27dfbf40411926c918eca4daa8b0f512b80f9f64f204d761a8c1e65945f0db3b"
+    },
+    "vit_hpss": {
+      "folder": "runs/vit_hpss-20261021T115423153046Z",
+      "report_sha256": "fb0708ab14b65de7b8a327141ffdad29c1abaafe73186b952bd54ba8ea6e405c"
+    },
+    "descriptor": {
+      "folder": "runs/descriptors-20261020T195511254895Z",
+      "report_sha256": "b5084cc05354e6bb8813c354acc55e8814391181fbdc0f1d38135fc1993f6d97"
+    },
+    "cnn20_seed42": {
+      "folder": "runs/cnn20_seed42-20261021T185433222368Z",
+      "report_sha256": "77794db839770c2ff85ef438713e82def4a227d4ce07826fcc4a054146262a90"
+    },
+    "cnn20_seed43": {
+      "folder": "runs/cnn20_seed43-20261021T190439492087Z",
+      "report_sha256": "788d16ad32d775663ebc2425f8eb33b50a4093710aa31ff5918ec81ec2d68690"
+    },
+    "cnn20_seed44": {
+      "folder": "runs/cnn20_seed44-20261021T190901243607Z",
+      "report_sha256": "26cd269944023a4890142619e2e0da21caf3c433b8ab1cd238d2d0c0e9a0becb"
+    }
+  },
+  "test_audio_loaded": false,
+  "test_evaluated": false,
+  "semantic_listening_performed": false,
+  "source_sha256": {
+    "scripts/diagnose_review_audio.py": "6318b7084f2a37063b12a7b7f81659d1bcf6a6f68fee269b4878ee9b99f589e1",
+    "src/music_genre/evaluation/audio_diagnostic.py": "51edad2af926949033c06c4abfdd09bc4bcd216044ad4b2448a1be9e85f9cc1d"
+  }
+}

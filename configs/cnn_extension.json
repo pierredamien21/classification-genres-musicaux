@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-21T18:53:59.813880+00:00",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "max_epochs": 20,
+  "parents": [
+    {
+      "folder": "runs/cnn-20261020T202753531958Z",
+      "report_sha256": "df7e3e90a218579bf9786d4682160e3f64c3bc65eb2f8537d0436f56a14bbfa8",
+      "seed": 42,
+      "checkpoint_sha256": "51c3d4bcea733da482a80960edb2228e6931e1d364c4f2714e320cbdfdcdbc46"
+    },
+    {
+      "folder": "runs/cnn_seed43-20261021T182143235893Z",
+      "report_sha256": "17294cfc82c3989b8982a9fadfa5816b87cf1d5a315256912a621ed865a809ce",
+      "seed": 43,
+      "checkpoint_sha256": "4bb22e3be8e5aad7fafa409fdb03067d302b7164e5eaf0810797e736c7063cbc"
+    },
+    {
+      "folder": "runs/cnn_seed44-20261021T183501483565Z",
+      "report_sha256": "c77e46606e954c2ee4abc8353ac83c5e65b6b33990f452911a64c0fddaf447c4",
+      "seed": 44,
+      "checkpoint_sha256": "383ea2100e22bbc2a502f5927b68495e0e91c39bf8b73491bdeaee1e5a174f3b"
+    }
+  ],
+  "parent_plan_sha256": "3ab978d39aea341bbbf0c971ecfafb87f3c90e6643fbe8319c5ff009d189a158",
+  "source_sha256": {
+    "scripts/train_cnn_extended.py": "6093edafca4449f8ae70a44dd6509d66c165db3a436ce30fa7e5e94e3d787ca3",
+    "src/music_genre/training/extension.py": "933d6193e9424e5485faf30f61bcfadddb607b20876de269aedd19f6a9bf3743",
+    "src/music_genre/training/cnn.py": "7cf0cf45ec393c753f78a78a56577e009ef9b11843104b32285e82f39127cf53",
+    "src/music_genre/models/cnn.py": "143cf3a94ce12dea0e185bb558d2e72b85175b2b3ae1510e4bd8db7cfffc1a2f",
+    "src/music_genre/evaluation/metrics.py": "05f51dd60d503b2b359637c3a0490783a1133a88b1f34aaf8819261528880075"
+  },
+  "cost_estimates": [
+    {
+      "seed": 42,
+      "max_observed_epoch_seconds": 79.68351850000909,
+      "estimated_additional_seconds_with_margin": 1315.2527775001363
+    },
+    {
+      "seed": 43,
+      "max_observed_epoch_seconds": 95.22556740000005,
+      "estimated_additional_seconds_with_margin": 1548.3835110000007
+    },
+    {
+      "seed": 44,
+      "max_observed_epoch_seconds": 74.93423409999968,
+      "estimated_additional_seconds_with_margin": 1244.0135114999953
+    }
+  ],
+  "estimated_total_additional_seconds": 4107.649800000132,
+  "cost_method": "max measured full epoch per seed * 10 * 1.5 + 120s per export; estimate, not guarantee",
+  "continuation": "last complete epoch, optimizer/RNG/patience/best model and history preserved",
+  "selection": "best validation macro-F1 among all completed epochs, tie earlier epoch",
+  "comparison": "paired per-seed changes versus ten epochs; mean and sample std; report all seeds",
+  "decision": "report gain or no gain without seed selection; no significance claim with three seeds",
+  "adaptive_origin": "extension chosen after inspecting ten-epoch validation curves",
+  "test": "not_loaded_or_evaluated",
+  "ensemble": false
+}

@@ -1,0 +1,35 @@
+{
+  "cnn_run": {
+    "folder": "runs/cnn-20261020T202753531958Z",
+    "report_sha256": "df7e3e90a218579bf9786d4682160e3f64c3bc65eb2f8537d0436f56a14bbfa8"
+  },
+  "reference_runs": {
+    "descriptor": {
+      "folder": "runs/descriptors-20261020T195511254895Z",
+      "report_sha256": "b5084cc05354e6bb8813c354acc55e8814391181fbdc0f1d38135fc1993f6d97"
+    },
+    "vit": {
+      "folder": "runs/vit-20261020T201146743988Z",
+      "report_sha256": "d0322aeaaba291ca0507ba7b4ef831bdc137ebb381e8dac57540ffe89acfb286"
+    },
+    "fusion": {
+      "folder": "runs/fusion-20261020T201803253265Z",
+      "report_sha256": "1f6240a7c4af29111ea87f11e582a1c4cbb810d1817a3b62e8fd3c3b56e17433"
+    },
+    "fusion_no_rhythm": {
+      "folder": "runs/fusion_no_rhythm-20261020T201813274845Z",
+      "report_sha256": "58b7cb95f248a69f7225abdcb4c927bdd0f11d20b38e180075b2cf933ad27806"
+    },
+    "fusion_no_harmony": {
+      "folder": "runs/fusion_no_harmony-20261020T201822268410Z",
+      "report_sha256": "f32cdb98cb65916b64023c4add1204711981bf15b46431b1ce8b65ae847afda7"
+    }
+  },
+  "index_sha256": "74e948e6934001d1fb01ac0583f137106f890aaf3b88ac27e884deea744d8905",
+  "selected_epoch": 9,
+  "macro_f1_difference_cnn_minus_vit": -0.014571255671204542,
+  "accuracy_difference_cnn_minus_vit": 0.0038461538461538325,
+  "cnn_correct_vit_wrong": 93,
+  "vit_correct_cnn_wrong": 90,
+  "test_evaluated": false
+}

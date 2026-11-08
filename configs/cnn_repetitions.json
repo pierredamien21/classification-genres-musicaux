@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-21T18:20:40.755076+00:00",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "reference_run": {
+    "folder": "runs/cnn-20261020T202753531958Z",
+    "report_sha256": "df7e3e90a218579bf9786d4682160e3f64c3bc65eb2f8537d0436f56a14bbfa8"
+  },
+  "base_config": {
+    "schema_version": 1,
+    "name": "cnn_small_v1",
+    "seed": 42,
+    "sample_rate": 16000,
+    "window_seconds": 10.0,
+    "offsets_seconds": [
+      0.0,
+      10.0,
+      20.0
+    ],
+    "logmel": {
+      "n_fft": 1024,
+      "hop_length": 256,
+      "n_mels": 128,
+      "f_min": 0.0,
+      "window": "hann",
+      "center": false,
+      "power": 2.0,
+      "amin": 1e-10
+    },
+    "db_min": -80.0,
+    "db_max": 20.0,
+    "input_shape": [
+      1,
+      128,
+      622
+    ],
+    "channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "strides": [
+      2,
+      1,
+      1
+    ],
+    "padding": 1,
+    "pooling": "max2_each_block_then_global_average",
+    "pretraining": null,
+    "batch_size": 16,
+    "threads": 4,
+    "max_epochs": 10,
+    "patience": 3,
+    "selection": "validation_track_macro_f1_tie_earlier_epoch",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "augmentation": null,
+    "budget_seconds": 43200,
+    "deterministic": true,
+    "memory_format": "channels_last",
+    "cache_dtype": "float32",
+    "test": "not_loaded_or_evaluated"
+  },
+  "base_config_sha256": "89469d27dc7b7da7d62def2f726e05836ea2b3f59b9e99b6cd0def84796586d6",
+  "benchmark_sha256": "f00103a4c6adc728f55e494e6280eb8a1047c83e25418ba230c054e5b294d24e",
+  "new_trainer_sha256": "9d77a4a8526f2356e1057dde6465530164615601b778a3f34175c658de1d8173",
+  "reference_source_sha256": {
+    "scripts/train_cnn.py": "ca7858e911b95a7bc5c70e340aa9c94c405a8363382b29b00adabf2c715dc2b2",
+    "src/music_genre/training/cnn.py": "7cf0cf45ec393c753f78a78a56577e009ef9b11843104b32285e82f39127cf53",
+    "src/music_genre/models/cnn.py": "143cf3a94ce12dea0e185bb558d2e72b85175b2b3ae1510e4bd8db7cfffc1a2f",
+    "src/music_genre/evaluation/metrics.py": "05f51dd60d503b2b359637c3a0490783a1133a88b1f34aaf8819261528880075"
+  },
+  "summary": "arithmetic_mean_and_sample_standard_deviation_ddof_1",
+  "seed_selection": "none_report_all_prespecified_seeds",
+  "ensemble": false,
+  "test": "not_loaded_or_evaluated"
+}

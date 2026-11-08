@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "comparison": {
+    "report": "reports/BLOCK6_ROBUSTNESS_COMPARISON.json",
+    "report_sha256": "fcf03a3621c824733eff8a19dd36344e21552faab90e687dcfc9f0d05030e3ea"
+  },
+  "verification_source_sha256": "543c1b156f9c1c90346db6c64306ac952295172e458b4a7a6b2a5db61a642b71",
+  "source_hashes_verified": 30,
+  "recount": {
+    "original": {
+      "identity": {
+        "windows": 192,
+        "macro_f1": 0.46933056623459096,
+        "accuracy": 0.46875,
+        "flips": 0
+      },
+      "gain_minus_6_db": {
+        "windows": 192,
+        "macro_f1": 0.47306435394670693,
+        "accuracy": 0.46875,
+        "flips": 4
+      },
+      "white_noise_snr_20_db": {
+        "windows": 192,
+        "macro_f1": 0.3681469618969619,
+        "accuracy": 0.375,
+        "flips": 28
+      }
+    },
+    "hpss": {
+      "identity": {
+        "windows": 192,
+        "macro_f1": 0.5479070035571584,
+        "accuracy": 0.546875,
+        "flips": 0
+      },
+      "gain_minus_6_db": {
+        "windows": 192,
+        "macro_f1": 0.5049884487287738,
+        "accuracy": 0.5,
+        "flips": 6
+      },
+      "white_noise_snr_20_db": {
+        "windows": 192,
+        "macro_f1": 0.36479978354978354,
+        "accuracy": 0.40625,
+        "flips": 26
+      }
+    }
+  },
+  "pcm_hashes_reproduced": 192,
+  "snr_min_db": 19.999999995017898,
+  "snr_max_db": 20.000000005849277,
+  "test_evaluated": false,
+  "test_audio_loaded": false
+}

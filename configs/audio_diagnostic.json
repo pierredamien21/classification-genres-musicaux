@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "split": "validation",
+  "selection": "all tracks in the existing error-review queue; no new sampling",
+  "models": ["vit", "vit_block6", "vit_hpss"],
+  "logmel_absolute_tolerance_db": 0.0001,
+  "embedding_absolute_tolerance": 0.0001,
+  "probability_absolute_tolerance": 0.00001,
+  "plots": "first existing queue track in each review stratum",
+  "test": "not_loaded_or_evaluated"
+}

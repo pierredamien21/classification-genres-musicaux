@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "name": "conservative_baseline_v1",
+  "scope": "Technical selection for initial experiments; not a human listening review.",
+  "fingerprint": {
+    "version": "1.6.2",
+    "archive_url": "https://github.com/acoustid/chromaprint/releases/download/v1.6.2/chromaprint-fpcalc-1.6.2-windows-x86_64.zip",
+    "archive_sha256": "b74369726676670af3ab0eadff45f960cf969fdf4a87a971ba37eaf8d530e874",
+    "executable": "data/interim/tools/chromaprint-fpcalc-1.6.2-windows-x86_64/fpcalc.exe",
+    "executable_sha256": "1fff0e00387ae96eb461f9913511e3adfd4f634cf80c67c761fc88f69027251e",
+    "algorithm": 2,
+    "max_seconds": 40,
+    "timeout_seconds": 45,
+    "minimum_words": 120,
+    "minimum_unique_words": 30,
+    "maximum_posting_tracks": 25,
+    "minimum_shared_words": 10,
+    "minimum_overlap_words": 120,
+    "maximum_bit_error_rate": 0.1,
+    "offset_candidates": 5
+  },
+  "decisions": {
+    "decode_failed": "exclude",
+    "decoder_diagnostic": "hold",
+    "mostly_silent": "hold",
+    "missing_license": "hold",
+    "near_full_scale_only": "keep_with_flag",
+    "exact_duplicate_same_split_same_genre": "keep_lowest_eligible_track_id",
+    "exact_duplicate_conflicting_genre_or_cross_split": "hold_all",
+    "nonexact_fingerprint_candidate": "hold_both",
+    "fingerprint_failed_or_diagnostic": "hold",
+    "low_information_fingerprint": "hold"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "split": "validation",
+  "session_id": 89453,
+  "pid": 16888,
+  "started_at": "2026-10-29T14:29:21.378684+00:00",
+  "command": ".venv/Scripts/python.exe -u scripts/evaluate_final.py --split validation --output data/interim/final-validation-v1",
+  "folder": "data/interim/final-validation-v1",
+  "progress": "data/interim/final-validation-v1/progress.json",
+  "stdout": "data/interim/final-validation-v1.stdout.log",
+  "stderr": "data/interim/final-validation-v1.stderr.log",
+  "runner_sha256": {
+    "scripts/evaluate_final.py": "b1866348e69da82bb078995bc5cfaa71a5204ff9d9ee049fc5fca6ff754fd498",
+    "src/music_genre/evaluation/final_evaluation.py": "690d2e425f5808d2e40e61eff815788b7012ac3fe19a7799787f17ee6d1a450c"
+  },
+  "tests_passed": 247,
+  "estimated_inference_minutes": [
+    95.5,
+    191.0
+  ],
+  "test_evaluated": false,
+  "automation_id": "suivi-validation-musicale-t7",
+  "monitor_interval_minutes": 60,
+  "exit_code": 0,
+  "completed_at": "2026-10-29T16:02:33.685161+00:00",
+  "completion_sha256": "cbcf2cf3f3fb2731035137905f4d11b078af9a470d60c3be87396331f0870e21",
+  "predictions": 7020,
+  "automation_status": "deleted_after_completion",
+  "independent_recount": "passed",
+  "independent_recount_path": "reports/FINAL_VALIDATION_RECOUNT.json"
+}

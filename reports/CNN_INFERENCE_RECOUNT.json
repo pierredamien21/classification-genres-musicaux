@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "report": {
+    "report": "reports/CNN_INFERENCE_CHECK.json",
+    "report_sha256": "321016af78afd0cbd80bed8f01fd1ecb99bbf5f7c7e57529735376d98fbc02a1"
+  },
+  "verification_source_sha256": "0fc45ce044e0359e63f74369317369d163fa857abd7794ec186b5868fd3eeeb8",
+  "systems": {
+    "cnn20_seed42": {
+      "tracks": 64,
+      "windows": 192,
+      "validation_tracks": 780,
+      "selected_epoch": 15,
+      "max_track_probability_error": 0.0
+    },
+    "cnn20_seed43": {
+      "tracks": 64,
+      "windows": 192,
+      "validation_tracks": 780,
+      "selected_epoch": 10,
+      "max_track_probability_error": 0.0
+    },
+    "cnn20_seed44": {
+      "tracks": 64,
+      "windows": 192,
+      "validation_tracks": 780,
+      "selected_epoch": 8,
+      "max_track_probability_error": 0.0
+    }
+  },
+  "test_evaluated": false,
+  "test_audio_loaded": false,
+  "method": "source_hashes_window_means_class_identity_manual_confusions_mean_and_sample_std"
+}

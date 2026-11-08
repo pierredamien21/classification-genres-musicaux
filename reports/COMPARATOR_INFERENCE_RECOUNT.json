@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "report": {
+    "report": "reports/COMPARATOR_INFERENCE_CHECK.json",
+    "report_sha256": "e863337482c83a0133cd9e09b72743038ba8e865b2217fe90ada0935ed5dfa94"
+  },
+  "verification_source_sha256": "d660ce569bed73ab429e1613d3ed2f685e7e9b61d176b6ef047690fdb4758bb0",
+  "systems": {
+    "descriptor": {
+      "tracks": 64,
+      "windows": 192,
+      "validation_tracks": 780,
+      "max_track_probability_error": 2.220446049250313e-16
+    },
+    "vit": {
+      "tracks": 64,
+      "windows": 192,
+      "validation_tracks": 780,
+      "max_track_probability_error": 3.3306690738754696e-16
+    },
+    "fusion": {
+      "tracks": 64,
+      "windows": 192,
+      "validation_tracks": 780,
+      "max_track_probability_error": 2.7755575615628914e-16
+    },
+    "vit_block6": {
+      "tracks": 64,
+      "windows": 192,
+      "validation_tracks": 780,
+      "max_track_probability_error": 2.220446049250313e-16
+    },
+    "vit_hpss": {
+      "tracks": 64,
+      "windows": 192,
+      "validation_tracks": 780,
+      "max_track_probability_error": 2.220446049250313e-16
+    },
+    "vit_block6_hpss": {
+      "tracks": 64,
+      "windows": 192,
+      "validation_tracks": 780,
+      "max_track_probability_error": 2.220446049250313e-16
+    }
+  },
+  "test_evaluated": false,
+  "test_audio_loaded": false,
+  "method": "source_hashes_window_means_saved_reference_and_manual_confusion_metrics"
+}

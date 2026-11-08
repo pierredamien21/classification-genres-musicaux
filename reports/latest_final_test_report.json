@@ -1,0 +1,27 @@
+{
+  "status": "verified",
+  "created_at": "2026-10-29T20:21:21.946199+00:00",
+  "report": {
+    "path": "reports/final-test-report-v1/report.json",
+    "sha256": "e5d59c7d1995e24041e7df2a1be8f8e17f52a2aa163ee5d43bc78514056bf2f1"
+  },
+  "independent_predictions": {
+    "path": "reports/FINAL_TEST_RECOUNT.json",
+    "sha256": "44d6bd774f5b60101bb9987843ac27f80070834dab2e73c664a3397c72787217"
+  },
+  "independent_statistics": {
+    "path": "reports/FINAL_TEST_REPORT_CHECK.json",
+    "sha256": "f335d45eb6ca2a78d89b626a84cacca2495eaae8d5f3ffb642589c132f4a8a3c"
+  },
+  "summary": {
+    "path": "reports/EVALUATION_FINALE.md",
+    "sha256": "ca81b42766ed7af74e578c603696445581f7b163136753800d4a23f8d4cf9a49"
+  },
+  "model_card": {
+    "path": "docs/FICHE_MODELE.md",
+    "sha256": "c5a432e0eba26500db4eb7560ff240df328b5f5e6df2dbf5a78f081015c5d19a"
+  },
+  "tracks": 778,
+  "systems": 9,
+  "test_evaluated": true
+}

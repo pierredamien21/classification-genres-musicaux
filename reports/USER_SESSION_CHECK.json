@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-07T21:56:02.568977+00:00",
+  "run": "runs/cnn_user-20261107T073012932719Z",
+  "report_sha256": "f748e20f17aaefa3c4717dd70c583ca057d99832823f134e04499a1f3eeef834",
+  "checkpoint_sha256": "5152a6e0d1c9080d0a6a7333ce4599318a86cdc0c680bc7e50a416f0b059f36d",
+  "verification_script_sha256": "a3891c5bb421af5367aa11317093d6b7c9a92fbbdc5831faa515378f5c09a3c4",
+  "validation_from_csv": {
+    "macro_f1": 0.570680563874727,
+    "accuracy": 0.5782051282051283,
+    "tracks": 780,
+    "correct": 451
+  },
+  "replayed_from_export": {
+    "validation": {
+      "macro_f1": 0.570680563874727,
+      "accuracy": 0.5782051282051283,
+      "tracks": 780,
+      "correct": 451
+    },
+    "train": {
+      "macro_f1": 0.62975932031305,
+      "accuracy": 0.6329576123194158,
+      "tracks": 6299,
+      "correct": 3987
+    }
+  },
+  "max_probability_error": 0.0,
+  "selected_epoch": 26,
+  "epochs_completed": 30,
+  "bad_epochs_at_end": 4,
+  "stop_reason": "max_epochs",
+  "prior_seed42_first_18_epochs_identical_except_timing": true,
+  "prior_seed42_validation_macro_f1": 0.5464336658181137,
+  "validation_macro_f1_difference": 0.024246898056613286,
+  "wall_seconds": 2932.460534,
+  "checks": [
+    "source_and_config_hashes",
+    "cache_hash_and_index",
+    "cohort_and_artist_separation",
+    "csv_metrics_and_confusion",
+    "best_epoch_and_patience",
+    "checkpoint_and_export_identity",
+    "export_replay_all_train_and_validation",
+    "V1_reports_unchanged"
+  ],
+  "test_loaded_by_verification": false,
+  "limitations": [
+    "One seed; selected on validation; no new independent test estimate",
+    "Inference reuses the production model and batching; aggregation and metrics recounted separately",
+    "Audio extraction not repeated; cached feature bytes verified"
+  ]
+}

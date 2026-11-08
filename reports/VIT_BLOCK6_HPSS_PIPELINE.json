@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "pid": 54312,
+  "started_at_utc": "2026-10-27T23:20:33.604397+00:00",
+  "stage": "comparison",
+  "test_evaluated": false,
+  "fixed_sha256": {
+    "configs/baseline_vit_block6_hpss.json": "9499815b35ac5e04f5938d37ff07e163241899021cf954e666cf2274a845b8c4",
+    "scripts/train_descriptor_baseline.py": "7c2071342cd7b3f6b77f0ff9279b0b3333c28184fe16279be48fd1a9735f1e79",
+    "scripts/compare_vit_block6_hpss.py": "a087a4102ea612655a78206744f03d8dbd63fd469fc378c5c547dd766a5256b9",
+    "scripts/compare_vit_baseline.py": "c67795c484db54bfba9bc3c0260128d3fcf7e3d6971c55c5788ab98abe11998d",
+    "src/music_genre/models/linear.py": "7b8d3210650761236fbbb28d6910b2a53a7bfa65eaa4d6b21b3d60e6ed9c06cd",
+    "src/music_genre/evaluation/metrics.py": "05f51dd60d503b2b359637c3a0490783a1133a88b1f34aaf8819261528880075"
+  },
+  "finished_at_utc": "2026-10-27T23:54:14.014912+00:00"
+}

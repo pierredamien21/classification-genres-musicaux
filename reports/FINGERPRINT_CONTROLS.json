@@ -1,0 +1,123 @@
+{
+  "created_at_utc": "2026-10-20T14:25:57.821386+00:00",
+  "audit_sha256": "97afd9f768020d76c451e0a96e71b6c4270122105162ad699b3405d01324ee95",
+  "policy_sha256": "58e858bc24ea2f2152d61a4dc726d64219d15af3a6145bb632e2fb042147f86c",
+  "source_sha256": "1b377cdebb00b3b11184a122c740b6f934fe7bb88acdc8e1e72566c911544be3",
+  "training_track_ids": [
+    "001482",
+    "000140",
+    "000002"
+  ],
+  "positive_controls": [
+    {
+      "a": "001482",
+      "b": "001482_mono16k_gain",
+      "detected": true
+    },
+    {
+      "a": "001482",
+      "b": "001482_mono16k_shift2s",
+      "detected": true
+    },
+    {
+      "a": "000140",
+      "b": "000140_mono16k_gain",
+      "detected": true
+    },
+    {
+      "a": "000140",
+      "b": "000140_mono16k_shift2s",
+      "detected": true
+    },
+    {
+      "a": "000002",
+      "b": "000002_mono16k_gain",
+      "detected": true
+    },
+    {
+      "a": "000002",
+      "b": "000002_mono16k_shift2s",
+      "detected": true
+    }
+  ],
+  "unexpected_cross_track_matches": [],
+  "matches": [
+    {
+      "a": "000002",
+      "b": "000002_mono16k_gain",
+      "shared_distinct_words": 219,
+      "offset_words": 0,
+      "overlap_words": 221,
+      "bit_error_rate": 0.0
+    },
+    {
+      "a": "000002",
+      "b": "000002_mono16k_shift2s",
+      "shared_distinct_words": 105,
+      "offset_words": 16,
+      "overlap_words": 205,
+      "bit_error_rate": 0.02301829268292683
+    },
+    {
+      "a": "000002_mono16k_gain",
+      "b": "000002_mono16k_shift2s",
+      "shared_distinct_words": 105,
+      "offset_words": 16,
+      "overlap_words": 205,
+      "bit_error_rate": 0.02301829268292683
+    },
+    {
+      "a": "000140",
+      "b": "000140_mono16k_gain",
+      "shared_distinct_words": 219,
+      "offset_words": 0,
+      "overlap_words": 221,
+      "bit_error_rate": 0.0
+    },
+    {
+      "a": "000140",
+      "b": "000140_mono16k_shift2s",
+      "shared_distinct_words": 86,
+      "offset_words": 16,
+      "overlap_words": 205,
+      "bit_error_rate": 0.02347560975609756
+    },
+    {
+      "a": "000140_mono16k_gain",
+      "b": "000140_mono16k_shift2s",
+      "shared_distinct_words": 86,
+      "offset_words": 16,
+      "overlap_words": 205,
+      "bit_error_rate": 0.02347560975609756
+    },
+    {
+      "a": "001482",
+      "b": "001482_mono16k_gain",
+      "shared_distinct_words": 208,
+      "offset_words": 0,
+      "overlap_words": 221,
+      "bit_error_rate": 0.0
+    },
+    {
+      "a": "001482",
+      "b": "001482_mono16k_shift2s",
+      "shared_distinct_words": 87,
+      "offset_words": 16,
+      "overlap_words": 205,
+      "bit_error_rate": 0.028353658536585367
+    },
+    {
+      "a": "001482_mono16k_gain",
+      "b": "001482_mono16k_shift2s",
+      "shared_distinct_words": 87,
+      "offset_words": 16,
+      "overlap_words": 205,
+      "bit_error_rate": 0.028353658536585367
+    }
+  ],
+  "limitations": [
+    "Three training sources, six transformations; not a dataset-wide recall estimate.",
+    "No threshold tuned using these outcomes or validation/test performance.",
+    "WAV conversion, gain and 2-second shift only; no MP3 re-encoding control."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "started_at": "2026-11-07T07:29:41.932982+00:00",
+  "supervisor": {
+    "pid": 59552,
+    "created": 1794036581.6598115
+  },
+  "command": [
+    "E:\\projet\\vision transformer\\.venv-notebook\\Scripts\\python.exe",
+    "-u",
+    "E:\\projet\\vision transformer\\scripts\\train_user_cnn.py"
+  ],
+  "smoke": false,
+  "test_evaluated": false,
+  "training_process": {
+    "pid": 58696,
+    "created": 1794036581.9386156
+  },
+  "exit_code": 0,
+  "finished_at": "2026-11-07T08:18:34.393516+00:00",
+  "folder": "runs/cnn_user-20261107T073012932719Z"
+}

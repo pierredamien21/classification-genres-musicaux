@@ -1,0 +1,1749 @@
+{
+  "schema_version": 1,
+  "systems": {
+    "descriptor": {
+      "label": "Descripteurs musicaux",
+      "run": {
+        "folder": "runs/descriptors-20261020T195511254895Z",
+        "report_sha256": "b5084cc05354e6bb8813c354acc55e8814391181fbdc0f1d38135fc1993f6d97"
+      },
+      "validation": {
+        "tracks": 780,
+        "macro_f1": 0.4612229344724649,
+        "accuracy": 0.4756410256410256,
+        "confusion_matrix": [
+          [
+            49,
+            6,
+            3,
+            19,
+            10,
+            5,
+            6,
+            1
+          ],
+          [
+            15,
+            47,
+            6,
+            3,
+            16,
+            1,
+            2,
+            10
+          ],
+          [
+            1,
+            0,
+            79,
+            3,
+            5,
+            2,
+            5,
+            4
+          ],
+          [
+            25,
+            1,
+            2,
+            55,
+            0,
+            10,
+            7,
+            0
+          ],
+          [
+            6,
+            19,
+            10,
+            1,
+            27,
+            2,
+            20,
+            8
+          ],
+          [
+            11,
+            12,
+            14,
+            11,
+            3,
+            40,
+            5,
+            2
+          ],
+          [
+            17,
+            18,
+            8,
+            15,
+            10,
+            5,
+            10,
+            11
+          ],
+          [
+            1,
+            5,
+            4,
+            7,
+            2,
+            2,
+            12,
+            64
+          ]
+        ],
+        "per_class": {
+          "Electronic": {
+            "precision": 0.392,
+            "recall": 0.494949494949495,
+            "f1-score": 0.4375,
+            "support": 99.0
+          },
+          "Experimental": {
+            "precision": 0.4351851851851852,
+            "recall": 0.47,
+            "f1-score": 0.4519230769230769,
+            "support": 100.0
+          },
+          "Folk": {
+            "precision": 0.626984126984127,
+            "recall": 0.797979797979798,
+            "f1-score": 0.7022222222222222,
+            "support": 99.0
+          },
+          "Hip-Hop": {
+            "precision": 0.4824561403508772,
+            "recall": 0.55,
+            "f1-score": 0.514018691588785,
+            "support": 100.0
+          },
+          "Instrumental": {
+            "precision": 0.3698630136986301,
+            "recall": 0.2903225806451613,
+            "f1-score": 0.3253012048192771,
+            "support": 93.0
+          },
+          "International": {
+            "precision": 0.5970149253731343,
+            "recall": 0.40816326530612246,
+            "f1-score": 0.48484848484848486,
+            "support": 98.0
+          },
+          "Pop": {
+            "precision": 0.14925373134328357,
+            "recall": 0.10638297872340426,
+            "f1-score": 0.12422360248447205,
+            "support": 94.0
+          },
+          "Rock": {
+            "precision": 0.64,
+            "recall": 0.6597938144329897,
+            "f1-score": 0.649746192893401,
+            "support": 97.0
+          },
+          "accuracy": 0.4756410256410256,
+          "macro avg": {
+            "precision": 0.4615946403669047,
+            "recall": 0.4721989915046213,
+            "f1-score": 0.4612229344724649,
+            "support": 780.0
+          },
+          "weighted avg": {
+            "precision": 0.46366427542544,
+            "recall": 0.4756410256410256,
+            "f1-score": 0.46397082020350094,
+            "support": 780.0
+          }
+        }
+      },
+      "training_macro_f1": 0.5446215552525061,
+      "selection": {
+        "c": 0.1
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      }
+    },
+    "vit": {
+      "label": "ViT bloc 12, trois fenêtres",
+      "run": {
+        "folder": "runs/vit-20261020T201146743988Z",
+        "report_sha256": "d0322aeaaba291ca0507ba7b4ef831bdc137ebb381e8dac57540ffe89acfb286"
+      },
+      "validation": {
+        "tracks": 780,
+        "macro_f1": 0.5447091086808501,
+        "accuracy": 0.5538461538461539,
+        "confusion_matrix": [
+          [
+            62,
+            7,
+            1,
+            10,
+            9,
+            4,
+            5,
+            1
+          ],
+          [
+            19,
+            48,
+            5,
+            2,
+            10,
+            4,
+            3,
+            9
+          ],
+          [
+            1,
+            3,
+            63,
+            3,
+            7,
+            3,
+            18,
+            1
+          ],
+          [
+            13,
+            2,
+            1,
+            76,
+            0,
+            5,
+            2,
+            1
+          ],
+          [
+            3,
+            16,
+            6,
+            0,
+            45,
+            3,
+            16,
+            4
+          ],
+          [
+            10,
+            4,
+            4,
+            3,
+            6,
+            64,
+            5,
+            2
+          ],
+          [
+            14,
+            23,
+            7,
+            11,
+            7,
+            9,
+            9,
+            14
+          ],
+          [
+            3,
+            7,
+            2,
+            2,
+            2,
+            4,
+            12,
+            65
+          ]
+        ],
+        "per_class": {
+          "Electronic": {
+            "precision": 0.496,
+            "recall": 0.6262626262626263,
+            "f1-score": 0.5535714285714286,
+            "support": 99.0
+          },
+          "Experimental": {
+            "precision": 0.43636363636363634,
+            "recall": 0.48,
+            "f1-score": 0.45714285714285713,
+            "support": 100.0
+          },
+          "Folk": {
+            "precision": 0.7078651685393258,
+            "recall": 0.6363636363636364,
+            "f1-score": 0.6702127659574468,
+            "support": 99.0
+          },
+          "Hip-Hop": {
+            "precision": 0.7102803738317757,
+            "recall": 0.76,
+            "f1-score": 0.7342995169082126,
+            "support": 100.0
+          },
+          "Instrumental": {
+            "precision": 0.5232558139534884,
+            "recall": 0.4838709677419355,
+            "f1-score": 0.5027932960893855,
+            "support": 93.0
+          },
+          "International": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6530612244897959,
+            "f1-score": 0.6597938144329897,
+            "support": 98.0
+          },
+          "Pop": {
+            "precision": 0.12857142857142856,
+            "recall": 0.09574468085106383,
+            "f1-score": 0.10975609756097561,
+            "support": 94.0
+          },
+          "Rock": {
+            "precision": 0.6701030927835051,
+            "recall": 0.6701030927835051,
+            "f1-score": 0.6701030927835051,
+            "support": 97.0
+          },
+          "accuracy": 0.5538461538461539,
+          "macro avg": {
+            "precision": 0.5423882725887283,
+            "recall": 0.5506757785615704,
+            "f1-score": 0.5447091086808501,
+            "support": 780.0
+          },
+          "weighted avg": {
+            "precision": 0.5447806295149442,
+            "recall": 0.5538461538461539,
+            "f1-score": 0.5474814310063374,
+            "support": 780.0
+          }
+        }
+      },
+      "training_macro_f1": 0.6050947695866469,
+      "selection": {
+        "c": 0.1
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      }
+    },
+    "fusion": {
+      "label": "Fusion bloc 12 + descripteurs",
+      "run": {
+        "folder": "runs/fusion-20261020T201803253265Z",
+        "report_sha256": "1f6240a7c4af29111ea87f11e582a1c4cbb810d1817a3b62e8fd3c3b56e17433"
+      },
+      "validation": {
+        "tracks": 780,
+        "macro_f1": 0.5218659499833392,
+        "accuracy": 0.5294871794871795,
+        "confusion_matrix": [
+          [
+            57,
+            9,
+            1,
+            13,
+            9,
+            2,
+            6,
+            2
+          ],
+          [
+            19,
+            46,
+            5,
+            1,
+            15,
+            1,
+            4,
+            9
+          ],
+          [
+            1,
+            1,
+            73,
+            0,
+            7,
+            4,
+            10,
+            3
+          ],
+          [
+            18,
+            0,
+            2,
+            68,
+            1,
+            8,
+            3,
+            0
+          ],
+          [
+            9,
+            15,
+            2,
+            0,
+            41,
+            2,
+            18,
+            6
+          ],
+          [
+            8,
+            3,
+            9,
+            6,
+            5,
+            59,
+            7,
+            1
+          ],
+          [
+            16,
+            22,
+            8,
+            12,
+            9,
+            9,
+            9,
+            9
+          ],
+          [
+            1,
+            3,
+            3,
+            5,
+            2,
+            5,
+            18,
+            60
+          ]
+        ],
+        "per_class": {
+          "Electronic": {
+            "precision": 0.4418604651162791,
+            "recall": 0.5757575757575758,
+            "f1-score": 0.5,
+            "support": 99.0
+          },
+          "Experimental": {
+            "precision": 0.46464646464646464,
+            "recall": 0.46,
+            "f1-score": 0.4623115577889447,
+            "support": 100.0
+          },
+          "Folk": {
+            "precision": 0.7087378640776699,
+            "recall": 0.7373737373737373,
+            "f1-score": 0.7227722772277227,
+            "support": 99.0
+          },
+          "Hip-Hop": {
+            "precision": 0.6476190476190476,
+            "recall": 0.68,
+            "f1-score": 0.6634146341463415,
+            "support": 100.0
+          },
+          "Instrumental": {
+            "precision": 0.4606741573033708,
+            "recall": 0.44086021505376344,
+            "f1-score": 0.45054945054945056,
+            "support": 93.0
+          },
+          "International": {
+            "precision": 0.6555555555555556,
+            "recall": 0.6020408163265306,
+            "f1-score": 0.6276595744680851,
+            "support": 98.0
+          },
+          "Pop": {
+            "precision": 0.12,
+            "recall": 0.09574468085106383,
+            "f1-score": 0.10650887573964497,
+            "support": 94.0
+          },
+          "Rock": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6185567010309279,
+            "f1-score": 0.6417112299465241,
+            "support": 97.0
+          },
+          "accuracy": 0.5294871794871795,
+          "macro avg": {
+            "precision": 0.5207200276231319,
+            "recall": 0.5262917157991999,
+            "f1-score": 0.5218659499833392,
+            "support": 780.0
+          },
+          "weighted avg": {
+            "precision": 0.5232943507142009,
+            "recall": 0.5294871794871795,
+            "f1-score": 0.5247392762338254,
+            "support": 780.0
+          }
+        }
+      },
+      "training_macro_f1": 0.6678185946530067,
+      "selection": {
+        "c": 0.1
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      }
+    },
+    "fusion_no_rhythm": {
+      "label": "Fusion sans rythme",
+      "run": {
+        "folder": "runs/fusion_no_rhythm-20261020T201813274845Z",
+        "report_sha256": "58b7cb95f248a69f7225abdcb4c927bdd0f11d20b38e180075b2cf933ad27806"
+      },
+      "validation": {
+        "tracks": 780,
+        "macro_f1": 0.5386954891551013,
+        "accuracy": 0.5487179487179488,
+        "confusion_matrix": [
+          [
+            59,
+            9,
+            2,
+            13,
+            8,
+            1,
+            5,
+            2
+          ],
+          [
+            16,
+            49,
+            5,
+            3,
+            13,
+            2,
+            4,
+            8
+          ],
+          [
+            1,
+            1,
+            69,
+            0,
+            9,
+            5,
+            12,
+            2
+          ],
+          [
+            14,
+            0,
+            2,
+            74,
+            0,
+            7,
+            2,
+            1
+          ],
+          [
+            8,
+            15,
+            6,
+            1,
+            40,
+            2,
+            15,
+            6
+          ],
+          [
+            8,
+            1,
+            5,
+            5,
+            5,
+            67,
+            6,
+            1
+          ],
+          [
+            13,
+            23,
+            8,
+            16,
+            8,
+            7,
+            8,
+            11
+          ],
+          [
+            1,
+            3,
+            3,
+            0,
+            2,
+            4,
+            22,
+            62
+          ]
+        ],
+        "per_class": {
+          "Electronic": {
+            "precision": 0.49166666666666664,
+            "recall": 0.5959595959595959,
+            "f1-score": 0.5388127853881278,
+            "support": 99.0
+          },
+          "Experimental": {
+            "precision": 0.48514851485148514,
+            "recall": 0.49,
+            "f1-score": 0.48756218905472637,
+            "support": 100.0
+          },
+          "Folk": {
+            "precision": 0.69,
+            "recall": 0.696969696969697,
+            "f1-score": 0.6934673366834171,
+            "support": 99.0
+          },
+          "Hip-Hop": {
+            "precision": 0.6607142857142857,
+            "recall": 0.74,
+            "f1-score": 0.6981132075471698,
+            "support": 100.0
+          },
+          "Instrumental": {
+            "precision": 0.47058823529411764,
+            "recall": 0.43010752688172044,
+            "f1-score": 0.449438202247191,
+            "support": 93.0
+          },
+          "International": {
+            "precision": 0.7052631578947368,
+            "recall": 0.6836734693877551,
+            "f1-score": 0.694300518134715,
+            "support": 98.0
+          },
+          "Pop": {
+            "precision": 0.10810810810810811,
+            "recall": 0.0851063829787234,
+            "f1-score": 0.09523809523809523,
+            "support": 94.0
+          },
+          "Rock": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6391752577319587,
+            "f1-score": 0.6526315789473685,
+            "support": 97.0
+          },
+          "accuracy": 0.5487179487179488,
+          "macro avg": {
+            "precision": 0.5347694543995083,
+            "recall": 0.5451239912386814,
+            "f1-score": 0.5386954891551013,
+            "support": 780.0
+          },
+          "weighted avg": {
+            "precision": 0.5375392362069782,
+            "recall": 0.5487179487179488,
+            "f1-score": 0.5418719480022296,
+            "support": 780.0
+          }
+        }
+      },
+      "training_macro_f1": 0.6577059860862202,
+      "selection": {
+        "c": 1.0
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      }
+    },
+    "fusion_no_harmony": {
+      "label": "Fusion sans harmonie",
+      "run": {
+        "folder": "runs/fusion_no_harmony-20261020T201822268410Z",
+        "report_sha256": "f32cdb98cb65916b64023c4add1204711981bf15b46431b1ce8b65ae847afda7"
+      },
+      "validation": {
+        "tracks": 780,
+        "macro_f1": 0.5282386004476642,
+        "accuracy": 0.5384615384615384,
+        "confusion_matrix": [
+          [
+            58,
+            7,
+            1,
+            14,
+            9,
+            3,
+            5,
+            2
+          ],
+          [
+            16,
+            48,
+            5,
+            2,
+            16,
+            2,
+            3,
+            8
+          ],
+          [
+            1,
+            2,
+            71,
+            1,
+            6,
+            6,
+            8,
+            4
+          ],
+          [
+            17,
+            0,
+            2,
+            69,
+            1,
+            8,
+            3,
+            0
+          ],
+          [
+            9,
+            16,
+            4,
+            0,
+            40,
+            2,
+            17,
+            5
+          ],
+          [
+            10,
+            3,
+            7,
+            5,
+            5,
+            62,
+            5,
+            1
+          ],
+          [
+            17,
+            22,
+            8,
+            10,
+            8,
+            9,
+            9,
+            11
+          ],
+          [
+            1,
+            4,
+            2,
+            5,
+            2,
+            3,
+            17,
+            63
+          ]
+        ],
+        "per_class": {
+          "Electronic": {
+            "precision": 0.4496124031007752,
+            "recall": 0.5858585858585859,
+            "f1-score": 0.5087719298245614,
+            "support": 99.0
+          },
+          "Experimental": {
+            "precision": 0.47058823529411764,
+            "recall": 0.48,
+            "f1-score": 0.4752475247524752,
+            "support": 100.0
+          },
+          "Folk": {
+            "precision": 0.71,
+            "recall": 0.7171717171717171,
+            "f1-score": 0.7135678391959799,
+            "support": 99.0
+          },
+          "Hip-Hop": {
+            "precision": 0.6509433962264151,
+            "recall": 0.69,
+            "f1-score": 0.6699029126213593,
+            "support": 100.0
+          },
+          "Instrumental": {
+            "precision": 0.45977011494252873,
+            "recall": 0.43010752688172044,
+            "f1-score": 0.4444444444444444,
+            "support": 93.0
+          },
+          "International": {
+            "precision": 0.6526315789473685,
+            "recall": 0.6326530612244898,
+            "f1-score": 0.6424870466321243,
+            "support": 98.0
+          },
+          "Pop": {
+            "precision": 0.13432835820895522,
+            "recall": 0.09574468085106383,
+            "f1-score": 0.11180124223602485,
+            "support": 94.0
+          },
+          "Rock": {
+            "precision": 0.6702127659574468,
+            "recall": 0.6494845360824743,
+            "f1-score": 0.6596858638743456,
+            "support": 97.0
+          },
+          "accuracy": 0.5384615384615384,
+          "macro avg": {
+            "precision": 0.5247608565847008,
+            "recall": 0.5351275135087563,
+            "f1-score": 0.5282386004476642,
+            "support": 780.0
+          },
+          "weighted avg": {
+            "precision": 0.5273189877628737,
+            "recall": 0.5384615384615384,
+            "f1-score": 0.5311828081278158,
+            "support": 780.0
+          }
+        }
+      },
+      "training_macro_f1": 0.6582036961992567,
+      "selection": {
+        "c": 0.1
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      }
+    },
+    "cnn": {
+      "label": "CNN, moyenne de trois graines",
+      "runs": [
+        {
+          "folder": "runs/cnn-20261020T202753531958Z",
+          "report_sha256": "df7e3e90a218579bf9786d4682160e3f64c3bc65eb2f8537d0436f56a14bbfa8"
+        },
+        {
+          "folder": "runs/cnn_seed43-20261021T182143235893Z",
+          "report_sha256": "17294cfc82c3989b8982a9fadfa5816b87cf1d5a315256912a621ed865a809ce"
+        },
+        {
+          "folder": "runs/cnn_seed44-20261021T183501483565Z",
+          "report_sha256": "c77e46606e954c2ee4abc8353ac83c5e65b6b33990f452911a64c0fddaf447c4"
+        }
+      ],
+      "validation": {
+        "macro_f1": 0.53531534840651,
+        "accuracy": 0.5547008547008547
+      },
+      "validation_sample_std": {
+        "macro_f1": 0.010254362295415853,
+        "accuracy": 0.00632420879784132
+      },
+      "training_macro_f1": 0.5431533715235125,
+      "selection": {
+        "seeds": [
+          42,
+          43,
+          44
+        ]
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      },
+      "aggregation": "mean_of_per_seed_metrics_not_an_ensemble"
+    },
+    "vit_central": {
+      "label": "ViT bloc 12, fenêtre centrale",
+      "run": {
+        "folder": "runs/vit_central-20261021T061356952398Z",
+        "report_sha256": "3cbf96cbd63002b72fc4d88c5382e739c7e24a03e32177b9b55459a53ed1fb4a"
+      },
+      "validation": {
+        "tracks": 780,
+        "macro_f1": 0.48815310578899185,
+        "accuracy": 0.49615384615384617,
+        "confusion_matrix": [
+          [
+            53,
+            11,
+            1,
+            14,
+            11,
+            4,
+            5,
+            0
+          ],
+          [
+            18,
+            50,
+            5,
+            3,
+            9,
+            5,
+            3,
+            7
+          ],
+          [
+            0,
+            5,
+            58,
+            4,
+            12,
+            4,
+            14,
+            2
+          ],
+          [
+            12,
+            4,
+            1,
+            65,
+            1,
+            12,
+            2,
+            3
+          ],
+          [
+            4,
+            17,
+            11,
+            1,
+            41,
+            2,
+            11,
+            6
+          ],
+          [
+            11,
+            10,
+            5,
+            4,
+            4,
+            58,
+            5,
+            1
+          ],
+          [
+            18,
+            23,
+            11,
+            11,
+            7,
+            6,
+            8,
+            10
+          ],
+          [
+            6,
+            8,
+            3,
+            1,
+            2,
+            7,
+            16,
+            54
+          ]
+        ],
+        "per_class": {
+          "Electronic": {
+            "precision": 0.4344262295081967,
+            "recall": 0.5353535353535354,
+            "f1-score": 0.4796380090497738,
+            "support": 99.0
+          },
+          "Experimental": {
+            "precision": 0.390625,
+            "recall": 0.5,
+            "f1-score": 0.43859649122807015,
+            "support": 100.0
+          },
+          "Folk": {
+            "precision": 0.6105263157894737,
+            "recall": 0.5858585858585859,
+            "f1-score": 0.5979381443298969,
+            "support": 99.0
+          },
+          "Hip-Hop": {
+            "precision": 0.6310679611650486,
+            "recall": 0.65,
+            "f1-score": 0.6403940886699507,
+            "support": 100.0
+          },
+          "Instrumental": {
+            "precision": 0.47126436781609193,
+            "recall": 0.44086021505376344,
+            "f1-score": 0.45555555555555555,
+            "support": 93.0
+          },
+          "International": {
+            "precision": 0.5918367346938775,
+            "recall": 0.5918367346938775,
+            "f1-score": 0.5918367346938775,
+            "support": 98.0
+          },
+          "Pop": {
+            "precision": 0.125,
+            "recall": 0.0851063829787234,
+            "f1-score": 0.10126582278481013,
+            "support": 94.0
+          },
+          "Rock": {
+            "precision": 0.6506024096385542,
+            "recall": 0.5567010309278351,
+            "f1-score": 0.6,
+            "support": 97.0
+          },
+          "accuracy": 0.49615384615384617,
+          "macro avg": {
+            "precision": 0.48816862732640537,
+            "recall": 0.4932145606082901,
+            "f1-score": 0.48815310578899185,
+            "support": 780.0
+          },
+          "weighted avg": {
+            "precision": 0.490135407747193,
+            "recall": 0.49615384615384617,
+            "f1-score": 0.49059583484977987,
+            "support": 780.0
+          }
+        }
+      },
+      "training_macro_f1": 0.5747571146335952,
+      "selection": {
+        "c": 0.1
+      },
+      "window_counts": {
+        "train": 6299,
+        "validation": 780
+      }
+    },
+    "vit_block6": {
+      "label": "ViT bloc 6, trois fenêtres",
+      "run": {
+        "folder": "runs/vit_block6-20261021T062701855205Z",
+        "report_sha256": "27dfbf40411926c918eca4daa8b0f512b80f9f64f204d761a8c1e65945f0db3b"
+      },
+      "validation": {
+        "tracks": 780,
+        "macro_f1": 0.5780480927536223,
+        "accuracy": 0.5884615384615385,
+        "confusion_matrix": [
+          [
+            66,
+            10,
+            1,
+            9,
+            7,
+            2,
+            4,
+            0
+          ],
+          [
+            18,
+            50,
+            4,
+            3,
+            14,
+            3,
+            0,
+            8
+          ],
+          [
+            3,
+            1,
+            69,
+            1,
+            6,
+            4,
+            14,
+            1
+          ],
+          [
+            14,
+            1,
+            1,
+            78,
+            0,
+            4,
+            1,
+            1
+          ],
+          [
+            6,
+            16,
+            5,
+            0,
+            50,
+            2,
+            12,
+            2
+          ],
+          [
+            7,
+            3,
+            3,
+            2,
+            7,
+            70,
+            4,
+            2
+          ],
+          [
+            19,
+            23,
+            12,
+            10,
+            5,
+            6,
+            12,
+            7
+          ],
+          [
+            2,
+            4,
+            5,
+            2,
+            3,
+            4,
+            13,
+            64
+          ]
+        ],
+        "per_class": {
+          "Electronic": {
+            "precision": 0.4888888888888889,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.5641025641025641,
+            "support": 99.0
+          },
+          "Experimental": {
+            "precision": 0.46296296296296297,
+            "recall": 0.5,
+            "f1-score": 0.4807692307692308,
+            "support": 100.0
+          },
+          "Folk": {
+            "precision": 0.69,
+            "recall": 0.696969696969697,
+            "f1-score": 0.6934673366834171,
+            "support": 99.0
+          },
+          "Hip-Hop": {
+            "precision": 0.7428571428571429,
+            "recall": 0.78,
+            "f1-score": 0.7609756097560976,
+            "support": 100.0
+          },
+          "Instrumental": {
+            "precision": 0.5434782608695652,
+            "recall": 0.5376344086021505,
+            "f1-score": 0.5405405405405406,
+            "support": 93.0
+          },
+          "International": {
+            "precision": 0.7368421052631579,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.7253886010362695,
+            "support": 98.0
+          },
+          "Pop": {
+            "precision": 0.2,
+            "recall": 0.1276595744680851,
+            "f1-score": 0.15584415584415584,
+            "support": 94.0
+          },
+          "Rock": {
+            "precision": 0.7529411764705882,
+            "recall": 0.6597938144329897,
+            "f1-score": 0.7032967032967034,
+            "support": 97.0
+          },
+          "accuracy": 0.5884615384615385,
+          "macro avg": {
+            "precision": 0.5772463171640383,
+            "recall": 0.5853762344281629,
+            "f1-score": 0.5780480927536223,
+            "support": 780.0
+          },
+          "weighted avg": {
+            "precision": 0.5793350118927136,
+            "recall": 0.5884615384615385,
+            "f1-score": 0.5806428054760263,
+            "support": 780.0
+          }
+        }
+      },
+      "training_macro_f1": 0.6394410774725863,
+      "selection": {
+        "c": 0.1
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      }
+    },
+    "vit_hpss": {
+      "label": "ViT bloc 12, canaux HPSS",
+      "run": {
+        "folder": "runs/vit_hpss-20261021T115423153046Z",
+        "report_sha256": "fb0708ab14b65de7b8a327141ffdad29c1abaafe73186b952bd54ba8ea6e405c"
+      },
+      "validation": {
+        "tracks": 780,
+        "macro_f1": 0.5844334654163579,
+        "accuracy": 0.5974358974358974,
+        "confusion_matrix": [
+          [
+            64,
+            3,
+            3,
+            10,
+            13,
+            1,
+            4,
+            1
+          ],
+          [
+            15,
+            53,
+            7,
+            3,
+            8,
+            2,
+            4,
+            8
+          ],
+          [
+            0,
+            2,
+            73,
+            3,
+            4,
+            2,
+            14,
+            1
+          ],
+          [
+            19,
+            2,
+            1,
+            71,
+            0,
+            5,
+            1,
+            1
+          ],
+          [
+            3,
+            14,
+            4,
+            0,
+            54,
+            1,
+            9,
+            8
+          ],
+          [
+            11,
+            3,
+            1,
+            3,
+            5,
+            71,
+            2,
+            2
+          ],
+          [
+            16,
+            20,
+            6,
+            13,
+            5,
+            8,
+            12,
+            14
+          ],
+          [
+            4,
+            6,
+            3,
+            2,
+            1,
+            6,
+            7,
+            68
+          ]
+        ],
+        "per_class": {
+          "Electronic": {
+            "precision": 0.48484848484848486,
+            "recall": 0.6464646464646465,
+            "f1-score": 0.5541125541125541,
+            "support": 99.0
+          },
+          "Experimental": {
+            "precision": 0.5145631067961165,
+            "recall": 0.53,
+            "f1-score": 0.5221674876847291,
+            "support": 100.0
+          },
+          "Folk": {
+            "precision": 0.7448979591836735,
+            "recall": 0.7373737373737373,
+            "f1-score": 0.7411167512690355,
+            "support": 99.0
+          },
+          "Hip-Hop": {
+            "precision": 0.6761904761904762,
+            "recall": 0.71,
+            "f1-score": 0.6926829268292682,
+            "support": 100.0
+          },
+          "Instrumental": {
+            "precision": 0.6,
+            "recall": 0.5806451612903226,
+            "f1-score": 0.5901639344262295,
+            "support": 93.0
+          },
+          "International": {
+            "precision": 0.7395833333333334,
+            "recall": 0.7244897959183674,
+            "f1-score": 0.7319587628865979,
+            "support": 98.0
+          },
+          "Pop": {
+            "precision": 0.22641509433962265,
+            "recall": 0.1276595744680851,
+            "f1-score": 0.16326530612244897,
+            "support": 94.0
+          },
+          "Rock": {
+            "precision": 0.6601941747572816,
+            "recall": 0.7010309278350515,
+            "f1-score": 0.68,
+            "support": 97.0
+          },
+          "accuracy": 0.5974358974358974,
+          "macro avg": {
+            "precision": 0.5808365786811236,
+            "recall": 0.5947079804187763,
+            "f1-score": 0.5844334654163579,
+            "support": 780.0
+          },
+          "weighted avg": {
+            "precision": 0.5825913804408851,
+            "recall": 0.5974358974358974,
+            "f1-score": 0.5867139565695041,
+            "support": 780.0
+          }
+        }
+      },
+      "training_macro_f1": 0.6041846120758418,
+      "selection": {
+        "c": 1.0
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      }
+    },
+    "vit_block6_hpss": {
+      "label": "ViT bloc 6, canaux HPSS",
+      "run": {
+        "folder": "runs/vit_block6_hpss-20261027T235406908805Z",
+        "report_sha256": "37fbacf53978bb76b67d37d51a1ba2bb95e477d8d3c6abe469ea306628e3182d"
+      },
+      "validation": {
+        "tracks": 780,
+        "macro_f1": 0.5975036316969011,
+        "accuracy": 0.6128205128205129,
+        "confusion_matrix": [
+          [
+            68,
+            6,
+            0,
+            10,
+            10,
+            1,
+            1,
+            3
+          ],
+          [
+            18,
+            55,
+            5,
+            1,
+            12,
+            1,
+            1,
+            7
+          ],
+          [
+            0,
+            2,
+            71,
+            3,
+            5,
+            2,
+            14,
+            2
+          ],
+          [
+            17,
+            1,
+            1,
+            77,
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            6,
+            15,
+            9,
+            0,
+            50,
+            3,
+            7,
+            3
+          ],
+          [
+            7,
+            3,
+            3,
+            3,
+            8,
+            70,
+            2,
+            2
+          ],
+          [
+            14,
+            25,
+            8,
+            13,
+            6,
+            7,
+            13,
+            8
+          ],
+          [
+            3,
+            4,
+            2,
+            3,
+            2,
+            4,
+            5,
+            74
+          ]
+        ],
+        "per_class": {
+          "Electronic": {
+            "precision": 0.5112781954887218,
+            "recall": 0.6868686868686869,
+            "f1-score": 0.5862068965517241,
+            "support": 99.0
+          },
+          "Experimental": {
+            "precision": 0.4954954954954955,
+            "recall": 0.55,
+            "f1-score": 0.5213270142180095,
+            "support": 100.0
+          },
+          "Folk": {
+            "precision": 0.7171717171717171,
+            "recall": 0.7171717171717171,
+            "f1-score": 0.7171717171717171,
+            "support": 99.0
+          },
+          "Hip-Hop": {
+            "precision": 0.7,
+            "recall": 0.77,
+            "f1-score": 0.7333333333333333,
+            "support": 100.0
+          },
+          "Instrumental": {
+            "precision": 0.5376344086021505,
+            "recall": 0.5376344086021505,
+            "f1-score": 0.5376344086021505,
+            "support": 93.0
+          },
+          "International": {
+            "precision": 0.7777777777777778,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.7446808510638298,
+            "support": 98.0
+          },
+          "Pop": {
+            "precision": 0.29545454545454547,
+            "recall": 0.13829787234042554,
+            "f1-score": 0.18840579710144928,
+            "support": 94.0
+          },
+          "Rock": {
+            "precision": 0.74,
+            "recall": 0.7628865979381443,
+            "f1-score": 0.751269035532995,
+            "support": 97.0
+          },
+          "accuracy": 0.6128205128205129,
+          "macro avg": {
+            "precision": 0.596851517498801,
+            "recall": 0.6096431246508549,
+            "f1-score": 0.5975036316969011,
+            "support": 780.0
+          },
+          "weighted avg": {
+            "precision": 0.5986423594844648,
+            "recall": 0.6128205128205129,
+            "f1-score": 0.6000801055028808,
+            "support": 780.0
+          }
+        }
+      },
+      "training_macro_f1": 0.6352451177136877,
+      "selection": {
+        "c": 0.1
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      }
+    },
+    "cnn20": {
+      "label": "CNN, plafond 20, moyenne de trois graines",
+      "runs": [
+        {
+          "folder": "runs/cnn20_seed42-20261021T185433222368Z",
+          "report_sha256": "77794db839770c2ff85ef438713e82def4a227d4ce07826fcc4a054146262a90"
+        },
+        {
+          "folder": "runs/cnn20_seed43-20261021T190439492087Z",
+          "report_sha256": "788d16ad32d775663ebc2425f8eb33b50a4093710aa31ff5918ec81ec2d68690"
+        },
+        {
+          "folder": "runs/cnn20_seed44-20261021T190901243607Z",
+          "report_sha256": "26cd269944023a4890142619e2e0da21caf3c433b8ab1cd238d2d0c0e9a0becb"
+        }
+      ],
+      "validation": {
+        "macro_f1": 0.5407472860093326,
+        "accuracy": 0.555982905982906
+      },
+      "validation_sample_std": {
+        "macro_f1": 0.010454582184119867,
+        "accuracy": 0.0075121349706183255
+      },
+      "training_macro_f1": 0.5622615959296918,
+      "selection": {
+        "seeds": [
+          42,
+          43,
+          44
+        ]
+      },
+      "window_counts": {
+        "train": 18897,
+        "validation": 2340
+      },
+      "aggregation": "mean_of_per_seed_metrics_not_an_ensemble"
+    }
+  },
+  "order_by_validation_macro_f1": [
+    "vit_block6_hpss",
+    "vit_hpss",
+    "vit_block6",
+    "vit",
+    "cnn20",
+    "fusion_no_rhythm",
+    "cnn",
+    "fusion_no_harmony",
+    "fusion",
+    "vit_central",
+    "descriptor"
+  ],
+  "best_development_system": "vit_block6_hpss",
+  "majority_validation": {
+    "tracks": 780,
+    "macro_f1": 0.028409090909090908,
+    "accuracy": 0.1282051282051282,
+    "confusion_matrix": [
+      [
+        0,
+        99,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        99,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        93,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        98,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        94,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        97,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "per_class": {
+      "Electronic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 99.0
+      },
+      "Experimental": {
+        "precision": 0.1282051282051282,
+        "recall": 1.0,
+        "f1-score": 0.22727272727272727,
+        "support": 100.0
+      },
+      "Folk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 99.0
+      },
+      "Hip-Hop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 100.0
+      },
+      "Instrumental": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 93.0
+      },
+      "International": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 98.0
+      },
+      "Pop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 94.0
+      },
+      "Rock": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 97.0
+      },
+      "accuracy": 0.1282051282051282,
+      "macro avg": {
+        "precision": 0.016025641025641024,
+        "recall": 0.125,
+        "f1-score": 0.028409090909090908,
+        "support": 780.0
+      },
+      "weighted avg": {
+        "precision": 0.01643655489809336,
+        "recall": 0.1282051282051282,
+        "f1-score": 0.029137529137529136,
+        "support": 780.0
+      }
+    }
+  },
+  "manifest_sha256": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+  "track_counts": {
+    "train": 6299,
+    "validation": 780
+  },
+  "labels": [
+    "Electronic",
+    "Experimental",
+    "Folk",
+    "Hip-Hop",
+    "Instrumental",
+    "International",
+    "Pop",
+    "Rock"
+  ],
+  "test_evaluated": false,
+  "cnn_three_seed_repetitions_complete": true,
+  "cnn_twenty_epoch_extension_complete": true,
+  "source_sha256": "7ef03918def07ee15b8f2458a2290ec89396417ffb94377b9855392eef9e3e60"
+}

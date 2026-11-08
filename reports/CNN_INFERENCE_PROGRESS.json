@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "systems": [
+    "cnn20_seed42",
+    "cnn20_seed43",
+    "cnn20_seed44"
+  ],
+  "test_evaluated": false
+}

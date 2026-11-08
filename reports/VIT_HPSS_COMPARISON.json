@@ -1,0 +1,29 @@
+{
+  "original_run": {
+    "folder": "runs/vit-20261020T201146743988Z",
+    "report_sha256": "d0322aeaaba291ca0507ba7b4ef831bdc137ebb381e8dac57540ffe89acfb286"
+  },
+  "hpss_run": {
+    "folder": "runs/vit_hpss-20261021T115423153046Z",
+    "report_sha256": "fb0708ab14b65de7b8a327141ffdad29c1abaafe73186b952bd54ba8ea6e405c"
+  },
+  "block6_context_run": {
+    "folder": "runs/vit_block6-20261021T062701855205Z",
+    "report_sha256": "27dfbf40411926c918eca4daa8b0f512b80f9f64f204d761a8c1e65945f0db3b"
+  },
+  "identical_window_index_sha256": "74e948e6934001d1fb01ac0583f137106f890aaf3b88ac27e884deea744d8905",
+  "baseline_manifest_sha256": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+  "macro_f1_difference_hpss_minus_original": 0.03972435673550778,
+  "hpss_correct_original_wrong": 77,
+  "original_correct_hpss_wrong": 43,
+  "cache_write_timing": {
+    "track_files": 7079,
+    "largest_cache_write_gap_seconds": 13005.336439371109,
+    "gaps_over_two_minutes_seconds": [
+      13005.336439371109,
+      1876.937572002411,
+      743.9284510612488
+    ]
+  },
+  "test_evaluated": false
+}

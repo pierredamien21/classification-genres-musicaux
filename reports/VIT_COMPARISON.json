@@ -1,0 +1,21 @@
+{
+  "descriptor_run": {
+    "folder": "runs/descriptors-20261020T195511254895Z",
+    "report_sha256": "b5084cc05354e6bb8813c354acc55e8814391181fbdc0f1d38135fc1993f6d97"
+  },
+  "vit_run": {
+    "folder": "runs/vit-20261020T201146743988Z",
+    "report_sha256": "d0322aeaaba291ca0507ba7b4ef831bdc137ebb381e8dac57540ffe89acfb286"
+  },
+  "identical_window_index_sha256": "74e948e6934001d1fb01ac0583f137106f890aaf3b88ac27e884deea744d8905",
+  "baseline_manifest_sha256": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+  "validation_tracks": 780,
+  "macro_f1_difference_vit_minus_descriptors": 0.08348617420838522,
+  "paired_correctness": {
+    "both_correct": 287,
+    "only_descriptors_correct": 84,
+    "only_vit_correct": 145,
+    "both_wrong": 264
+  },
+  "test_evaluated": false
+}

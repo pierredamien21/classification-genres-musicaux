@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "split": "validation",
+  "expected_tracks": 780,
+  "models": ["vit", "vit_block6", "vit_hpss"],
+  "offsets_seconds": [0.0, 10.0, 20.0],
+  "probability_absolute_tolerance": 0.00001,
+  "aggregation": "arithmetic_mean_of_three_window_probabilities",
+  "analysis": "descriptive_only; fixed_exported_models; no_refit_or_selection",
+  "metrics": ["window_disagreements", "correct_window_count_vs_mean_correctness", "unique_majority_vs_probability_mean", "per_position_metrics", "per_genre_counts"],
+  "test": "not_loaded_or_evaluated"
+}

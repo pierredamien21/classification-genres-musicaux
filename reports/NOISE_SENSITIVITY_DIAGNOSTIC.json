@@ -1,0 +1,3623 @@
+{
+  "status": "complete",
+  "test_evaluated": false,
+  "test_audio_loaded": false,
+  "track_ids": [
+    "146879",
+    "038891",
+    "080001",
+    "075399",
+    "040655",
+    "025668",
+    "128484",
+    "138060"
+  ],
+  "conditions": [
+    "identity",
+    "gain_minus_6_db",
+    "white_noise_snr_20_db"
+  ],
+  "labels": [
+    "Electronic",
+    "Experimental",
+    "Folk",
+    "Hip-Hop",
+    "Instrumental",
+    "International",
+    "Pop",
+    "Rock"
+  ],
+  "budget_seconds": 600,
+  "elapsed_seconds": 28.778674900000624,
+  "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+  "source_and_input_sha256": {
+    "reports/PREPARATION_EVALUATION_FINALE.json": "17815b95fb6526becf150702778ad87b23833480c5f9b2e056a5c1fb64ca61ab",
+    "configs/final_evaluation_protocol.json": "6cb7f6c9387607aefad52f3ea7744cf1a14d5f1315ccf0686d8a959d8a2deda0",
+    "reports/CANDIDATE_INFERENCE_CHECK.json": "47180dd2a37da97a84be19ce9872bb3145d49ab7088d5cf3e0661351280f49aa",
+    "data/manifests/robustness-validation-v1.csv": "50cb89ec0b07640e1b6a54d22951d1155fe23cdec6a7e138f2ba2baf91a620a0",
+    "data/manifests/baseline-20261020T142750008115Z/manifest.csv": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+    "runs/vit_block6_hpss-20261027T235406908805Z/validation_predictions.csv": "c233013d504dddadf21326fa52e97c3f245510b8de54322752133303a8a4d05f",
+    "scripts/check_candidate_inference.py": "edec7606a179e0cb3028ee0a8fed4a089ced14b9463b22c0052735eb7384264b",
+    "src/music_genre/inference/predict.py": "5623a9e90a9576288dd9b53c794541e222c34c259ceee355861867aae1b24868",
+    "src/music_genre/audio/processing.py": "9d8a7665b73dac9ec9f611c67ef783a4911ae6ec04d4ea256f887e6cd467e806",
+    "src/music_genre/features/hpss.py": "2e6dd5b3ad171aa2dfa4c028af0c83095230ab1e3b492f2ade6a8265d89c8468",
+    "src/music_genre/features/hpss_block6.py": "1c860faba6b665ce3dc1603787921fdc60523c1523399f24e3a9cd489e5b2bf8",
+    "src/music_genre/models/linear.py": "7b8d3210650761236fbbb28d6910b2a53a7bfa65eaa4d6b21b3d60e6ed9c06cd",
+    "src/music_genre/models/vit.py": "2de7f275fc74a1c9919ffeab1147075ffddb0ee33c9dcc4d19737e333df7fe8e",
+    "src/music_genre/models/vit_channels.py": "a7c0345809c5494b41bf4ea61699c9ef7718200936ee44b4d87c0b6969995eea",
+    "src/music_genre/evaluation/robustness.py": "1c26158a612ee719b258a9cc27451fce7a6f246e8280d9f06c569a57d7bbe250",
+    "src/music_genre/evaluation/metrics.py": "05f51dd60d503b2b359637c3a0490783a1133a88b1f34aaf8819261528880075",
+    "src/music_genre/evaluation/errors.py": "28041bc485a45b4b9a3da811fa00dde46ee2fa23c64566b05baa7afd2a37267b",
+    "scripts/evaluate_robustness.py": "10132146e03505da10399ebcc7cc7252ecd7d5ee9cbd6b2b8668d5edffa88a27",
+    "scripts/diagnose_noise_sensitivity.py": "93a5d46d12432947673a966579bc4146c0ab66bc7ab5a2d5053e3b24205f09a2",
+    "src/music_genre/evaluation/noise_diagnostic.py": "e559ac99a6588b46474ddb6d22250770e227306a1cb4c11cf9d6a008c934643c",
+    "reports/ROBUSTNESS_PANEL.json": "0bc34a83b2aa0d46d4f66b6c4bffe97261df5a7fc91f63543b54d29b3c3c4016"
+  },
+  "previous_report": {
+    "report": "reports/ROBUSTNESS_PANEL.json",
+    "report_sha256": "0bc34a83b2aa0d46d4f66b6c4bffe97261df5a7fc91f63543b54d29b3c3c4016"
+  },
+  "max_window_probability_error": 0.0,
+  "summary": {
+    "identity": {
+      "mean_scaled_delta_l2": 0.0,
+      "mean_embedding_relative_l2": 0.0,
+      "mean_cosine_distance": 3.23815048849004e-17,
+      "channels": [
+        {
+          "raw_mean_absolute_db_change": 0.0,
+          "raw_mean_signed_db_change": 0.0,
+          "bounded_mean_absolute_change": 0.0,
+          "reference_below_min_fraction": 0.0015443922494640945,
+          "reference_above_max_fraction": 0.004656203945605573,
+          "changed_below_min_fraction": 0.0015443922494640945,
+          "changed_above_max_fraction": 0.004656203945605573
+        },
+        {
+          "raw_mean_absolute_db_change": 0.0,
+          "raw_mean_signed_db_change": 0.0,
+          "bounded_mean_absolute_change": 0.0,
+          "reference_below_min_fraction": 0.003178799906216506,
+          "reference_above_max_fraction": 0.0031348388933547695,
+          "changed_below_min_fraction": 0.003178799906216506,
+          "changed_above_max_fraction": 0.0031348388933547695
+        },
+        {
+          "raw_mean_absolute_db_change": 0.0,
+          "raw_mean_signed_db_change": 0.0,
+          "bounded_mean_absolute_change": 0.0,
+          "reference_below_min_fraction": 0.006261304260450161,
+          "reference_above_max_fraction": 0.0004092560959271169,
+          "changed_below_min_fraction": 0.006261304260450161,
+          "changed_above_max_fraction": 0.0004092560959271169
+        }
+      ]
+    },
+    "gain_minus_6_db": {
+      "mean_scaled_delta_l2": 1.8943151290928186,
+      "mean_embedding_relative_l2": 0.04521758933495639,
+      "mean_cosine_distance": 0.0010774080273697473,
+      "channels": [
+        {
+          "raw_mean_absolute_db_change": 5.998975987671997,
+          "raw_mean_signed_db_change": -5.998975987671997,
+          "bounded_mean_absolute_change": 0.05975779651152197,
+          "reference_below_min_fraction": 0.0015443922494640945,
+          "reference_above_max_fraction": 0.004656203945605573,
+          "changed_below_min_fraction": 0.002876306270096463,
+          "changed_above_max_fraction": 0.0005531760785101821
+        },
+        {
+          "raw_mean_absolute_db_change": 5.996493304259762,
+          "raw_mean_signed_db_change": -5.996493304259762,
+          "bounded_mean_absolute_change": 0.05963122437545021,
+          "reference_below_min_fraction": 0.003178799906216506,
+          "reference_above_max_fraction": 0.0031348388933547695,
+          "changed_below_min_fraction": 0.007300668207395497,
+          "changed_above_max_fraction": 0.00045845056270096455
+        },
+        {
+          "raw_mean_absolute_db_change": 5.9948350114990205,
+          "raw_mean_signed_db_change": -5.9948350114990205,
+          "bounded_mean_absolute_change": 0.05942680397373076,
+          "reference_below_min_fraction": 0.006261304260450161,
+          "reference_above_max_fraction": 0.0004092560959271169,
+          "changed_below_min_fraction": 0.013486087386120041,
+          "changed_above_max_fraction": 1.5700361736334407e-06
+        }
+      ]
+    },
+    "white_noise_snr_20_db": {
+      "mean_scaled_delta_l2": 12.925925083485017,
+      "mean_embedding_relative_l2": 0.2931477937373211,
+      "mean_cosine_distance": 0.046916069215699165,
+      "channels": [
+        {
+          "raw_mean_absolute_db_change": 4.909195931287389,
+          "raw_mean_signed_db_change": 4.532673745430283,
+          "bounded_mean_absolute_change": 0.048969824946103434,
+          "reference_below_min_fraction": 0.0015443922494640945,
+          "reference_above_max_fraction": 0.004656203945605573,
+          "changed_below_min_fraction": 0.0,
+          "changed_above_max_fraction": 0.004666670853429796
+        },
+        {
+          "raw_mean_absolute_db_change": 5.335729895065815,
+          "raw_mean_signed_db_change": 4.788083973388297,
+          "bounded_mean_absolute_change": 0.053075504244753824,
+          "reference_below_min_fraction": 0.003178799906216506,
+          "reference_above_max_fraction": 0.0031348388933547695,
+          "changed_below_min_fraction": 3.34941050375134e-05,
+          "changed_above_max_fraction": 0.0031348388933547695
+        },
+        {
+          "raw_mean_absolute_db_change": 6.449520876863384,
+          "raw_mean_signed_db_change": 5.763950075253125,
+          "bounded_mean_absolute_change": 0.0640171834707949,
+          "reference_below_min_fraction": 0.006261304260450161,
+          "reference_above_max_fraction": 0.0004092560959271169,
+          "changed_below_min_fraction": 5.233453912111468e-06,
+          "changed_above_max_fraction": 0.0004092560959271169
+        }
+      ]
+    }
+  },
+  "full_panel_original_margins_by_noise_flip": {
+    "changed": {
+      "tracks": 26,
+      "median": 0.2073388836320013,
+      "min": 0.0031959591898143014,
+      "max": 0.8205737024276394
+    },
+    "stable": {
+      "tracks": 38,
+      "median": 0.46121782493438734,
+      "min": 0.004434297692515354,
+      "max": 0.9120722991952334
+    }
+  },
+  "feature_archive": {
+    "path": "reports/NOISE_DIAGNOSTIC_FEATURES.npz",
+    "sha256": "dfaf69cee98bca25e476d4abe4df3676375b6aa9a4210e94e89c53d11a7b8f6e",
+    "axes": [
+      "track",
+      "condition",
+      "window",
+      "embedding_dimension"
+    ]
+  },
+  "results": [
+    {
+      "track_id": "146879",
+      "genre": "Electronic",
+      "conditions": {
+        "identity": {
+          "predicted_label": "Electronic",
+          "scores": [
+            0.35034038037138776,
+            0.10683765493526827,
+            0.028374802090950307,
+            0.042633595051301515,
+            0.2935282478612571,
+            0.061166323799747756,
+            0.04281645415303851,
+            0.07430254173704873
+          ],
+          "top_two_probability_gap": 0.056812132510130675,
+          "identity_class_probability_margin": 0.056812132510130675,
+          "mean_window_logit_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0044212218649517685,
+                  "reference_above_max_fraction": 0.006732315112540193,
+                  "changed_below_min_fraction": 0.0044212218649517685,
+                  "changed_above_max_fraction": 0.006732315112540193
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.013263665594855305,
+                  "reference_above_max_fraction": 0.005086917202572348,
+                  "changed_below_min_fraction": 0.013263665594855305,
+                  "changed_above_max_fraction": 0.005086917202572348
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.02353798231511254,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.02353798231511254,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008440514469453377,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.008440514469453377
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.007887861736334404,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.007887861736334404
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.00038936897106109326,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.00038936897106109326,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.00806370578778135,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00806370578778135
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 3.7680868167202575e-05,
+                  "reference_above_max_fraction": 0.007448251607717042,
+                  "changed_below_min_fraction": 3.7680868167202575e-05,
+                  "changed_above_max_fraction": 0.007448251607717042
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.002248291800643087,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.002248291800643087,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            }
+          ]
+        },
+        "gain_minus_6_db": {
+          "predicted_label": "Instrumental",
+          "scores": [
+            0.3314852050777956,
+            0.1078441851820251,
+            0.02304931173622805,
+            0.031308036036298476,
+            0.3352879566052005,
+            0.07829357370383323,
+            0.04095093787511373,
+            0.051780793783505356
+          ],
+          "top_two_probability_gap": 0.0038027515274048906,
+          "identity_class_probability_margin": -0.0038027515274048906,
+          "mean_window_logit_delta": [
+            0.061823918484111284,
+            0.07723783959511012,
+            -0.14511035112535006,
+            -0.18363582866759084,
+            0.2273257976197999,
+            0.1216620684519956,
+            0.00501266793523938,
+            -0.16431611229331014
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 5.998751202473686,
+                  "raw_mean_signed_db_change": -5.998751202473686,
+                  "bounded_mean_absolute_change": 0.05945916833950201,
+                  "reference_below_min_fraction": 0.0044212218649517685,
+                  "reference_above_max_fraction": 0.006732315112540193,
+                  "changed_below_min_fraction": 0.014054963826366559,
+                  "changed_above_max_fraction": 5.0241157556270096e-05
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.993976047078187,
+                  "raw_mean_signed_db_change": -5.993976047078187,
+                  "bounded_mean_absolute_change": 0.05841558828388244,
+                  "reference_below_min_fraction": 0.013263665594855305,
+                  "reference_above_max_fraction": 0.005086917202572348,
+                  "changed_below_min_fraction": 0.039451868971061094,
+                  "changed_above_max_fraction": 5.0241157556270096e-05
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.986532211860348,
+                  "raw_mean_signed_db_change": -5.986532211860348,
+                  "bounded_mean_absolute_change": 0.05782228706907302,
+                  "reference_below_min_fraction": 0.02353798231511254,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.050241157556270094,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 3.289894636794883,
+              "embedding_relative_l2": 0.08268105961466338,
+              "scaled_delta_l2": 3.502603424507093,
+              "cosine_distance": 0.003420957270614533
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.00000048323717,
+                  "raw_mean_signed_db_change": -6.00000048323717,
+                  "bounded_mean_absolute_change": 0.05988005278390019,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008440514469453377,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00010048231511254019
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000496631758,
+                  "raw_mean_signed_db_change": -6.000000496631758,
+                  "bounded_mean_absolute_change": 0.05989552007233707,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.007887861736334404,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 6.280144694533762e-05
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 6.00000047173271,
+                  "raw_mean_signed_db_change": -6.00000047173271,
+                  "bounded_mean_absolute_change": 0.059945730354943924,
+                  "reference_below_min_fraction": 0.00038936897106109326,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0014695538585209004,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.5903548996790853,
+              "embedding_relative_l2": 0.03722883880919657,
+              "scaled_delta_l2": 1.4620933408898225,
+              "cosine_distance": 0.0006899615502794498
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000509758916,
+                  "raw_mean_signed_db_change": -6.000000509758916,
+                  "bounded_mean_absolute_change": 0.05988138707341743,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.00806370578778135,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 8.792202572347267e-05
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000459696566,
+                  "raw_mean_signed_db_change": -6.000000459696566,
+                  "bounded_mean_absolute_change": 0.05989007744723058,
+                  "reference_below_min_fraction": 3.7680868167202575e-05,
+                  "reference_above_max_fraction": 0.007448251607717042,
+                  "changed_below_min_fraction": 7.536173633440515e-05,
+                  "changed_above_max_fraction": 8.792202572347267e-05
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.999950052824699,
+                  "raw_mean_signed_db_change": -5.999950052824699,
+                  "bounded_mean_absolute_change": 0.05975201998764177,
+                  "reference_below_min_fraction": 0.002248291800643087,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.00669463424437299,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.3404336466306042,
+              "embedding_relative_l2": 0.032645857659717926,
+              "scaled_delta_l2": 1.3561623249321095,
+              "cosine_distance": 0.0005329978014865233
+            }
+          ]
+        },
+        "white_noise_snr_20_db": {
+          "predicted_label": "Electronic",
+          "scores": [
+            0.6729717453623203,
+            0.035445980614899696,
+            0.0009391310393348741,
+            0.13747348122846034,
+            0.04161298912238983,
+            0.05016947060941484,
+            0.017174783708576027,
+            0.044212418314604006
+          ],
+          "top_two_probability_gap": 0.5354982641338599,
+          "identity_class_probability_margin": 0.5354982641338599,
+          "mean_window_logit_delta": [
+            1.6889075813282455,
+            -0.07426914284483967,
+            -2.776726765186858,
+            2.1203054303416775,
+            -1.7114669548772536,
+            0.005749402375336388,
+            0.13000498458635212,
+            0.6174954642773027
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 9.978288181216648,
+                  "raw_mean_signed_db_change": 9.574868822853302,
+                  "bounded_mean_absolute_change": 0.09946658581537901,
+                  "reference_below_min_fraction": 0.0044212218649517685,
+                  "reference_above_max_fraction": 0.006732315112540193,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00679511655948553
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 10.395568883760975,
+                  "raw_mean_signed_db_change": 9.76228174095497,
+                  "bounded_mean_absolute_change": 0.10316222252260092,
+                  "reference_below_min_fraction": 0.013263665594855305,
+                  "reference_above_max_fraction": 0.005086917202572348,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.005061796623794212
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 11.189485018875796,
+                  "raw_mean_signed_db_change": 10.558987824172089,
+                  "bounded_mean_absolute_change": 0.11046149324015381,
+                  "reference_below_min_fraction": 0.02353798231511254,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 15.300184986461051,
+              "embedding_relative_l2": 0.3845215870540464,
+              "scaled_delta_l2": 16.296384566105942,
+              "cosine_distance": 0.0709419648616727
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 3.2236531975666254,
+                  "raw_mean_signed_db_change": 2.730249485027943,
+                  "bounded_mean_absolute_change": 0.032233900762641376,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008440514469453377,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.008515876205787781
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 3.890829629245101,
+                  "raw_mean_signed_db_change": 3.2218965379753066,
+                  "bounded_mean_absolute_change": 0.038905678620556904,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.007887861736334404,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.007887861736334404
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 4.695588687184642,
+                  "raw_mean_signed_db_change": 3.7674372375546312,
+                  "bounded_mean_absolute_change": 0.04694279726254698,
+                  "reference_below_min_fraction": 0.00038936897106109326,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 10.149050472214737,
+              "embedding_relative_l2": 0.23758053260484555,
+              "scaled_delta_l2": 10.308138399226014,
+              "cosine_distance": 0.028059850640041684
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 5.676824337910571,
+                  "raw_mean_signed_db_change": 5.229931220784799,
+                  "bounded_mean_absolute_change": 0.05676561800149055,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.00806370578778135,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.008076266077170418
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.840662377923757,
+                  "raw_mean_signed_db_change": 5.146444544029512,
+                  "bounded_mean_absolute_change": 0.05840209729949887,
+                  "reference_below_min_fraction": 3.7680868167202575e-05,
+                  "reference_above_max_fraction": 0.007448251607717042,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00751105305466238
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 8.424668349544001,
+                  "raw_mean_signed_db_change": 7.7020335811855904,
+                  "bounded_mean_absolute_change": 0.08416308170253108,
+                  "reference_below_min_fraction": 0.002248291800643087,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 14.918783472227279,
+              "embedding_relative_l2": 0.36334247720111235,
+              "scaled_delta_l2": 16.361616092884987,
+              "cosine_distance": 0.06590380272445451
+            }
+          ]
+        }
+      }
+    },
+    {
+      "track_id": "038891",
+      "genre": "Experimental",
+      "conditions": {
+        "identity": {
+          "predicted_label": "Experimental",
+          "scores": [
+            0.09435453903140047,
+            0.8780180572301778,
+            1.861698211191553e-05,
+            0.0069976721365312055,
+            0.015498230344300395,
+            0.0002537590322479603,
+            0.00027456262514029533,
+            0.004584562618089914
+          ],
+          "top_two_probability_gap": 0.7836635181987773,
+          "identity_class_probability_margin": 0.7836635181987773,
+          "mean_window_logit_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 2.5120578778135048e-05,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 2.5120578778135048e-05,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.00012560289389067523,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.00012560289389067523,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 6.280144694533762e-05,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 6.280144694533762e-05,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            }
+          ]
+        },
+        "gain_minus_6_db": {
+          "predicted_label": "Experimental",
+          "scores": [
+            0.09084814731001982,
+            0.881659640679088,
+            2.0221133891243655e-05,
+            0.0060473126485524635,
+            0.016928024781942955,
+            0.00027652578049928766,
+            0.0002483648272769925,
+            0.003971762838729248
+          ],
+          "top_two_probability_gap": 0.7908114933690682,
+          "identity_class_probability_margin": 0.7908114933690682,
+          "mean_window_logit_delta": [
+            -0.02238054920317023,
+            0.0218186858966704,
+            0.10224826598919334,
+            -0.12772311451831583,
+            0.09605684305228351,
+            0.11781216863762332,
+            -0.07450956877081626,
+            -0.1133227310834617
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.00000049331553,
+                  "raw_mean_signed_db_change": -6.00000049331553,
+                  "bounded_mean_absolute_change": 0.06000000493315529,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000497043995,
+                  "raw_mean_signed_db_change": -6.000000497043995,
+                  "bounded_mean_absolute_change": 0.06000000497043996,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 6.000000485253435,
+                  "raw_mean_signed_db_change": -6.000000485253435,
+                  "bounded_mean_absolute_change": 0.05998107302593979,
+                  "reference_below_min_fraction": 2.5120578778135048e-05,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0009294614147909968,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.5726689494320365,
+              "embedding_relative_l2": 0.03661035775865935,
+              "scaled_delta_l2": 1.4275952609269922,
+              "cosine_distance": 0.0006703740693415616
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.0000004894380785,
+                  "raw_mean_signed_db_change": -6.0000004894380785,
+                  "bounded_mean_absolute_change": 0.06000000489438079,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.00000047609949,
+                  "raw_mean_signed_db_change": -6.00000047609949,
+                  "bounded_mean_absolute_change": 0.0600000047609949,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 6.00000050206274,
+                  "raw_mean_signed_db_change": -6.00000050206274,
+                  "bounded_mean_absolute_change": 0.05997705124413445,
+                  "reference_below_min_fraction": 0.00012560289389067523,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0008289790996784565,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.549846104118402,
+              "embedding_relative_l2": 0.03586805708717193,
+              "scaled_delta_l2": 1.4633095177833464,
+              "cosine_distance": 0.0006430076181563882
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000474974896,
+                  "raw_mean_signed_db_change": -6.000000474974896,
+                  "bounded_mean_absolute_change": 0.06000000474974895,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000487621793,
+                  "raw_mean_signed_db_change": -6.000000487621793,
+                  "bounded_mean_absolute_change": 0.06000000487621793,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 6.000000482309685,
+                  "raw_mean_signed_db_change": -6.000000482309685,
+                  "bounded_mean_absolute_change": 0.05998585211704413,
+                  "reference_below_min_fraction": 6.280144694533762e-05,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0005400924437299036,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.7007895837462226,
+              "embedding_relative_l2": 0.03842671594234387,
+              "scaled_delta_l2": 1.597367266550455,
+              "cosine_distance": 0.0007378552460444165
+            }
+          ]
+        },
+        "white_noise_snr_20_db": {
+          "predicted_label": "Experimental",
+          "scores": [
+            0.1714766459337473,
+            0.8029033872067252,
+            2.83084487095095e-05,
+            0.009317284958773273,
+            0.004986769326284037,
+            0.00023445996184856988,
+            0.0001956938884400789,
+            0.010857450275472176
+          ],
+          "top_two_probability_gap": 0.6314267412729778,
+          "identity_class_probability_margin": 0.6314267412729778,
+          "mean_window_logit_delta": [
+            0.4939878967935625,
+            -0.165062069664998,
+            0.32902110603402296,
+            0.2573015445642697,
+            -1.2382473202177458,
+            -0.1758867597351367,
+            -0.3807051392360952,
+            0.8795907414621166
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 1.68308817623012,
+                  "raw_mean_signed_db_change": 1.2483251543768739,
+                  "bounded_mean_absolute_change": 0.0168308817623012,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 1.8332926445062396,
+                  "raw_mean_signed_db_change": 1.2678144573280121,
+                  "bounded_mean_absolute_change": 0.018332926445062393,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 2.096490559309784,
+                  "raw_mean_signed_db_change": 1.3555686643577565,
+                  "bounded_mean_absolute_change": 0.020963943117992725,
+                  "reference_below_min_fraction": 2.5120578778135048e-05,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 7.080406193956459,
+              "embedding_relative_l2": 0.1648256639968561,
+              "scaled_delta_l2": 7.938893793975377,
+              "cosine_distance": 0.012997293671682453
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 1.5139737124110506,
+                  "raw_mean_signed_db_change": 1.1007993820234145,
+                  "bounded_mean_absolute_change": 0.015139737124110503,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 1.6446388665411213,
+                  "raw_mean_signed_db_change": 1.1078618199990438,
+                  "bounded_mean_absolute_change": 0.016446388665411215,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 1.9213026007825011,
+                  "raw_mean_signed_db_change": 1.1934949890339364,
+                  "bounded_mean_absolute_change": 0.019210363845902863,
+                  "reference_below_min_fraction": 0.00012560289389067523,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 8.082860957641152,
+              "embedding_relative_l2": 0.18706148790254182,
+              "scaled_delta_l2": 8.674862406503825,
+              "cosine_distance": 0.01716544940621778
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 1.3137226635323225,
+                  "raw_mean_signed_db_change": 0.9220482904378092,
+                  "bounded_mean_absolute_change": 0.013137226635323228,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 1.429223637870738,
+                  "raw_mean_signed_db_change": 0.9071515714302769,
+                  "bounded_mean_absolute_change": 0.014292236378707381,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 1.6888518256414953,
+                  "raw_mean_signed_db_change": 1.0085362608753823,
+                  "bounded_mean_absolute_change": 0.01688670768675143,
+                  "reference_below_min_fraction": 6.280144694533762e-05,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 6.124217969171691,
+              "embedding_relative_l2": 0.13836725396212982,
+              "scaled_delta_l2": 6.97626113653301,
+              "cosine_distance": 0.009424645173845891
+            }
+          ]
+        }
+      }
+    },
+    {
+      "track_id": "080001",
+      "genre": "Folk",
+      "conditions": {
+        "identity": {
+          "predicted_label": "Pop",
+          "scores": [
+            0.0541194111357444,
+            0.020140112645895613,
+            0.2180543537526863,
+            0.06011540266777641,
+            0.15985404222746322,
+            0.024955915634725878,
+            0.38360244116271663,
+            0.07915832077299138
+          ],
+          "top_two_probability_gap": 0.16554808741003033,
+          "identity_class_probability_margin": 0.16554808741003033,
+          "mean_window_logit_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.005790293408360129,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.005790293408360129
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0018589228295819936,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0018589228295819936
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.00028888665594855304,
+                  "reference_above_max_fraction": 0.0011429863344051448,
+                  "changed_below_min_fraction": 0.00028888665594855304,
+                  "changed_above_max_fraction": 0.0011429863344051448
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.006179662379421222,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.006179662379421222
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0023613344051446944,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0023613344051446944
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0005777733118971061,
+                  "reference_above_max_fraction": 0.0011932274919614148,
+                  "changed_below_min_fraction": 0.0005777733118971061,
+                  "changed_above_max_fraction": 0.0011932274919614148
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.006418307877813505,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.006418307877813505
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0019970860128617363,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0019970860128617363
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0005024115755627009,
+                  "reference_above_max_fraction": 0.0012434686495176848,
+                  "changed_below_min_fraction": 0.0005024115755627009,
+                  "changed_above_max_fraction": 0.0012434686495176848
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            }
+          ]
+        },
+        "gain_minus_6_db": {
+          "predicted_label": "Pop",
+          "scores": [
+            0.04127398373482374,
+            0.02609111683010626,
+            0.20987938832130337,
+            0.03188975837541641,
+            0.23288429242901007,
+            0.0314658968842631,
+            0.3463799779192203,
+            0.08013558550585674
+          ],
+          "top_two_probability_gap": 0.11349568549021025,
+          "identity_class_probability_margin": 0.11349568549021025,
+          "mean_window_logit_delta": [
+            -0.21799118556797392,
+            0.2853999481351699,
+            -0.01718613496789782,
+            -0.6434675067256886,
+            0.4309016998928647,
+            0.24637767377688666,
+            -0.08812243575695362,
+            0.0040879412135961845
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000477959018,
+                  "raw_mean_signed_db_change": -6.000000477959018,
+                  "bounded_mean_absolute_change": 0.05988504024152501,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.005790293408360129,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00025120578778135047
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000493597739,
+                  "raw_mean_signed_db_change": -6.000000493597739,
+                  "bounded_mean_absolute_change": 0.059974671198963186,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0018589228295819936,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.999925089382656,
+                  "raw_mean_signed_db_change": -5.999925089382656,
+                  "bounded_mean_absolute_change": 0.059945100464544786,
+                  "reference_below_min_fraction": 0.00028888665594855304,
+                  "reference_above_max_fraction": 0.0011429863344051448,
+                  "changed_below_min_fraction": 0.0010550643086816721,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.78882290827301,
+              "embedding_relative_l2": 0.04366591252851903,
+              "scaled_delta_l2": 1.8950331363363744,
+              "cosine_distance": 0.0009502487044000807
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000515541229,
+                  "raw_mean_signed_db_change": -6.000000515541229,
+                  "bounded_mean_absolute_change": 0.0598758604568143,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.006179662379421222,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0003265675241157556
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000490952433,
+                  "raw_mean_signed_db_change": -6.000000490952433,
+                  "bounded_mean_absolute_change": 0.05997143070490695,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0023613344051446944,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.999818003296146,
+                  "raw_mean_signed_db_change": -5.999818003296146,
+                  "bounded_mean_absolute_change": 0.059917539639331746,
+                  "reference_below_min_fraction": 0.0005777733118971061,
+                  "reference_above_max_fraction": 0.0011932274919614148,
+                  "changed_below_min_fraction": 0.001632837620578778,
+                  "changed_above_max_fraction": 2.5120578778135048e-05
+                }
+              ],
+              "embedding_l2": 1.6753703616088043,
+              "embedding_relative_l2": 0.03991107634664967,
+              "scaled_delta_l2": 1.6720220043394063,
+              "cosine_distance": 0.0007966502914876772
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000500891205,
+                  "raw_mean_signed_db_change": -6.000000500891205,
+                  "bounded_mean_absolute_change": 0.05987664821687837,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.006418307877813505,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00023864549839228296
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.0000004744906095,
+                  "raw_mean_signed_db_change": -6.0000004744906095,
+                  "bounded_mean_absolute_change": 0.059973805577677126,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0019970860128617363,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.999910222669473,
+                  "raw_mean_signed_db_change": -5.999910222669473,
+                  "bounded_mean_absolute_change": 0.059930186887454044,
+                  "reference_below_min_fraction": 0.0005024115755627009,
+                  "reference_above_max_fraction": 0.0012434686495176848,
+                  "changed_below_min_fraction": 0.0012434686495176848,
+                  "changed_above_max_fraction": 1.2560289389067524e-05
+                }
+              ],
+              "embedding_l2": 1.7907276610974963,
+              "embedding_relative_l2": 0.04371990777990555,
+              "scaled_delta_l2": 1.899079146990831,
+              "cosine_distance": 0.0009561721360767939
+            }
+          ]
+        },
+        "white_noise_snr_20_db": {
+          "predicted_label": "Hip-Hop",
+          "scores": [
+            0.23816693894161658,
+            0.02530071973435924,
+            0.02817052694565274,
+            0.3894396822946678,
+            0.07759650933880531,
+            0.0023016111075077803,
+            0.1781115427450375,
+            0.06091246889235291
+          ],
+          "top_two_probability_gap": 0.15127274335305121,
+          "identity_class_probability_margin": -0.2113281395496303,
+          "mean_window_logit_delta": [
+            1.76786388912669,
+            0.5134130089298211,
+            -1.7723888170033233,
+            2.0919045268926006,
+            -0.7048952709813063,
+            -1.9620276851440999,
+            -0.38525446229097726,
+            0.4513848104706108
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 4.1233689617539016,
+                  "raw_mean_signed_db_change": 3.784258135258668,
+                  "bounded_mean_absolute_change": 0.041231523803953056,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.005790293408360129,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.005802853697749196
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 4.71883376654077,
+                  "raw_mean_signed_db_change": 4.262014837537758,
+                  "bounded_mean_absolute_change": 0.04718734249351348,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0018589228295819936,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0018589228295819936
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.516555961016083,
+                  "raw_mean_signed_db_change": 4.810031056151272,
+                  "bounded_mean_absolute_change": 0.055148432196798276,
+                  "reference_below_min_fraction": 0.00028888665594855304,
+                  "reference_above_max_fraction": 0.0011429863344051448,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0011681069131832798
+                }
+              ],
+              "embedding_l2": 11.852790988423237,
+              "embedding_relative_l2": 0.2893315666551813,
+              "scaled_delta_l2": 12.650396894363244,
+              "cosine_distance": 0.0407249797292667
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 4.444439718041061,
+                  "raw_mean_signed_db_change": 4.093854991105738,
+                  "bounded_mean_absolute_change": 0.04444203725907635,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.006179662379421222,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.006217343247588425
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.04068378605897,
+                  "raw_mean_signed_db_change": 4.56400508662043,
+                  "bounded_mean_absolute_change": 0.05040573780751927,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0023613344051446944,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0023613344051446944
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.9568108693865796,
+                  "raw_mean_signed_db_change": 5.249765180223509,
+                  "bounded_mean_absolute_change": 0.05953368684069566,
+                  "reference_below_min_fraction": 0.0005777733118971061,
+                  "reference_above_max_fraction": 0.0011932274919614148,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0011932274919614148
+                }
+              ],
+              "embedding_l2": 13.461395329539252,
+              "embedding_relative_l2": 0.3206806023557454,
+              "scaled_delta_l2": 14.460434876989337,
+              "cosine_distance": 0.0505731929597113
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 4.111323746894608,
+                  "raw_mean_signed_db_change": 3.7665604852786716,
+                  "bounded_mean_absolute_change": 0.041110833202283155,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.006418307877813505,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.006455988745980707
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 4.753584061567703,
+                  "raw_mean_signed_db_change": 4.288781732384133,
+                  "bounded_mean_absolute_change": 0.04753464497692804,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0019970860128617363,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0019970860128617363
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.537687352198565,
+                  "raw_mean_signed_db_change": 4.820178173921403,
+                  "bounded_mean_absolute_change": 0.05534931874796961,
+                  "reference_below_min_fraction": 0.0005024115755627009,
+                  "reference_above_max_fraction": 0.0012434686495176848,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0012434686495176848
+                }
+              ],
+              "embedding_l2": 13.684799257790868,
+              "embedding_relative_l2": 0.33410896281707814,
+              "scaled_delta_l2": 14.855213513364905,
+              "cosine_distance": 0.05426354570803016
+            }
+          ]
+        }
+      }
+    },
+    {
+      "track_id": "075399",
+      "genre": "Hip-Hop",
+      "conditions": {
+        "identity": {
+          "predicted_label": "Hip-Hop",
+          "scores": [
+            0.04446886881893126,
+            0.1147197437603406,
+            0.0005232187647755544,
+            0.7157288573410178,
+            0.00011560818701013245,
+            0.08165749373175055,
+            0.03843004213843266,
+            0.0043561672577415176
+          ],
+          "top_two_probability_gap": 0.6010091135806772,
+          "identity_class_probability_margin": 0.6010091135806772,
+          "mean_window_logit_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.011957395498392283,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.011957395498392283
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.007724577974276527,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.007724577974276527
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.00028888665594855304,
+                  "reference_above_max_fraction": 0.0019217242765273313,
+                  "changed_below_min_fraction": 0.00028888665594855304,
+                  "changed_above_max_fraction": 0.0019217242765273313
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 1.1102230246251565e-16
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.01243468649517685,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.01243468649517685
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008139067524115756,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.008139067524115756
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0013062700964630225,
+                  "reference_above_max_fraction": 0.0017333199356913184,
+                  "changed_below_min_fraction": 0.0013062700964630225,
+                  "changed_above_max_fraction": 0.0017333199356913184
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.012510048231511254,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.012510048231511254
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.007912982315112541,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.007912982315112541
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 5.0241157556270096e-05,
+                  "reference_above_max_fraction": 0.0011681069131832798,
+                  "changed_below_min_fraction": 5.0241157556270096e-05,
+                  "changed_above_max_fraction": 0.0011681069131832798
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            }
+          ]
+        },
+        "gain_minus_6_db": {
+          "predicted_label": "Hip-Hop",
+          "scores": [
+            0.03781966576582865,
+            0.14234879113357238,
+            0.0006974766273924174,
+            0.6429178976125909,
+            0.00016925202291596906,
+            0.12626627594332393,
+            0.04382612094915684,
+            0.005954519945218929
+          ],
+          "top_two_probability_gap": 0.5005691064790185,
+          "identity_class_probability_margin": 0.5005691064790185,
+          "mean_window_logit_delta": [
+            -0.3333239383104944,
+            0.06690687419668277,
+            0.13615504519260463,
+            -0.30277328397674547,
+            0.23412064248765307,
+            0.25601144134850684,
+            -0.11545541649907753,
+            0.05835863556087075
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000489103417,
+                  "raw_mean_signed_db_change": -6.000000489103417,
+                  "bounded_mean_absolute_change": 0.05960103598318842,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.011957395498392283,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.003215434083601286
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000488915458,
+                  "raw_mean_signed_db_change": -6.000000488915458,
+                  "bounded_mean_absolute_change": 0.05970674374339496,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.007724577974276527,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0030144694533762056
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.99912454899417,
+                  "raw_mean_signed_db_change": -5.99912454899417,
+                  "bounded_mean_absolute_change": 0.059933418488054974,
+                  "reference_below_min_fraction": 0.00028888665594855304,
+                  "reference_above_max_fraction": 0.0019217242765273313,
+                  "changed_below_min_fraction": 0.0004772909967845659,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.8333517390024459,
+              "embedding_relative_l2": 0.04689888732001226,
+              "scaled_delta_l2": 1.8639002231208774,
+              "cosine_distance": 0.0010977453206150178
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.00000050388606,
+                  "raw_mean_signed_db_change": -6.00000050388606,
+                  "bounded_mean_absolute_change": 0.05959762971191054,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.01243468649517685,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0032279943729903535
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000500836334,
+                  "raw_mean_signed_db_change": -6.000000500836334,
+                  "bounded_mean_absolute_change": 0.05970186038098888,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008139067524115756,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0030144694533762056
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.998569060049949,
+                  "raw_mean_signed_db_change": -5.998569060049949,
+                  "bounded_mean_absolute_change": 0.059856396000940344,
+                  "reference_below_min_fraction": 0.0013062700964630225,
+                  "reference_above_max_fraction": 0.0017333199356913184,
+                  "changed_below_min_fraction": 0.0023362138263665596,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.8463390166134122,
+              "embedding_relative_l2": 0.04780827033736332,
+              "scaled_delta_l2": 1.9907030829209458,
+              "cosine_distance": 0.001139472575824474
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000491345624,
+                  "raw_mean_signed_db_change": -6.000000491345624,
+                  "bounded_mean_absolute_change": 0.05959263648864355,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.012510048231511254,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.002876306270096463
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000491555454,
+                  "raw_mean_signed_db_change": -6.000000491555454,
+                  "bounded_mean_absolute_change": 0.059708398899265144,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.007912982315112541,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0025748593247588423
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 6.000000502508322,
+                  "raw_mean_signed_db_change": -6.000000502508322,
+                  "bounded_mean_absolute_change": 0.059969150124916305,
+                  "reference_below_min_fraction": 5.0241157556270096e-05,
+                  "reference_above_max_fraction": 0.0011681069131832798,
+                  "changed_below_min_fraction": 0.00011304260450160771,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 2.091872556435477,
+              "embedding_relative_l2": 0.05196046538997557,
+              "scaled_delta_l2": 2.1896036097132248,
+              "cosine_distance": 0.0013507368445631052
+            }
+          ]
+        },
+        "white_noise_snr_20_db": {
+          "predicted_label": "Hip-Hop",
+          "scores": [
+            0.024032017853295447,
+            0.02604841371432608,
+            3.503547514098302e-05,
+            0.9353320901859262,
+            1.7577255718494988e-05,
+            0.005056977999465472,
+            0.007448928448175557,
+            0.0020289590679516737
+          ],
+          "top_two_probability_gap": 0.9092836764716001,
+          "identity_class_probability_margin": 0.9092836764716001,
+          "mean_window_logit_delta": [
+            0.8540412457470029,
+            -0.0682264508517846,
+            -1.375918430143054,
+            1.6926312378510537,
+            -0.39743663594903067,
+            -1.1686997097748357,
+            -0.17990922817457564,
+            0.6435179712952058
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 2.039559319101366,
+                  "raw_mean_signed_db_change": 1.6000994331092502,
+                  "bounded_mean_absolute_change": 0.020390891433371812,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.011957395498392283,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.011932274919614148
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 2.474880302890452,
+                  "raw_mean_signed_db_change": 1.875519173048962,
+                  "bounded_mean_absolute_change": 0.024745325006845842,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.007724577974276527,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.007737138263665595
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 3.201016793459116,
+                  "raw_mean_signed_db_change": 2.398678991786616,
+                  "bounded_mean_absolute_change": 0.03197115945058178,
+                  "reference_below_min_fraction": 0.00028888665594855304,
+                  "reference_above_max_fraction": 0.0019217242765273313,
+                  "changed_below_min_fraction": 6.280144694533762e-05,
+                  "changed_above_max_fraction": 0.0019217242765273313
+                }
+              ],
+              "embedding_l2": 7.941070503404171,
+              "embedding_relative_l2": 0.20314016280480282,
+              "scaled_delta_l2": 8.79432890496092,
+              "cosine_distance": 0.019490467584217575
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 2.349651256358903,
+                  "raw_mean_signed_db_change": 1.9102347962495194,
+                  "bounded_mean_absolute_change": 0.02349127709570433,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.01243468649517685,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.012484927652733119
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 2.8230650620570517,
+                  "raw_mean_signed_db_change": 2.198095675185834,
+                  "bounded_mean_absolute_change": 0.028226732605313175,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008139067524115756,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.008151627813504822
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 3.717433860976423,
+                  "raw_mean_signed_db_change": 2.9172016741465767,
+                  "bounded_mean_absolute_change": 0.03705119354119081,
+                  "reference_below_min_fraction": 0.0013062700964630225,
+                  "reference_above_max_fraction": 0.0017333199356913184,
+                  "changed_below_min_fraction": 5.0241157556270096e-05,
+                  "changed_above_max_fraction": 0.0017333199356913184
+                }
+              ],
+              "embedding_l2": 8.82727340914228,
+              "embedding_relative_l2": 0.22856943913808603,
+              "scaled_delta_l2": 9.059424547969897,
+              "cosine_distance": 0.024050470000691493
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 1.703671760344098,
+                  "raw_mean_signed_db_change": 1.2721508796300314,
+                  "bounded_mean_absolute_change": 0.01703133941261767,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.012510048231511254,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.012547729099678457
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 2.0333057399972123,
+                  "raw_mean_signed_db_change": 1.460748382587874,
+                  "bounded_mean_absolute_change": 0.020329110776641412,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.007912982315112541,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.007912982315112541
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 2.4657230142885167,
+                  "raw_mean_signed_db_change": 1.657854217467549,
+                  "bounded_mean_absolute_change": 0.024653083725408045,
+                  "reference_below_min_fraction": 5.0241157556270096e-05,
+                  "reference_above_max_fraction": 0.0011681069131832798,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0011555466237942122
+                }
+              ],
+              "embedding_l2": 6.818370355096476,
+              "embedding_relative_l2": 0.16936294506187508,
+              "scaled_delta_l2": 7.498985443519279,
+              "cosine_distance": 0.013196468331362454
+            }
+          ]
+        }
+      }
+    },
+    {
+      "track_id": "040655",
+      "genre": "Instrumental",
+      "conditions": {
+        "identity": {
+          "predicted_label": "Experimental",
+          "scores": [
+            0.005221569581937983,
+            0.7911443263747383,
+            0.03823201052353291,
+            0.0002812925962548727,
+            0.11035486158560577,
+            0.02665660642435395,
+            0.017721475698750714,
+            0.01038785721482542
+          ],
+          "top_two_probability_gap": 0.6807894647891325,
+          "identity_class_probability_margin": 0.6807894647891325,
+          "mean_window_logit_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.006732315112540193,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.006732315112540193,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.008327471864951768,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.008327471864951768,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.015285872186495178,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.015285872186495178,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0024743770096463022,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0024743770096463022,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.009357415594855305,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.009357415594855305,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.008289790996784566,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.008289790996784566,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 3.7680868167202575e-05,
+                  "reference_above_max_fraction": 1.2560289389067524e-05,
+                  "changed_below_min_fraction": 3.7680868167202575e-05,
+                  "changed_above_max_fraction": 1.2560289389067524e-05
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.001293709807073955,
+                  "reference_above_max_fraction": 1.2560289389067524e-05,
+                  "changed_below_min_fraction": 0.001293709807073955,
+                  "changed_above_max_fraction": 1.2560289389067524e-05
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.004283058681672025,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.004283058681672025,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 1.1102230246251565e-16
+            }
+          ]
+        },
+        "gain_minus_6_db": {
+          "predicted_label": "Experimental",
+          "scores": [
+            0.004473162963831295,
+            0.7714906672628136,
+            0.04006997145643571,
+            0.0002530101996553937,
+            0.1383290065388066,
+            0.02186091373726702,
+            0.014736270008873729,
+            0.00878699783231674
+          ],
+          "top_two_probability_gap": 0.6331616607240069,
+          "identity_class_probability_margin": 0.6331616607240069,
+          "mean_window_logit_delta": [
+            -0.09177693746454489,
+            0.09971650052233612,
+            0.22765743752179937,
+            -0.30500916567848946,
+            0.34892028896928134,
+            -0.12238578982522634,
+            -0.0809598884580783,
+            -0.07616244558706446
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000448066084,
+                  "raw_mean_signed_db_change": -6.000000448066084,
+                  "bounded_mean_absolute_change": 0.0595741858520323,
+                  "reference_below_min_fraction": 0.006732315112540193,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.008239549839228295,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.999800938902308,
+                  "raw_mean_signed_db_change": -5.999800938902308,
+                  "bounded_mean_absolute_change": 0.059127293866525286,
+                  "reference_below_min_fraction": 0.008327471864951768,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.03377461816720257,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.992483661384651,
+                  "raw_mean_signed_db_change": -5.992483661384651,
+                  "bounded_mean_absolute_change": 0.05796482148173362,
+                  "reference_below_min_fraction": 0.015285872186495178,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.06213575160771704,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 2.7498079573967225,
+              "embedding_relative_l2": 0.07099382567181854,
+              "scaled_delta_l2": 2.985173774232918,
+              "cosine_distance": 0.0024790561461645044
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000501114138,
+                  "raw_mean_signed_db_change": -6.000000501114138,
+                  "bounded_mean_absolute_change": 0.059696618761606805,
+                  "reference_below_min_fraction": 0.0024743770096463022,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.007259847266881029,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.9996730524617075,
+                  "raw_mean_signed_db_change": -5.9996730524617075,
+                  "bounded_mean_absolute_change": 0.05932487917328694,
+                  "reference_below_min_fraction": 0.009357415594855305,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.013062700964630225,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.998898035317354,
+                  "raw_mean_signed_db_change": -5.998898035317354,
+                  "bounded_mean_absolute_change": 0.059319255231764366,
+                  "reference_below_min_fraction": 0.008289790996784566,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.016529340836012863,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.6889612389538768,
+              "embedding_relative_l2": 0.041033341433897884,
+              "scaled_delta_l2": 1.7873614352492675,
+              "cosine_distance": 0.0008409064255960885
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000601900186,
+                  "raw_mean_signed_db_change": -6.000000601900186,
+                  "bounded_mean_absolute_change": 0.05996302118359488,
+                  "reference_below_min_fraction": 3.7680868167202575e-05,
+                  "reference_above_max_fraction": 1.2560289389067524e-05,
+                  "changed_below_min_fraction": 0.0022734123794212217,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.999966888217667,
+                  "raw_mean_signed_db_change": -5.999966888217667,
+                  "bounded_mean_absolute_change": 0.059679133584326735,
+                  "reference_below_min_fraction": 0.001293709807073955,
+                  "reference_above_max_fraction": 1.2560289389067524e-05,
+                  "changed_below_min_fraction": 0.009256933279742766,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.999972868196807,
+                  "raw_mean_signed_db_change": -5.999972868196807,
+                  "bounded_mean_absolute_change": 0.05963067549219058,
+                  "reference_below_min_fraction": 0.004283058681672025,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.007825060289389068,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.7124668329605637,
+              "embedding_relative_l2": 0.041305668248372764,
+              "scaled_delta_l2": 1.5643851998551188,
+              "cosine_distance": 0.0008519705180705106
+            }
+          ]
+        },
+        "white_noise_snr_20_db": {
+          "predicted_label": "Experimental",
+          "scores": [
+            0.07296229286910659,
+            0.7615221554104736,
+            0.007445819794815516,
+            0.04985025726787051,
+            0.028563517566765072,
+            0.004157732042137567,
+            0.04021364169502906,
+            0.03528458335380199
+          ],
+          "top_two_probability_gap": 0.688559862541367,
+          "identity_class_probability_margin": 0.688559862541367,
+          "mean_window_logit_delta": [
+            1.6087258487318425,
+            -0.3022553021616363,
+            -2.006427117831197,
+            4.430106628282298,
+            -2.584475420604801,
+            -2.3298142953385454,
+            0.6096897714940369,
+            0.5744498874279783
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 13.625056667163348,
+                  "raw_mean_signed_db_change": 13.394366515866423,
+                  "bounded_mean_absolute_change": 0.13593559325136464,
+                  "reference_below_min_fraction": 0.006732315112540193,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 13.972753821612738,
+                  "raw_mean_signed_db_change": 13.567531985917176,
+                  "bounded_mean_absolute_change": 0.13904390958399435,
+                  "reference_below_min_fraction": 0.008327471864951768,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 14.77227164994204,
+                  "raw_mean_signed_db_change": 14.431150692278594,
+                  "bounded_mean_absolute_change": 0.14664560894994005,
+                  "reference_below_min_fraction": 0.015285872186495178,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 19.65684232829032,
+              "embedding_relative_l2": 0.5074952357161034,
+              "scaled_delta_l2": 19.996507324361477,
+              "cosine_distance": 0.12523182147901724
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 8.581019460665683,
+                  "raw_mean_signed_db_change": 8.220870936515325,
+                  "bounded_mean_absolute_change": 0.08574621353491942,
+                  "reference_below_min_fraction": 0.0024743770096463022,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 8.690413567007301,
+                  "raw_mean_signed_db_change": 8.121812739827623,
+                  "bounded_mean_absolute_change": 0.08650455953296113,
+                  "reference_below_min_fraction": 0.009357415594855305,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.00013816318327974277,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 9.827866700703241,
+                  "raw_mean_signed_db_change": 9.293792983648064,
+                  "bounded_mean_absolute_change": 0.09773304965449617,
+                  "reference_below_min_fraction": 0.008289790996784566,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 17.707234718863965,
+              "embedding_relative_l2": 0.43019756244930496,
+              "scaled_delta_l2": 18.988658716845006,
+              "cosine_distance": 0.09481860263103425
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 5.3124896414182725,
+                  "raw_mean_signed_db_change": 4.967600576338101,
+                  "bounded_mean_absolute_change": 0.05312454999261016,
+                  "reference_below_min_fraction": 3.7680868167202575e-05,
+                  "reference_above_max_fraction": 1.2560289389067524e-05,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 1.2560289389067524e-05
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.271372530089111,
+                  "raw_mean_signed_db_change": 4.767539042047111,
+                  "bounded_mean_absolute_change": 0.05268104545623148,
+                  "reference_below_min_fraction": 0.001293709807073955,
+                  "reference_above_max_fraction": 1.2560289389067524e-05,
+                  "changed_below_min_fraction": 0.00027632636655948553,
+                  "changed_above_max_fraction": 1.2560289389067524e-05
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 6.252095055087167,
+                  "raw_mean_signed_db_change": 5.672273945147739,
+                  "bounded_mean_absolute_change": 0.0623580450464058,
+                  "reference_below_min_fraction": 0.004283058681672025,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 13.25753023580619,
+              "embedding_relative_l2": 0.3197791251619485,
+              "scaled_delta_l2": 14.3334490836273,
+              "cosine_distance": 0.05191484542304059
+            }
+          ]
+        }
+      }
+    },
+    {
+      "track_id": "025668",
+      "genre": "International",
+      "conditions": {
+        "identity": {
+          "predicted_label": "International",
+          "scores": [
+            0.04382456516251878,
+            0.007420450811756053,
+            0.025738598171128623,
+            0.16129125100441574,
+            0.0008293505588358689,
+            0.6984821527705233,
+            0.05834172173637008,
+            0.004071909784451456
+          ],
+          "top_two_probability_gap": 0.5371909017661075,
+          "identity_class_probability_margin": 0.5371909017661075,
+          "mean_window_logit_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008390273311897106,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.008390273311897106
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 6.280144694533762e-05,
+                  "reference_above_max_fraction": 0.005702371382636656,
+                  "changed_below_min_fraction": 6.280144694533762e-05,
+                  "changed_above_max_fraction": 0.005702371382636656
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0056772508038585206,
+                  "reference_above_max_fraction": 0.0004647307073954984,
+                  "changed_below_min_fraction": 0.0056772508038585206,
+                  "changed_above_max_fraction": 0.0004647307073954984
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 1.1102230246251565e-16
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0010927451768488745,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0010927451768488745
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0005400924437299036,
+                  "reference_above_max_fraction": 0.0004647307073954984,
+                  "changed_below_min_fraction": 0.0005400924437299036,
+                  "changed_above_max_fraction": 0.0004647307073954984
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0033661575562700967,
+                  "reference_above_max_fraction": 7.536173633440515e-05,
+                  "changed_below_min_fraction": 0.0033661575562700967,
+                  "changed_above_max_fraction": 7.536173633440515e-05
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 1.1102230246251565e-16
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0029767885852090034,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0029767885852090034
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0005903336012861736,
+                  "reference_above_max_fraction": 0.00263766077170418,
+                  "changed_below_min_fraction": 0.0005903336012861736,
+                  "changed_above_max_fraction": 0.00263766077170418
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0036550442122186494,
+                  "reference_above_max_fraction": 1.2560289389067524e-05,
+                  "changed_below_min_fraction": 0.0036550442122186494,
+                  "changed_above_max_fraction": 1.2560289389067524e-05
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            }
+          ]
+        },
+        "gain_minus_6_db": {
+          "predicted_label": "International",
+          "scores": [
+            0.027965063162122477,
+            0.007427628862662344,
+            0.02062070330997456,
+            0.07574883673118767,
+            0.0009181591235878193,
+            0.8106708574235378,
+            0.05233863928688562,
+            0.004310112100041665
+          ],
+          "top_two_probability_gap": 0.7349220206923501,
+          "identity_class_probability_margin": 0.7349220206923501,
+          "mean_window_logit_delta": [
+            -0.32233731309432884,
+            0.17457305474090123,
+            0.00010341546174211698,
+            -0.5822787632754743,
+            0.1240777386042295,
+            0.3565291232846757,
+            0.04274110892989252,
+            0.20659163534836208
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.0000005038783915,
+                  "raw_mean_signed_db_change": -6.0000005038783915,
+                  "bounded_mean_absolute_change": 0.05979230524612666,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008390273311897106,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00012560289389067523
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000500895206,
+                  "raw_mean_signed_db_change": -6.000000500895206,
+                  "bounded_mean_absolute_change": 0.05984358055851853,
+                  "reference_below_min_fraction": 6.280144694533762e-05,
+                  "reference_above_max_fraction": 0.005702371382636656,
+                  "changed_below_min_fraction": 0.00023864549839228296,
+                  "changed_above_max_fraction": 5.0241157556270096e-05
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.993912873529739,
+                  "raw_mean_signed_db_change": -5.993912873529739,
+                  "bounded_mean_absolute_change": 0.059540042111392605,
+                  "reference_below_min_fraction": 0.0056772508038585206,
+                  "reference_above_max_fraction": 0.0004647307073954984,
+                  "changed_below_min_fraction": 0.009910068327974277,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.9813713317694026,
+              "embedding_relative_l2": 0.049584467103909215,
+              "scaled_delta_l2": 2.129183069940808,
+              "cosine_distance": 0.0012242113963103485
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000489740761,
+                  "raw_mean_signed_db_change": -6.000000489740761,
+                  "bounded_mean_absolute_change": 0.05998165301442397,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0010927451768488745,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.999728623047962,
+                  "raw_mean_signed_db_change": -5.999728623047962,
+                  "bounded_mean_absolute_change": 0.05993784978771192,
+                  "reference_below_min_fraction": 0.0005400924437299036,
+                  "reference_above_max_fraction": 0.0004647307073954984,
+                  "changed_below_min_fraction": 0.001343950964630225,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.997125990092269,
+                  "raw_mean_signed_db_change": -5.997125990092269,
+                  "bounded_mean_absolute_change": 0.05970581260287582,
+                  "reference_below_min_fraction": 0.0033661575562700967,
+                  "reference_above_max_fraction": 7.536173633440515e-05,
+                  "changed_below_min_fraction": 0.006581591639871383,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.663273578033429,
+              "embedding_relative_l2": 0.041462019860688586,
+              "scaled_delta_l2": 1.655273095008425,
+              "cosine_distance": 0.0008575001276365235
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000496478339,
+                  "raw_mean_signed_db_change": -6.000000496478339,
+                  "bounded_mean_absolute_change": 0.05993275776334336,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0029767885852090034,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.999854195293132,
+                  "raw_mean_signed_db_change": -5.999854195293132,
+                  "bounded_mean_absolute_change": 0.059886707361850415,
+                  "reference_below_min_fraction": 0.0005903336012861736,
+                  "reference_above_max_fraction": 0.00263766077170418,
+                  "changed_below_min_fraction": 0.0014193127009646301,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.996438103180517,
+                  "raw_mean_signed_db_change": -5.996438103180517,
+                  "bounded_mean_absolute_change": 0.05967500349375507,
+                  "reference_below_min_fraction": 0.0036550442122186494,
+                  "reference_above_max_fraction": 1.2560289389067524e-05,
+                  "changed_below_min_fraction": 0.007573854501607717,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.8742820132492877,
+              "embedding_relative_l2": 0.04676252138649784,
+              "scaled_delta_l2": 1.926514028119703,
+              "cosine_distance": 0.0010920526448234824
+            }
+          ]
+        },
+        "white_noise_snr_20_db": {
+          "predicted_label": "International",
+          "scores": [
+            0.06315755058571884,
+            0.02803663897566369,
+            0.008269474585061873,
+            0.3345375360924792,
+            0.001008116421683049,
+            0.4923625698329412,
+            0.05967630476879837,
+            0.012951808737653732
+          ],
+          "top_two_probability_gap": 0.15782503374046197,
+          "identity_class_probability_margin": 0.15782503374046197,
+          "mean_window_logit_delta": [
+            0.4999508884058557,
+            0.8802305730973873,
+            -1.7679499744621803,
+            0.3521656629358088,
+            0.39362710444473725,
+            -0.7581556728183253,
+            -0.36187509684433666,
+            0.7620065152410316
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 2.6490537572708024,
+                  "raw_mean_signed_db_change": 2.2950011084694055,
+                  "bounded_mean_absolute_change": 0.02648801444916083,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008390273311897106,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00836515273311897
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 3.393125393486587,
+                  "raw_mean_signed_db_change": 2.8571939565634126,
+                  "bounded_mean_absolute_change": 0.03392460463953659,
+                  "reference_below_min_fraction": 6.280144694533762e-05,
+                  "reference_above_max_fraction": 0.005702371382636656,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.005689811093247589
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 4.711445734254263,
+                  "raw_mean_signed_db_change": 4.0182406010002305,
+                  "bounded_mean_absolute_change": 0.04662884189614567,
+                  "reference_below_min_fraction": 0.0056772508038585206,
+                  "reference_above_max_fraction": 0.0004647307073954984,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00045217041800643085
+                }
+              ],
+              "embedding_l2": 10.178492264823161,
+              "embedding_relative_l2": 0.25472010560575536,
+              "scaled_delta_l2": 10.55154041545589,
+              "cosine_distance": 0.030757314554618942
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 2.618785408702615,
+                  "raw_mean_signed_db_change": 2.2277554888630395,
+                  "bounded_mean_absolute_change": 0.02618752307905183,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0010927451768488745,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0010927451768488745
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 3.5098634472966608,
+                  "raw_mean_signed_db_change": 2.9348397982719394,
+                  "bounded_mean_absolute_change": 0.035063215240757596,
+                  "reference_below_min_fraction": 0.0005400924437299036,
+                  "reference_above_max_fraction": 0.0004647307073954984,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00043961012861736334
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 4.49981698504889,
+                  "raw_mean_signed_db_change": 3.723584138807805,
+                  "bounded_mean_absolute_change": 0.04473226668160094,
+                  "reference_below_min_fraction": 0.0033661575562700967,
+                  "reference_above_max_fraction": 7.536173633440515e-05,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 7.536173633440515e-05
+                }
+              ],
+              "embedding_l2": 10.322542665588038,
+              "embedding_relative_l2": 0.257319947040495,
+              "scaled_delta_l2": 11.352483795227037,
+              "cosine_distance": 0.031158615824208313
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 2.8378497511461993,
+                  "raw_mean_signed_db_change": 2.4446243211709464,
+                  "bounded_mean_absolute_change": 0.028377499574947198,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.0029767885852090034,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.002951668006430868
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 3.7250008817584592,
+                  "raw_mean_signed_db_change": 3.166402947852024,
+                  "bounded_mean_absolute_change": 0.03721172938941685,
+                  "reference_below_min_fraction": 0.0005903336012861736,
+                  "reference_above_max_fraction": 0.00263766077170418,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0026251004823151123
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 4.823194504642844,
+                  "raw_mean_signed_db_change": 4.011100487601215,
+                  "bounded_mean_absolute_change": 0.04794023714500659,
+                  "reference_below_min_fraction": 0.0036550442122186494,
+                  "reference_above_max_fraction": 1.2560289389067524e-05,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 1.2560289389067524e-05
+                }
+              ],
+              "embedding_l2": 10.121119522297832,
+              "embedding_relative_l2": 0.2525175319247988,
+              "scaled_delta_l2": 10.834394855030155,
+              "cosine_distance": 0.03097918647177944
+            }
+          ]
+        }
+      }
+    },
+    {
+      "track_id": "128484",
+      "genre": "Pop",
+      "conditions": {
+        "identity": {
+          "predicted_label": "Electronic",
+          "scores": [
+            0.4554197744238284,
+            0.04639781044823895,
+            0.04421887072517327,
+            0.11689661246113132,
+            0.027047610405643473,
+            0.045487232714974145,
+            0.2268187832958605,
+            0.03771330552514988
+          ],
+          "top_two_probability_gap": 0.22860099112796792,
+          "identity_class_probability_margin": 0.22860099112796792,
+          "mean_window_logit_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.010914891479099678,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.010914891479099678
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008603798231511254,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.008603798231511254
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.00018840434083601285,
+                  "reference_above_max_fraction": 0.0004144895498392283,
+                  "changed_below_min_fraction": 0.00018840434083601285,
+                  "changed_above_max_fraction": 0.0004144895498392283
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.006455988745980707,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.006455988745980707
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.00038936897106109326,
+                  "reference_above_max_fraction": 0.005300442122186495,
+                  "changed_below_min_fraction": 0.00038936897106109326,
+                  "changed_above_max_fraction": 0.005300442122186495
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.00025120578778135047,
+                  "reference_above_max_fraction": 0.00013816318327974277,
+                  "changed_below_min_fraction": 0.00025120578778135047,
+                  "changed_above_max_fraction": 0.00013816318327974277
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 3.7680868167202575e-05,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 3.7680868167202575e-05,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.006970960610932476,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.006970960610932476,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.001582596463022508,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.001582596463022508,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 1.1102230246251565e-16
+            }
+          ]
+        },
+        "gain_minus_6_db": {
+          "predicted_label": "Electronic",
+          "scores": [
+            0.417016908087177,
+            0.05459125274129097,
+            0.05057800575831085,
+            0.11147584618467667,
+            0.04245547792796073,
+            0.061209238988547666,
+            0.22308543692772054,
+            0.03958783338431559
+          ],
+          "top_two_probability_gap": 0.19393147115945647,
+          "identity_class_probability_margin": 0.19393147115945647,
+          "mean_window_logit_delta": [
+            -0.1799035860738735,
+            0.09167806299934667,
+            -0.014610761312200501,
+            -0.2550197267181365,
+            0.33575646360520156,
+            0.1368304144718673,
+            -0.06618224219425636,
+            -0.04854862477794783
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000476904472,
+                  "raw_mean_signed_db_change": -6.000000476904472,
+                  "bounded_mean_absolute_change": 0.05964057337667824,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.010914891479099678,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.001582596463022508
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 6.000000490015406,
+                  "raw_mean_signed_db_change": -6.000000490015406,
+                  "bounded_mean_absolute_change": 0.05971859416755704,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008603798231511254,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0012811495176848875
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 6.000000411521855,
+                  "raw_mean_signed_db_change": -6.000000411521855,
+                  "bounded_mean_absolute_change": 0.05996969943204381,
+                  "reference_below_min_fraction": 0.00018840434083601285,
+                  "reference_above_max_fraction": 0.0004144895498392283,
+                  "changed_below_min_fraction": 0.0006028938906752412,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 2.041137311494973,
+              "embedding_relative_l2": 0.04828204721516401,
+              "scaled_delta_l2": 2.2628563817354146,
+              "cosine_distance": 0.0011628797095082355
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000479180335,
+                  "raw_mean_signed_db_change": -6.000000479180335,
+                  "bounded_mean_absolute_change": 0.05978730254349798,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.006455988745980707,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0011178657556270098
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.999859101699727,
+                  "raw_mean_signed_db_change": -5.999859101699727,
+                  "bounded_mean_absolute_change": 0.05979651264188238,
+                  "reference_below_min_fraction": 0.00038936897106109326,
+                  "reference_above_max_fraction": 0.005300442122186495,
+                  "changed_below_min_fraction": 0.0006782556270096464,
+                  "changed_above_max_fraction": 0.0008666599678456592
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 6.0000004771932725,
+                  "raw_mean_signed_db_change": -6.0000004771932725,
+                  "bounded_mean_absolute_change": 0.059968678711183394,
+                  "reference_below_min_fraction": 0.00025120578778135047,
+                  "reference_above_max_fraction": 0.00013816318327974277,
+                  "changed_below_min_fraction": 0.0007410570739549839,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.6474686746283864,
+              "embedding_relative_l2": 0.04007491971274354,
+              "scaled_delta_l2": 1.7576166914888578,
+              "cosine_distance": 0.0008024017520890103
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.000000475539392,
+                  "raw_mean_signed_db_change": -6.000000475539392,
+                  "bounded_mean_absolute_change": 0.05999207761553826,
+                  "reference_below_min_fraction": 3.7680868167202575e-05,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0003014469453376206,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.981296818358694,
+                  "raw_mean_signed_db_change": -5.981296818358694,
+                  "bounded_mean_absolute_change": 0.0595303393435897,
+                  "reference_below_min_fraction": 0.006970960610932476,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.009269493569131832,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.99955699923014,
+                  "raw_mean_signed_db_change": -5.99955699923014,
+                  "bounded_mean_absolute_change": 0.059830144219465795,
+                  "reference_below_min_fraction": 0.001582596463022508,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.004885952572347267,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.5581697547386852,
+              "embedding_relative_l2": 0.03775420395414921,
+              "scaled_delta_l2": 1.4689286642567208,
+              "cosine_distance": 0.0007127343832996624
+            }
+          ]
+        },
+        "white_noise_snr_20_db": {
+          "predicted_label": "Electronic",
+          "scores": [
+            0.612936538602992,
+            0.026795735902965283,
+            0.0012737068826550483,
+            0.17996155043506543,
+            0.0069513661184996516,
+            0.0021399491996785124,
+            0.11167757651009676,
+            0.05826357634804725
+          ],
+          "top_two_probability_gap": 0.43297498816792657,
+          "identity_class_probability_margin": 0.43297498816792657,
+          "mean_window_logit_delta": [
+            1.936988348086718,
+            0.4888832713475577,
+            -2.2072148351656247,
+            1.5116759009258967,
+            -0.6420931042467433,
+            -2.0140564416969244,
+            -0.07087394641907944,
+            0.9966908071681854
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 2.81956055329195,
+                  "raw_mean_signed_db_change": 2.414153583182323,
+                  "bounded_mean_absolute_change": 0.028192557619941983,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.010914891479099678,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.010877210610932476
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 3.2796365991218557,
+                  "raw_mean_signed_db_change": 2.7571167522855036,
+                  "bounded_mean_absolute_change": 0.03279336206517521,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.008603798231511254,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.008603798231511254
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 4.085141811757343,
+                  "raw_mean_signed_db_change": 3.3053800920970273,
+                  "bounded_mean_absolute_change": 0.04084540495808602,
+                  "reference_below_min_fraction": 0.00018840434083601285,
+                  "reference_above_max_fraction": 0.0004144895498392283,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0004144895498392283
+                }
+              ],
+              "embedding_l2": 8.673865046029588,
+              "embedding_relative_l2": 0.20517579063979244,
+              "scaled_delta_l2": 9.170894249748844,
+              "cosine_distance": 0.020875407573689553
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 3.1993239202601647,
+                  "raw_mean_signed_db_change": 2.7802684011491317,
+                  "bounded_mean_absolute_change": 0.03199150317467937,
+                  "reference_below_min_fraction": 0.0,
+                  "reference_above_max_fraction": 0.006455988745980707,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0065062299035369775
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 3.61857658705991,
+                  "raw_mean_signed_db_change": 3.061160380971808,
+                  "bounded_mean_absolute_change": 0.03615830883837818,
+                  "reference_below_min_fraction": 0.00038936897106109326,
+                  "reference_above_max_fraction": 0.005300442122186495,
+                  "changed_below_min_fraction": 2.5120578778135048e-05,
+                  "changed_above_max_fraction": 0.00527532154340836
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 4.418169945313941,
+                  "raw_mean_signed_db_change": 3.646813715712386,
+                  "bounded_mean_absolute_change": 0.04417054291638089,
+                  "reference_below_min_fraction": 0.00025120578778135047,
+                  "reference_above_max_fraction": 0.00013816318327974277,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.00013816318327974277
+                }
+              ],
+              "embedding_l2": 10.216136048191329,
+              "embedding_relative_l2": 0.2485090236984821,
+              "scaled_delta_l2": 10.974612886327586,
+              "cosine_distance": 0.030275441763208732
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 8.521491568482038,
+                  "raw_mean_signed_db_change": 8.218703256954406,
+                  "bounded_mean_absolute_change": 0.0852139670059865,
+                  "reference_below_min_fraction": 3.7680868167202575e-05,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 9.455921245020805,
+                  "raw_mean_signed_db_change": 8.930504248715902,
+                  "bounded_mean_absolute_change": 0.09359479716120161,
+                  "reference_below_min_fraction": 0.006970960610932476,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.00025120578778135047,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 10.313259905966374,
+                  "raw_mean_signed_db_change": 9.813557817889086,
+                  "bounded_mean_absolute_change": 0.10305045064168954,
+                  "reference_below_min_fraction": 0.001582596463022508,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 17.462279144840107,
+              "embedding_relative_l2": 0.42310823088023813,
+              "scaled_delta_l2": 18.724052027385714,
+              "cosine_distance": 0.09183378901552497
+            }
+          ]
+        }
+      }
+    },
+    {
+      "track_id": "138060",
+      "genre": "Rock",
+      "conditions": {
+        "identity": {
+          "predicted_label": "Instrumental",
+          "scores": [
+            0.057972820639449724,
+            0.0320011272341828,
+            0.23296179215400825,
+            0.0023320623848860546,
+            0.46017082956707567,
+            0.12362800774094292,
+            0.08115326500939979,
+            0.009780095270054764
+          ],
+          "top_two_probability_gap": 0.22720903741306742,
+          "identity_class_probability_margin": 0.22720903741306742,
+          "mean_window_logit_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.0023864549839228296,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0023864549839228296,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.00492363344051447,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.00492363344051447,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.009784465434083602,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.009784465434083602,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 1.1102230246251565e-16
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.01227140273311897,
+                  "reference_above_max_fraction": 0.000816418810289389,
+                  "changed_below_min_fraction": 0.01227140273311897,
+                  "changed_above_max_fraction": 0.000816418810289389
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.01796121382636656,
+                  "reference_above_max_fraction": 0.0007787379421221865,
+                  "changed_below_min_fraction": 0.01796121382636656,
+                  "changed_above_max_fraction": 0.0007787379421221865
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.04011756430868167,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.04011756430868167,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 0.0
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.008704280546623795,
+                  "reference_above_max_fraction": 0.002562299035369775,
+                  "changed_below_min_fraction": 0.008704280546623795,
+                  "changed_above_max_fraction": 0.002562299035369775
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.012572849678456592,
+                  "reference_above_max_fraction": 0.00131883038585209,
+                  "changed_below_min_fraction": 0.012572849678456592,
+                  "changed_above_max_fraction": 0.00131883038585209
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 0.0,
+                  "raw_mean_signed_db_change": 0.0,
+                  "bounded_mean_absolute_change": 0.0,
+                  "reference_below_min_fraction": 0.028386254019292605,
+                  "reference_above_max_fraction": 0.0003140072347266881,
+                  "changed_below_min_fraction": 0.028386254019292605,
+                  "changed_above_max_fraction": 0.0003140072347266881
+                }
+              ],
+              "embedding_l2": 0.0,
+              "embedding_relative_l2": 0.0,
+              "scaled_delta_l2": 0.0,
+              "cosine_distance": 1.1102230246251565e-16
+            }
+          ]
+        },
+        "gain_minus_6_db": {
+          "predicted_label": "Instrumental",
+          "scores": [
+            0.04860391161890002,
+            0.03852383318360916,
+            0.19763779641305776,
+            0.0013910239737592995,
+            0.5355408377570029,
+            0.09952377456307719,
+            0.07073115084764148,
+            0.008047671642952236
+          ],
+          "top_two_probability_gap": 0.3379030413439451,
+          "identity_class_probability_margin": 0.3379030413439451,
+          "mean_window_logit_delta": [
+            -0.06984265360837863,
+            0.2978874465637591,
+            -0.11917156534842653,
+            -0.4624987502162969,
+            0.32526274620559653,
+            -0.061246615619514465,
+            0.005788548527050121,
+            0.0838208434962127
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 5.999826353205138,
+                  "raw_mean_signed_db_change": -5.999826353205138,
+                  "bounded_mean_absolute_change": 0.05979678077743144,
+                  "reference_below_min_fraction": 0.0023864549839228296,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0043835409967845655,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.9967404196504965,
+                  "raw_mean_signed_db_change": -5.9967404196504965,
+                  "bounded_mean_absolute_change": 0.05958250032341861,
+                  "reference_below_min_fraction": 0.00492363344051447,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.009407656752411576,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.991129954981077,
+                  "raw_mean_signed_db_change": -5.991129954981077,
+                  "bounded_mean_absolute_change": 0.05910988930886007,
+                  "reference_below_min_fraction": 0.009784465434083602,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.021214328778135047,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.6700418852293895,
+              "embedding_relative_l2": 0.03985394736162405,
+              "scaled_delta_l2": 1.6386571003827688,
+              "cosine_distance": 0.0007942874579451864
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 5.984059860574388,
+                  "raw_mean_signed_db_change": -5.984059860574388,
+                  "bounded_mean_absolute_change": 0.05904723809544788,
+                  "reference_below_min_fraction": 0.01227140273311897,
+                  "reference_above_max_fraction": 0.000816418810289389,
+                  "changed_below_min_fraction": 0.0200336615755627,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.961413414673047,
+                  "raw_mean_signed_db_change": -5.961413414673047,
+                  "bounded_mean_absolute_change": 0.05853211968727267,
+                  "reference_below_min_fraction": 0.01796121382636656,
+                  "reference_above_max_fraction": 0.0007787379421221865,
+                  "changed_below_min_fraction": 0.03329732717041801,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.951350904276352,
+                  "raw_mean_signed_db_change": -5.951350904276352,
+                  "bounded_mean_absolute_change": 0.05685436943066684,
+                  "reference_below_min_fraction": 0.04011756430868167,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.06623040594855305,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.969492991758269,
+              "embedding_relative_l2": 0.046622392550011695,
+              "scaled_delta_l2": 2.026114394041938,
+              "cosine_distance": 0.0010850824707649975
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 5.99277638562147,
+                  "raw_mean_signed_db_change": -5.99277638562147,
+                  "bounded_mean_absolute_change": 0.0593331281737407,
+                  "reference_below_min_fraction": 0.008704280546623795,
+                  "reference_above_max_fraction": 0.002562299035369775,
+                  "changed_below_min_fraction": 0.012484927652733119,
+                  "changed_above_max_fraction": 7.536173633440515e-05
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 5.983523454499126,
+                  "raw_mean_signed_db_change": -5.983523454499126,
+                  "bounded_mean_absolute_change": 0.05895176359856547,
+                  "reference_below_min_fraction": 0.012572849678456592,
+                  "reference_above_max_fraction": 0.00131883038585209,
+                  "changed_below_min_fraction": 0.0239399115755627,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 5.971338364128122,
+                  "raw_mean_signed_db_change": -5.971338364128122,
+                  "bounded_mean_absolute_change": 0.05765909844958697,
+                  "reference_below_min_fraction": 0.028386254019292605,
+                  "reference_above_max_fraction": 0.0003140072347266881,
+                  "changed_below_min_fraction": 0.051873995176848875,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 1.8417158453742968,
+              "embedding_relative_l2": 0.0440673829658975,
+              "scaled_delta_l2": 1.942026924904227,
+              "cosine_distance": 0.0009685301957753634
+            }
+          ]
+        },
+        "white_noise_snr_20_db": {
+          "predicted_label": "Electronic",
+          "scores": [
+            0.4032498161651062,
+            0.0877352905431299,
+            0.02151001123181422,
+            0.05298454178506092,
+            0.11718955025752631,
+            0.029709210346550514,
+            0.14912092642422978,
+            0.13850065324658212
+          ],
+          "top_two_probability_gap": 0.25412888974087644,
+          "identity_class_probability_margin": -0.2860602659075799,
+          "mean_window_logit_delta": [
+            1.3718067456553324,
+            0.3782506548384826,
+            -2.8210252414385963,
+            2.7018304611365944,
+            -1.9615184574877587,
+            -2.3969164008295913,
+            0.20284868301273162,
+            2.524723555112797
+          ],
+          "windows": [
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 6.996104730893564,
+                  "raw_mean_signed_db_change": 6.693797959668367,
+                  "bounded_mean_absolute_change": 0.06977425990699575,
+                  "reference_below_min_fraction": 0.0023864549839228296,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 7.1192604905492765,
+                  "raw_mean_signed_db_change": 6.5944463201911105,
+                  "bounded_mean_absolute_change": 0.07074593231930165,
+                  "reference_below_min_fraction": 0.00492363344051447,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.00011304260450160771,
+                  "changed_above_max_fraction": 0.0
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 9.390610618709855,
+                  "raw_mean_signed_db_change": 8.812903357545768,
+                  "bounded_mean_absolute_change": 0.09314523726804952,
+                  "reference_below_min_fraction": 0.009784465434083602,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 1.2560289389067524e-05,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 16.099354044667837,
+              "embedding_relative_l2": 0.3841956386406505,
+              "scaled_delta_l2": 17.40825674847229,
+              "cosine_distance": 0.0747749651251075
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 9.636958173535554,
+                  "raw_mean_signed_db_change": 9.333403236778539,
+                  "bounded_mean_absolute_change": 0.09510495593612125,
+                  "reference_below_min_fraction": 0.01227140273311897,
+                  "reference_above_max_fraction": 0.000816418810289389,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.000816418810289389
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 9.843568531425829,
+                  "raw_mean_signed_db_change": 9.322601315382032,
+                  "bounded_mean_absolute_change": 0.09650173502211412,
+                  "reference_below_min_fraction": 0.01796121382636656,
+                  "reference_above_max_fraction": 0.0007787379421221865,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0007787379421221865
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 13.019741673272835,
+                  "raw_mean_signed_db_change": 12.45828620160008,
+                  "bounded_mean_absolute_change": 0.1266185330731187,
+                  "reference_below_min_fraction": 0.04011756430868167,
+                  "reference_above_max_fraction": 0.0,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0
+                }
+              ],
+              "embedding_l2": 14.865998401416213,
+              "embedding_relative_l2": 0.3519120992148933,
+              "scaled_delta_l2": 16.480219795768686,
+              "cosine_distance": 0.06383391545256978
+            },
+            {
+              "channels": [
+                {
+                  "channel": "original",
+                  "raw_mean_absolute_db_change": 8.861443686705861,
+                  "raw_mean_signed_db_change": 8.560243429234747,
+                  "bounded_mean_absolute_change": 0.08786730887245112,
+                  "reference_below_min_fraction": 0.008704280546623795,
+                  "reference_above_max_fraction": 0.002562299035369775,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0025497387459807075
+                },
+                {
+                  "channel": "harmonic",
+                  "raw_mean_absolute_db_change": 9.299455628190932,
+                  "raw_mean_signed_db_change": 8.770250314211378,
+                  "bounded_mean_absolute_change": 0.0916184590264241,
+                  "reference_below_min_fraction": 0.012572849678456592,
+                  "reference_above_max_fraction": 0.00131883038585209,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0013313906752411575
+                },
+                {
+                  "channel": "percussive",
+                  "raw_mean_absolute_db_change": 12.263271567358911,
+                  "raw_mean_signed_db_change": 11.707949921870709,
+                  "bounded_mean_absolute_change": 0.12020892370963468,
+                  "reference_below_min_fraction": 0.028386254019292605,
+                  "reference_above_max_fraction": 0.0003140072347266881,
+                  "changed_below_min_fraction": 0.0,
+                  "changed_above_max_fraction": 0.0003140072347266881
+                }
+              ],
+              "embedding_l2": 15.869874785470618,
+              "embedding_relative_l2": 0.3797240771689428,
+              "scaled_delta_l2": 17.532191528993643,
+              "cosine_distance": 0.07273962507178611
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

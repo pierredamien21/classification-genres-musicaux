@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-10-29T19:11:11.906894+00:00",
+  "status": "prepared",
+  "command": ".venv/Scripts/python.exe -u scripts/evaluate_final.py --split test --output data/interim/final-test-v1 --validation data/interim/final-validation-v1",
+  "lock": {
+    "report": "reports/final-evaluation-lock-20261029T085227817846Z.json",
+    "report_sha256": "80eccf469a80dff691a02aaca20443eb7bbc6d952ab6516aca7e7a5c4ae446ec",
+    "status": "verified",
+    "artifacts_verified": 7985,
+    "elapsed_seconds": 240.66004619999148,
+    "validation_cohort_gate": "passed",
+    "test_evaluated": false
+  },
+  "validation_completion_sha256": "cbcf2cf3f3fb2731035137905f4d11b078af9a470d60c3be87396331f0870e21",
+  "independent_check": {
+    "path": "reports/FINAL_VALIDATION_RECOUNT.json",
+    "sha256": "a6e9ca276026212621526047ae37e3e210528d31df0503ee869a98190d2dc465"
+  },
+  "runner_sha256": {
+    "scripts/evaluate_final.py": "b1866348e69da82bb078995bc5cfaa71a5204ff9d9ee049fc5fca6ff754fd498",
+    "src/music_genre/evaluation/final_evaluation.py": "690d2e425f5808d2e40e61eff815788b7012ac3fe19a7799787f17ee6d1a450c"
+  },
+  "tests_passed": 252,
+  "tracks": 778,
+  "systems": 9,
+  "expected_predictions": 7002,
+  "expected_window_vectors": 21006,
+  "estimated_minutes": [
+    95,
+    190
+  ],
+  "folder": "data/interim/final-test-v1",
+  "progress": "data/interim/final-test-v1/progress.json",
+  "stdout": "data/interim/final-test-v1.stdout.log",
+  "stderr": "data/interim/final-test-v1.stderr.log"
+}

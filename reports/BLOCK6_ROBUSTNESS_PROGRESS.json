@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "completed_tracks": 64,
+  "total_tracks": 64,
+  "elapsed_seconds": 57.729202099999384,
+  "benchmark": {
+    "track_ids": [
+      "146879",
+      "038891",
+      "080001",
+      "075399",
+      "040655",
+      "025668",
+      "128484",
+      "138060"
+    ],
+    "elapsed_seconds": 6.086516600000323,
+    "projected_panel_seconds": 48.69213280000258,
+    "budget_seconds": 1800,
+    "workers": 1,
+    "results_reused": true
+  },
+  "attempt": "data/interim/block6-robustness-20261028T150812908020Z",
+  "test_evaluated": false
+}

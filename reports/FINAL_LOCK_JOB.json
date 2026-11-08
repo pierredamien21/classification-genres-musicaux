@@ -1,0 +1,24 @@
+{
+  "pid": 24924,
+  "started_at": "2026-10-29T08:48:31.5365194Z",
+  "stdout": "E:\\projet\\vision transformer\\data\\interim\\final-lock-20261029T084831Z.out.log",
+  "stderr": "E:\\projet\\vision transformer\\data\\interim\\final-lock-20261029T084831Z.err.log",
+  "script": "E:\\projet\\vision transformer\\scripts\\lock_final_evaluation.py",
+  "progress": "reports/FINAL_LOCK_PROGRESS.json",
+  "expected_result": "reports/latest_final_evaluation_lock.json",
+  "initial_launch_status": "process_missing_no_output",
+  "active_execution": "persistent_exec_session",
+  "session_id": 21880,
+  "stdout_scope": "persistent session output; structured progress in reports/FINAL_LOCK_PROGRESS.json",
+  "status": "complete",
+  "exit_code": 0,
+  "result": {
+    "report": "reports/final-evaluation-lock-20261029T085227817846Z.json",
+    "report_sha256": "80eccf469a80dff691a02aaca20443eb7bbc6d952ab6516aca7e7a5c4ae446ec",
+    "status": "verified",
+    "artifacts_verified": 7985,
+    "elapsed_seconds": 240.66004619999148,
+    "validation_cohort_gate": "passed",
+    "test_evaluated": false
+  }
+}

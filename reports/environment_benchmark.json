@@ -1,0 +1,1545 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-20T07:45:57.260896+00:00",
+  "status": "passed",
+  "purpose": "feasibility_only_no_genre_accuracy",
+  "selection": {
+    "split": "training",
+    "seed": 42,
+    "requested": 64,
+    "successful": 64,
+    "genres": {
+      "Electronic": 8,
+      "Experimental": 8,
+      "International": 8,
+      "Instrumental": 8,
+      "Folk": 8,
+      "Rock": 8,
+      "Hip-Hop": 8,
+      "Pop": 8
+    }
+  },
+  "environment": {
+    "project_version": "0.1.0",
+    "root": "E:\\projet\\vision transformer",
+    "python": {
+      "executable": "E:\\projet\\vision transformer\\.venv\\Scripts\\python.exe",
+      "version": "3.13.16",
+      "process_machine": "AMD64",
+      "pointer_bits": 64
+    },
+    "system": {
+      "os": "Windows",
+      "release": "11",
+      "processor_architecture_env": "AMD64",
+      "processor_architew6432_env": null
+    },
+    "disk": {
+      "total_gib": 475.73,
+      "free_gib": 454.15
+    },
+    "dependencies": {
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "librosa": "1.0.0",
+      "soundfile": "0.14.0",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.1+cpu",
+      "timm": "1.0.30",
+      "gradio": null,
+      "pytest": "9.1.1",
+      "ruff": "0.17.1"
+    },
+    "accelerator": {
+      "status": "not_probed",
+      "note": "La pr\u00e9sence de torch ne d\u00e9montre pas une acc\u00e9l\u00e9ration GPU utilisable."
+    },
+    "note": "Une version install\u00e9e ne garantit ni l'import ni la compatibilit\u00e9 du pipeline."
+  },
+  "host_architecture_reported": "AMD64",
+  "torch_cuda_available": false,
+  "torch_threads": 4,
+  "libsndfile": "1.2.2",
+  "physical_ram_gib": 15.61,
+  "process_rss_mib": 506.14,
+  "process_peak_working_set_mib": 526.19,
+  "model_load_seconds": 0.184938600010355,
+  "first_call_warmup_seconds": 1.657575999997789,
+  "config": {
+    "schema_version": 1,
+    "status": "diagnostic_only_not_tuned",
+    "sample_count": 64,
+    "seed": 42,
+    "audio": {
+      "sample_rate": 16000,
+      "window_seconds": 10.0,
+      "start_seconds": 10.0
+    },
+    "logmel": {
+      "n_fft": 1024,
+      "hop_length": 256,
+      "n_mels": 128,
+      "f_min": 0.0,
+      "window": "hann",
+      "center": false,
+      "power": 2.0,
+      "amin": 1e-10
+    },
+    "vit": {
+      "directory": "artifacts/pretrained/vit_tiny",
+      "db_min": -80.0,
+      "db_max": 20.0,
+      "threads": 4
+    }
+  },
+  "checkpoint": {
+    "repo_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+    "revision": "7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106",
+    "sha256": {
+      "config.json": "e328e0f3717427f87898184cd8eba835526a8deaaba703b5066b307afea10e80",
+      "model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+      "README.md": "989d20e77ea71e4710ef2e990dece8176bc29882dec9000328539e1fa82b1db3"
+    }
+  },
+  "source_sha256": {
+    "src/music_genre/__init__.py": "6bf32ed58fb6603c01a381134db9203fa7a4f77a559ba51ef5ee81c3d39e0195",
+    "src/music_genre/__main__.py": "6f7fb2927c4fc82e0b00527723ffccc0e4b92fddb5fd7483aefbcd493feeb175",
+    "src/music_genre/audio/__init__.py": "9faa7f029df9d2e8488678f056a66fe6ade4e0c474617fcbb1df57c9c07b3fc4",
+    "src/music_genre/audio/processing.py": "9d8a7665b73dac9ec9f611c67ef783a4911ae6ec04d4ea256f887e6cd467e806",
+    "src/music_genre/cli.py": "7ce1dab7bee113e6c1bd3749fb734206b9c6738c14ef98788a89e833d7f0f537",
+    "src/music_genre/data/__init__.py": "ecfb13cb7ea40530bc82553c74a571e21230d80be0e71251cba448bf4e5c9772",
+    "src/music_genre/diagnostics.py": "93786227d2a17cd430f5d410f444e6c8faede79cab062a3b3531e49df5aeb538",
+    "src/music_genre/evaluation/__init__.py": "5685ac228f79624f618299009017ab4a563f23313d610c73c29f62b2e38b194e",
+    "src/music_genre/features/__init__.py": "abc48990d1cf04b9b4ccfa490c8608f450f51a03d2ee569a2bff988c6b8d8417",
+    "src/music_genre/features/logmel.py": "482f57345897a1275d69f2fada40a0f1cb5198715c378cd24c27a14e33d940cf",
+    "src/music_genre/inference/__init__.py": "5f8bd74cfd61dbf1a3648e2696ab5462aad5119268ff16451eb5479128669faf",
+    "src/music_genre/models/__init__.py": "f976ead05a579e05085ba51e437f0c34a3acdaeccb6eaf4ad40b3d83d06ec308",
+    "src/music_genre/models/vit.py": "2de7f275fc74a1c9919ffeab1147075ffddb0ee33c9dcc4d19737e333df7fe8e",
+    "src/music_genre/training/__init__.py": "377b6fc44cdc5d8ca1eee0e5cb5839f7e7b2c9a9fd6bc7c036bac3ed391e9163"
+  },
+  "failures": [],
+  "samples": [
+    {
+      "track_id": "033221",
+      "audio_path": "data/raw/fma_small/033/033221.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0005400924437299036,
+      "decode_resample_seconds": 0.07508500000403728,
+      "logmel_seconds": 0.009947099999408238,
+      "vit_seconds": 0.02996339999663178,
+      "total_seconds": 0.1149955000000773,
+      "genre": "Electronic"
+    },
+    {
+      "track_id": "036567",
+      "audio_path": "data/raw/fma_small/036/036567.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0001632837620578778,
+      "decode_resample_seconds": 0.11480719999235589,
+      "logmel_seconds": 0.009284300002036616,
+      "vit_seconds": 0.028936100003193133,
+      "total_seconds": 0.15302759999758564,
+      "genre": "Experimental"
+    },
+    {
+      "track_id": "067707",
+      "audio_path": "data/raw/fma_small/067/067707.mp3",
+      "source_sample_rate": 48000,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0014318729903536978,
+      "decode_resample_seconds": 0.08017610000388231,
+      "logmel_seconds": 0.008710599999176338,
+      "vit_seconds": 0.025459199998294935,
+      "total_seconds": 0.11434590000135358,
+      "genre": "Experimental"
+    },
+    {
+      "track_id": "134949",
+      "audio_path": "data/raw/fma_small/134/134949.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.002298532958199357,
+      "decode_resample_seconds": 0.07252140001219232,
+      "logmel_seconds": 0.008879900007741526,
+      "vit_seconds": 0.026632399996742606,
+      "total_seconds": 0.10803370001667645,
+      "genre": "International"
+    },
+    {
+      "track_id": "110689",
+      "audio_path": "data/raw/fma_small/110/110689.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.007234726688102894,
+      "decode_resample_seconds": 0.07929359999252483,
+      "logmel_seconds": 0.009415799999260344,
+      "vit_seconds": 0.02812679999624379,
+      "total_seconds": 0.11683619998802897,
+      "genre": "Electronic"
+    },
+    {
+      "track_id": "114239",
+      "audio_path": "data/raw/fma_small/114/114239.mp3",
+      "source_sample_rate": 48000,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.016202773311897106,
+      "decode_resample_seconds": 0.07938880000438076,
+      "logmel_seconds": 0.008694999996805564,
+      "vit_seconds": 0.025420399993890896,
+      "total_seconds": 0.11350419999507722,
+      "genre": "Instrumental"
+    },
+    {
+      "track_id": "116468",
+      "audio_path": "data/raw/fma_small/116/116468.mp3",
+      "source_sample_rate": 48000,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.02368870578778135,
+      "decode_resample_seconds": 0.0781591999984812,
+      "logmel_seconds": 0.009081800002604723,
+      "vit_seconds": 0.025733399990713224,
+      "total_seconds": 0.11297439999179915,
+      "genre": "Instrumental"
+    },
+    {
+      "track_id": "131904",
+      "audio_path": "data/raw/fma_small/131/131904.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.004571945337620579,
+      "decode_resample_seconds": 0.07771329999377485,
+      "logmel_seconds": 0.009174700011499226,
+      "vit_seconds": 0.027588400000240654,
+      "total_seconds": 0.11447640000551473,
+      "genre": "Folk"
+    },
+    {
+      "track_id": "137176",
+      "audio_path": "data/raw/fma_small/137/137176.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0,
+      "decode_resample_seconds": 0.07657380000455305,
+      "logmel_seconds": 0.008962399995652959,
+      "vit_seconds": 0.02785319999384228,
+      "total_seconds": 0.11338939999404829,
+      "genre": "Instrumental"
+    },
+    {
+      "track_id": "119715",
+      "audio_path": "data/raw/fma_small/119/119715.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0078125,
+      "decode_resample_seconds": 0.06870020000496879,
+      "logmel_seconds": 0.008701099999598227,
+      "vit_seconds": 0.02652210000087507,
+      "total_seconds": 0.10392340000544209,
+      "genre": "Rock"
+    },
+    {
+      "track_id": "111230",
+      "audio_path": "data/raw/fma_small/111/111230.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.00018840434083601285,
+      "decode_resample_seconds": 0.07040209999831859,
+      "logmel_seconds": 0.012279200003831647,
+      "vit_seconds": 0.024072000000160187,
+      "total_seconds": 0.10675330000231043,
+      "genre": "Instrumental"
+    },
+    {
+      "track_id": "114375",
+      "audio_path": "data/raw/fma_small/114/114375.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0165921422829582,
+      "decode_resample_seconds": 0.07584169998881407,
+      "logmel_seconds": 0.00897929999337066,
+      "vit_seconds": 0.0289389000099618,
+      "total_seconds": 0.11375989999214653,
+      "genre": "Instrumental"
+    },
+    {
+      "track_id": "085837",
+      "audio_path": "data/raw/fma_small/085/085837.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.006028938906752411,
+      "decode_resample_seconds": 0.07570169999962673,
+      "logmel_seconds": 0.0086829000065336,
+      "vit_seconds": 0.025403299994650297,
+      "total_seconds": 0.10978790000081062,
+      "genre": "Electronic"
+    },
+    {
+      "track_id": "071254",
+      "audio_path": "data/raw/fma_small/071/071254.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.006380627009646303,
+      "decode_resample_seconds": 0.0771798000059789,
+      "logmel_seconds": 0.008784899997408502,
+      "vit_seconds": 0.0268486999993911,
+      "total_seconds": 0.11281340000277851,
+      "genre": "Hip-Hop"
+    },
+    {
+      "track_id": "097585",
+      "audio_path": "data/raw/fma_small/097/097585.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.01359023311897106,
+      "decode_resample_seconds": 0.07187620000331663,
+      "logmel_seconds": 0.0090347999939695,
+      "vit_seconds": 0.02580949998809956,
+      "total_seconds": 0.10672049998538569,
+      "genre": "Folk"
+    },
+    {
+      "track_id": "114399",
+      "audio_path": "data/raw/fma_small/114/114399.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0,
+      "decode_resample_seconds": 0.07325169999967329,
+      "logmel_seconds": 0.009057100003701635,
+      "vit_seconds": 0.02723609999520704,
+      "total_seconds": 0.10954489999858197,
+      "genre": "Rock"
+    },
+    {
+      "track_id": "108745",
+      "audio_path": "data/raw/fma_small/108/108745.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.004031852893890675,
+      "decode_resample_seconds": 0.07618489999731537,
+      "logmel_seconds": 0.008716399999684654,
+      "vit_seconds": 0.024924099998315796,
+      "total_seconds": 0.10982539999531582,
+      "genre": "Hip-Hop"
+    },
+    {
+      "track_id": "130923",
+      "audio_path": "data/raw/fma_small/130/130923.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 1,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.00010048231511254019,
+      "decode_resample_seconds": 0.04727749999437947,
+      "logmel_seconds": 0.009200000000419095,
+      "vit_seconds": 0.025215000001480803,
+      "total_seconds": 0.08169249999627937,
+      "genre": "Electronic"
+    },
+    {
+      "track_id": "026026",
+      "audio_path": "data/raw/fma_small/026/026026.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.00258741961414791,
+      "decode_resample_seconds": 0.07550010000704788,
+      "logmel_seconds": 0.010528500002692454,
+      "vit_seconds": 0.026393399995868094,
+      "total_seconds": 0.11242200000560842,
+      "genre": "Hip-Hop"
+    },
+    {
+      "track_id": "057344",
+      "audio_path": "data/raw/fma_small/057/057344.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0,
+      "decode_resample_seconds": 0.0795155999949202,
+      "logmel_seconds": 0.008493999994243495,
+      "vit_seconds": 0.027306999996653758,
+      "total_seconds": 0.11531659998581745,
+      "genre": "Experimental"
+    },
+    {
+      "track_id": "003909",
+      "audio_path": "data/raw/fma_small/003/003909.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0043207395498392285,
+      "decode_resample_seconds": 0.07327010000881273,
+      "logmel_seconds": 0.008886499999789521,
+      "vit_seconds": 0.027111799994600005,
+      "total_seconds": 0.10926840000320226,
+      "genre": "Folk"
+    },
+    {
+      "track_id": "095506",
+      "audio_path": "data/raw/fma_small/095/095506.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0031023914790996782,
+      "decode_resample_seconds": 0.06739379999635275,
+      "logmel_seconds": 0.009000499994726852,
+      "vit_seconds": 0.027381899999454618,
+      "total_seconds": 0.10377619999053422,
+      "genre": "Rock"
+    },
+    {
+      "track_id": "067357",
+      "audio_path": "data/raw/fma_small/067/067357.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.005526527331189711,
+      "decode_resample_seconds": 0.07720030000200495,
+      "logmel_seconds": 0.008765800012042746,
+      "vit_seconds": 0.02641099999891594,
+      "total_seconds": 0.11237710001296364,
+      "genre": "Pop"
+    },
+    {
+      "track_id": "130265",
+      "audio_path": "data/raw/fma_small/130/130265.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0009420217041800643,
+      "decode_resample_seconds": 0.07776719999674242,
+      "logmel_seconds": 0.008890299999620765,
+      "vit_seconds": 0.025488200000836514,
+      "total_seconds": 0.1121456999971997,
+      "genre": "Pop"
+    },
+    {
+      "track_id": "060547",
+      "audio_path": "data/raw/fma_small/060/060547.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0,
+      "decode_resample_seconds": 0.07450539999990724,
+      "logmel_seconds": 0.008694799995282665,
+      "vit_seconds": 0.027268599995295517,
+      "total_seconds": 0.11046879999048542,
+      "genre": "International"
+    },
+    {
+      "track_id": "033203",
+      "audio_path": "data/raw/fma_small/033/033203.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0,
+      "decode_resample_seconds": 0.07885129998612683,
+      "logmel_seconds": 0.00886529999843333,
+      "vit_seconds": 0.02596559999801684,
+      "total_seconds": 0.113682199982577,
+      "genre": "Electronic"
+    },
+    {
+      "track_id": "046840",
+      "audio_path": "data/raw/fma_small/046/046840.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.00908108922829582,
+      "decode_resample_seconds": 0.08015310000337195,
+      "logmel_seconds": 0.008753399990382604,
+      "vit_seconds": 0.02689989999635145,
+      "total_seconds": 0.115806399990106,
+      "genre": "Pop"
+    },
+    {
+      "track_id": "074375",
+      "audio_path": "data/raw/fma_small/074/074375.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.006481109324758843,
+      "decode_resample_seconds": 0.07759030000306666,
+      "logmel_seconds": 0.008607499999925494,
+      "vit_seconds": 0.026361900003394112,
+      "total_seconds": 0.11255970000638627,
+      "genre": "Experimental"
+    },
+    {
+      "track_id": "121315",
+      "audio_path": "data/raw/fma_small/121/121315.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.014431772508038586,
+      "decode_resample_seconds": 0.07411049999063835,
+      "logmel_seconds": 0.0092333999928087,
+      "vit_seconds": 0.02692949998890981,
+      "total_seconds": 0.11027339997235686,
+      "genre": "Hip-Hop"
+    },
+    {
+      "track_id": "043585",
+      "audio_path": "data/raw/fma_small/043/043585.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.004308179260450161,
+      "decode_resample_seconds": 0.07712380000157282,
+      "logmel_seconds": 0.00875619999715127,
+      "vit_seconds": 0.025529499995172955,
+      "total_seconds": 0.11140949999389704,
+      "genre": "International"
+    },
+    {
+      "track_id": "064991",
+      "audio_path": "data/raw/fma_small/064/064991.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.004835711414790997,
+      "decode_resample_seconds": 0.08056740000029095,
+      "logmel_seconds": 0.008893299993360415,
+      "vit_seconds": 0.02723140000307467,
+      "total_seconds": 0.11669209999672603,
+      "genre": "Hip-Hop"
+    },
+    {
+      "track_id": "125774",
+      "audio_path": "data/raw/fma_small/125/125774.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0031903135048231513,
+      "decode_resample_seconds": 0.07564369999454357,
+      "logmel_seconds": 0.008902999994461425,
+      "vit_seconds": 0.029421500003081746,
+      "total_seconds": 0.11396819999208674,
+      "genre": "Rock"
+    },
+    {
+      "track_id": "061492",
+      "audio_path": "data/raw/fma_small/061/061492.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.006958400321543408,
+      "decode_resample_seconds": 0.07570200000191107,
+      "logmel_seconds": 0.008805200006463565,
+      "vit_seconds": 0.02806840000266675,
+      "total_seconds": 0.11257560001104139,
+      "genre": "Rock"
+    },
+    {
+      "track_id": "054568",
+      "audio_path": "data/raw/fma_small/054/054568.mp3",
+      "source_sample_rate": 22050,
+      "source_channels": 1,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0033912781350482315,
+      "decode_resample_seconds": 0.03104249999159947,
+      "logmel_seconds": 0.008589099990786053,
+      "vit_seconds": 0.025366700006998144,
+      "total_seconds": 0.06499829998938367,
+      "genre": "International"
+    },
+    {
+      "track_id": "127290",
+      "audio_path": "data/raw/fma_small/127/127290.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.01993317926045016,
+      "decode_resample_seconds": 0.07978209998691455,
+      "logmel_seconds": 0.009474599995883182,
+      "vit_seconds": 0.026938800001516938,
+      "total_seconds": 0.11619549998431467,
+      "genre": "Pop"
+    },
+    {
+      "track_id": "138041",
+      "audio_path": "data/raw/fma_small/138/138041.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.008427954180064309,
+      "decode_resample_seconds": 0.07934799999929965,
+      "logmel_seconds": 0.00889120000647381,
+      "vit_seconds": 0.02854660000593867,
+      "total_seconds": 0.11678580001171213,
+      "genre": "Pop"
+    },
+    {
+      "track_id": "122001",
+      "audio_path": "data/raw/fma_small/122/122001.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.00027632636655948553,
+      "decode_resample_seconds": 0.07301179999194574,
+      "logmel_seconds": 0.009598699994967319,
+      "vit_seconds": 0.027070899988757446,
+      "total_seconds": 0.1096813999756705,
+      "genre": "Experimental"
+    },
+    {
+      "track_id": "125779",
+      "audio_path": "data/raw/fma_small/125/125779.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.002411575562700965,
+      "decode_resample_seconds": 0.07504910000716336,
+      "logmel_seconds": 0.009214200006681494,
+      "vit_seconds": 0.0265821000066353,
+      "total_seconds": 0.11084540002048016,
+      "genre": "Rock"
+    },
+    {
+      "track_id": "138218",
+      "audio_path": "data/raw/fma_small/138/138218.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.010148713826366559,
+      "decode_resample_seconds": 0.07816449999518227,
+      "logmel_seconds": 0.00881400000071153,
+      "vit_seconds": 0.027740499994251877,
+      "total_seconds": 0.11471899999014568,
+      "genre": "Hip-Hop"
+    },
+    {
+      "track_id": "127497",
+      "audio_path": "data/raw/fma_small/127/127497.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0022357315112540195,
+      "decode_resample_seconds": 0.07667790001141839,
+      "logmel_seconds": 0.008933799996157177,
+      "vit_seconds": 0.028837099991505966,
+      "total_seconds": 0.11444879999908153,
+      "genre": "Instrumental"
+    },
+    {
+      "track_id": "086793",
+      "audio_path": "data/raw/fma_small/086/086793.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0006908159163987139,
+      "decode_resample_seconds": 0.07882880000397563,
+      "logmel_seconds": 0.00915040000109002,
+      "vit_seconds": 0.027140499994857237,
+      "total_seconds": 0.11511969999992289,
+      "genre": "Electronic"
+    },
+    {
+      "track_id": "085691",
+      "audio_path": "data/raw/fma_small/085/085691.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.00527532154340836,
+      "decode_resample_seconds": 0.07400619999680202,
+      "logmel_seconds": 0.008638999992399476,
+      "vit_seconds": 0.029562199997599237,
+      "total_seconds": 0.11220739998680074,
+      "genre": "Folk"
+    },
+    {
+      "track_id": "118496",
+      "audio_path": "data/raw/fma_small/118/118496.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 5.0241157556270096e-05,
+      "decode_resample_seconds": 0.0754229000012856,
+      "logmel_seconds": 0.01036739999835845,
+      "vit_seconds": 0.025884999995469116,
+      "total_seconds": 0.11167529999511316,
+      "genre": "Experimental"
+    },
+    {
+      "track_id": "108038",
+      "audio_path": "data/raw/fma_small/108/108038.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.005740052250803858,
+      "decode_resample_seconds": 0.07676569999603089,
+      "logmel_seconds": 0.00882590000401251,
+      "vit_seconds": 0.02569999999832362,
+      "total_seconds": 0.11129159999836702,
+      "genre": "Rock"
+    },
+    {
+      "track_id": "114386",
+      "audio_path": "data/raw/fma_small/114/114386.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.021452974276527332,
+      "decode_resample_seconds": 0.07256869999400806,
+      "logmel_seconds": 0.008846299999277107,
+      "vit_seconds": 0.025959699996747077,
+      "total_seconds": 0.10737469999003224,
+      "genre": "Electronic"
+    },
+    {
+      "track_id": "026301",
+      "audio_path": "data/raw/fma_small/026/026301.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.007724577974276527,
+      "decode_resample_seconds": 0.06855969999742229,
+      "logmel_seconds": 0.010286999997333623,
+      "vit_seconds": 0.02563449999433942,
+      "total_seconds": 0.10448119998909533,
+      "genre": "Experimental"
+    },
+    {
+      "track_id": "136134",
+      "audio_path": "data/raw/fma_small/136/136134.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.00045217041800643085,
+      "decode_resample_seconds": 0.0784535999991931,
+      "logmel_seconds": 0.008826299992506392,
+      "vit_seconds": 0.025930200004950166,
+      "total_seconds": 0.11321009999664966,
+      "genre": "Folk"
+    },
+    {
+      "track_id": "051275",
+      "audio_path": "data/raw/fma_small/051/051275.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0036550442122186494,
+      "decode_resample_seconds": 0.07637179999437649,
+      "logmel_seconds": 0.00863339999341406,
+      "vit_seconds": 0.024309000000357628,
+      "total_seconds": 0.10931419998814818,
+      "genre": "Pop"
+    },
+    {
+      "track_id": "126047",
+      "audio_path": "data/raw/fma_small/126/126047.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0073980104501607715,
+      "decode_resample_seconds": 0.07132669999555219,
+      "logmel_seconds": 0.008887100004358217,
+      "vit_seconds": 0.026381399991805665,
+      "total_seconds": 0.10659519999171607,
+      "genre": "Rock"
+    },
+    {
+      "track_id": "056469",
+      "audio_path": "data/raw/fma_small/056/056469.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0036676045016077173,
+      "decode_resample_seconds": 0.07380990000092424,
+      "logmel_seconds": 0.010705000007874332,
+      "vit_seconds": 0.024863400001777336,
+      "total_seconds": 0.10937830001057591,
+      "genre": "International"
+    },
+    {
+      "track_id": "080758",
+      "audio_path": "data/raw/fma_small/080/080758.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 3.7680868167202575e-05,
+      "decode_resample_seconds": 0.07358070000191219,
+      "logmel_seconds": 0.008852899991325103,
+      "vit_seconds": 0.025685400003567338,
+      "total_seconds": 0.10811899999680463,
+      "genre": "International"
+    },
+    {
+      "track_id": "121591",
+      "audio_path": "data/raw/fma_small/121/121591.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.004471463022508039,
+      "decode_resample_seconds": 0.07580800000869203,
+      "logmel_seconds": 0.00899329999811016,
+      "vit_seconds": 0.027450699999462813,
+      "total_seconds": 0.11225200000626501,
+      "genre": "Pop"
+    },
+    {
+      "track_id": "027195",
+      "audio_path": "data/raw/fma_small/027/027195.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.00026376607717041803,
+      "decode_resample_seconds": 0.0789636999979848,
+      "logmel_seconds": 0.008572400009143166,
+      "vit_seconds": 0.02664799999911338,
+      "total_seconds": 0.11418410000624135,
+      "genre": "International"
+    },
+    {
+      "track_id": "130349",
+      "audio_path": "data/raw/fma_small/130/130349.mp3",
+      "source_sample_rate": 48000,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0,
+      "decode_resample_seconds": 0.07790770000428893,
+      "logmel_seconds": 0.009462699992582202,
+      "vit_seconds": 0.02661989998887293,
+      "total_seconds": 0.11399029998574406,
+      "genre": "Folk"
+    },
+    {
+      "track_id": "019459",
+      "audio_path": "data/raw/fma_small/019/019459.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.00400673231511254,
+      "decode_resample_seconds": 0.07531709999602754,
+      "logmel_seconds": 0.008657200000016019,
+      "vit_seconds": 0.02662659999623429,
+      "total_seconds": 0.11060089999227785,
+      "genre": "International"
+    },
+    {
+      "track_id": "139771",
+      "audio_path": "data/raw/fma_small/139/139771.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 3.7680868167202575e-05,
+      "decode_resample_seconds": 0.07532200000423472,
+      "logmel_seconds": 0.008861399997840635,
+      "vit_seconds": 0.026564899992081337,
+      "total_seconds": 0.1107482999941567,
+      "genre": "Instrumental"
+    },
+    {
+      "track_id": "123442",
+      "audio_path": "data/raw/fma_small/123/123442.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.009118770096463023,
+      "decode_resample_seconds": 0.0765395000053104,
+      "logmel_seconds": 0.00878680001187604,
+      "vit_seconds": 0.025170299995807,
+      "total_seconds": 0.11049660001299344,
+      "genre": "Hip-Hop"
+    },
+    {
+      "track_id": "120466",
+      "audio_path": "data/raw/fma_small/120/120466.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.003617363344051447,
+      "decode_resample_seconds": 0.07819720001134556,
+      "logmel_seconds": 0.008795699992333539,
+      "vit_seconds": 0.02623269999457989,
+      "total_seconds": 0.11322559999825899,
+      "genre": "Electronic"
+    },
+    {
+      "track_id": "047865",
+      "audio_path": "data/raw/fma_small/047/047865.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.0011681069131832798,
+      "decode_resample_seconds": 0.07381840000743978,
+      "logmel_seconds": 0.008590400000684895,
+      "vit_seconds": 0.02864209999097511,
+      "total_seconds": 0.11105089999909978,
+      "genre": "Folk"
+    },
+    {
+      "track_id": "062450",
+      "audio_path": "data/raw/fma_small/062/062450.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 3.7680868167202575e-05,
+      "decode_resample_seconds": 0.06984189999639057,
+      "logmel_seconds": 0.008730000001378357,
+      "vit_seconds": 0.0255782000022009,
+      "total_seconds": 0.10415009999996983,
+      "genre": "Pop"
+    },
+    {
+      "track_id": "073821",
+      "audio_path": "data/raw/fma_small/073/073821.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.28789439308681675,
+      "decode_resample_seconds": 0.07483640000282321,
+      "logmel_seconds": 0.008893099991837516,
+      "vit_seconds": 0.025633299999753945,
+      "total_seconds": 0.10936279999441467,
+      "genre": "Experimental"
+    },
+    {
+      "track_id": "005381",
+      "audio_path": "data/raw/fma_small/005/005381.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.004873392282958199,
+      "decode_resample_seconds": 0.07167469999694731,
+      "logmel_seconds": 0.008851599995978177,
+      "vit_seconds": 0.02702609999687411,
+      "total_seconds": 0.1075523999897996,
+      "genre": "Folk"
+    },
+    {
+      "track_id": "146153",
+      "audio_path": "data/raw/fma_small/146/146153.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 0.011329381028938906,
+      "decode_resample_seconds": 0.0792646999907447,
+      "logmel_seconds": 0.012083800000254996,
+      "vit_seconds": 0.025753699999768287,
+      "total_seconds": 0.11710219999076799,
+      "genre": "Hip-Hop"
+    },
+    {
+      "track_id": "146019",
+      "audio_path": "data/raw/fma_small/146/146019.mp3",
+      "source_sample_rate": 44100,
+      "source_channels": 2,
+      "start_seconds": 10.0,
+      "valid_seconds": 10.0,
+      "logmel_shape": [
+        128,
+        622
+      ],
+      "embedding_shape": [
+        192
+      ],
+      "embedding_finite": true,
+      "db_clipped_fraction": 5.0241157556270096e-05,
+      "decode_resample_seconds": 0.08214380001300015,
+      "logmel_seconds": 0.04697979999764357,
+      "vit_seconds": 0.026635900008841418,
+      "total_seconds": 0.15575950001948513,
+      "genre": "Instrumental"
+    }
+  ],
+  "limitations": [
+    "64 training excerpts; not a full dataset decode audit",
+    "warm timings exclude imports, model load and first-call compilation",
+    "fixed dB mapping for diagnosis only; no claim of optimal audio representation",
+    "CPU inference only; no estimate of fine-tuning cost"
+  ],
+  "warm_median_seconds": {
+    "decode_resample_seconds": 0.07582484999875305,
+    "logmel_seconds": 0.008886800002073869,
+    "vit_seconds": 0.026600999997754116,
+    "total_seconds": 0.11217654999200022
+  },
+  "warm_p95_total_seconds": 0.11682863999158144
+}

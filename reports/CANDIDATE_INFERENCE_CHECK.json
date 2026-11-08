@@ -1,0 +1,6232 @@
+{
+  "status": "complete",
+  "tracks": 64,
+  "windows": 192,
+  "test_evaluated": false,
+  "test_audio_loaded": false,
+  "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+  "preparation_sha256": "17815b95fb6526becf150702778ad87b23833480c5f9b2e056a5c1fb64ca61ab",
+  "sample": {
+    "path": "data/manifests/robustness-validation-v1.csv",
+    "sha256": "50cb89ec0b07640e1b6a54d22951d1155fe23cdec6a7e138f2ba2baf91a620a0",
+    "selection": "music_genre.evaluation.errors.select_review",
+    "selection_source_sha256": "28041bc485a45b4b9a3da811fa00dde46ee2fa23c64566b05baa7afd2a37267b",
+    "seed": 20261028,
+    "tracks": 64,
+    "artists": 64,
+    "coverage": {
+      "Instrumental": {
+        "available_tracks": 93,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Pop": {
+        "available_tracks": 94,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Rock": {
+        "available_tracks": 97,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "International": {
+        "available_tracks": 98,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Electronic": {
+        "available_tracks": 99,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Folk": {
+        "available_tracks": 99,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Experimental": {
+        "available_tracks": 100,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Hip-Hop": {
+        "available_tracks": 100,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      }
+    },
+    "source_audio_sha256_verified": true
+  },
+  "run": {
+    "folder": "runs/vit_block6_hpss-20261027T235406908805Z",
+    "report_sha256": "37fbacf53978bb76b67d37d51a1ba2bb95e477d8d3c6abe469ea306628e3182d"
+  },
+  "source_sha256": {
+    "scripts/check_candidate_inference.py": "edec7606a179e0cb3028ee0a8fed4a089ced14b9463b22c0052735eb7384264b",
+    "src/music_genre/inference/predict.py": "5623a9e90a9576288dd9b53c794541e222c34c259ceee355861867aae1b24868",
+    "src/music_genre/audio/processing.py": "9d8a7665b73dac9ec9f611c67ef783a4911ae6ec04d4ea256f887e6cd467e806",
+    "src/music_genre/features/hpss.py": "2e6dd5b3ad171aa2dfa4c028af0c83095230ab1e3b492f2ade6a8265d89c8468",
+    "src/music_genre/features/hpss_block6.py": "1c860faba6b665ce3dc1603787921fdc60523c1523399f24e3a9cd489e5b2bf8",
+    "src/music_genre/models/linear.py": "7b8d3210650761236fbbb28d6910b2a53a7bfa65eaa4d6b21b3d60e6ed9c06cd",
+    "src/music_genre/models/vit.py": "2de7f275fc74a1c9919ffeab1147075ffddb0ee33c9dcc4d19737e333df7fe8e",
+    "src/music_genre/models/vit_channels.py": "a7c0345809c5494b41bf4ea61699c9ef7718200936ee44b4d87c0b6969995eea"
+  },
+  "tolerance": 1e-06,
+  "max_probability_error": 5.175731637718783e-07,
+  "elapsed_seconds": 163.01619609992485,
+  "results": [
+    {
+      "track_id": "040655",
+      "artist_id": "9568",
+      "source_sha256": "0203d49dde3b23176a1fe5595d823138f2eecab86b71e0089886c42aa1639341",
+      "max_probability_error": 5.25046310873023e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.005221569581937983,
+          0.7911443263747383,
+          0.03823201052353291,
+          0.0002812925962548727,
+          0.11035486158560577,
+          0.02665660642435395,
+          0.017721475698750714,
+          0.01038785721482542
+        ],
+        "top3": [
+          {
+            "label": "Experimental",
+            "score": 0.7911443263747383
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.11035486158560577
+          },
+          {
+            "label": "Folk",
+            "score": 0.03823201052353291
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.011388714597422684,
+              0.8481114124655941,
+              0.023676896309066817,
+              0.0006213262856228926,
+              0.08697428967932089,
+              0.010528526022389694,
+              0.008121452849927139,
+              0.010577381790655774
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.002447879755236539,
+              0.6911984040256453,
+              0.0709606298096558,
+              0.00017831935226792894,
+              0.12877893375331173,
+              0.06194836597086341,
+              0.03541337584343042,
+              0.009074091489588862
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.001828114393154725,
+              0.8341231626329757,
+              0.02005850545187611,
+              4.4232150873796745e-05,
+              0.11531136132418472,
+              0.007492927279808744,
+              0.00962959840289459,
+              0.011512098364231626
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 5.218884899979457
+      }
+    },
+    {
+      "track_id": "121656",
+      "artist_id": "11939",
+      "source_sha256": "44cecc64caef71b7ad6a8ac770c65cae3e2b140436dddab82222a641d6664624",
+      "max_probability_error": 1.5986779605681178e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.010058449517403001,
+          0.2642791070088385,
+          0.33187238045498135,
+          0.004688918792243954,
+          0.03650879502870091,
+          0.26409546554994573,
+          0.07691736450717247,
+          0.011579519140714048
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.33187238045498135
+          },
+          {
+            "label": "Experimental",
+            "score": 0.2642791070088385
+          },
+          {
+            "label": "International",
+            "score": 0.26409546554994573
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.019117006650295008,
+              0.13190807645489772,
+              0.3294941808031017,
+              0.006107945679893158,
+              0.023175987879922942,
+              0.404877209574428,
+              0.07815114723674006,
+              0.007168445720721436
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.007476591426962938,
+              0.09914865550704138,
+              0.4879127070231901,
+              0.005387860504224178,
+              0.02084600569724817,
+              0.28221956314237134,
+              0.08685101223999621,
+              0.010157604458965548
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0035817504749510597,
+              0.5617805890645764,
+              0.17821025353865216,
+              0.002570950192614523,
+              0.06550439150893163,
+              0.10518962393303788,
+              0.06574993404478113,
+              0.017412507242455157
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.2917297000531107
+      }
+    },
+    {
+      "track_id": "134452",
+      "artist_id": "21803",
+      "source_sha256": "8397891573e2fabbc3a1315831b70c30a4fe04fd8aa68c4183bdf45d2aa00066",
+      "max_probability_error": 3.7822819126676066e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.2502482405225214,
+          0.05751836714240179,
+          0.0683260621827536,
+          0.06734152760895715,
+          0.24917971556904558,
+          0.0027600628416853336,
+          0.25508001061245494,
+          0.04954601352018023
+        ],
+        "top3": [
+          {
+            "label": "Pop",
+            "score": 0.25508001061245494
+          },
+          {
+            "label": "Electronic",
+            "score": 0.2502482405225214
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.24917971556904558
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.28703830825235827,
+              0.04954426603427535,
+              0.08696454117712307,
+              0.055286959817776135,
+              0.21244189935212907,
+              0.004205106960085867,
+              0.2683734958547654,
+              0.03614542255148692
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.2472131857729817,
+              0.040849737560330605,
+              0.04787934638659908,
+              0.09569500428808185,
+              0.313415928403066,
+              0.0022157774073848125,
+              0.21116973299878472,
+              0.041561287182771287
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.21649322754222416,
+              0.08216109783259941,
+              0.07013429898453861,
+              0.051042618721013455,
+              0.22168131895194168,
+              0.0018593041575853222,
+              0.28569680298381483,
+              0.07093133082628247
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.3233763999305665
+      }
+    },
+    {
+      "track_id": "114006",
+      "artist_id": "19125",
+      "source_sha256": "99d702e30dbbe1c43b358f0e3e966cc49a789ac0d107f63c641859a778e833aa",
+      "max_probability_error": 1.5575028267100777e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.03572375091434667,
+          0.18145713501896524,
+          0.33893307899287767,
+          0.008963257731255806,
+          0.06408852878519679,
+          0.0034757970274165353,
+          0.1846170149649795,
+          0.18274143656496175
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.33893307899287767
+          },
+          {
+            "label": "Pop",
+            "score": 0.1846170149649795
+          },
+          {
+            "label": "Rock",
+            "score": 0.18274143656496175
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.030803422934279213,
+              0.1206993765909779,
+              0.472010495136512,
+              0.0046008590490261405,
+              0.0621588431282932,
+              0.005616321557535025,
+              0.18076085820401822,
+              0.12334982339935827
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.031114033867724728,
+              0.25512624287545116,
+              0.28848533742128796,
+              0.012837588654629426,
+              0.07144668809740141,
+              0.0028103587040541073,
+              0.22374893422553951,
+              0.11443081615391165
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.04525379594103606,
+              0.1685457855904667,
+              0.25630340442083305,
+              0.009451325490111852,
+              0.05866005512989573,
+              0.002000710820660475,
+              0.14934125246538077,
+              0.31044367014161534
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.379110399982892
+      }
+    },
+    {
+      "track_id": "126588",
+      "artist_id": "21020",
+      "source_sha256": "a0fbae7f4b1d388415e7ee028aa0732ff973f71937e5d8ef3c9b2cecab5b05a2",
+      "max_probability_error": 1.0299524759449508e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.09445880369389888,
+          0.12084900408782928,
+          0.06055027931966812,
+          0.0029883656613901234,
+          0.5164587976741893,
+          0.012767307450926793,
+          0.10781920749097608,
+          0.08410823462112134
+        ],
+        "top3": [
+          {
+            "label": "Instrumental",
+            "score": 0.5164587976741893
+          },
+          {
+            "label": "Experimental",
+            "score": 0.12084900408782928
+          },
+          {
+            "label": "Pop",
+            "score": 0.10781920749097608
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.14424955005006002,
+              0.18560784140928666,
+              0.04625640386807937,
+              0.007446784128571301,
+              0.3840879506499022,
+              0.008227473332178546,
+              0.12547665350847467,
+              0.09864734305344716
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.039437337150273456,
+              0.14407259872839223,
+              0.12978666028572858,
+              0.0010048263340469608,
+              0.35047599595752305,
+              0.02832759742777045,
+              0.1720591996823516,
+              0.13483578443391375
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.09968952388136319,
+              0.03286657212580897,
+              0.0056077738051964225,
+              0.000513486521552109,
+              0.8148124464151429,
+              0.0017468515928313814,
+              0.02592176928210201,
+              0.01884157637600309
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.2944014000240713
+      }
+    },
+    {
+      "track_id": "130927",
+      "artist_id": "7010",
+      "source_sha256": "da5be6f23a8226d91e458ea492edb9607ec284c77249dce125181bb3423b3e8a",
+      "max_probability_error": 1.6724446721960717e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.035612322082372055,
+          0.042861140374013874,
+          0.46602857813822807,
+          0.004327344597955426,
+          0.11371112583974259,
+          0.02625109626153123,
+          0.16455324131652682,
+          0.14665515138962984
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.46602857813822807
+          },
+          {
+            "label": "Pop",
+            "score": 0.16455324131652682
+          },
+          {
+            "label": "Rock",
+            "score": 0.14665515138962984
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0816642407223183,
+              0.06138318631979493,
+              0.4938646762083078,
+              0.0016025100727405958,
+              0.06346012635153414,
+              0.049751167332915,
+              0.16725024534659902,
+              0.08102384764579007
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.009420042353115986,
+              0.029945473292089023,
+              0.6446082957228533,
+              0.0022812619604809015,
+              0.11522219236054154,
+              0.014862975439499635,
+              0.08020807967055446,
+              0.10345167920086515
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.01575268317168188,
+              0.037254761510157684,
+              0.25961276248352316,
+              0.009098261760644781,
+              0.1624510588071521,
+              0.01413914601217906,
+              0.24620139893242696,
+              0.2554899273222343
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.4475414999760687
+      }
+    },
+    {
+      "track_id": "132310",
+      "artist_id": "20475",
+      "source_sha256": "7524f88361c363d844305a0ff9fba562237e3f0d35bd4a8103f100d9429eaf3c",
+      "max_probability_error": 4.14191045794432e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.01780880206360543,
+          0.020044916011285992,
+          0.6160038357876835,
+          0.004620751937026758,
+          0.13631237181036263,
+          0.07861773567014572,
+          0.10384910036328876,
+          0.02274248635660135
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.6160038357876835
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.13631237181036263
+          },
+          {
+            "label": "Pop",
+            "score": 0.10384910036328876
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.006368352295216227,
+              0.014870354856575783,
+              0.7044798939799539,
+              0.0007607035699392087,
+              0.10566997003002716,
+              0.08770520202340351,
+              0.06415001561467838,
+              0.015995507630205852
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.030419279276168894,
+              0.03397386621598864,
+              0.4613009612954186,
+              0.0104141578972547,
+              0.1822705462896727,
+              0.07660536876443796,
+              0.1781751612662296,
+              0.026840658994829025
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.016638774619431165,
+              0.011290526961293545,
+              0.6822306520876776,
+              0.0026873943438863648,
+              0.12099659911138802,
+              0.07154263622259568,
+              0.0692221242089583,
+              0.02539129244476916
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.4163077999837697
+      }
+    },
+    {
+      "track_id": "143306",
+      "artist_id": "22795",
+      "source_sha256": "093ca3e5d17b8f14f44ab319bf3c3d9263a7b3bd18396339f46e14fb713dd22d",
+      "max_probability_error": 2.395213694050824e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.06500242248350162,
+          0.08100672896183288,
+          0.06485449411044371,
+          0.006977203218336974,
+          0.6147619879934965,
+          0.0021573808938186246,
+          0.1437511728538742,
+          0.021488609484695487
+        ],
+        "top3": [
+          {
+            "label": "Instrumental",
+            "score": 0.6147619879934965
+          },
+          {
+            "label": "Pop",
+            "score": 0.1437511728538742
+          },
+          {
+            "label": "Experimental",
+            "score": 0.08100672896183288
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.021986397399536187,
+              0.1521127059506275,
+              0.14424680968611583,
+              0.01817547177512064,
+              0.2660288814699321,
+              0.004480070587002504,
+              0.34701624576660367,
+              0.0459534173650615
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.16329365836172016,
+              0.05552422615470429,
+              0.008475887846838026,
+              0.0024901310944765837,
+              0.703231552890348,
+              0.0012722106573561504,
+              0.061070774140348165,
+              0.004641558854208673
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.009727211689248524,
+              0.035383254780166865,
+              0.04184078479837724,
+              0.0002660067854136973,
+              0.8750255296202094,
+              0.0007198614370972189,
+              0.023166498654670725,
+              0.013870852234816293
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.3742376000154763
+      }
+    },
+    {
+      "track_id": "128484",
+      "artist_id": "21155",
+      "source_sha256": "4f5a46928c6c3943c4ea1752c7882070153143125b4621f16c5b2b5dee9b5036",
+      "max_probability_error": 1.0285282026761822e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.4554197744238284,
+          0.04639781044823895,
+          0.04421887072517327,
+          0.11689661246113132,
+          0.027047610405643473,
+          0.045487232714974145,
+          0.2268187832958605,
+          0.03771330552514988
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.4554197744238284
+          },
+          {
+            "label": "Pop",
+            "score": 0.2268187832958605
+          },
+          {
+            "label": "Hip-Hop",
+            "score": 0.11689661246113132
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.6740558578908583,
+              0.02584815242966751,
+              0.004803457366943428,
+              0.2056912423403672,
+              0.010107647519239673,
+              0.012091827702614277,
+              0.05409075300904752,
+              0.013311061741262191
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.6621443807220968,
+              0.014382230768018225,
+              0.015592072849022535,
+              0.06395923634016555,
+              0.0330167144505097,
+              0.08177977571846579,
+              0.09826574316570263,
+              0.030859845986018663
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.030059084658530147,
+              0.09896304814703112,
+              0.11226108195955384,
+              0.08103935870286125,
+              0.038018469247181046,
+              0.04259009472384237,
+              0.5280998537128314,
+              0.06896900884816878
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.4759694000240415
+      }
+    },
+    {
+      "track_id": "107049",
+      "artist_id": "18725",
+      "source_sha256": "2c805d28b3f42c5658b4370341f8fcffc1fbdf2dd811d95d6fba0e287e132d42",
+      "max_probability_error": 1.5936460495691307e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.18523848085040018,
+          0.35860493747474315,
+          0.0014411482753067502,
+          0.26618796471951206,
+          0.0805098767436898,
+          0.019379920079175935,
+          0.06409177806376114,
+          0.02454589379341086
+        ],
+        "top3": [
+          {
+            "label": "Experimental",
+            "score": 0.35860493747474315
+          },
+          {
+            "label": "Hip-Hop",
+            "score": 0.26618796471951206
+          },
+          {
+            "label": "Electronic",
+            "score": 0.18523848085040018
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.017928335709627055,
+              0.08135202170188587,
+              0.0018947600872243446,
+              0.7257417969779711,
+              0.0013542967900580746,
+              0.03163995851740352,
+              0.08702152314161882,
+              0.05306730707421121
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.07233655460607238,
+              0.7309986840998046,
+              0.001972920903083657,
+              0.005163390718139006,
+              0.14929142277496277,
+              0.01001209227694522,
+              0.021584793608106587,
+              0.008640141012885552
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.46545055223550114,
+              0.263464106622539,
+              0.0004557638356122488,
+              0.06765870646242614,
+              0.09088391066604853,
+              0.016487709443179066,
+              0.08366901744155802,
+              0.011930233293135816
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.5976838000351563
+      }
+    },
+    {
+      "track_id": "021587",
+      "artist_id": "5643",
+      "source_sha256": "acb777c12c595e466cad35d1f9c6b61216be76ab1b88e15d7fbc95804a1256b3",
+      "max_probability_error": 9.392282813991404e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.08516594252736547,
+          0.07674811119605256,
+          0.06618885118405249,
+          0.050864351342948665,
+          0.07039871994001443,
+          0.4589729917591585,
+          0.17156207231628265,
+          0.02009895973412529
+        ],
+        "top3": [
+          {
+            "label": "International",
+            "score": 0.4589729917591585
+          },
+          {
+            "label": "Pop",
+            "score": 0.17156207231628265
+          },
+          {
+            "label": "Electronic",
+            "score": 0.08516594252736547
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.07448411224656283,
+              0.042818305657630715,
+              0.0272188804113513,
+              0.07015150895693074,
+              0.01703600754670792,
+              0.6725989109441904,
+              0.09127478945281212,
+              0.0044174847838139705
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.13640168079976003,
+              0.06236917255514395,
+              0.021557625568128146,
+              0.042129367757262295,
+              0.03886346957677995,
+              0.604497575717954,
+              0.0904379686772206,
+              0.0037431393477509326
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.04461203453577351,
+              0.125056855375383,
+              0.14979004757267803,
+              0.04031217731465293,
+              0.15529668269655542,
+              0.09982248861533091,
+              0.3329734588188153,
+              0.05213625507081097
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.5609071000944823
+      }
+    },
+    {
+      "track_id": "109974",
+      "artist_id": "9454",
+      "source_sha256": "fa8cba7f8175cb1f2fdb1daaff8a9c02909ee88781bee6b639e34d81d2c71606",
+      "max_probability_error": 3.56080330332631e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.032364601618988104,
+          0.1321957088706719,
+          0.17262275530967544,
+          0.03551907541559134,
+          0.04161772706085655,
+          0.1523728328169612,
+          0.3206479642138389,
+          0.1126593346934166
+        ],
+        "top3": [
+          {
+            "label": "Pop",
+            "score": 0.3206479642138389
+          },
+          {
+            "label": "Folk",
+            "score": 0.17262275530967544
+          },
+          {
+            "label": "International",
+            "score": 0.1523728328169612
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.006316302367656704,
+              0.13580534933870525,
+              0.1876609413145704,
+              0.008139387003547126,
+              0.031911097423907554,
+              0.09387030607749108,
+              0.2811601891201132,
+              0.2551364273540087
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.026810482796884565,
+              0.07546169792577814,
+              0.22549740107182323,
+              0.011744371845421528,
+              0.050079526996403216,
+              0.07930474485821899,
+              0.47041523388638895,
+              0.06068654061908158
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.06396701969242305,
+              0.1853200793475323,
+              0.10470992354263271,
+              0.08667346739780536,
+              0.04286255676225888,
+              0.2839434475151736,
+              0.21036846963501452,
+              0.022155036107159548
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.4774232000345364
+      }
+    },
+    {
+      "track_id": "017345",
+      "artist_id": "4634",
+      "source_sha256": "f58262e12f459eaa331832cc06c3d0d316cf64d2807285f6567e1aae326fd817",
+      "max_probability_error": 5.175731637718783e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.021105641963931162,
+          0.3909126321625816,
+          0.38647833447006624,
+          0.0003269877592049192,
+          0.03550241624195891,
+          0.05621511950413264,
+          0.0837311394489849,
+          0.025727728449139564
+        ],
+        "top3": [
+          {
+            "label": "Experimental",
+            "score": 0.3909126321625816
+          },
+          {
+            "label": "Folk",
+            "score": 0.38647833447006624
+          },
+          {
+            "label": "Pop",
+            "score": 0.0837311394489849
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.04205441819349724,
+              0.3513245035528715,
+              0.27639126945380255,
+              0.0003496727511682894,
+              0.07281728635335707,
+              0.10126154761399099,
+              0.13640563197602557,
+              0.019395670105286825
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0029576643839145556,
+              0.4008188422092344,
+              0.5141701504924153,
+              0.00010017077081225726,
+              0.028203962839484575,
+              0.027285842338141377,
+              0.022605161913724872,
+              0.003858205052272629
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.018304843314381685,
+              0.42059455072563895,
+              0.3688735834639809,
+              0.000531119755634211,
+              0.0054859995330350944,
+              0.04009796856026557,
+              0.09218262445720425,
+              0.05392931018985924
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.4421314999926835
+      }
+    },
+    {
+      "track_id": "061734",
+      "artist_id": "13153",
+      "source_sha256": "84cef3cd4380deb9a19877595ff93080ebcee5ce9e2b5b718e0792dd297d7e6c",
+      "max_probability_error": 9.878556783693426e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.006528154042066028,
+          0.06423473876907755,
+          0.5505345005634691,
+          0.010959786040247872,
+          0.025427550474607766,
+          0.20596680888307065,
+          0.11834837355777299,
+          0.01800008766968823
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.5505345005634691
+          },
+          {
+            "label": "International",
+            "score": 0.20596680888307065
+          },
+          {
+            "label": "Pop",
+            "score": 0.11834837355777299
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.001106072828211414,
+              0.05032431705469448,
+              0.4325189164621641,
+              0.023757074170014485,
+              0.008416296165390386,
+              0.32496266193093004,
+              0.14548952621633124,
+              0.013425135172263802
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.00035284130150854356,
+              0.0502118036844577,
+              0.7964258268656664,
+              0.005175999276094357,
+              0.00539207254071192,
+              0.0191212170630543,
+              0.1087372562877361,
+              0.014582982980770721
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.018125547996478125,
+              0.09216809556808046,
+              0.4226587583625764,
+              0.0039462846746347756,
+              0.06247428271772099,
+              0.2738165476552276,
+              0.10081833816925163,
+              0.02599214485603016
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.492430599988438
+      }
+    },
+    {
+      "track_id": "129053",
+      "artist_id": "21268",
+      "source_sha256": "c521eba3286ba88da794fe39e0667aaaed6896a7f226604c4dfb44a256ef6bb3",
+      "max_probability_error": 2.2570731106341668e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.3959453528487223,
+          0.04038545895677687,
+          0.0012346693555841627,
+          0.23472552071423972,
+          0.012773765213788679,
+          0.19730247802166404,
+          0.09751396291101598,
+          0.02011879197820819
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.3959453528487223
+          },
+          {
+            "label": "Hip-Hop",
+            "score": 0.23472552071423972
+          },
+          {
+            "label": "International",
+            "score": 0.19730247802166404
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.5197501384809712,
+              0.0202030595608441,
+              0.0003006295223477226,
+              0.04590085962675705,
+              0.014022869120175951,
+              0.37812747233162697,
+              0.013970153783908881,
+              0.007724817573368182
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.37256360156427226,
+              0.08555159716862905,
+              0.0014962463404412857,
+              0.08119164551120281,
+              0.02313882291976996,
+              0.18945268695365233,
+              0.20783019760532775,
+              0.03877520193670445
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.2955223185009236,
+              0.015401720140857458,
+              0.00190713220396348,
+              0.5770840570047593,
+              0.001159603601420122,
+              0.024327274779712905,
+              0.07074153734381129,
+              0.013856356424551937
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.453048099996522
+      }
+    },
+    {
+      "track_id": "070423",
+      "artist_id": "13910",
+      "source_sha256": "21e9a70b758d767561b3bc5eeeb3cf12ad7940a81174818ccb6540ca65f4a6d2",
+      "max_probability_error": 2.47894802019033e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.011259418857960515,
+          0.05938974971097602,
+          0.12920525490725265,
+          0.03577900058241318,
+          0.003859596855842074,
+          0.08448140208038875,
+          0.5095868498978392,
+          0.16643872710732774
+        ],
+        "top3": [
+          {
+            "label": "Pop",
+            "score": 0.5095868498978392
+          },
+          {
+            "label": "Rock",
+            "score": 0.16643872710732774
+          },
+          {
+            "label": "Folk",
+            "score": 0.12920525490725265
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.021262714658392638,
+              0.09524903189297872,
+              0.14601157517661514,
+              0.050061313668517925,
+              0.0024741470775789414,
+              0.11177329225177238,
+              0.4487678412174777,
+              0.12440008405666671
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.007444050319209176,
+              0.062158284837991795,
+              0.10243296134598874,
+              0.03658211146747972,
+              0.002800139828361763,
+              0.11161950038039431,
+              0.3826039984037094,
+              0.2943589534168652
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.005071491596279734,
+              0.02076193240195754,
+              0.13917122819915406,
+              0.020693576611241875,
+              0.0063045036615855185,
+              0.03005141360899957,
+              0.6973887100723303,
+              0.0805571438484513
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.3991982999723405
+      }
+    },
+    {
+      "track_id": "138060",
+      "artist_id": "22222",
+      "source_sha256": "a5750e6d520132bc052f475a00c9bfb73462d3fa80d281676a53eb15183602cf",
+      "max_probability_error": 2.4304850862466587e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.057972820639449724,
+          0.0320011272341828,
+          0.23296179215400825,
+          0.0023320623848860546,
+          0.46017082956707567,
+          0.12362800774094292,
+          0.08115326500939979,
+          0.009780095270054764
+        ],
+        "top3": [
+          {
+            "label": "Instrumental",
+            "score": 0.46017082956707567
+          },
+          {
+            "label": "Folk",
+            "score": 0.23296179215400825
+          },
+          {
+            "label": "International",
+            "score": 0.12362800774094292
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.06098347707108676,
+              0.02876467066487718,
+              0.49730603271048945,
+              0.004654917713481859,
+              0.17070337577771647,
+              0.0500007261527808,
+              0.16375112275522907,
+              0.02383567715433836
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.05295511835557958,
+              0.031493792195832745,
+              0.12352367637315986,
+              0.000923308739746033,
+              0.5000371537796622,
+              0.23776826595317688,
+              0.05058593201704198,
+              0.0027127525858008225
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.059979866491682826,
+              0.03574491884183848,
+              0.0780556673783754,
+              0.0014179607014302717,
+              0.7097719591438484,
+              0.08311503111687105,
+              0.02912274025592832,
+              0.0027918560700251087
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.3519375999458134
+      }
+    },
+    {
+      "track_id": "142950",
+      "artist_id": "22765",
+      "source_sha256": "30ae597bf5466bef29ddb29d6e4db22586d66c6b33d2d72a2a39b9e9d95942d9",
+      "max_probability_error": 9.237324344324449e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.012501273759326003,
+          0.14794312435106277,
+          0.028319789975712672,
+          0.012769884447743898,
+          0.09722088465265488,
+          0.014196061738165455,
+          0.12730025072371284,
+          0.5597487303516214
+        ],
+        "top3": [
+          {
+            "label": "Rock",
+            "score": 0.5597487303516214
+          },
+          {
+            "label": "Experimental",
+            "score": 0.14794312435106277
+          },
+          {
+            "label": "Pop",
+            "score": 0.12730025072371284
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.011974457704891979,
+              0.034539383536044584,
+              0.011716419586495568,
+              0.01993554162594848,
+              0.02882200806772521,
+              0.015940687917336407,
+              0.13508771805911593,
+              0.7419837835024419
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.021511429405643795,
+              0.025821576385847405,
+              0.017521828757363942,
+              0.017823212120394907,
+              0.017611220168077438,
+              0.026415258765919433,
+              0.22229431426817198,
+              0.651001160128581
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.004017934167442236,
+              0.3834684131312963,
+              0.05572112158327851,
+              0.0005508995968883022,
+              0.245229425722162,
+              0.00023223853124052776,
+              0.02451871984385058,
+              0.2862612474238416
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.422922300058417
+      }
+    },
+    {
+      "track_id": "058542",
+      "artist_id": "12721",
+      "source_sha256": "0d24d194ced5429faab056923e0da9b0edc25102551b1493a73a2d7ac21aabac",
+      "max_probability_error": 1.8083347019803853e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.014576305445205688,
+          0.01640952502981566,
+          0.00844739791729743,
+          0.032055721539527855,
+          0.009950911702828228,
+          0.03273465503269924,
+          0.23862983990537553,
+          0.6471956434272504
+        ],
+        "top3": [
+          {
+            "label": "Rock",
+            "score": 0.6471956434272504
+          },
+          {
+            "label": "Pop",
+            "score": 0.23862983990537553
+          },
+          {
+            "label": "International",
+            "score": 0.03273465503269924
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.016285871791384694,
+              0.021026780117278304,
+              0.012553848813361542,
+              0.005671968038003639,
+              0.009978229640323282,
+              0.014159151320238343,
+              0.19877090343920956,
+              0.7215532468402007
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.006042753286816762,
+              0.01009247082345475,
+              0.008023918551373698,
+              0.02769297175106211,
+              0.007102869127285218,
+              0.06417857634445161,
+              0.2852203219206429,
+              0.591646118194913
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.021400291257415605,
+              0.018109324148713933,
+              0.004764426387157053,
+              0.06280222482951782,
+              0.01277163634087618,
+              0.019866237433407773,
+              0.23189829435627407,
+              0.6283875652466376
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.3901405999204144
+      }
+    },
+    {
+      "track_id": "047032",
+      "artist_id": "10023",
+      "source_sha256": "a7772b496329b4390e089b1bb1db2d8965166d6578d2237ca9bd8cc8a4ca0731",
+      "max_probability_error": 1.4437363579644646e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.005334685874272045,
+          0.02958344358198749,
+          0.15271287496857386,
+          0.018979713928594752,
+          0.0013762869623692234,
+          0.6036787042220632,
+          0.17262663679594303,
+          0.015707653666196517
+        ],
+        "top3": [
+          {
+            "label": "International",
+            "score": 0.6036787042220632
+          },
+          {
+            "label": "Pop",
+            "score": 0.17262663679594303
+          },
+          {
+            "label": "Folk",
+            "score": 0.15271287496857386
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.012671877689502835,
+              0.008922743368768018,
+              0.20545944523492332,
+              0.04264973532075184,
+              0.002066926314251378,
+              0.5119318690038779,
+              0.19433810032843918,
+              0.02195930273948542
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0025463548630791865,
+              0.039655269293181375,
+              0.053303552598094196,
+              0.003155653221164026,
+              0.0005902550192921034,
+              0.8838331325548696,
+              0.01383016430619012,
+              0.0030856181441294758
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.0007858250702341141,
+              0.04017231808401308,
+              0.19937562707270406,
+              0.011133753243868389,
+              0.0014716795535641882,
+              0.4152711111074418,
+              0.30971164575319976,
+              0.02207804011497466
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.1912904999917373
+      }
+    },
+    {
+      "track_id": "050444",
+      "artist_id": "11374",
+      "source_sha256": "6b48c44e420235c6c21d9283a1f84fc89ba5ee8101f5120005952e6bc647f54b",
+      "max_probability_error": 2.3486218370116774e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.003995028963761481,
+          0.14077927812499244,
+          0.040958422461604964,
+          0.0031166010854688764,
+          0.03241667752889105,
+          0.005010928395586888,
+          0.020605744598974667,
+          0.7531173188407198
+        ],
+        "top3": [
+          {
+            "label": "Rock",
+            "score": 0.7531173188407198
+          },
+          {
+            "label": "Experimental",
+            "score": 0.14077927812499244
+          },
+          {
+            "label": "Folk",
+            "score": 0.040958422461604964
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.00021372872965989348,
+              0.10064304157412428,
+              0.013733352737523899,
+              0.0013930651685695823,
+              0.006193610502732941,
+              0.00025164614774587425,
+              0.017882027570975876,
+              0.8596895275686678
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.002198615004530805,
+              0.10380143832402414,
+              0.04145813375849018,
+              0.004634359461463761,
+              0.0491869768311894,
+              0.006485427545245165,
+              0.025208770067449978,
+              0.7670262790076067
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.009572743157093744,
+              0.2178933544768289,
+              0.06768378088880081,
+              0.0033223786263732857,
+              0.04186944525275079,
+              0.008295711493769627,
+              0.01872643615849814,
+              0.6326361499458848
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.274859800003469
+      }
+    },
+    {
+      "track_id": "106948",
+      "artist_id": "18706",
+      "source_sha256": "11732b06135356b64d5f674008c50cbbe66dd86711ba0e16770bb18f5d2f977f",
+      "max_probability_error": 2.7357855469922754e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.0070541439164239425,
+          0.02908243555387574,
+          0.2135324279820745,
+          0.032565016704066106,
+          0.027449889632802593,
+          0.15514068992414873,
+          0.402376902924321,
+          0.1327984933622873
+        ],
+        "top3": [
+          {
+            "label": "Pop",
+            "score": 0.402376902924321
+          },
+          {
+            "label": "Folk",
+            "score": 0.2135324279820745
+          },
+          {
+            "label": "International",
+            "score": 0.15514068992414873
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0026395464606566985,
+              0.02942252578231367,
+              0.2840277234648916,
+              0.0018208400506905813,
+              0.04821543430517468,
+              0.10715444643920226,
+              0.3297283135635422,
+              0.19699116993352822
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0018942733127781308,
+              0.03288999141216559,
+              0.18331028380240907,
+              0.02104058568915959,
+              0.025451232002119923,
+              0.2156198675339353,
+              0.43559125803149834,
+              0.08420250821593407
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.016628611975837,
+              0.02493478946714796,
+              0.17325927667892288,
+              0.07483362437234814,
+              0.008683002591113185,
+              0.14264775579930863,
+              0.44181113717792253,
+              0.11720180193739964
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.298997100093402
+      }
+    },
+    {
+      "track_id": "040984",
+      "artist_id": "1917",
+      "source_sha256": "f4945afef018d5d4d6e0e5fef31dc31ebc477dd91b131a032f30c5bf282b50a0",
+      "max_probability_error": 2.355343863696957e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.03603467066758755,
+          0.06153715118784397,
+          0.199716013051877,
+          0.0707444335869753,
+          0.08803583218286974,
+          0.11825232107163745,
+          0.204632542077227,
+          0.221047036173982
+        ],
+        "top3": [
+          {
+            "label": "Rock",
+            "score": 0.221047036173982
+          },
+          {
+            "label": "Pop",
+            "score": 0.204632542077227
+          },
+          {
+            "label": "Folk",
+            "score": 0.199716013051877
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.07702430325097037,
+              0.11326361663937119,
+              0.30226332681123463,
+              0.00603236961284394,
+              0.17082258766109584,
+              0.07945748466139368,
+              0.16958128799145047,
+              0.0815550233716398
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.004370225134109564,
+              0.022561135987568433,
+              0.186542889015378,
+              0.07732524143246029,
+              0.016737004193249475,
+              0.10591616151857493,
+              0.26655847967375,
+              0.3199888630449093
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.02670948361768271,
+              0.04878670093659226,
+              0.11034182332901832,
+              0.12887568971562166,
+              0.0765479046942639,
+              0.16938331703494378,
+              0.17775785856648052,
+              0.2615972221053968
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.63941820000764
+      }
+    },
+    {
+      "track_id": "056559",
+      "artist_id": "12277",
+      "source_sha256": "d210fd79e098d38746dc964bd3ed09e4adf95b4da1eda0d3e49893d808a496f1",
+      "max_probability_error": 1.3026165868179618e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.03150119260653356,
+          0.3215609003893462,
+          0.008600549438471071,
+          0.0429370474770829,
+          0.014438573694155804,
+          0.05591938715043641,
+          0.15548829581716395,
+          0.3695540534268101
+        ],
+        "top3": [
+          {
+            "label": "Rock",
+            "score": 0.3695540534268101
+          },
+          {
+            "label": "Experimental",
+            "score": 0.3215609003893462
+          },
+          {
+            "label": "Pop",
+            "score": 0.15548829581716395
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.05744116773550445,
+              0.29323440835961284,
+              0.00514037294051801,
+              0.09058745827853443,
+              0.020829945989068673,
+              0.0719463583200377,
+              0.1345975711700738,
+              0.3262227172066501
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.031063231743879774,
+              0.10495039985808649,
+              0.008998242155824315,
+              0.036945225433078384,
+              0.004312997550365923,
+              0.08408060671853491,
+              0.21417922724539862,
+              0.5154700692948316
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.005999178340216447,
+              0.5664978929503394,
+              0.011663033219070888,
+              0.0012784587196358794,
+              0.018172777543032818,
+              0.011731196412736613,
+              0.11768808903601943,
+              0.2669693737789486
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.6840284999925643
+      }
+    },
+    {
+      "track_id": "025668",
+      "artist_id": "5303",
+      "source_sha256": "91ea214dcb393fe04c4d7f05aba911a8822de352aa32148fd792a215e80dc1a2",
+      "max_probability_error": 1.90555802970227e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.04382456516251878,
+          0.007420450811756053,
+          0.025738598171128623,
+          0.16129125100441574,
+          0.0008293505588358689,
+          0.6984821527705233,
+          0.05834172173637008,
+          0.004071909784451456
+        ],
+        "top3": [
+          {
+            "label": "International",
+            "score": 0.6984821527705233
+          },
+          {
+            "label": "Hip-Hop",
+            "score": 0.16129125100441574
+          },
+          {
+            "label": "Pop",
+            "score": 0.05834172173637008
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.11927654523049946,
+              0.008454218897106878,
+              0.0124688088045597,
+              0.2050355517031039,
+              0.002208721009828962,
+              0.562079806084233,
+              0.08638547870545077,
+              0.00409086956521732
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.00589924482042961,
+              0.0038989786208087043,
+              0.032038898567790505,
+              0.13150101151947605,
+              6.408601016373678e-05,
+              0.7861838231437075,
+              0.037736653171117414,
+              0.002677304146506418
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.006297905436627257,
+              0.009908154917352578,
+              0.032708087141035666,
+              0.14733718979066723,
+              0.00021524465651490777,
+              0.7471828290836295,
+              0.05090303333254207,
+              0.0054475556416306295
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.5652818999951705
+      }
+    },
+    {
+      "track_id": "006385",
+      "artist_id": "1836",
+      "source_sha256": "f3e005012340785dbb0dc17c0c99dba6277f16f98054d7227c9756a065374374",
+      "max_probability_error": 1.9839366449669882e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.0017017878756297805,
+          0.022312619899835722,
+          0.041242380256910974,
+          0.0010226243375899505,
+          0.002587182997605819,
+          0.824769244988602,
+          0.06198755535992359,
+          0.044376604283902145
+        ],
+        "top3": [
+          {
+            "label": "International",
+            "score": 0.824769244988602
+          },
+          {
+            "label": "Pop",
+            "score": 0.06198755535992359
+          },
+          {
+            "label": "Rock",
+            "score": 0.044376604283902145
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0020639711584999427,
+              0.01597031811171884,
+              0.041240015007005984,
+              0.00038473520420386333,
+              0.0058486505152818705,
+              0.7779653046404299,
+              0.08627760457793783,
+              0.07024940078492162
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0024184267689302047,
+              0.016847589150058517,
+              0.04095089916562259,
+              0.001284836786705279,
+              0.0008859808891977598,
+              0.8736493114092759,
+              0.036061846673723294,
+              0.02790110915648633
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0006229656994591941,
+              0.0341199524377298,
+              0.04153622659810434,
+              0.0013983010218607092,
+              0.0010269175883378264,
+              0.8226931189161,
+              0.06362321482810965,
+              0.03497930291029849
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.3435041999910027
+      }
+    },
+    {
+      "track_id": "127866",
+      "artist_id": "21105",
+      "source_sha256": "1357d64b5e4d03f27e34d6356516e16d1e815f1ea1ce8002b1e46cf93fd51425",
+      "max_probability_error": 1.852853769856999e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.25413238337416505,
+          0.1433634861735224,
+          0.08195088477310368,
+          0.009375344400131264,
+          0.28048758079693137,
+          0.05644718449838577,
+          0.12647021673068407,
+          0.04777291925307634
+        ],
+        "top3": [
+          {
+            "label": "Instrumental",
+            "score": 0.28048758079693137
+          },
+          {
+            "label": "Electronic",
+            "score": 0.25413238337416505
+          },
+          {
+            "label": "Experimental",
+            "score": 0.1433634861735224
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.11824228409767089,
+              0.2242429022314726,
+              0.07938175440027927,
+              0.0008619675524728064,
+              0.48313500214881466,
+              0.006721578820915493,
+              0.05551431124468185,
+              0.03190019950369242
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.2818621929290356,
+              0.13862851402112014,
+              0.06383996110322558,
+              0.020241953071702692,
+              0.19951121508151387,
+              0.10539112173730684,
+              0.16481711011405956,
+              0.025707931942035734
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.989,
+            "padded_seconds": 0.011,
+            "scores": [
+              0.3622926730957887,
+              0.06721904226797443,
+              0.10263093881580616,
+              0.007022112576218297,
+              0.15881652516046568,
+              0.057228852936934964,
+              0.15907922883331077,
+              0.08571062631350086
+            ]
+          }
+        ],
+        "source_sample_rate": 48000,
+        "source_channels": 2,
+        "duration_seconds": 29.989,
+        "elapsed_seconds": 2.1419693999923766
+      }
+    },
+    {
+      "track_id": "073775",
+      "artist_id": "4092",
+      "source_sha256": "8fdd35fd4b901a895b5f5acc5a36a01d9bc5ec0aa6879aba8b4b8438ce8f089f",
+      "max_probability_error": 2.4802418069347354e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.01719999163945356,
+          0.14187606377721004,
+          0.04011988264904318,
+          0.12967052180262076,
+          0.0219468400872745,
+          0.2653111466019015,
+          0.3434448739826772,
+          0.04043067945981924
+        ],
+        "top3": [
+          {
+            "label": "Pop",
+            "score": 0.3434448739826772
+          },
+          {
+            "label": "International",
+            "score": 0.2653111466019015
+          },
+          {
+            "label": "Experimental",
+            "score": 0.14187606377721004
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.011752778947473314,
+              0.03606394982780252,
+              0.01370613745724541,
+              0.24056937616577653,
+              0.036183199158066455,
+              0.14202017131869166,
+              0.4698280271224589,
+              0.04987636000248514
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.007687142579137027,
+              0.22973284754006082,
+              0.062245247414406076,
+              0.005821792906664711,
+              0.006457047440486261,
+              0.41715203978766446,
+              0.2591051127349476,
+              0.011798769596632997
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.03216005339175035,
+              0.15983139396376678,
+              0.04440826307547806,
+              0.142620396335421,
+              0.023200273663270786,
+              0.2367612286993483,
+              0.30140148209062523,
+              0.05961690878033959
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.422529200091958
+      }
+    },
+    {
+      "track_id": "014319",
+      "artist_id": "3936",
+      "source_sha256": "ca95dcbac1f7d671141b6b067999b305343aec34f0b8b3f73ba089e89831f340",
+      "max_probability_error": 6.588523637773847e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.004016394010159492,
+          0.051228777806991053,
+          0.054730537895278965,
+          0.0007067617155126554,
+          0.00510178487866755,
+          0.8753042403229183,
+          0.00702290669656986,
+          0.0018885966739020895
+        ],
+        "top3": [
+          {
+            "label": "International",
+            "score": 0.8753042403229183
+          },
+          {
+            "label": "Folk",
+            "score": 0.054730537895278965
+          },
+          {
+            "label": "Experimental",
+            "score": 0.051228777806991053
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.00712033934353146,
+              0.0912548268741972,
+              0.07562325522841755,
+              0.0010058214369264489,
+              0.011447420737647318,
+              0.8094738039013148,
+              0.003153134724754602,
+              0.0009213977532105092
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.003991532287085973,
+              0.02489104370769349,
+              0.04039595772100739,
+              0.00013715801691181523,
+              0.0021203499127721024,
+              0.9233606965946873,
+              0.004551206982660294,
+              0.0005520547771816126
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0009373103998610437,
+              0.03754046283908248,
+              0.04817240073641196,
+              0.0009773056926997022,
+              0.0017375839855832311,
+              0.8930782204727526,
+              0.013364378382294683,
+              0.0041923374913141465
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.2528728999895975
+      }
+    },
+    {
+      "track_id": "054467",
+      "artist_id": "11989",
+      "source_sha256": "f3da9ceb994b6b1567daf0799955e8c2d333e3eef08af6530a23651681e69eeb",
+      "max_probability_error": 2.1848895465081952e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.26128699800202715,
+          0.04215707034899672,
+          0.005574414900554343,
+          0.4487557278529623,
+          0.023237912296048185,
+          0.07962927535004785,
+          0.09274622412372226,
+          0.04661237712564115
+        ],
+        "top3": [
+          {
+            "label": "Hip-Hop",
+            "score": 0.4487557278529623
+          },
+          {
+            "label": "Electronic",
+            "score": 0.26128699800202715
+          },
+          {
+            "label": "Pop",
+            "score": 0.09274622412372226
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.1408495472017066,
+              0.032428589124090614,
+              0.0064499829733424,
+              0.3379555670668485,
+              0.0030745251967139323,
+              0.16877212209560802,
+              0.1901594313772389,
+              0.12031023496445102
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.3137459821351912,
+              0.03998755593333477,
+              0.00456074461954274,
+              0.5042370718114227,
+              0.02701381404753131,
+              0.05324781137114021,
+              0.053787595763340364,
+              0.0034194243184966304
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.3292654646691836,
+              0.05405506598956476,
+              0.005712517108777889,
+              0.5040745446806157,
+              0.039625397643899316,
+              0.016867892583395324,
+              0.034291645230587545,
+              0.01610747209397579
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.5292433999711648
+      }
+    },
+    {
+      "track_id": "029350",
+      "artist_id": "7325",
+      "source_sha256": "91cd6fbd2e57ed2b66ae7e1329846ef2f2fd35e6a3ea5dcc3c8e177ba467b7ea",
+      "max_probability_error": 2.7905147126361385e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.0022726234891793052,
+          0.27152167004394,
+          0.160859360603913,
+          0.00346328446770209,
+          0.013442842713610292,
+          0.40735474008713163,
+          0.07484437703468053,
+          0.06624110155984314
+        ],
+        "top3": [
+          {
+            "label": "International",
+            "score": 0.40735474008713163
+          },
+          {
+            "label": "Experimental",
+            "score": 0.27152167004394
+          },
+          {
+            "label": "Folk",
+            "score": 0.160859360603913
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0001340925494784265,
+              0.19919496395709455,
+              0.1634545388699987,
+              0.0007634918378717017,
+              0.012482748350858336,
+              0.49418705309679295,
+              0.04410476752336534,
+              0.08567834381454
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.000626673360277786,
+              0.17883692654887753,
+              0.13149639525279758,
+              0.0004066448570626705,
+              0.005982771563480982,
+              0.5853308739523211,
+              0.07962008267215585,
+              0.017699631793026523
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.99075,
+            "padded_seconds": 0.00925,
+            "scores": [
+              0.006057104557781703,
+              0.43653311962584795,
+              0.1876271476889427,
+              0.009219716708171897,
+              0.021863008226491558,
+              0.14254629321228093,
+              0.10080828090852038,
+              0.09534532907196291
+            ]
+          }
+        ],
+        "source_sample_rate": 22050,
+        "source_channels": 2,
+        "duration_seconds": 29.99075,
+        "elapsed_seconds": 2.192919999943115
+      }
+    },
+    {
+      "track_id": "135225",
+      "artist_id": "21947",
+      "source_sha256": "00766fba28f5e4f5b7d3f339a5e5e65da55186b10fca5a55dd319ab730904918",
+      "max_probability_error": 2.0959174906742817e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.05168998125714893,
+          0.0883344632754348,
+          0.28018854040577484,
+          0.03805580025075445,
+          0.09446337365465736,
+          0.2873385354670266,
+          0.14966723812575103,
+          0.01026206756345197
+        ],
+        "top3": [
+          {
+            "label": "International",
+            "score": 0.2873385354670266
+          },
+          {
+            "label": "Folk",
+            "score": 0.28018854040577484
+          },
+          {
+            "label": "Pop",
+            "score": 0.14966723812575103
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.039288455980673154,
+              0.07325277793138041,
+              0.26297096900753353,
+              0.014847130405272111,
+              0.04389234026480298,
+              0.4499821188811622,
+              0.10368743274735498,
+              0.012078774781820593
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.04411608696012854,
+              0.10039486722898386,
+              0.23844415221212217,
+              0.05885832806278482,
+              0.12279458395059012,
+              0.2395060958609436,
+              0.18402457989584653,
+              0.011861305828600297
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.07166540083064508,
+              0.09135574466594014,
+              0.3391504999976688,
+              0.04046194228420643,
+              0.116703196748579,
+              0.172527391658974,
+              0.1612897017340516,
+              0.006846122079935024
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.2384902999037877
+      }
+    },
+    {
+      "track_id": "146879",
+      "artist_id": "23015",
+      "source_sha256": "282b9514a1c8a5304e7d5d660951c9894c56b72859274fde64f1ef719e9e312a",
+      "max_probability_error": 2.6750416648457787e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.35034038037138776,
+          0.10683765493526827,
+          0.028374802090950307,
+          0.042633595051301515,
+          0.2935282478612571,
+          0.061166323799747756,
+          0.04281645415303851,
+          0.07430254173704873
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.35034038037138776
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.2935282478612571
+          },
+          {
+            "label": "Experimental",
+            "score": 0.10683765493526827
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.22759706452781328,
+              0.129134792326073,
+              0.02998294739597877,
+              0.02610643619828589,
+              0.36363632607863616,
+              0.006091503429549024,
+              0.06384788193197544,
+              0.15360304811168832
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.4580735938583448,
+              0.04682944428220345,
+              0.025457195622386217,
+              0.08337373664458154,
+              0.25616289864451447,
+              0.07769774900435396,
+              0.01985233542790106,
+              0.03255304651571435
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.36535048272800513,
+              0.14454872819752834,
+              0.029684263254485938,
+              0.018420612311037112,
+              0.2607855188606207,
+              0.09970971896534028,
+              0.044749145099239045,
+              0.03675153058374351
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.4749880000017583
+      }
+    },
+    {
+      "track_id": "122832",
+      "artist_id": "14348",
+      "source_sha256": "e15059c427dff390492bedc133e19a4d6ed142032277cea463a04632996a680a",
+      "max_probability_error": 1.6075035202955945e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.6738555623052259,
+          0.10230051781074967,
+          0.0029752642601206677,
+          0.12026763985828455,
+          0.02857211485561975,
+          0.021498641762131777,
+          0.04344494523212408,
+          0.00708531391574357
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.6738555623052259
+          },
+          {
+            "label": "Hip-Hop",
+            "score": 0.12026763985828455
+          },
+          {
+            "label": "Experimental",
+            "score": 0.10230051781074967
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.5738502338705505,
+              0.09811051961130088,
+              0.0024024151989402534,
+              0.24245631855903071,
+              0.013653985529517493,
+              0.01403677350176456,
+              0.045506668391750583,
+              0.009983085337144952
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.7783093416185431,
+              0.07574209470914083,
+              0.001278899460544522,
+              0.08237719591653801,
+              0.021870100566190494,
+              0.021344904560256873,
+              0.016791319744833225,
+              0.002286143423952831
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.6694071114265839,
+              0.1330489391118073,
+              0.005244478120877226,
+              0.035969405099284917,
+              0.050192258471151274,
+              0.02911424722437391,
+              0.06803684755978844,
+              0.008986712986132926
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.5380305000580847
+      }
+    },
+    {
+      "track_id": "125161",
+      "artist_id": "3578",
+      "source_sha256": "f6b47fb752ba057256a2b35792c7590418f4ab09aec6464203bac2d6ad1c207e",
+      "max_probability_error": 2.572615777907128e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.21569907776995415,
+          0.051966205090513945,
+          0.005288332784537377,
+          0.2337425688753605,
+          0.07601655530577972,
+          0.14151062119588512,
+          0.2305466096855462,
+          0.045230029292423056
+        ],
+        "top3": [
+          {
+            "label": "Hip-Hop",
+            "score": 0.2337425688753605
+          },
+          {
+            "label": "Pop",
+            "score": 0.2305466096855462
+          },
+          {
+            "label": "Electronic",
+            "score": 0.21569907776995415
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.2732925800317861,
+              0.015670702300129777,
+              0.003628987595831951,
+              0.14639861804647583,
+              0.07603673821475035,
+              0.34786509318297404,
+              0.10689565745347382,
+              0.03021162317457806
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.19929751556143527,
+              0.026315125899371464,
+              0.0052955490711405085,
+              0.29680301710064255,
+              0.07736162146640038,
+              0.03646221181592301,
+              0.30820647232235193,
+              0.05025848676273485
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.1745071377166411,
+              0.1139127870720406,
+              0.006940461686639672,
+              0.2580260714789631,
+              0.07465130623618842,
+              0.040204558588758245,
+              0.2765376992808128,
+              0.05521997793995625
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.5877590999007225
+      }
+    },
+    {
+      "track_id": "108339",
+      "artist_id": "18846",
+      "source_sha256": "d1b457661b2128d1d3faa3e7ec62d0e9e40f97ffc6f140210f9a05fe9423213d",
+      "max_probability_error": 3.363319455162994e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.3619621930322588,
+          0.3299820548884833,
+          0.019576396319822418,
+          0.012269057016021885,
+          0.03125695275805339,
+          0.04662302643801384,
+          0.1359430942931065,
+          0.06238722525423981
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.3619621930322588
+          },
+          {
+            "label": "Experimental",
+            "score": 0.3299820548884833
+          },
+          {
+            "label": "Pop",
+            "score": 0.1359430942931065
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.2812757160859761,
+              0.45373399987496804,
+              0.007302069010446844,
+              0.006956086161306631,
+              0.025727799277071174,
+              0.06227508473892821,
+              0.12185107162578722,
+              0.04087817322551573
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.6401052763271456,
+              0.07645725289723311,
+              0.004615028223780443,
+              0.022190529593792526,
+              0.042922738155266635,
+              0.04891924497404032,
+              0.09132062410307219,
+              0.07346930572566922
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.16450558668365473,
+              0.45975491189324885,
+              0.04681209172523997,
+              0.007660555292966499,
+              0.02512032084182235,
+              0.02867474960107299,
+              0.19465758715046014,
+              0.07281419681153448
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.6020669999998063
+      }
+    },
+    {
+      "track_id": "116238",
+      "artist_id": "19780",
+      "source_sha256": "899941d3d41dad0bb16dc9ca4821fbcd4ba3b224e03f4312abeb5374012b5945",
+      "max_probability_error": 9.313426363455335e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.4230416027452202,
+          0.13461844321468877,
+          0.0018213306520703874,
+          0.17747162728649438,
+          0.012562509998841224,
+          0.05317448235051481,
+          0.1462779161315753,
+          0.05103208762059486
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.4230416027452202
+          },
+          {
+            "label": "Hip-Hop",
+            "score": 0.17747162728649438
+          },
+          {
+            "label": "Pop",
+            "score": 0.1462779161315753
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.6724350072003255,
+              0.11345687758784263,
+              0.0013702793617632355,
+              0.04233602290986035,
+              0.025323449664284584,
+              0.003863609996564794,
+              0.08326653010161916,
+              0.05794822317773981
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.4761358715570534,
+              0.21751883298920976,
+              0.001111182404783183,
+              0.07736609436935045,
+              0.007761315812262788,
+              0.008196481169894083,
+              0.16889067302181157,
+              0.04301954867563477
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.12055392947828174,
+              0.07287961906701391,
+              0.002982530189664744,
+              0.4127127645802724,
+              0.004602764519976298,
+              0.14746335588508555,
+              0.18667654527129518,
+              0.05212849100840999
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.4102527999784797
+      }
+    },
+    {
+      "track_id": "029528",
+      "artist_id": "7357",
+      "source_sha256": "6a026afed19c596c299f0299d2849340e164218560b1719491d92a3d03dd90b3",
+      "max_probability_error": 1.5962243915534913e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.6415406124297292,
+          0.1309105685615131,
+          0.006777580824742471,
+          0.04883476796061093,
+          0.056632121619691465,
+          0.0702522890871596,
+          0.042109878867793105,
+          0.002942180648760239
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.6415406124297292
+          },
+          {
+            "label": "Experimental",
+            "score": 0.1309105685615131
+          },
+          {
+            "label": "International",
+            "score": 0.0702522890871596
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.7333750036905364,
+              0.07588635605416658,
+              0.004164528933460424,
+              0.016859691838657914,
+              0.09472400433264216,
+              0.03508166157676715,
+              0.035408129275359315,
+              0.004500624298410106
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.576915593140153,
+              0.10999661257293554,
+              0.003978939093437016,
+              0.10395009611888302,
+              0.023685063195172145,
+              0.14304421968799091,
+              0.037624182359371525,
+              0.0008052938320568944
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.6143312404584981,
+              0.20684873705743714,
+              0.012189274447329977,
+              0.025694515924291863,
+              0.05148729733126008,
+              0.03263098599672075,
+              0.05329732496864846,
+              0.003520623815813717
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.3058351000072435
+      }
+    },
+    {
+      "track_id": "031568",
+      "artist_id": "7797",
+      "source_sha256": "4d7751f3c1c771c256aaf2b60130400136ee824e13aa90bfef7853494788b6b1",
+      "max_probability_error": 2.5211241572176135e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.13125486039196757,
+          0.10300583335539344,
+          0.014826654735100642,
+          0.3343436983682904,
+          0.042416073792694575,
+          0.18228950882937975,
+          0.14112180974742036,
+          0.050741560779753316
+        ],
+        "top3": [
+          {
+            "label": "Hip-Hop",
+            "score": 0.3343436983682904
+          },
+          {
+            "label": "International",
+            "score": 0.18228950882937975
+          },
+          {
+            "label": "Pop",
+            "score": 0.14112180974742036
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.10713449937979155,
+              0.1116469666163031,
+              0.01642465374654877,
+              0.26619263136749294,
+              0.050291127722347916,
+              0.17510346154570283,
+              0.1823860204421001,
+              0.09082063917971286
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.10326261554238354,
+              0.05784366619872747,
+              0.005778488160144484,
+              0.6800306960252409,
+              0.020093898894794165,
+              0.057077720397674454,
+              0.046318982042075414,
+              0.029593932738959657
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.18336746625372757,
+              0.13952686725114977,
+              0.02227682229860867,
+              0.056807767712137455,
+              0.05686319476094165,
+              0.314687344544762,
+              0.19466042675808556,
+              0.03181011042058742
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.4767291999887675
+      }
+    },
+    {
+      "track_id": "127936",
+      "artist_id": "21128",
+      "source_sha256": "f606c5075a2bee3060626fac67f3512aaf94b4ca9900077dcd34825167fef913",
+      "max_probability_error": 3.0557137276066015e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.40037988129216057,
+          0.3118748696516414,
+          0.01036296948045469,
+          0.001029241435491426,
+          0.10461392982186311,
+          0.01660466447742003,
+          0.13890826607298726,
+          0.016226177767981603
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.40037988129216057
+          },
+          {
+            "label": "Experimental",
+            "score": 0.3118748696516414
+          },
+          {
+            "label": "Pop",
+            "score": 0.13890826607298726
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.2824338335228836,
+              0.4644561588424866,
+              0.015183886282235694,
+              0.00019977328964708723,
+              0.11760542164490154,
+              0.01266677034539822,
+              0.09872600942773732,
+              0.008728146644710028
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.27803177558502334,
+              0.40341385355623316,
+              0.011865495903415626,
+              0.0006422204628194727,
+              0.15430787616126496,
+              0.006999986033627147,
+              0.13122501448070834,
+              0.013513777816907975
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.989,
+            "padded_seconds": 0.011,
+            "scores": [
+              0.6406740347685747,
+              0.06775459655620442,
+              0.004039526255712753,
+              0.002245730554007718,
+              0.04192849165942285,
+              0.03014723705323472,
+              0.18677377431051614,
+              0.026436608842326806
+            ]
+          }
+        ],
+        "source_sample_rate": 48000,
+        "source_channels": 2,
+        "duration_seconds": 29.989,
+        "elapsed_seconds": 2.513569200062193
+      }
+    },
+    {
+      "track_id": "080001",
+      "artist_id": "15763",
+      "source_sha256": "576821f05d58404db5e4a7f7d65a647d3f77cbfd9944b20888bd8d1f1a5c82af",
+      "max_probability_error": 1.0386580451271499e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.0541194111357444,
+          0.020140112645895613,
+          0.2180543537526863,
+          0.06011540266777641,
+          0.15985404222746322,
+          0.024955915634725878,
+          0.38360244116271663,
+          0.07915832077299138
+        ],
+        "top3": [
+          {
+            "label": "Pop",
+            "score": 0.38360244116271663
+          },
+          {
+            "label": "Folk",
+            "score": 0.2180543537526863
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.15985404222746322
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.016052998702433565,
+              0.018943188811333035,
+              0.16768049743283286,
+              0.06670866678730523,
+              0.07250170446345759,
+              0.03110446824112415,
+              0.45500275652823974,
+              0.17200571903327366
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.11506349041923475,
+              0.02074677141807371,
+              0.21665066717928602,
+              0.0317676087770699,
+              0.2914003113520621,
+              0.011850568185045384,
+              0.2861400771588356,
+              0.026380505510392515
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.031241744285564907,
+              0.02073037770828009,
+              0.26983189664594,
+              0.08186993243895412,
+              0.11566011086686992,
+              0.03191271047800811,
+              0.4096644898010747,
+              0.039088737775307976
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.4248778000473976
+      }
+    },
+    {
+      "track_id": "052946",
+      "artist_id": "1065",
+      "source_sha256": "1cd20b39429b679c9bc256297d3e784cd83f0a2f19b9c15f349ecb74cacdf4b3",
+      "max_probability_error": 1.6241948772033332e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.010635031432368663,
+          0.03870762134627301,
+          0.5444252975434342,
+          0.0008212939082053232,
+          0.03160555407184848,
+          0.23599473496108336,
+          0.11474020268307707,
+          0.023070264053710012
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.5444252975434342
+          },
+          {
+            "label": "International",
+            "score": 0.23599473496108336
+          },
+          {
+            "label": "Pop",
+            "score": 0.11474020268307707
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.003677348582158305,
+              0.04605568702323628,
+              0.6743985966900373,
+              0.0003754035178567393,
+              0.023327267074004326,
+              0.10865408574927922,
+              0.12000374976735231,
+              0.023507861596075586
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0013318333346945305,
+              0.029297311868722295,
+              0.25731720501183314,
+              0.0004476216249055529,
+              0.013835376420990465,
+              0.5348277805141045,
+              0.14493612057423147,
+              0.01800675065051806
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.026895912380253153,
+              0.040769865146860464,
+              0.701560090928432,
+              0.0016408565818536772,
+              0.05765401872055065,
+              0.06450233861986637,
+              0.07928073770764742,
+              0.02769617991453639
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.6184598999097943
+      }
+    },
+    {
+      "track_id": "083439",
+      "artist_id": "16167",
+      "source_sha256": "3720e9450a792dec1f64148af4a1deba0e0c9a49a8cf1cd5f454f0e2b0360ab1",
+      "max_probability_error": 2.9088326725101865e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.003713546862739335,
+          0.13651599427156602,
+          0.582121492509802,
+          0.0026430662458714264,
+          0.1521304821942849,
+          0.00560040376479936,
+          0.09309710432009581,
+          0.02417790983084118
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.582121492509802
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.1521304821942849
+          },
+          {
+            "label": "Experimental",
+            "score": 0.13651599427156602
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0032893116640749518,
+              0.10904408582562872,
+              0.3258831223563281,
+              0.001788737748554654,
+              0.32649860167785383,
+              0.008564969470052645,
+              0.17127109963226414,
+              0.053660071625243
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.006866521406630055,
+              0.25989937506577926,
+              0.5639906215155638,
+              0.005158683088421361,
+              0.09588147300914979,
+              0.0025590120148144243,
+              0.055510773608229716,
+              0.010133540291411617
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0009848075175129987,
+              0.04060452192329011,
+              0.856490733657514,
+              0.000981777900638263,
+              0.03401137189585114,
+              0.005677229809531012,
+              0.05250943971979352,
+              0.00874011757586892
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.5601458000019193
+      }
+    },
+    {
+      "track_id": "085968",
+      "artist_id": "16527",
+      "source_sha256": "07ec2bbe7fcd1abe4b4969015a9ada6a7594f2a29002671ba50339a5154cf290",
+      "max_probability_error": 2.154298325562909e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.0025052091456303394,
+          0.0738115350949707,
+          0.5176745430990488,
+          0.014475887755143012,
+          0.030428252435260678,
+          0.1397570856623157,
+          0.14158151665819366,
+          0.07976597014943701
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.5176745430990488
+          },
+          {
+            "label": "Pop",
+            "score": 0.14158151665819366
+          },
+          {
+            "label": "International",
+            "score": 0.1397570856623157
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.002404055898481155,
+              0.0608889809824574,
+              0.6401173372688773,
+              0.0226298398642834,
+              0.008972548680258763,
+              0.08245732449272676,
+              0.10828497903605479,
+              0.07424493377686028
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0019912524334332305,
+              0.05294883792505104,
+              0.36962829765099503,
+              0.01532700245884871,
+              0.008989209624498683,
+              0.29811788846073534,
+              0.18649420549237017,
+              0.06650330595406789
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0031203191049766323,
+              0.10759678637740364,
+              0.5432779943772742,
+              0.005470820942296929,
+              0.07332299900102458,
+              0.03869604403348504,
+              0.12996536544615606,
+              0.09854967071738285
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.545979500049725
+      }
+    },
+    {
+      "track_id": "148215",
+      "artist_id": "22428",
+      "source_sha256": "2aedfa505274af3153fcf906f60b1069f08b458da1916c4579d98df4566c914d",
+      "max_probability_error": 1.0630743443873492e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.18340538398457729,
+          0.1395620211313863,
+          0.04898720878687785,
+          0.17206402205896432,
+          0.04363947252354649,
+          0.06338126213653723,
+          0.2761240621507015,
+          0.07283656722740899
+        ],
+        "top3": [
+          {
+            "label": "Pop",
+            "score": 0.2761240621507015
+          },
+          {
+            "label": "Electronic",
+            "score": 0.18340538398457729
+          },
+          {
+            "label": "Hip-Hop",
+            "score": 0.17206402205896432
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0878987336399301,
+              0.1350801027947213,
+              0.05288914098816158,
+              0.04568675367549635,
+              0.0974684625912974,
+              0.04933419065685595,
+              0.4216274050276065,
+              0.11001521062593081
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.15321672003340545,
+              0.2140352207586187,
+              0.052494448439128254,
+              0.3446458985734765,
+              0.010743617126370474,
+              0.044748117728935013,
+              0.15833383581866878,
+              0.021782141521396743
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.3091006982803963,
+              0.06957073984081892,
+              0.04157803693334373,
+              0.1258594139279201,
+              0.022706337852971572,
+              0.09606147802382076,
+              0.24841094560582924,
+              0.0867123495348994
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.484350400045514
+      }
+    },
+    {
+      "track_id": "089477",
+      "artist_id": "16875",
+      "source_sha256": "59d6771fa26aeb611a0ed33aff7ed62a6575aac13feaa9e49209a6a1c6ff8c46",
+      "max_probability_error": 1.7598855221734322e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.020046111691770587,
+          0.043080403191099854,
+          0.2186563201802482,
+          0.06529275988600389,
+          0.025376153331398376,
+          0.03849295928099611,
+          0.39533058480797045,
+          0.1937247076305125
+        ],
+        "top3": [
+          {
+            "label": "Pop",
+            "score": 0.39533058480797045
+          },
+          {
+            "label": "Folk",
+            "score": 0.2186563201802482
+          },
+          {
+            "label": "Rock",
+            "score": 0.1937247076305125
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.018854376232739015,
+              0.03320135473327616,
+              0.11577735357040096,
+              0.09210396901535126,
+              0.034149180620670426,
+              0.04722940305612801,
+              0.4356145787260418,
+              0.22306978404539235
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.00874130342014182,
+              0.03877186265608585,
+              0.34092358908155457,
+              0.043892579566710874,
+              0.0062249301475290715,
+              0.031857585644333636,
+              0.38831756877620943,
+              0.14127058070743462
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.03254265542243092,
+              0.05726799218393757,
+              0.199268017888789,
+              0.05988173107594954,
+              0.03575434922599564,
+              0.036391889142526675,
+              0.36205960692166017,
+              0.2168337581387105
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.60413949994836
+      }
+    },
+    {
+      "track_id": "111188",
+      "artist_id": "19120",
+      "source_sha256": "ba850a7c3cb8195f1a1362037a439a397b2f8bffa9213a9d1f086a19f7541f0a",
+      "max_probability_error": 1.2923397119807278e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.0009108919416129145,
+          0.019833309881701257,
+          0.9043569080925913,
+          0.00040269998910987697,
+          0.021945782814924892,
+          0.016955731865681764,
+          0.028633145094913923,
+          0.006961530319464011
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.9043569080925913
+          },
+          {
+            "label": "Pop",
+            "score": 0.028633145094913923
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.021945782814924892
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0013736108673672814,
+              0.03892473326799653,
+              0.8144945881511665,
+              0.000796740454548413,
+              0.05497822080607253,
+              0.02526429538676189,
+              0.05167916357709856,
+              0.012488647488988395
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0008568389966686121,
+              0.016023901993410167,
+              0.9406328705097965,
+              0.0002896990813455372,
+              0.007227582518308822,
+              0.013556566075332788,
+              0.016620824356588425,
+              0.004791716468549271
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.0005022259608028504,
+              0.004551294383697076,
+              0.9579432656168112,
+              0.00012166043143568078,
+              0.0036315451203933267,
+              0.012046334134950609,
+              0.017599447351054787,
+              0.0036042270008543667
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 1,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.4219490999821573
+      }
+    },
+    {
+      "track_id": "087972",
+      "artist_id": "16823",
+      "source_sha256": "e03afd948258b5f1142c6714576040bc342698645e98ae0f9f7bf820960df73f",
+      "max_probability_error": 6.016139869613468e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.004101048608815276,
+          0.10183636008883758,
+          0.6707993508224185,
+          0.00020427966989803938,
+          0.1433556315610464,
+          0.029676981127395058,
+          0.025866664624293618,
+          0.024159683497295543
+        ],
+        "top3": [
+          {
+            "label": "Folk",
+            "score": 0.6707993508224185
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.1433556315610464
+          },
+          {
+            "label": "Experimental",
+            "score": 0.10183636008883758
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.00018007452419415828,
+              0.04041759022851885,
+              0.8139489678439035,
+              9.756771515115597e-05,
+              0.04842661220545271,
+              0.014901374439382997,
+              0.03477293786744064,
+              0.04725487517595612
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.011476493047729228,
+              0.21096662664546956,
+              0.35355920161168514,
+              0.0004564373974487497,
+              0.3686282912187903,
+              0.027340068921963154,
+              0.014860218883154743,
+              0.012712662273759159
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.0006465782545224436,
+              0.054124863392524335,
+              0.844889883011667,
+              5.883389709421239e-05,
+              0.013011991258896181,
+              0.04678950002083903,
+              0.027966837122285468,
+              0.01251151304217135
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.391673699952662
+      }
+    },
+    {
+      "track_id": "038891",
+      "artist_id": "9279",
+      "source_sha256": "2b23d35262cc8dee20022c6406663a5209d2b9eaf3fba66b58f7b1d83df62b84",
+      "max_probability_error": 8.376606075444215e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.09435453903140047,
+          0.8780180572301778,
+          1.861698211191553e-05,
+          0.0069976721365312055,
+          0.015498230344300395,
+          0.0002537590322479603,
+          0.00027456262514029533,
+          0.004584562618089914
+        ],
+        "top3": [
+          {
+            "label": "Experimental",
+            "score": 0.8780180572301778
+          },
+          {
+            "label": "Electronic",
+            "score": 0.09435453903140047
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.015498230344300395
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0991900869212208,
+              0.8738450011631239,
+              1.0471257079059987e-05,
+              0.010042985322111423,
+              0.014152868750440709,
+              0.00010272011124408483,
+              0.0003642130774605028,
+              0.0022916533973194896
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.1040023736371393,
+              0.8674880749961547,
+              1.4907760062261467e-05,
+              0.00496104076205582,
+              0.019852121357259857,
+              0.00027176038048450687,
+              0.0001858928571488599,
+              0.003223828249694758
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.07987115653584133,
+              0.8927210955312549,
+              3.047192919442515e-05,
+              0.005988990325426373,
+              0.012489700925200615,
+              0.00038679660501528935,
+              0.00027358194081152326,
+              0.008238206207255494
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.441795799997635
+      }
+    },
+    {
+      "track_id": "035462",
+      "artist_id": "8014",
+      "source_sha256": "f43b48fed8d0818e14cad2a2819419614bb818577e6d1c80f08c3399a30f9c32",
+      "max_probability_error": 1.1326372861830691e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.018319897718090197,
+          0.1238839523622488,
+          0.273609251134435,
+          0.006427637954477354,
+          0.28005968946786525,
+          0.039281064166589295,
+          0.1937589221326548,
+          0.06465958506363925
+        ],
+        "top3": [
+          {
+            "label": "Instrumental",
+            "score": 0.28005968946786525
+          },
+          {
+            "label": "Folk",
+            "score": 0.273609251134435
+          },
+          {
+            "label": "Pop",
+            "score": 0.1937589221326548
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.022097212111070557,
+              0.1767123168778338,
+              0.14442216179946327,
+              0.005871429844105058,
+              0.32733141127378057,
+              0.08177100689862012,
+              0.1963575750910345,
+              0.04543688610409215
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.010550329496689291,
+              0.0809350603230454,
+              0.23785075743191927,
+              0.008786399046161833,
+              0.2808720765124434,
+              0.01848151720331417,
+              0.27479764321837025,
+              0.08772621676805645
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.02231215154651074,
+              0.11400447988586719,
+              0.43855483417192254,
+              0.004625084973165168,
+              0.23197558061737192,
+              0.017590668397833603,
+              0.1101215480885597,
+              0.06081565231876915
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.580754499998875
+      }
+    },
+    {
+      "track_id": "124517",
+      "artist_id": "19918",
+      "source_sha256": "27afda006b3f2b83d5e8663c835457b507916d8cc9433ed4545640d7d67898d6",
+      "max_probability_error": 2.2218051209943468e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.12183758552597425,
+          0.1713738734004532,
+          0.03836785982154402,
+          0.0003045715394530271,
+          0.41931516343897296,
+          0.021901894737702887,
+          0.03748909061176021,
+          0.18940996092413945
+        ],
+        "top3": [
+          {
+            "label": "Instrumental",
+            "score": 0.41931516343897296
+          },
+          {
+            "label": "Rock",
+            "score": 0.18940996092413945
+          },
+          {
+            "label": "Experimental",
+            "score": 0.1713738734004532
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.09980931176774938,
+              0.23504745439339958,
+              0.10118332339038155,
+              0.00013781715278163854,
+              0.19501805132503072,
+              0.057483690413367594,
+              0.03650713924765907,
+              0.2748132123096304
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.18331429519032377,
+              0.12488354980378716,
+              0.0017715735284210483,
+              0.0003115370725255571,
+              0.6098066050958297,
+              0.0011844653534466446,
+              0.017806430510448924,
+              0.06092154344521715
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.0823891496198496,
+              0.15419061600417291,
+              0.012148682545829464,
+              0.00046436039305188567,
+              0.45312083389605845,
+              0.007037528446294413,
+              0.058153702077172624,
+              0.23249512701757077
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.5012938999570906
+      }
+    },
+    {
+      "track_id": "083908",
+      "artist_id": "16171",
+      "source_sha256": "e905c625d89abff712d8a101e79ca9f5731469fb06c4385b0b3e91c633a59f2b",
+      "max_probability_error": 2.3544129582053763e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.011624037095027484,
+          0.053229324069433294,
+          0.1368215010381225,
+          0.004892305454050936,
+          0.07784621023712592,
+          0.21671359747947083,
+          0.415704115051677,
+          0.08316890957509204
+        ],
+        "top3": [
+          {
+            "label": "Pop",
+            "score": 0.415704115051677
+          },
+          {
+            "label": "International",
+            "score": 0.21671359747947083
+          },
+          {
+            "label": "Folk",
+            "score": 0.1368215010381225
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0017059179054585052,
+              0.015382658795139004,
+              0.32429146898096584,
+              0.005004877796133198,
+              0.023757171076020978,
+              0.22980233301777392,
+              0.30698824178005935,
+              0.09306733064844923
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.008843173917249132,
+              0.028898969491005,
+              0.05232872318244111,
+              0.002038332302992004,
+              0.09475743340782185,
+              0.15698726573634286,
+              0.5499122851971948,
+              0.1062338167649532
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.024323019462374817,
+              0.11540634392215589,
+              0.033844310950960556,
+              0.007633706263027608,
+              0.11502402622753491,
+              0.2633511936842957,
+              0.39021181817777684,
+              0.05020558131187369
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.422712199972011
+      }
+    },
+    {
+      "track_id": "126506",
+      "artist_id": "21005",
+      "source_sha256": "9ff5e56631259c2f919d4fe8cc3a19f0e1d785df1ea280200f08439c294e13b5",
+      "max_probability_error": 7.688631387114953e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.760922508607393,
+          0.06596623280453844,
+          0.0001757325853956454,
+          0.001125793457165101,
+          0.03905477199008022,
+          0.012622131949238074,
+          0.021978196590024934,
+          0.09815463201616463
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.760922508607393
+          },
+          {
+            "label": "Rock",
+            "score": 0.09815463201616463
+          },
+          {
+            "label": "Experimental",
+            "score": 0.06596623280453844
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.6065080391713854,
+              0.1262792105585804,
+              0.00032659331711610445,
+              0.00032779068917396237,
+              0.05879884357443618,
+              0.020683996434456883,
+              0.034122623293098904,
+              0.15295290296175207
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.8235280680892355,
+              0.03050780152836598,
+              6.096292450205833e-05,
+              0.0014712552127326799,
+              0.025444501627134315,
+              0.004643330246066125,
+              0.014312280677933132,
+              0.10003179969403024
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.852731418561558,
+              0.0411116863266689,
+              0.0001396415145687734,
+              0.0015783344695886612,
+              0.03292097076867018,
+              0.012539069167191214,
+              0.017499685799042767,
+              0.04147919339271153
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.5243306000484154
+      }
+    },
+    {
+      "track_id": "125239",
+      "artist_id": "20860",
+      "source_sha256": "2d52216bdf6b86caaa173cee11316d0e003b5596f7b6c07fecc59e89c367cc7f",
+      "max_probability_error": 1.786112564516884e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.06318731359044007,
+          0.5196984705249218,
+          0.028137428196560316,
+          0.004257549894244688,
+          0.24056738743224756,
+          0.0018562783003872763,
+          0.08139880405000245,
+          0.06089676801119584
+        ],
+        "top3": [
+          {
+            "label": "Experimental",
+            "score": 0.5196984705249218
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.24056738743224756
+          },
+          {
+            "label": "Pop",
+            "score": 0.08139880405000245
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.019176457603145562,
+              0.7117757479301788,
+              0.03329389559467449,
+              0.003994654182979977,
+              0.04495726120070301,
+              0.0037865230618128534,
+              0.05872270621838104,
+              0.12429275420812429
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.028433159867571417,
+              0.4360292256259933,
+              0.03343245296294417,
+              0.00014301027728043077,
+              0.3816204185506957,
+              0.00045574595756730547,
+              0.07355051374715511,
+              0.04633547301079259
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.14195232330060323,
+              0.41129043801859333,
+              0.017685936032062283,
+              0.008634985222473657,
+              0.29512448254534396,
+              0.00132656588178167,
+              0.1119231921844712,
+              0.012062076814670647
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.6561700999736786
+      }
+    },
+    {
+      "track_id": "132589",
+      "artist_id": "21725",
+      "source_sha256": "8c870a4678309c04ef92da104c5272ab85513fea70acf577df19235ead3ffd32",
+      "max_probability_error": 7.31756395477845e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.013862746032614283,
+          0.8447702554132687,
+          0.008870129919830194,
+          0.003983160936245295,
+          0.09617162235830512,
+          0.007129551762726792,
+          0.009574289826535557,
+          0.015638243750473953
+        ],
+        "top3": [
+          {
+            "label": "Experimental",
+            "score": 0.8447702554132687
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.09617162235830512
+          },
+          {
+            "label": "Rock",
+            "score": 0.015638243750473953
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.004456010247953165,
+              0.8451346770087217,
+              0.008946017021828529,
+              0.004302874835394574,
+              0.11781476976027698,
+              0.00044024065251503956,
+              0.004482147602512365,
+              0.014423262870797595
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.0025476778922610046,
+              0.8930771623264364,
+              0.011390982083167302,
+              0.0017817192985427896,
+              0.05430037432660089,
+              0.0059504647313678456,
+              0.007035442553256366,
+              0.023916176788367258
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.034584549957628684,
+              0.796098926904648,
+              0.006273390654494745,
+              0.005864888674798523,
+              0.11639972298803752,
+              0.014997949904297488,
+              0.017205279323837936,
+              0.00857529159225701
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.5354052000911906
+      }
+    },
+    {
+      "track_id": "051158",
+      "artist_id": "11461",
+      "source_sha256": "415666f02f07461b0b31d50a8ea2399530edc4f04298db6aaaaba561d0069927",
+      "max_probability_error": 2.2706035174291372e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.007129291902875086,
+          0.4897422964191566,
+          0.09314818398704228,
+          0.05596369789765652,
+          0.02294415270120685,
+          0.06523768834670698,
+          0.19904377182615826,
+          0.06679091691919742
+        ],
+        "top3": [
+          {
+            "label": "Experimental",
+            "score": 0.4897422964191566
+          },
+          {
+            "label": "Pop",
+            "score": 0.19904377182615826
+          },
+          {
+            "label": "Folk",
+            "score": 0.09314818398704228
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.008996070224022589,
+              0.2053973634655387,
+              0.25521888640354173,
+              0.0011006704880617262,
+              0.05619143116219152,
+              0.12822427920909973,
+              0.24061621299861408,
+              0.10425508604892997
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.003937971317673033,
+              0.7072360745147578,
+              0.0069320883326786506,
+              0.13467196502700304,
+              0.002578320259293952,
+              0.024721124134042483,
+              0.10196185516764036,
+              0.017960601246910585
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.008453834166929635,
+              0.5565934512771734,
+              0.017293577224906435,
+              0.0321184581779048,
+              0.010062706682135082,
+              0.04276766169697874,
+              0.2545532473122203,
+              0.07815706346175172
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.5087132999906316
+      }
+    },
+    {
+      "track_id": "075399",
+      "artist_id": "12271",
+      "source_sha256": "e5ab841330bd4e71887d0d85538d4215da1f5445601193a0e25ae47649d1311a",
+      "max_probability_error": 1.9403870110679122e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.04446886881893126,
+          0.1147197437603406,
+          0.0005232187647755544,
+          0.7157288573410178,
+          0.00011560818701013245,
+          0.08165749373175055,
+          0.03843004213843266,
+          0.0043561672577415176
+        ],
+        "top3": [
+          {
+            "label": "Hip-Hop",
+            "score": 0.7157288573410178
+          },
+          {
+            "label": "Experimental",
+            "score": 0.1147197437603406
+          },
+          {
+            "label": "International",
+            "score": 0.08165749373175055
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.06897841480267233,
+              0.09932748052073304,
+              0.00012655718581761207,
+              0.6534114277465128,
+              4.560279153486526e-05,
+              0.11046325327106706,
+              0.06314931082941713,
+              0.004497952852245172
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.04786982070966562,
+              0.2035009777234058,
+              0.0008582821815137718,
+              0.575577948509461,
+              0.00012564731031376652,
+              0.12668897834168105,
+              0.03955772607200831,
+              0.005820619151950793
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.016558370944455846,
+              0.04133077303688291,
+              0.0005848169269952791,
+              0.9181971957670795,
+              0.00017557445918176556,
+              0.007820249582503509,
+              0.012583089513872535,
+              0.0027499297690285873
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.3844695000443608
+      }
+    },
+    {
+      "track_id": "089196",
+      "artist_id": "16856",
+      "source_sha256": "b9b1954b2301fc463e41e6877508ee44314d9a4afc58f50a3aaa93a783a278e4",
+      "max_probability_error": 2.5672844417012897e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.7511108785319306,
+          0.019303406013533687,
+          0.008342162063607257,
+          0.0026202392996653415,
+          0.0734411843916817,
+          0.07005771664027076,
+          0.0568404966699527,
+          0.018283916389357977
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.7511108785319306
+          },
+          {
+            "label": "Instrumental",
+            "score": 0.0734411843916817
+          },
+          {
+            "label": "International",
+            "score": 0.07005771664027076
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.9532370663703499,
+              0.003085673187184048,
+              0.0011637190092946737,
+              0.001653536701654096,
+              0.023803339284487367,
+              0.0020678462297786773,
+              0.013319641871516612,
+              0.0016691773457346308
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.8468225556082379,
+              0.03611683435483001,
+              0.0003697244502124829,
+              0.0007459921295311912,
+              0.08682199428430543,
+              0.0014467812090136782,
+              0.025388522289865906,
+              0.0022875956740034337
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.453273013617204,
+              0.018707710498586997,
+              0.023493042731314612,
+              0.005461189067810738,
+              0.1096982196062523,
+              0.2066585224820199,
+              0.1318133258484756,
+              0.050894976148335866
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.672086099977605
+      }
+    },
+    {
+      "track_id": "070774",
+      "artist_id": "14476",
+      "source_sha256": "1cd2c2b4765d1906a5aa30c9d68974ee2ec9e7464310b2f33f81b7c6cc861b95",
+      "max_probability_error": 4.7281536769139265e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.6678357067231652,
+          0.12008003401798144,
+          0.007899796783637732,
+          0.059643133791026925,
+          0.05468048740297907,
+          0.030690595762510365,
+          0.041649376257366685,
+          0.017520869261332752
+        ],
+        "top3": [
+          {
+            "label": "Electronic",
+            "score": 0.6678357067231652
+          },
+          {
+            "label": "Experimental",
+            "score": 0.12008003401798144
+          },
+          {
+            "label": "Hip-Hop",
+            "score": 0.059643133791026925
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.8471199979625478,
+              0.011539470018812312,
+              0.00037659561592844564,
+              0.07666404995345594,
+              0.010824500494124829,
+              0.02963194883736717,
+              0.009735556238517526,
+              0.014107880879245896
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.7359420910180807,
+              0.046702897015858724,
+              0.005165160025695621,
+              0.03249365833131214,
+              0.04579246264389261,
+              0.015804712287045764,
+              0.09327149333438271,
+              0.024827525343731876
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.4204450311888668,
+              0.30199773501927324,
+              0.01815763470928913,
+              0.06977169308831271,
+              0.10742449907091976,
+              0.046635126163118164,
+              0.021941079199199815,
+              0.013627201561020486
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.6575617999769747
+      }
+    },
+    {
+      "track_id": "065745",
+      "artist_id": "13729",
+      "source_sha256": "77c16b6d45e66bcfb680cb82a967f8c812186f210721579b5370378eadb687e1",
+      "max_probability_error": 9.128116085221905e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.15343784498682986,
+          0.028882891606047734,
+          0.0009023845841838546,
+          0.7229059345215435,
+          0.001350500452032163,
+          0.046506480865032736,
+          0.03989060448820048,
+          0.0061233584961297065
+        ],
+        "top3": [
+          {
+            "label": "Hip-Hop",
+            "score": 0.7229059345215435
+          },
+          {
+            "label": "Electronic",
+            "score": 0.15343784498682986
+          },
+          {
+            "label": "International",
+            "score": 0.046506480865032736
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.10018991877777778,
+              0.01150529081670738,
+              0.0002091196708356677,
+              0.8468714334389609,
+              0.0002490257450369024,
+              0.013376067458267797,
+              0.02325324815966012,
+              0.004345895932753653
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.15924609601728495,
+              0.026488908852996245,
+              0.0016231460382880062,
+              0.7090631915158953,
+              0.002563435489295997,
+              0.04662898819565809,
+              0.04911865652885573,
+              0.005267577361725762
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.20087752016542684,
+              0.048654475148439576,
+              0.0008748880434278903,
+              0.6127831786097744,
+              0.0012390401217635895,
+              0.07951438694117233,
+              0.04729990877608562,
+              0.008756602193909708
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.5477784000104293
+      }
+    },
+    {
+      "track_id": "011803",
+      "artist_id": "3203",
+      "source_sha256": "e41fba57756559426426062b6c8f02fa90185a90418160a0c46342021d4519e4",
+      "max_probability_error": 2.7647414579945462e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.01386499684591331,
+          0.005766197343812691,
+          0.003782722046641728,
+          0.9345550279317489,
+          0.000676819898972445,
+          0.004654809721607711,
+          0.022482728736515602,
+          0.014216697474787635
+        ],
+        "top3": [
+          {
+            "label": "Hip-Hop",
+            "score": 0.9345550279317489
+          },
+          {
+            "label": "Pop",
+            "score": 0.022482728736515602
+          },
+          {
+            "label": "Rock",
+            "score": 0.014216697474787635
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.004477640982097294,
+              0.0013691912734367924,
+              0.0006207013194366979,
+              0.9874497586036964,
+              6.937337178432769e-05,
+              0.0014761953991036573,
+              0.003612575990832124,
+              0.0009245630596125904
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.02726227535417432,
+              0.014101676536543274,
+              0.010600909364029316,
+              0.8307068258646156,
+              0.001842158296735631,
+              0.01204753141186176,
+              0.062036064503854384,
+              0.04140255866818578
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.009855074201468323,
+              0.0018277242214580051,
+              0.00012655545645917155,
+              0.9855084993269345,
+              0.00011892802839737633,
+              0.00044070235385771495,
+              0.0017995457148602906,
+              0.0003229706965645378
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.4330295000690967
+      }
+    },
+    {
+      "track_id": "064522",
+      "artist_id": "13476",
+      "source_sha256": "b19c9fede836024d4e0df3f44f4f063bfe2d15da9d43bc3ca35e891a71ee3e24",
+      "max_probability_error": 8.693460629149996e-08,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.01239369446216299,
+          0.0651455115056352,
+          0.0012914332630667598,
+          0.8844364248526256,
+          0.0007655113983197413,
+          0.018385094796561797,
+          0.013689716779121274,
+          0.0038926129425065174
+        ],
+        "top3": [
+          {
+            "label": "Hip-Hop",
+            "score": 0.8844364248526256
+          },
+          {
+            "label": "Experimental",
+            "score": 0.0651455115056352
+          },
+          {
+            "label": "International",
+            "score": 0.018385094796561797
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.009511442272575403,
+              0.08512301422027183,
+              0.001510375981312495,
+              0.8789095049699182,
+              0.001191901783976285,
+              0.011931710674358848,
+              0.008140266002399353,
+              0.003681784095187702
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.02496883934012312,
+              0.10407361035272193,
+              0.0020562610594401015,
+              0.7955234431075736,
+              0.0009469814058584821,
+              0.04067180960632317,
+              0.02578449989069258,
+              0.005974555237266825
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.002700801773790445,
+              0.006239909943911888,
+              0.00030766274844768235,
+              0.978876326480385,
+              0.00015765100512445696,
+              0.002551764109003365,
+              0.0071443844442718885,
+              0.0020214994950650245
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.4570249000098556
+      }
+    },
+    {
+      "track_id": "014391",
+      "artist_id": "3985",
+      "source_sha256": "2fa5fd993529efcc6970c9820cf971944f93bcfacee8e6f8470d67a15931bb60",
+      "max_probability_error": 1.2767157997473078e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.039949334207905064,
+          0.005347109636644871,
+          0.001210000759511583,
+          0.9174858444982346,
+          0.0030911791548428893,
+          0.005728816448495012,
+          0.024779600070836558,
+          0.002408115223529453
+        ],
+        "top3": [
+          {
+            "label": "Hip-Hop",
+            "score": 0.9174858444982346
+          },
+          {
+            "label": "Electronic",
+            "score": 0.039949334207905064
+          },
+          {
+            "label": "Pop",
+            "score": 0.024779600070836558
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.08789213568541174,
+              0.012707856884114131,
+              0.002334681083790625,
+              0.807979318902808,
+              0.008834167185080724,
+              0.012115292046396716,
+              0.06228097056807195,
+              0.00585557764432612
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.01248782124645135,
+              0.001814582697851126,
+              0.0011923530072794728,
+              0.9733639733119677,
+              0.00018804613125208332,
+              0.0025226265980162273,
+              0.007486679895035984,
+              0.0009439171121459485
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.01946804569185211,
+              0.0015188893279693579,
+              0.00010296818746465156,
+              0.971114241279928,
+              0.0002513241481958612,
+              0.002548530701072092,
+              0.004571149749401747,
+              0.0004248509141162903
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 30.00275,
+        "elapsed_seconds": 2.345036300015636
+      }
+    },
+    {
+      "track_id": "013201",
+      "artist_id": "3594",
+      "source_sha256": "c1400e8d36eb9ce1c531c0215fa8b63256c521d37ff59738c4230f29d680bd3e",
+      "max_probability_error": 2.2237938646085809e-07,
+      "prediction": {
+        "schema_version": 1,
+        "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+        "mode": "fma",
+        "labels": [
+          "Electronic",
+          "Experimental",
+          "Folk",
+          "Hip-Hop",
+          "Instrumental",
+          "International",
+          "Pop",
+          "Rock"
+        ],
+        "scores": [
+          0.026841704928883537,
+          0.06653873529938588,
+          0.006541707207049289,
+          0.6652066650762072,
+          0.0013909622034978045,
+          0.15331295584545027,
+          0.06547376634810591,
+          0.014693503091420196
+        ],
+        "top3": [
+          {
+            "label": "Hip-Hop",
+            "score": 0.6652066650762072
+          },
+          {
+            "label": "International",
+            "score": 0.15331295584545027
+          },
+          {
+            "label": "Experimental",
+            "score": 0.06653873529938588
+          }
+        ],
+        "windows": [
+          {
+            "start_seconds": 0.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.03943724559313753,
+              0.04968986030562076,
+              0.009037979493356116,
+              0.6821049862969181,
+              0.0016647449583897397,
+              0.10571084413551451,
+              0.10175143669544512,
+              0.010602902521618125
+            ]
+          },
+          {
+            "start_seconds": 10.0,
+            "valid_seconds": 10.0,
+            "padded_seconds": 0.0,
+            "scores": [
+              0.021517153018277137,
+              0.13120649273555735,
+              0.007602215805736378,
+              0.6948351378390858,
+              0.001474633596450514,
+              0.06245430899149692,
+              0.06177143383725648,
+              0.019138624176139474
+            ]
+          },
+          {
+            "start_seconds": 20.0,
+            "valid_seconds": 9.976625,
+            "padded_seconds": 0.023375,
+            "scores": [
+              0.01957071617523596,
+              0.018719852856979566,
+              0.0029849263220553734,
+              0.6186798710926176,
+              0.0010335080556531596,
+              0.29177371440933936,
+              0.03289842851161612,
+              0.014338982576502991
+            ]
+          }
+        ],
+        "source_sample_rate": 44100,
+        "source_channels": 2,
+        "duration_seconds": 29.976625,
+        "elapsed_seconds": 2.3625415000133216
+      }
+    }
+  ]
+}

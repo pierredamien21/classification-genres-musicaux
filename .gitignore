@@ -1,0 +1,51 @@
+# Python et outils
+__pycache__/
+*.py[cod]
+.venv/
+.venv-notebook/
+.venv-demo/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# Configuration locale
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Données, caches et artefacts volumineux
+/data/raw/*
+!/data/raw/.gitkeep
+/data/manifests/*
+!/data/manifests/.gitkeep
+/data/interim/*
+!/data/interim/.gitkeep
+/data/features/*
+!/data/features/.gitkeep
+/artifacts/pretrained/*
+!/artifacts/pretrained/.gitkeep
+/artifacts/checkpoints/*
+!/artifacts/checkpoints/.gitkeep
+/artifacts/exports/*
+!/artifacts/exports/.gitkeep
+/runs/*
+!/runs/README.md
+!/runs/.gitkeep
+
+# Rapports contrôlés et sélectionnés manuellement avant publication
+/reports/figures/*
+!/reports/figures/.gitkeep
+/reports/tables/*
+!/reports/tables/.gitkeep
+# SVG de 78 et 47 Mo, conservés sur disque ; leur PNG équivalent est versionné.
+/reports/notebooks-v1/figures/07_stft_mel.svg
+/reports/notebooks-v1/figures/09_hpss.svg
+

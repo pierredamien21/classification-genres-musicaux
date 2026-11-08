@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revue audio — erreurs de validation</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,sans-serif;color:#172b42;background:#edf2f6}
+body{max-width:1040px;margin:0 auto;padding:28px 20px}h1{font-size:30px;margin-bottom:12px}
+header,.case{background:white;border:1px solid #d5dfe7;border-radius:12px;padding:24px;margin-bottom:20px}
+header{border-top:6px solid #13776c}p{line-height:1.6}.subtle{color:#526579;font-size:14px}
+.toolbar{display:flex;align-items:center;gap:18px;flex-wrap:wrap}button{background:#116d63;color:white;border:0;border-radius:6px;padding:12px 18px;font:inherit;cursor:pointer}
+audio{width:100%;margin:8px 0 16px}textarea{box-sizing:border-box;width:100%;min-height:100px;padding:12px;font:inherit;border:1px solid #aabac8;border-radius:6px}
+details{margin-top:18px;border-top:1px solid #e1e7ec;padding-top:14px}summary{cursor:pointer;font-weight:600}
+label{display:block;margin:12px 0}table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+th,td{text-align:left;padding:8px;border-bottom:1px solid #e1e7ec}th{background:#f3f7fa}code{overflow-wrap:anywhere}
+a{color:#08685f}footer{padding:12px}.case h2{margin-top:0}small{display:block;margin-top:8px}
+</style></head><body>
+<header><p class="subtle">Projet musique · validation uniquement · __PACKET__</p>
+<h1>Écouter avant de voir les prédictions</h1>
+<p>__COUNT__ extraits sélectionnés pour examiner Pop et Hip-Hop. Chaque artiste apparaît au plus une fois.
+Cet échantillon ciblé contient aussi des exemples correctement classés ; il ne mesure pas la fréquence globale des erreurs.</p>
+<p>1. Écouter l’extrait. 2. Décrire les voix, le rythme, les instruments et les genres plausibles.
+3. Ouvrir les étiquettes et noter les désaccords. Une erreur du modèle ne prouve pas une erreur d’annotation.</p>
+<div class="toolbar"><button id="export" type="button">Exporter mes observations (JSON)</button><span id="progress" role="status"></span></div>
+<p class="subtle" id="storage">Observations conservées dans ce navigateur si le stockage local est disponible. Exporter le JSON pour les conserver dans le projet.</p>
+</header>
+<main>__CARDS__</main>
+<footer class="subtle">Aucune écoute humaine n’est présumée réalisée. Les champs sont initialement vides.
+Extraits originaux intégrés sans transformation, licences indiquées dans chaque fiche. Aucun envoi réseau.</footer>
+<script>
+const packet = "__PACKET__";
+const cards = [...document.querySelectorAll('.case')];
+const key = 'music-error-review:' + packet;
+function answers() { return cards.map(card => ({track_id:card.dataset.track,
+  status:card.querySelector('input').checked?'reviewed':'pending',
+  observations:card.querySelector('textarea').value})); }
+function update() { document.querySelector('#progress').textContent =
+  answers().filter(x=>x.status==='reviewed').length + ' / ' + cards.length + ' fiches marquées revues'; }
+function persist() { update(); try {localStorage.setItem(key, JSON.stringify(answers()));}
+  catch {document.querySelector('#storage').textContent='Stockage local indisponible : exporter le JSON avant de fermer cette page.';} }
+try {const saved=JSON.parse(localStorage.getItem(key)||'[]');
+  for (const row of saved) {const card=cards.find(c=>c.dataset.track===row.track_id);
+    if(card){card.querySelector('textarea').value=row.observations||'';card.querySelector('input').checked=row.status==='reviewed';}}
+} catch {document.querySelector('#storage').textContent='Restauration locale indisponible : exporter les observations avant fermeture.';}
+for(const card of cards){card.addEventListener('input',persist);card.addEventListener('change',persist);}update();
+document.querySelector('#export').addEventListener('click',()=>{
+  const payload={schema_version:1,packet,exported_at:new Date().toISOString(),annotations:answers()};
+  const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));
+  const a=document.createElement('a');a.href=url;a.download=packet+'-observations.json';a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+</script></body></html>

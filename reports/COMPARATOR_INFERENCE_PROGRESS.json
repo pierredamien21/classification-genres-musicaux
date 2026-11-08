@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "systems": [
+    "descriptor",
+    "vit",
+    "fusion",
+    "vit_block6",
+    "vit_hpss",
+    "vit_block6_hpss"
+  ],
+  "test_evaluated": false
+}

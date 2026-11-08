@@ -1,0 +1,515 @@
+{
+  "cache_key": "ede490a8baaa836390d2b91141a9b01302929e6be535bbcbe1ab5b257bd267b0",
+  "provenance": {
+    "config": {
+      "schema_version": 1,
+      "name": "musical_descriptors_v1",
+      "sample_rate": 16000,
+      "window_seconds": 10.0,
+      "offsets_seconds": [
+        0.0,
+        10.0,
+        20.0
+      ],
+      "n_fft": 1024,
+      "hop_length": 256,
+      "n_mels": 128,
+      "n_mfcc": 20,
+      "contrast_fmin": 200.0,
+      "contrast_n_bands": 6,
+      "contrast_quantile": 0.02,
+      "bpm_min": 40,
+      "bpm_max": 240,
+      "bpm_step": 5,
+      "padding_statistics": "use_complete_valid_frames_or_one_padded_frame",
+      "spectral_window": "hann",
+      "mel": "slaney_fmin0_nyquist",
+      "log_power": "reference1_amin1e-10_no_top_db",
+      "chroma": "power_stft_tuning0_linf",
+      "rhythm": "positive_logmel_flux_mean_centered_autocorrelation_normalized_at_zero_lag"
+    },
+    "manifest_sha256": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+    "labels": [
+      "Electronic",
+      "Experimental",
+      "Folk",
+      "Hip-Hop",
+      "Instrumental",
+      "International",
+      "Pop",
+      "Rock"
+    ],
+    "splits": [
+      "train",
+      "validation"
+    ],
+    "python": "3.13.16",
+    "versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "librosa": "1.0.0",
+      "soundfile": "0.14.0"
+    },
+    "source_sha256": {
+      "src/music_genre/features/descriptors.py": "6bda2d5f52c57eb0c8f91dc5180daf60d20ac15b3e97b1b616aeea71776ecda2",
+      "src/music_genre/audio/processing.py": "9d8a7665b73dac9ec9f611c67ef783a4911ae6ec04d4ea256f887e6cd467e806",
+      "scripts/extract_descriptors.py": "3e6b843e20ff140c8035817061b460f42593997724c1992a7526f89fad8840a4"
+    }
+  },
+  "sample_count": 64,
+  "split": "train",
+  "warmup_seconds": 0.4266976000071736,
+  "median_decode_seconds": 0.15668860000005225,
+  "median_features_seconds": 0.07020480000210227,
+  "samples": [
+    {
+      "track_id": "033124",
+      "genre": "Electronic",
+      "decode_seconds": 0.07537900000170339,
+      "features_seconds": 0.03192500000295695,
+      "dimensions": 125
+    },
+    {
+      "track_id": "114386",
+      "genre": "Electronic",
+      "decode_seconds": 0.07006349999574013,
+      "features_seconds": 0.05443289999675471,
+      "dimensions": 125
+    },
+    {
+      "track_id": "130923",
+      "genre": "Electronic",
+      "decode_seconds": 0.08007530000759289,
+      "features_seconds": 0.05934969999361783,
+      "dimensions": 125
+    },
+    {
+      "track_id": "110689",
+      "genre": "Electronic",
+      "decode_seconds": 0.13140579999890178,
+      "features_seconds": 0.057284800001070835,
+      "dimensions": 125
+    },
+    {
+      "track_id": "085837",
+      "genre": "Electronic",
+      "decode_seconds": 0.13115210000250954,
+      "features_seconds": 0.06100610000430606,
+      "dimensions": 125
+    },
+    {
+      "track_id": "086793",
+      "genre": "Electronic",
+      "decode_seconds": 0.12718160000804346,
+      "features_seconds": 0.061321399989537895,
+      "dimensions": 125
+    },
+    {
+      "track_id": "033221",
+      "genre": "Electronic",
+      "decode_seconds": 0.1331659999996191,
+      "features_seconds": 0.06626279999909457,
+      "dimensions": 125
+    },
+    {
+      "track_id": "120467",
+      "genre": "Electronic",
+      "decode_seconds": 0.16540810000151396,
+      "features_seconds": 0.07104859998798929,
+      "dimensions": 125
+    },
+    {
+      "track_id": "068407",
+      "genre": "Experimental",
+      "decode_seconds": 0.14926120000018273,
+      "features_seconds": 0.07483820000197738,
+      "dimensions": 125
+    },
+    {
+      "track_id": "118496",
+      "genre": "Experimental",
+      "decode_seconds": 0.144232100006775,
+      "features_seconds": 0.06882309999491554,
+      "dimensions": 125
+    },
+    {
+      "track_id": "074378",
+      "genre": "Experimental",
+      "decode_seconds": 0.1652241999981925,
+      "features_seconds": 0.0789165000023786,
+      "dimensions": 125
+    },
+    {
+      "track_id": "057440",
+      "genre": "Experimental",
+      "decode_seconds": 0.1534805000119377,
+      "features_seconds": 0.07613750000018626,
+      "dimensions": 125
+    },
+    {
+      "track_id": "026307",
+      "genre": "Experimental",
+      "decode_seconds": 0.12778129999060184,
+      "features_seconds": 0.0671829000057187,
+      "dimensions": 125
+    },
+    {
+      "track_id": "122001",
+      "genre": "Experimental",
+      "decode_seconds": 0.12931730000127573,
+      "features_seconds": 0.061694099989836104,
+      "dimensions": 125
+    },
+    {
+      "track_id": "074302",
+      "genre": "Experimental",
+      "decode_seconds": 0.1338955000101123,
+      "features_seconds": 0.06608109999797307,
+      "dimensions": 125
+    },
+    {
+      "track_id": "036567",
+      "genre": "Experimental",
+      "decode_seconds": 0.13704270000744145,
+      "features_seconds": 0.06249309999111574,
+      "dimensions": 125
+    },
+    {
+      "track_id": "132041",
+      "genre": "Folk",
+      "decode_seconds": 0.14135289999831002,
+      "features_seconds": 0.0681200999970315,
+      "dimensions": 125
+    },
+    {
+      "track_id": "003920",
+      "genre": "Folk",
+      "decode_seconds": 0.13765820000844542,
+      "features_seconds": 0.06938479999371339,
+      "dimensions": 125
+    },
+    {
+      "track_id": "048808",
+      "genre": "Folk",
+      "decode_seconds": 0.15094789999420755,
+      "features_seconds": 0.0688125000015134,
+      "dimensions": 125
+    },
+    {
+      "track_id": "130758",
+      "genre": "Folk",
+      "decode_seconds": 0.15681050000421237,
+      "features_seconds": 0.07056999999622349,
+      "dimensions": 125
+    },
+    {
+      "track_id": "097590",
+      "genre": "Folk",
+      "decode_seconds": 0.1401824999920791,
+      "features_seconds": 0.06820650000008754,
+      "dimensions": 125
+    },
+    {
+      "track_id": "085693",
+      "genre": "Folk",
+      "decode_seconds": 0.1420676999987336,
+      "features_seconds": 0.0644254000071669,
+      "dimensions": 125
+    },
+    {
+      "track_id": "136138",
+      "genre": "Folk",
+      "decode_seconds": 0.14952080001239665,
+      "features_seconds": 0.06888629999593832,
+      "dimensions": 125
+    },
+    {
+      "track_id": "005940",
+      "genre": "Folk",
+      "decode_seconds": 0.17407949999324046,
+      "features_seconds": 0.06369360000826418,
+      "dimensions": 125
+    },
+    {
+      "track_id": "026034",
+      "genre": "Hip-Hop",
+      "decode_seconds": 0.1252200000017183,
+      "features_seconds": 0.06710130001010839,
+      "dimensions": 125
+    },
+    {
+      "track_id": "071693",
+      "genre": "Hip-Hop",
+      "decode_seconds": 0.16539370000828058,
+      "features_seconds": 0.07275269999809097,
+      "dimensions": 125
+    },
+    {
+      "track_id": "123645",
+      "genre": "Hip-Hop",
+      "decode_seconds": 0.15936239999427926,
+      "features_seconds": 0.07433669999591075,
+      "dimensions": 125
+    },
+    {
+      "track_id": "121319",
+      "genre": "Hip-Hop",
+      "decode_seconds": 0.16264480000245385,
+      "features_seconds": 0.07397199999832083,
+      "dimensions": 125
+    },
+    {
+      "track_id": "141164",
+      "genre": "Hip-Hop",
+      "decode_seconds": 0.16905040001438465,
+      "features_seconds": 0.07123409998894203,
+      "dimensions": 125
+    },
+    {
+      "track_id": "146153",
+      "genre": "Hip-Hop",
+      "decode_seconds": 0.16705930000171065,
+      "features_seconds": 0.06911539999418892,
+      "dimensions": 125
+    },
+    {
+      "track_id": "064995",
+      "genre": "Hip-Hop",
+      "decode_seconds": 0.16325950001191813,
+      "features_seconds": 0.0750493999948958,
+      "dimensions": 125
+    },
+    {
+      "track_id": "108809",
+      "genre": "Hip-Hop",
+      "decode_seconds": 0.17041759999119677,
+      "features_seconds": 0.06889640000008512,
+      "dimensions": 125
+    },
+    {
+      "track_id": "114238",
+      "genre": "Instrumental",
+      "decode_seconds": 0.16155309999885503,
+      "features_seconds": 0.07429479999700561,
+      "dimensions": 125
+    },
+    {
+      "track_id": "137173",
+      "genre": "Instrumental",
+      "decode_seconds": 0.17285800000536256,
+      "features_seconds": 0.0652879999979632,
+      "dimensions": 125
+    },
+    {
+      "track_id": "111229",
+      "genre": "Instrumental",
+      "decode_seconds": 0.1236334999994142,
+      "features_seconds": 0.06983960000798106,
+      "dimensions": 125
+    },
+    {
+      "track_id": "127496",
+      "genre": "Instrumental",
+      "decode_seconds": 0.1622810999979265,
+      "features_seconds": 0.07552670000586659,
+      "dimensions": 125
+    },
+    {
+      "track_id": "114374",
+      "genre": "Instrumental",
+      "decode_seconds": 0.1734835999959614,
+      "features_seconds": 0.07704780000494793,
+      "dimensions": 125
+    },
+    {
+      "track_id": "116488",
+      "genre": "Instrumental",
+      "decode_seconds": 0.1650941999978386,
+      "features_seconds": 0.0730768000066746,
+      "dimensions": 125
+    },
+    {
+      "track_id": "145431",
+      "genre": "Instrumental",
+      "decode_seconds": 0.14622969999618363,
+      "features_seconds": 0.07609250000678003,
+      "dimensions": 125
+    },
+    {
+      "track_id": "139534",
+      "genre": "Instrumental",
+      "decode_seconds": 0.1695480999915162,
+      "features_seconds": 0.0753199000027962,
+      "dimensions": 125
+    },
+    {
+      "track_id": "134949",
+      "genre": "International",
+      "decode_seconds": 0.17670099998940714,
+      "features_seconds": 0.07376650000514928,
+      "dimensions": 125
+    },
+    {
+      "track_id": "060548",
+      "genre": "International",
+      "decode_seconds": 0.1431523999926867,
+      "features_seconds": 0.07174460000533145,
+      "dimensions": 125
+    },
+    {
+      "track_id": "027194",
+      "genre": "International",
+      "decode_seconds": 0.17261349999171216,
+      "features_seconds": 0.0782898000034038,
+      "dimensions": 125
+    },
+    {
+      "track_id": "043536",
+      "genre": "International",
+      "decode_seconds": 0.15873729999293573,
+      "features_seconds": 0.07526890000735875,
+      "dimensions": 125
+    },
+    {
+      "track_id": "056471",
+      "genre": "International",
+      "decode_seconds": 0.15981110000575427,
+      "features_seconds": 0.07319969999662135,
+      "dimensions": 125
+    },
+    {
+      "track_id": "018044",
+      "genre": "International",
+      "decode_seconds": 0.16823970001132693,
+      "features_seconds": 0.07622119999723509,
+      "dimensions": 125
+    },
+    {
+      "track_id": "080765",
+      "genre": "International",
+      "decode_seconds": 0.1843077999947127,
+      "features_seconds": 0.06610880000516772,
+      "dimensions": 125
+    },
+    {
+      "track_id": "054482",
+      "genre": "International",
+      "decode_seconds": 0.16180289999465458,
+      "features_seconds": 0.0769397999974899,
+      "dimensions": 125
+    },
+    {
+      "track_id": "129392",
+      "genre": "Pop",
+      "decode_seconds": 0.1724755000032019,
+      "features_seconds": 0.06705500000680331,
+      "dimensions": 125
+    },
+    {
+      "track_id": "127290",
+      "genre": "Pop",
+      "decode_seconds": 0.1585781999892788,
+      "features_seconds": 0.0741827000019839,
+      "dimensions": 125
+    },
+    {
+      "track_id": "121593",
+      "genre": "Pop",
+      "decode_seconds": 0.16528899999684654,
+      "features_seconds": 0.07590630000049714,
+      "dimensions": 125
+    },
+    {
+      "track_id": "062753",
+      "genre": "Pop",
+      "decode_seconds": 0.15490419999696314,
+      "features_seconds": 0.07602569999289699,
+      "dimensions": 125
+    },
+    {
+      "track_id": "047666",
+      "genre": "Pop",
+      "decode_seconds": 0.13758789999701548,
+      "features_seconds": 0.06798790000902954,
+      "dimensions": 125
+    },
+    {
+      "track_id": "138039",
+      "genre": "Pop",
+      "decode_seconds": 0.15689349999593105,
+      "features_seconds": 0.07460340000397991,
+      "dimensions": 125
+    },
+    {
+      "track_id": "067363",
+      "genre": "Pop",
+      "decode_seconds": 0.16017879999708384,
+      "features_seconds": 0.07199979999859352,
+      "dimensions": 125
+    },
+    {
+      "track_id": "052041",
+      "genre": "Pop",
+      "decode_seconds": 0.1705923000117764,
+      "features_seconds": 0.06969099999696482,
+      "dimensions": 125
+    },
+    {
+      "track_id": "125777",
+      "genre": "Rock",
+      "decode_seconds": 0.13070150000567082,
+      "features_seconds": 0.06775200000265613,
+      "dimensions": 125
+    },
+    {
+      "track_id": "114401",
+      "genre": "Rock",
+      "decode_seconds": 0.15035229999921285,
+      "features_seconds": 0.06603990000439808,
+      "dimensions": 125
+    },
+    {
+      "track_id": "061493",
+      "genre": "Rock",
+      "decode_seconds": 0.1634386999940034,
+      "features_seconds": 0.07903819999773987,
+      "dimensions": 125
+    },
+    {
+      "track_id": "121251",
+      "genre": "Rock",
+      "decode_seconds": 0.15656669999589212,
+      "features_seconds": 0.06752500000584405,
+      "dimensions": 125
+    },
+    {
+      "track_id": "126294",
+      "genre": "Rock",
+      "decode_seconds": 0.16840520000550896,
+      "features_seconds": 0.07464079999772366,
+      "dimensions": 125
+    },
+    {
+      "track_id": "149488",
+      "genre": "Rock",
+      "decode_seconds": 0.14905199999338947,
+      "features_seconds": 0.07103770000685472,
+      "dimensions": 125
+    },
+    {
+      "track_id": "108038",
+      "genre": "Rock",
+      "decode_seconds": 0.1565456000098493,
+      "features_seconds": 0.072586099995533,
+      "dimensions": 125
+    },
+    {
+      "track_id": "096399",
+      "genre": "Rock",
+      "decode_seconds": 0.14862069999799132,
+      "features_seconds": 0.06780080001044553,
+      "dimensions": 125
+    }
+  ],
+  "test_audio_loaded": false
+}

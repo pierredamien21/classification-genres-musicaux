@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "validation_track": "000148",
+  "max_probability_error": 5.994985639856676e-08,
+  "model_id": "b78f3a75c7e81fe8f86bd6013c4020b1ef5d0b95c0f5bca713ec612be7529dce",
+  "source_sha256": {
+    "app/main.py": "9b4e0fea45ecbfc14f54ac91449247b16e37e3fd9aee09474710bf98596be40f",
+    "src/music_genre/inference/demo.py": "1789b024a299eeb133b75d7ddc3d4a1e822009339f2791121e1418fe5ebab9e6",
+    "scripts/check_demo_delivery.py": "f9ecb3fcccaeab15ce358175fbcf67edcbf375c0bc9a2c304cc52136e2ce5367"
+  },
+  "checks": [
+    "pinned_validation_prediction",
+    "plot",
+    "empty_input",
+    "digital_silence",
+    "corrupt_mp3"
+  ],
+  "browser_check": "separate",
+  "test_audio_loaded": false
+}

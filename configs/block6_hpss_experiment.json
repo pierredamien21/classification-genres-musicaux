@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "candidate": "vit_block6_hpss",
+  "comparators": ["vit_block6", "vit_hpss", "vit"],
+  "primary_metric": "validation_track_macro_f1",
+  "secondary_metrics": ["accuracy", "per_genre_f1", "confusion_matrix", "elapsed_seconds"],
+  "benchmark": {
+    "split": "train",
+    "seed": 42,
+    "tracks_per_genre": 8,
+    "offset_seconds": 10.0,
+    "warmup_windows": 1,
+    "workers": 1,
+    "original_logmel_absolute_tolerance_db": 0.00001,
+    "reference_embedding_absolute_tolerance": 0.000001,
+    "serial_extraction_budget_seconds": 43200,
+    "estimate_safety_factor": 2.0
+  },
+  "classifier": "same C grid and train-only scaler as both comparators; no temporal reweighting",
+  "decision": "Report both paired macro-F1 differences even if negative; a small validation gain is not evidence of generalization",
+  "test": "not_loaded_or_evaluated"
+}

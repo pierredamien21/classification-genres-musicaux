@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "name": "musical_descriptors_v1",
+  "sample_rate": 16000,
+  "window_seconds": 10.0,
+  "offsets_seconds": [0.0, 10.0, 20.0],
+  "n_fft": 1024,
+  "hop_length": 256,
+  "n_mels": 128,
+  "n_mfcc": 20,
+  "contrast_fmin": 200.0,
+  "contrast_n_bands": 6,
+  "contrast_quantile": 0.02,
+  "bpm_min": 40,
+  "bpm_max": 240,
+  "bpm_step": 5,
+  "padding_statistics": "use_complete_valid_frames_or_one_padded_frame",
+  "spectral_window": "hann",
+  "mel": "slaney_fmin0_nyquist",
+  "log_power": "reference1_amin1e-10_no_top_db",
+  "chroma": "power_stft_tuning0_linf",
+  "rhythm": "positive_logmel_flux_mean_centered_autocorrelation_normalized_at_zero_lag"
+}

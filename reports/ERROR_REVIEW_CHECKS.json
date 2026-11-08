@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "report_sha256": "b7146de77971edd9fffc47de3da37ff6a388beb0d5b73ddaf858a85c6eb68e6f",
+  "packet_sha256": {
+    "queue.json": "1eb9cedf2adadb0fbcede94540b1cf88131bb14e26b9e2e8660454e95ac12490",
+    "index.html": "3173ec74080a00fcaf5940806f6d36c8bd1e0d67fdd3b4ea6791fae19ba59c2c",
+    "annotations_template.json": "33f2854491a385df78615e94defcc4302db1e4d2991084db94f60a9b9c5fa5d1"
+  },
+  "embedded_audio_sha256_match_originals": 19,
+  "unique_artists": 19,
+  "initially_hidden_label_sections": 19,
+  "annotations_initially_pending": 19,
+  "external_resources": 0,
+  "javascript_syntax_check": "node --check passed",
+  "browser_interaction_check": "not performed: file protocol blocked by browser URL policy",
+  "human_listening_performed": false,
+  "test_audio_loaded": false
+}

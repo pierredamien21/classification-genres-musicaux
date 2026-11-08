@@ -1,0 +1,9 @@
+{
+  "report": "reports/final-evaluation-lock-20261029T085227817846Z.json",
+  "report_sha256": "80eccf469a80dff691a02aaca20443eb7bbc6d952ab6516aca7e7a5c4ae446ec",
+  "status": "complete",
+  "artifacts_verified": 7985,
+  "elapsed_seconds": 240.66004619999148,
+  "validation_cohort_gate": "passed",
+  "test_evaluated": false
+}

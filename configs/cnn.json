@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "name": "cnn_small_v1",
+  "seed": 42,
+  "sample_rate": 16000,
+  "window_seconds": 10.0,
+  "offsets_seconds": [
+    0.0,
+    10.0,
+    20.0
+  ],
+  "logmel": {
+    "n_fft": 1024,
+    "hop_length": 256,
+    "n_mels": 128,
+    "f_min": 0.0,
+    "window": "hann",
+    "center": false,
+    "power": 2.0,
+    "amin": 1e-10
+  },
+  "db_min": -80.0,
+  "db_max": 20.0,
+  "input_shape": [
+    1,
+    128,
+    622
+  ],
+  "channels": [
+    16,
+    32,
+    64
+  ],
+  "kernel_size": 3,
+  "strides": [
+    2,
+    1,
+    1
+  ],
+  "padding": 1,
+  "pooling": "max2_each_block_then_global_average",
+  "pretraining": null,
+  "batch_size": 16,
+  "threads": 4,
+  "max_epochs": 10,
+  "patience": 3,
+  "selection": "validation_track_macro_f1_tie_earlier_epoch",
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "augmentation": null,
+  "budget_seconds": 43200,
+  "deterministic": true,
+  "memory_format": "channels_last",
+  "cache_dtype": "float32",
+  "test": "not_loaded_or_evaluated"
+}

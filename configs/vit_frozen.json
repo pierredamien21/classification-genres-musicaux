@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "name": "vit_frozen_logmel_v1",
+  "sample_rate": 16000,
+  "window_seconds": 10.0,
+  "offsets_seconds": [
+    0.0,
+    10.0,
+    20.0
+  ],
+  "logmel": {
+    "n_fft": 1024,
+    "hop_length": 256,
+    "n_mels": 128,
+    "f_min": 0.0,
+    "window": "hann",
+    "center": false,
+    "power": 2.0,
+    "amin": 1e-10
+  },
+  "db_min": -80.0,
+  "db_max": 20.0,
+  "db_range_policy": "fixed_diagnostic_range_not_tuned_on_validation",
+  "checkpoint_directory": "artifacts/pretrained/vit_tiny",
+  "checkpoint": {
+    "repo_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+    "revision": "7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106",
+    "sha256": {
+      "config.json": "e328e0f3717427f87898184cd8eba835526a8deaaba703b5066b307afea10e80",
+      "model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+      "README.md": "989d20e77ea71e4710ef2e990dece8176bc29882dec9000328539e1fa82b1db3"
+    }
+  },
+  "threads_per_worker": 1,
+  "resize": "bicubic_224x224_antialias_clamp_0_1",
+  "channels": "repeat_grayscale_three_times",
+  "normalization": "checkpoint_mean_std",
+  "pooling": "last_block_mean_patch_tokens_exclude_prefix",
+  "frozen": true
+}

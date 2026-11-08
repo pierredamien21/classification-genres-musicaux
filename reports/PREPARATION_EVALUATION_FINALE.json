@@ -1,0 +1,218 @@
+{
+  "status": "prepared_not_locked",
+  "test_evaluated": false,
+  "test_audio_loaded": false,
+  "protocol_path": "configs/final_evaluation_protocol.json",
+  "protocol_sha256": "6cb7f6c9387607aefad52f3ea7744cf1a14d5f1315ccf0686d8a959d8a2deda0",
+  "baseline": {
+    "folder": "data/manifests/baseline-20261020T142750008115Z",
+    "manifest_sha256": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+    "report_sha256": "f467d9d2441807fc5923bcfddc3fa4ff5730839936f4f4a375f8fe5eb113ba03"
+  },
+  "labels": [
+    "Electronic",
+    "Experimental",
+    "Folk",
+    "Hip-Hop",
+    "Instrumental",
+    "International",
+    "Pop",
+    "Rock"
+  ],
+  "runs": {
+    "descriptor": {
+      "run": {
+        "folder": "runs/descriptors-20261020T195511254895Z",
+        "report_sha256": "b5084cc05354e6bb8813c354acc55e8814391181fbdc0f1d38135fc1993f6d97"
+      },
+      "model_path": "runs/descriptors-20261020T195511254895Z/model.npz",
+      "model_sha256": "7b95fad5aa880b33484bc28e220648c217a63b173e8e55fd58ca69b6225def65",
+      "feature_cache": "data/features/descriptors-ede490a8baaa8363",
+      "feature_report_sha256": "6a93d932e73f572dda52ebf5d4cf1ee95f6372bb5723b13ca1cf23661997e4e9",
+      "validation_predictions_sha256": "5b4540aeaa424a17bc34017a996d2efc2b402380f2b05db1e718d0c148f244d2",
+      "selected_c": 0.1,
+      "selected_epoch": null
+    },
+    "vit": {
+      "run": {
+        "folder": "runs/vit-20261020T201146743988Z",
+        "report_sha256": "d0322aeaaba291ca0507ba7b4ef831bdc137ebb381e8dac57540ffe89acfb286"
+      },
+      "model_path": "runs/vit-20261020T201146743988Z/model.npz",
+      "model_sha256": "b76ce82cc923c3ed086b39ed35c2b95c5d7eb30443a1c297139e549b60ef4fd6",
+      "feature_cache": "data/features/vit-ab0098008b9f3d2b",
+      "feature_report_sha256": "f8d417a13e9b635673e0417edb1cd58b14f16ff821848cec31325e4546be0812",
+      "validation_predictions_sha256": "f756c387ac7f1c47022f5c8815214947b1849b1c1b440d1a4843cf21701cb700",
+      "selected_c": 0.1,
+      "selected_epoch": null
+    },
+    "fusion": {
+      "run": {
+        "folder": "runs/fusion-20261020T201803253265Z",
+        "report_sha256": "1f6240a7c4af29111ea87f11e582a1c4cbb810d1817a3b62e8fd3c3b56e17433"
+      },
+      "model_path": "runs/fusion-20261020T201803253265Z/model.npz",
+      "model_sha256": "84bf1d329f9cd9d14ba6697e2fc50f2c703abc562b9dfad7f7321a3826266fd9",
+      "feature_cache": "data/features/fusion-5e57aaa15b0b3f4c",
+      "feature_report_sha256": "55d088795669d84ceed0cf172083ec3765f99147b0edadad625827e33915ad03",
+      "validation_predictions_sha256": "85cd584f0855e9ecbd809109914d8fb3c2e3d3ca2509f94c0a457932dfa84c52",
+      "selected_c": 0.1,
+      "selected_epoch": null
+    },
+    "vit_block6": {
+      "run": {
+        "folder": "runs/vit_block6-20261021T062701855205Z",
+        "report_sha256": "27dfbf40411926c918eca4daa8b0f512b80f9f64f204d761a8c1e65945f0db3b"
+      },
+      "model_path": "runs/vit_block6-20261021T062701855205Z/model.npz",
+      "model_sha256": "4cdbd13300772634faf87860ec233cea0a2c56c894849f8e95694a35e81e6f13",
+      "feature_cache": "data/features/vit-block6-8f862946e898652d",
+      "feature_report_sha256": "02ac9c5ed3e3d24c1b514f7206456040b7afde15ff7200a391cf95aa410ad9c7",
+      "validation_predictions_sha256": "f5bcb7295cfec366be2695db28ca9f2693b8c57282a772661355edaefdb587dd",
+      "selected_c": 0.1,
+      "selected_epoch": null
+    },
+    "vit_hpss": {
+      "run": {
+        "folder": "runs/vit_hpss-20261021T115423153046Z",
+        "report_sha256": "fb0708ab14b65de7b8a327141ffdad29c1abaafe73186b952bd54ba8ea6e405c"
+      },
+      "model_path": "runs/vit_hpss-20261021T115423153046Z/model.npz",
+      "model_sha256": "7bd6ce70e2c68a6af2d5e6757e6e59f7e8525ab686d0b9650e5f9c2bd88fafce",
+      "feature_cache": "data/features/vit-hpss-b2979b40f817b603",
+      "feature_report_sha256": "ba7d083056c0d7f1c67f3e1c0d61443451c31d8948b6b8622f1afab09fca0dd1",
+      "validation_predictions_sha256": "4ff27123f55a1bd847705236fe9bafc246768fdc4d593e1ff7919e337df288b9",
+      "selected_c": 1.0,
+      "selected_epoch": null
+    },
+    "vit_block6_hpss": {
+      "run": {
+        "folder": "runs/vit_block6_hpss-20261027T235406908805Z",
+        "report_sha256": "37fbacf53978bb76b67d37d51a1ba2bb95e477d8d3c6abe469ea306628e3182d"
+      },
+      "model_path": "runs/vit_block6_hpss-20261027T235406908805Z/model.npz",
+      "model_sha256": "38ab3c33c6d891fb7dc88c8926cbfc616e1bb340edb2461cc43f03fc6f88693d",
+      "feature_cache": "data/features/vit-block6-hpss-589e85d9bb7a496b",
+      "feature_report_sha256": "4620a8c7a53e7192f4a4a63043509148935614147e5dc32d40787e1027bd1bfa",
+      "validation_predictions_sha256": "c233013d504dddadf21326fa52e97c3f245510b8de54322752133303a8a4d05f",
+      "selected_c": 0.1,
+      "selected_epoch": null
+    },
+    "cnn20_seed42": {
+      "run": {
+        "folder": "runs/cnn20_seed42-20261021T185433222368Z",
+        "report_sha256": "77794db839770c2ff85ef438713e82def4a227d4ce07826fcc4a054146262a90"
+      },
+      "model_path": "runs/cnn20_seed42-20261021T185433222368Z/model.safetensors",
+      "model_sha256": "e6442f3f67673adc914964765af0ce4acb3ec765701ec230a2ef3ff724af1d73",
+      "feature_cache": "data/features/cnn-logmel-b08e2e3768c5c4d6",
+      "feature_report_sha256": "8fe857bbce9371ebe2eafe2d2ae21ea9c3b1ebd07686b1c7c7744a0f7c68c5e0",
+      "validation_predictions_sha256": "43e1a50f62b59e2e613f14c6bcefb4e52a36e027c1bebdf653aece1be6392e9e",
+      "selected_c": null,
+      "selected_epoch": 15
+    },
+    "cnn20_seed43": {
+      "run": {
+        "folder": "runs/cnn20_seed43-20261021T190439492087Z",
+        "report_sha256": "788d16ad32d775663ebc2425f8eb33b50a4093710aa31ff5918ec81ec2d68690"
+      },
+      "model_path": "runs/cnn20_seed43-20261021T190439492087Z/model.safetensors",
+      "model_sha256": "110177a7a5f909b22496f551d6363cd46cd58cf7155b13c058f289f4c323b01f",
+      "feature_cache": "data/features/cnn-logmel-b08e2e3768c5c4d6",
+      "feature_report_sha256": "8fe857bbce9371ebe2eafe2d2ae21ea9c3b1ebd07686b1c7c7744a0f7c68c5e0",
+      "validation_predictions_sha256": "525bcb180285d5791264cc7e8e5a50ffddc0b37a774ca84d53c7cc6b05198328",
+      "selected_c": null,
+      "selected_epoch": 10
+    },
+    "cnn20_seed44": {
+      "run": {
+        "folder": "runs/cnn20_seed44-20261021T190901243607Z",
+        "report_sha256": "26cd269944023a4890142619e2e0da21caf3c433b8ab1cd238d2d0c0e9a0becb"
+      },
+      "model_path": "runs/cnn20_seed44-20261021T190901243607Z/model.safetensors",
+      "model_sha256": "0988bfa9293e58b48c17aee3cd5bb531966239c6128ee45fb783c973d78b90d9",
+      "feature_cache": "data/features/cnn-logmel-b08e2e3768c5c4d6",
+      "feature_report_sha256": "8fe857bbce9371ebe2eafe2d2ae21ea9c3b1ebd07686b1c7c7744a0f7c68c5e0",
+      "validation_predictions_sha256": "ca604420e315ee1d84af1582984255dad45d98b76f93703c8b73ed6eb0b65fb2",
+      "selected_c": null,
+      "selected_epoch": 8
+    }
+  },
+  "checkpoint": {
+    "repo_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+    "revision": "7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106",
+    "sha256": {
+      "config.json": "e328e0f3717427f87898184cd8eba835526a8deaaba703b5066b307afea10e80",
+      "model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+      "README.md": "989d20e77ea71e4710ef2e990dece8176bc29882dec9000328539e1fa82b1db3"
+    }
+  },
+  "artist_partitions_disjoint": true,
+  "validation_predictions_recomputed": true,
+  "sample": {
+    "path": "data/manifests/robustness-validation-v1.csv",
+    "sha256": "50cb89ec0b07640e1b6a54d22951d1155fe23cdec6a7e138f2ba2baf91a620a0",
+    "selection": "music_genre.evaluation.errors.select_review",
+    "selection_source_sha256": "28041bc485a45b4b9a3da811fa00dde46ee2fa23c64566b05baa7afd2a37267b",
+    "seed": 20261028,
+    "tracks": 64,
+    "artists": 64,
+    "coverage": {
+      "Instrumental": {
+        "available_tracks": 93,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Pop": {
+        "available_tracks": 94,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Rock": {
+        "available_tracks": 97,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "International": {
+        "available_tracks": 98,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Electronic": {
+        "available_tracks": 99,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Folk": {
+        "available_tracks": 99,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Experimental": {
+        "available_tracks": 100,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      },
+      "Hip-Hop": {
+        "available_tracks": 100,
+        "selected": 8,
+        "requested": 8,
+        "shortfall": 0
+      }
+    },
+    "source_audio_sha256_verified": true
+  },
+  "not_yet_verified": [
+    "common_audio_inference",
+    "robustness_transforms",
+    "bootstrap_implementation",
+    "final_lock_gate"
+  ]
+}

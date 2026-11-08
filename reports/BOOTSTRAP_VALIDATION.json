@@ -1,0 +1,554 @@
+{
+  "models": [
+    "descriptor",
+    "vit",
+    "fusion",
+    "vit_block6",
+    "vit_hpss",
+    "vit_block6_hpss",
+    "cnn20_seed42",
+    "cnn20_seed43",
+    "cnn20_seed44",
+    "majority",
+    "cnn20_mean"
+  ],
+  "metrics": [
+    "macro_f1",
+    "accuracy"
+  ],
+  "artist_ids": [
+    "10023",
+    "10121",
+    "10191",
+    "10357",
+    "10393",
+    "1065",
+    "1072",
+    "11209",
+    "11374",
+    "11461",
+    "11472",
+    "11595",
+    "11663",
+    "11939",
+    "11989",
+    "12003",
+    "12099",
+    "12190",
+    "122",
+    "12271",
+    "12277",
+    "12344",
+    "12420",
+    "12564",
+    "12626",
+    "12721",
+    "12950",
+    "13052",
+    "13153",
+    "13215",
+    "13418",
+    "13454",
+    "1346",
+    "13476",
+    "13489",
+    "13493",
+    "13534",
+    "13546",
+    "13625",
+    "13691",
+    "137",
+    "13729",
+    "13831",
+    "13910",
+    "13978",
+    "13996",
+    "14045",
+    "14124",
+    "14170",
+    "14208",
+    "14343",
+    "14348",
+    "14373",
+    "14410",
+    "14476",
+    "14551",
+    "14594",
+    "14615",
+    "14734",
+    "14783",
+    "15123",
+    "15127",
+    "15217",
+    "15242",
+    "15501",
+    "15763",
+    "16167",
+    "16171",
+    "16178",
+    "16245",
+    "16472",
+    "16527",
+    "16586",
+    "16660",
+    "16755",
+    "16823",
+    "16842",
+    "16856",
+    "16875",
+    "16993",
+    "17039",
+    "17285",
+    "17349",
+    "17353",
+    "17369",
+    "175",
+    "17704",
+    "17898",
+    "17927",
+    "17977",
+    "17984",
+    "18136",
+    "18195",
+    "18244",
+    "1834",
+    "1836",
+    "18401",
+    "1860",
+    "18706",
+    "18725",
+    "18823",
+    "18846",
+    "18953",
+    "19034",
+    "1907",
+    "19120",
+    "19125",
+    "1917",
+    "19302",
+    "19362",
+    "19365",
+    "19375",
+    "19381",
+    "19392",
+    "19780",
+    "19781",
+    "19815",
+    "19822",
+    "19918",
+    "19948",
+    "201",
+    "20107",
+    "20131",
+    "20157",
+    "2017",
+    "20204",
+    "20475",
+    "20657",
+    "20823",
+    "20860",
+    "21005",
+    "21016",
+    "21020",
+    "21105",
+    "21106",
+    "21128",
+    "21155",
+    "21268",
+    "21361",
+    "21510",
+    "2153",
+    "21581",
+    "21701",
+    "21725",
+    "21803",
+    "21947",
+    "21957",
+    "22184",
+    "22222",
+    "22357",
+    "22428",
+    "22491",
+    "22683",
+    "22765",
+    "22795",
+    "23015",
+    "23292",
+    "23552",
+    "23585",
+    "23670",
+    "2629",
+    "2882",
+    "3007",
+    "306",
+    "3168",
+    "3203",
+    "3229",
+    "330",
+    "334",
+    "3374",
+    "3375",
+    "3578",
+    "3594",
+    "3699",
+    "390",
+    "3936",
+    "3967",
+    "3985",
+    "4092",
+    "4140",
+    "4365",
+    "458",
+    "4634",
+    "4649",
+    "4967",
+    "5274",
+    "5303",
+    "5643",
+    "57",
+    "6035",
+    "6075",
+    "6080",
+    "6088",
+    "6416",
+    "661",
+    "7010",
+    "7111",
+    "7135",
+    "7270",
+    "7325",
+    "7357",
+    "7561",
+    "7562",
+    "7582",
+    "7797",
+    "8014",
+    "8268",
+    "833",
+    "855",
+    "8665",
+    "8681",
+    "8728",
+    "9279",
+    "9454",
+    "95",
+    "9568",
+    "9629",
+    "9845",
+    "9890"
+  ],
+  "estimates": {
+    "descriptor": {
+      "macro_f1": {
+        "point": 0.4612229344724649,
+        "low": 0.3871397730935153,
+        "high": 0.5041531682480728
+      },
+      "accuracy": {
+        "point": 0.4756410256410256,
+        "low": 0.4035003278297669,
+        "high": 0.5476017994675286
+      }
+    },
+    "vit": {
+      "macro_f1": {
+        "point": 0.5447091086808501,
+        "low": 0.4542387661707115,
+        "high": 0.5809841392307041
+      },
+      "accuracy": {
+        "point": 0.5538461538461539,
+        "low": 0.46677201512695843,
+        "high": 0.6288728067180992
+      }
+    },
+    "fusion": {
+      "macro_f1": {
+        "point": 0.5218659499833392,
+        "low": 0.43527118058629416,
+        "high": 0.5577032117224873
+      },
+      "accuracy": {
+        "point": 0.5294871794871795,
+        "low": 0.45298202614379085,
+        "high": 0.5979914469421865
+      }
+    },
+    "vit_block6": {
+      "macro_f1": {
+        "point": 0.5780480927536223,
+        "low": 0.4822035107912012,
+        "high": 0.616145708772238
+      },
+      "accuracy": {
+        "point": 0.5884615384615385,
+        "low": 0.5042828634672604,
+        "high": 0.6597795188973394
+      }
+    },
+    "vit_hpss": {
+      "macro_f1": {
+        "point": 0.5844334654163579,
+        "low": 0.4758603221503152,
+        "high": 0.6283328655866819
+      },
+      "accuracy": {
+        "point": 0.5974358974358974,
+        "low": 0.5064902019100492,
+        "high": 0.6751846105434731
+      }
+    },
+    "vit_block6_hpss": {
+      "macro_f1": {
+        "point": 0.5975036316969011,
+        "low": 0.5034170093318026,
+        "high": 0.6351898561083644
+      },
+      "accuracy": {
+        "point": 0.6128205128205129,
+        "low": 0.5300260342862656,
+        "high": 0.6846518468276767
+      }
+    },
+    "cnn20_seed42": {
+      "macro_f1": {
+        "point": 0.5464336658181137,
+        "low": 0.44497715132754784,
+        "high": 0.5855212028650179
+      },
+      "accuracy": {
+        "point": 0.5615384615384615,
+        "low": 0.46759344747835785,
+        "high": 0.6360572985227438
+      }
+    },
+    "cnn20_seed43": {
+      "macro_f1": {
+        "point": 0.5471261946810382,
+        "low": 0.45252016136506445,
+        "high": 0.5897049436086597
+      },
+      "accuracy": {
+        "point": 0.558974358974359,
+        "low": 0.47186118171372865,
+        "high": 0.6354623185523961
+      }
+    },
+    "cnn20_seed44": {
+      "macro_f1": {
+        "point": 0.5286819975288461,
+        "low": 0.4410133394436768,
+        "high": 0.5666221324625036
+      },
+      "accuracy": {
+        "point": 0.5474358974358975,
+        "low": 0.4593900345815131,
+        "high": 0.624589118192589
+      }
+    },
+    "majority": {
+      "macro_f1": {
+        "point": 0.028409090909090908,
+        "low": 0.015943813363260055,
+        "high": 0.04420612763520525
+      },
+      "accuracy": {
+        "point": 0.1282051282051282,
+        "low": 0.06811959983542355,
+        "high": 0.21480781194725337
+      }
+    },
+    "cnn20_mean": {
+      "macro_f1": {
+        "point": 0.5407472860093326,
+        "low": 0.44921080579611494,
+        "high": 0.5781712013799544
+      },
+      "accuracy": {
+        "point": 0.555982905982906,
+        "low": 0.4688882802395811,
+        "high": 0.6288576415373359
+      }
+    }
+  },
+  "differences": {
+    "vit_block6_hpss - vit": {
+      "macro_f1": {
+        "point": 0.05279452301605103,
+        "low": 0.02573333293736099,
+        "high": 0.07850505623578433
+      },
+      "accuracy": {
+        "point": 0.05897435897435899,
+        "low": 0.03371592826845744,
+        "high": 0.09017344930332424
+      }
+    },
+    "fusion - vit": {
+      "macro_f1": {
+        "point": -0.022843158697510857,
+        "low": -0.04899425489010339,
+        "high": 0.007314590906916224
+      },
+      "accuracy": {
+        "point": -0.024358974358974383,
+        "low": -0.0551183626085201,
+        "high": 0.009657153367724906
+      }
+    },
+    "vit_block6_hpss - vit_hpss": {
+      "macro_f1": {
+        "point": 0.01307016628054325,
+        "low": -0.01436735476709044,
+        "high": 0.04158123783699705
+      },
+      "accuracy": {
+        "point": 0.015384615384615441,
+        "low": -0.011278498666019862,
+        "high": 0.042768642174801565
+      }
+    },
+    "vit_block6_hpss - vit_block6": {
+      "macro_f1": {
+        "point": 0.019455538943278783,
+        "low": -0.009811258057474594,
+        "high": 0.04360715768521742
+      },
+      "accuracy": {
+        "point": 0.024358974358974383,
+        "low": 0.0012280917280917652,
+        "high": 0.049675418614690665
+      }
+    }
+  },
+  "missing_class_replicates": 0,
+  "status": "complete",
+  "split": "validation",
+  "tracks": 780,
+  "artists": 219,
+  "labels": [
+    "Electronic",
+    "Experimental",
+    "Folk",
+    "Hip-Hop",
+    "Instrumental",
+    "International",
+    "Pop",
+    "Rock"
+  ],
+  "settings": {
+    "unit": "artist",
+    "resampling": "all_tracks_of_each_sampled_artist_with_multiplicity",
+    "paired_across_systems": true,
+    "replicates": 2000,
+    "seed": 20261028,
+    "generator": "numpy_PCG64",
+    "confidence_level": 0.95,
+    "interval": "percentile",
+    "quantile_method": "linear",
+    "resample_tracks_within_artist": false,
+    "stratify_by_genre": false,
+    "missing_class_replicates": "retain_fixed_labels_and_report_count",
+    "claim": "approximate_pointwise_intervals_conditional_on_fixed_models_not_simultaneous_tests"
+  },
+  "ordering": "lexicographic_track_and_artist_ids",
+  "metric_groups": {
+    "cnn20_mean": [
+      "cnn20_seed42",
+      "cnn20_seed43",
+      "cnn20_seed44"
+    ]
+  },
+  "comparisons": [
+    [
+      "vit_block6_hpss",
+      "vit"
+    ],
+    [
+      "fusion",
+      "vit"
+    ],
+    [
+      "vit_block6_hpss",
+      "vit_hpss"
+    ],
+    [
+      "vit_block6_hpss",
+      "vit_block6"
+    ]
+  ],
+  "source_and_input_sha256": {
+    "reports/PREPARATION_EVALUATION_FINALE.json": "17815b95fb6526becf150702778ad87b23833480c5f9b2e056a5c1fb64ca61ab",
+    "configs/final_evaluation_protocol.json": "6cb7f6c9387607aefad52f3ea7744cf1a14d5f1315ccf0686d8a959d8a2deda0",
+    "data/manifests/baseline-20261020T142750008115Z/manifest.csv": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+    "scripts/check_bootstrap_validation.py": "6fc21b5083204748f9d15d9357086150e9bf849a2a03a8d3c4204fe40647d2bb",
+    "src/music_genre/evaluation/bootstrap.py": "5caf67d5ee836aa8511325cfa9540bd90ed02389f0f5b71823949fc796b47e70",
+    "src/music_genre/evaluation/metrics.py": "05f51dd60d503b2b359637c3a0490783a1133a88b1f34aaf8819261528880075",
+    "scripts/check_candidate_inference.py": "edec7606a179e0cb3028ee0a8fed4a089ced14b9463b22c0052735eb7384264b",
+    "src/music_genre/data/audit.py": "1a1aa772a956b14731e628a9ce36181ff3501a37e8ed5ed56e5696011695bd5c",
+    "runs/descriptors-20261020T195511254895Z/report.json": "b5084cc05354e6bb8813c354acc55e8814391181fbdc0f1d38135fc1993f6d97",
+    "runs/descriptors-20261020T195511254895Z/validation_predictions.csv": "5b4540aeaa424a17bc34017a996d2efc2b402380f2b05db1e718d0c148f244d2",
+    "runs/descriptors-20261020T195511254895Z/model.npz": "7b95fad5aa880b33484bc28e220648c217a63b173e8e55fd58ca69b6225def65",
+    "runs/vit-20261020T201146743988Z/report.json": "d0322aeaaba291ca0507ba7b4ef831bdc137ebb381e8dac57540ffe89acfb286",
+    "runs/vit-20261020T201146743988Z/validation_predictions.csv": "f756c387ac7f1c47022f5c8815214947b1849b1c1b440d1a4843cf21701cb700",
+    "runs/vit-20261020T201146743988Z/model.npz": "b76ce82cc923c3ed086b39ed35c2b95c5d7eb30443a1c297139e549b60ef4fd6",
+    "runs/fusion-20261020T201803253265Z/report.json": "1f6240a7c4af29111ea87f11e582a1c4cbb810d1817a3b62e8fd3c3b56e17433",
+    "runs/fusion-20261020T201803253265Z/validation_predictions.csv": "85cd584f0855e9ecbd809109914d8fb3c2e3d3ca2509f94c0a457932dfa84c52",
+    "runs/fusion-20261020T201803253265Z/model.npz": "84bf1d329f9cd9d14ba6697e2fc50f2c703abc562b9dfad7f7321a3826266fd9",
+    "runs/vit_block6-20261021T062701855205Z/report.json": "27dfbf40411926c918eca4daa8b0f512b80f9f64f204d761a8c1e65945f0db3b",
+    "runs/vit_block6-20261021T062701855205Z/validation_predictions.csv": "f5bcb7295cfec366be2695db28ca9f2693b8c57282a772661355edaefdb587dd",
+    "runs/vit_block6-20261021T062701855205Z/model.npz": "4cdbd13300772634faf87860ec233cea0a2c56c894849f8e95694a35e81e6f13",
+    "runs/vit_hpss-20261021T115423153046Z/report.json": "fb0708ab14b65de7b8a327141ffdad29c1abaafe73186b952bd54ba8ea6e405c",
+    "runs/vit_hpss-20261021T115423153046Z/validation_predictions.csv": "4ff27123f55a1bd847705236fe9bafc246768fdc4d593e1ff7919e337df288b9",
+    "runs/vit_hpss-20261021T115423153046Z/model.npz": "7bd6ce70e2c68a6af2d5e6757e6e59f7e8525ab686d0b9650e5f9c2bd88fafce",
+    "runs/vit_block6_hpss-20261027T235406908805Z/report.json": "37fbacf53978bb76b67d37d51a1ba2bb95e477d8d3c6abe469ea306628e3182d",
+    "runs/vit_block6_hpss-20261027T235406908805Z/validation_predictions.csv": "c233013d504dddadf21326fa52e97c3f245510b8de54322752133303a8a4d05f",
+    "runs/vit_block6_hpss-20261027T235406908805Z/model.npz": "38ab3c33c6d891fb7dc88c8926cbfc616e1bb340edb2461cc43f03fc6f88693d",
+    "runs/cnn20_seed42-20261021T185433222368Z/report.json": "77794db839770c2ff85ef438713e82def4a227d4ce07826fcc4a054146262a90",
+    "runs/cnn20_seed42-20261021T185433222368Z/validation_predictions.csv": "43e1a50f62b59e2e613f14c6bcefb4e52a36e027c1bebdf653aece1be6392e9e",
+    "runs/cnn20_seed42-20261021T185433222368Z/model.safetensors": "e6442f3f67673adc914964765af0ce4acb3ec765701ec230a2ef3ff724af1d73",
+    "runs/cnn20_seed43-20261021T190439492087Z/report.json": "788d16ad32d775663ebc2425f8eb33b50a4093710aa31ff5918ec81ec2d68690",
+    "runs/cnn20_seed43-20261021T190439492087Z/validation_predictions.csv": "525bcb180285d5791264cc7e8e5a50ffddc0b37a774ca84d53c7cc6b05198328",
+    "runs/cnn20_seed43-20261021T190439492087Z/model.safetensors": "110177a7a5f909b22496f551d6363cd46cd58cf7155b13c058f289f4c323b01f",
+    "runs/cnn20_seed44-20261021T190901243607Z/report.json": "26cd269944023a4890142619e2e0da21caf3c433b8ab1cd238d2d0c0e9a0becb",
+    "runs/cnn20_seed44-20261021T190901243607Z/validation_predictions.csv": "ca604420e315ee1d84af1582984255dad45d98b76f93703c8b73ed6eb0b65fb2",
+    "runs/cnn20_seed44-20261021T190901243607Z/model.safetensors": "0988bfa9293e58b48c17aee3cd5bb531966239c6128ee45fb783c973d78b90d9"
+  },
+  "majority_train_class": "Experimental",
+  "train_class_counts": [
+    792,
+    794,
+    786,
+    772,
+    786,
+    794,
+    782,
+    793
+  ],
+  "sampled_track_count_range": [
+    499,
+    1085
+  ],
+  "cnn_point_sample_std": {
+    "macro_f1": 0.010454582184119867,
+    "accuracy": 0.0075121349706183255
+  },
+  "archive": {
+    "path": "reports/BOOTSTRAP_VALIDATION_DRAWS.npz",
+    "sha256": "5e2c42c734d67d15df5694fb0fab213896cc76f6bea7276c1f4ec891f841c820"
+  },
+  "elapsed_seconds": 0.9480664000002434,
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1"
+  },
+  "audio_loaded": false,
+  "test_audio_loaded": false,
+  "test_evaluated": false,
+  "limitations": [
+    "validation_used_for_model_selection",
+    "fixed_models_conditional_intervals",
+    "pointwise_not_simultaneous",
+    "no_training_or_seed_resampling"
+  ]
+}

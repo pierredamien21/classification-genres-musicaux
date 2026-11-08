@@ -1,0 +1,60 @@
+schema_version = 1
+status = "draft_not_benchmarked"
+experiment_id = "vit_tiny_frozen_reference"
+seed = 42
+labels_path = "configs/labels.json"
+
+[dataset]
+name = "fma_small"
+raw_dir = "data/raw"
+manifest_dir = "data/manifests"
+split_policy = "official_after_audit"
+
+[audio]
+sample_rate = 16000
+mono = true
+window_seconds = 10.0
+short_window_policy = "right_zero_pad"
+training_offsets_seconds = [0.0, 10.0, 20.0]
+
+[features]
+representation = "log_mel"
+n_mels = 128
+n_fft = 1024
+hop_length = 256
+cache_dir = "data/features"
+# Fenêtrage, f_min/f_max, puissance, logarithme et normalisation
+# seront précisés et figés avant la première extraction.
+
+[model]
+family = "vit"
+checkpoint = "vit_tiny_patch16_224.augreg_in21k_ft_in1k"
+frozen = true
+image_size = 224
+channels = "repeat_mono"
+embedding = "mean_patch_tokens"
+block = 12
+# Révision/empreinte du checkpoint à enregistrer à son acquisition.
+
+[classifier]
+family = "logistic_regression"
+standardize_fit_split = "train"
+c_grid = [0.1, 1.0, 10.0]
+
+[evaluation]
+selection_split = "validation"
+primary_metric = "macro_f1"
+unit = "track"
+aggregation = "mean_window_probabilities"
+test_policy = "after_configuration_freeze"
+
+[compute]
+device = "cpu"
+benchmark_windows = 64
+max_training_hours_per_run = 12.0
+
+[demo]
+max_file_mb = 50
+max_duration_seconds = 300
+top_k = 3
+

@@ -1,0 +1,50 @@
+{
+  "status": "ready_for_user_launch",
+  "prepared_on": "2026-11-05",
+  "full_training_launched": false,
+  "python": "E:\\projet\\vision transformer\\.venv-notebook\\Scripts\\python.exe",
+  "python_version": "3.13.16",
+  "environment_method": "independent physical copy of verified local packages; network reinstall not tested",
+  "versions": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "librosa": "1.0.0",
+    "soundfile": "0.14.0",
+    "scikit-learn": "1.9.1",
+    "nbformat": "5.11.1",
+    "ipykernel": "7.4.0",
+    "jupyterlab": "4.6.5"
+  },
+  "source_sha256": {
+    "configs/cnn_user.json": "455ed946043347cbc08721fddec61e9fb0604b03460e4ccceccde9836567ba17",
+    "scripts/train_user_cnn.py": "90ed8818c112437aaa7505d3720b1ea72d9429d4463d146df092e3fbccbe9268",
+    "scripts/user_session.py": "e4c29da1576570b654ec0866f18ac8cf22971b73242703b3243ccbb9129554fe",
+    "src/music_genre/training/cnn.py": "7cf0cf45ec393c753f78a78a56577e009ef9b11843104b32285e82f39127cf53",
+    "src/music_genre/models/cnn.py": "143cf3a94ce12dea0e185bb558d2e72b85175b2b3ae1510e4bd8db7cfffc1a2f",
+    "src/music_genre/evaluation/metrics.py": "05f51dd60d503b2b359637c3a0490783a1133a88b1f34aaf8819261528880075"
+  },
+  "smoke_run": {
+    "folder": "runs/cnn_user_smoke-20261105T193358696487Z",
+    "report_sha256": "cdf24a14a5c10c6e4bd36e018170f642ac454a19767bb5ab9cf8d2c5d1b7c9e7"
+  },
+  "smoke_resume_verified": true,
+  "smoke_track_counts": {
+    "train": 16,
+    "validation": 16
+  },
+  "smoke_epochs": 2,
+  "independent_validation_metrics": {
+    "macro_f1": 0.027777777777777776,
+    "accuracy": 0.125
+  },
+  "estimated_max_epoch_seconds": 95.22556740000005,
+  "estimated_30_epochs_with_margin_seconds": 4465.150533000002,
+  "budget_seconds": 7200,
+  "test_evaluated": false,
+  "limitations": [
+    "Smoke scores are functional checks, not model quality estimates.",
+    "One pedagogical seed; development after test V1.",
+    "Independent copies are verified; fresh network installation on another machine is untested."
+  ]
+}

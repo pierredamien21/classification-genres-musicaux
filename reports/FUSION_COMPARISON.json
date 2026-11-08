@@ -1,0 +1,73 @@
+{
+  "runs": {
+    "descriptor": {
+      "run": {
+        "folder": "runs/descriptors-20261020T195511254895Z",
+        "report_sha256": "b5084cc05354e6bb8813c354acc55e8814391181fbdc0f1d38135fc1993f6d97"
+      },
+      "dimensions": 125,
+      "selected_c": 0.1,
+      "macro_f1": 0.4612229344724649,
+      "accuracy": 0.4756410256410256,
+      "macro_f1_difference_from_vit": -0.08348617420838522,
+      "corrected_vit_errors": 84,
+      "lost_vit_correct": 145
+    },
+    "vit": {
+      "run": {
+        "folder": "runs/vit-20261020T201146743988Z",
+        "report_sha256": "d0322aeaaba291ca0507ba7b4ef831bdc137ebb381e8dac57540ffe89acfb286"
+      },
+      "dimensions": 192,
+      "selected_c": 0.1,
+      "macro_f1": 0.5447091086808501,
+      "accuracy": 0.5538461538461539,
+      "macro_f1_difference_from_vit": 0.0,
+      "corrected_vit_errors": 0,
+      "lost_vit_correct": 0
+    },
+    "fusion": {
+      "run": {
+        "folder": "runs/fusion-20261020T201803253265Z",
+        "report_sha256": "1f6240a7c4af29111ea87f11e582a1c4cbb810d1817a3b62e8fd3c3b56e17433"
+      },
+      "dimensions": 317,
+      "selected_c": 0.1,
+      "macro_f1": 0.5218659499833392,
+      "accuracy": 0.5294871794871795,
+      "macro_f1_difference_from_vit": -0.022843158697510857,
+      "corrected_vit_errors": 50,
+      "lost_vit_correct": 69
+    },
+    "fusion_no_rhythm": {
+      "run": {
+        "folder": "runs/fusion_no_rhythm-20261020T201813274845Z",
+        "report_sha256": "58b7cb95f248a69f7225abdcb4c927bdd0f11d20b38e180075b2cf933ad27806"
+      },
+      "dimensions": 276,
+      "selected_c": 1.0,
+      "macro_f1": 0.5386954891551013,
+      "accuracy": 0.5487179487179488,
+      "macro_f1_difference_from_vit": -0.006013619525748748,
+      "corrected_vit_errors": 55,
+      "lost_vit_correct": 59
+    },
+    "fusion_no_harmony": {
+      "run": {
+        "folder": "runs/fusion_no_harmony-20261020T201822268410Z",
+        "report_sha256": "f32cdb98cb65916b64023c4add1204711981bf15b46431b1ce8b65ae847afda7"
+      },
+      "dimensions": 293,
+      "selected_c": 0.1,
+      "macro_f1": 0.5282386004476642,
+      "accuracy": 0.5384615384615384,
+      "macro_f1_difference_from_vit": -0.016470508233185854,
+      "corrected_vit_errors": 57,
+      "lost_vit_correct": 69
+    }
+  },
+  "baseline_manifest_sha256": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+  "index_sha256": "74e948e6934001d1fb01ac0583f137106f890aaf3b88ac27e884deea744d8905",
+  "parent_values_verified": true,
+  "test_evaluated": false
+}

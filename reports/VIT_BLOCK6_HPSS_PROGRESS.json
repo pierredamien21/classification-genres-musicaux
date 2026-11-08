@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "pilot": false,
+  "cache": "data/features/vit-block6-hpss-589e85d9bb7a496b",
+  "cache_key": "589e85d9bb7a496b7f66afea72e1fb2931bcb1e5ec3b7fac6b2bd90b764cedc9",
+  "total_tracks": 7079,
+  "processed_tracks": 7079,
+  "resumed_tracks": 64,
+  "workers": 4,
+  "started_at_utc": "2026-10-27T23:20:41.809060+00:00",
+  "test_audio_loaded": false,
+  "elapsed_seconds": 1998.8586250999942,
+  "updated_at_utc": "2026-10-27T23:54:00.668378+00:00"
+}

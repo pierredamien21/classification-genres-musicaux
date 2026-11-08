@@ -1,0 +1,1427 @@
+{
+  "benchmark_sha256": "608397dff659970994bd02a94aa871b99342104bf8bdbb0fcc3dde7b21c6fa09",
+  "config": {
+    "schema_version": 1,
+    "name": "vit_hpss_logmel_v1",
+    "sample_rate": 16000,
+    "window_seconds": 10.0,
+    "offsets_seconds": [
+      0.0,
+      10.0,
+      20.0
+    ],
+    "logmel": {
+      "n_fft": 1024,
+      "hop_length": 256,
+      "n_mels": 128,
+      "f_min": 0.0,
+      "window": "hann",
+      "center": false,
+      "power": 2.0,
+      "amin": 1e-10
+    },
+    "db_min": -80.0,
+    "db_max": 20.0,
+    "db_range_policy": "fixed_diagnostic_range_not_tuned_on_validation",
+    "checkpoint_directory": "artifacts/pretrained/vit_tiny",
+    "checkpoint": {
+      "repo_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+      "revision": "7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106",
+      "sha256": {
+        "config.json": "e328e0f3717427f87898184cd8eba835526a8deaaba703b5066b307afea10e80",
+        "model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+        "README.md": "989d20e77ea71e4710ef2e990dece8176bc29882dec9000328539e1fa82b1db3"
+      }
+    },
+    "threads_per_worker": 1,
+    "resize": "bicubic_224x224_antialias_clamp_0_1",
+    "channels": "original_harmonic_percussive",
+    "normalization": "checkpoint_mean_std",
+    "pooling": "last_block_mean_patch_tokens_exclude_prefix",
+    "frozen": true,
+    "hpss": {
+      "domain": "complex_stft_before_mel",
+      "kernel_size": [
+        31,
+        31
+      ],
+      "mask_power": 2.0,
+      "margin": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "sample_count": 64,
+  "split": "train",
+  "test_audio_loaded": false,
+  "figure_track_id": "132041",
+  "figure_selection": "first_Folk_track_in_fixed_benchmark",
+  "statistics_stage": "native_logmel_before_clipping_and_resize",
+  "mean_clipped_fractions": {
+    "Original": {
+      "below_db_min_fraction": 0.0021354454506631836,
+      "above_db_max_fraction": 0.004180417566820739
+    },
+    "Harmonique": {
+      "below_db_min_fraction": 0.0054193723623392285,
+      "above_db_max_fraction": 0.002722835234123794
+    },
+    "Percussif": {
+      "below_db_min_fraction": 0.010202880074356914,
+      "above_db_max_fraction": 0.00034874428506832795
+    }
+  },
+  "per_window": [
+    {
+      "track_id": "033124",
+      "genre": "Electronic",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0012309083601286174,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "033124",
+      "genre": "Electronic",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0031526326366559487,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "033124",
+      "genre": "Electronic",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.007875301446945338,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "114386",
+      "genre": "Electronic",
+      "channel": "Original",
+      "below_db_min_fraction": 2.5120578778135048e-05,
+      "above_db_max_fraction": 0.021427853697749195
+    },
+    {
+      "track_id": "114386",
+      "genre": "Electronic",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0007410570739549839,
+      "above_db_max_fraction": 0.01683078778135048
+    },
+    {
+      "track_id": "114386",
+      "genre": "Electronic",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0016202773311897107,
+      "above_db_max_fraction": 0.0010048231511254019
+    },
+    {
+      "track_id": "130923",
+      "genre": "Electronic",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00010048231511254019
+    },
+    {
+      "track_id": "130923",
+      "genre": "Electronic",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 3.7680868167202575e-05
+    },
+    {
+      "track_id": "130923",
+      "genre": "Electronic",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "110689",
+      "genre": "Electronic",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.007234726688102894
+    },
+    {
+      "track_id": "110689",
+      "genre": "Electronic",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0003140072347266881,
+      "above_db_max_fraction": 0.006167102090032154
+    },
+    {
+      "track_id": "110689",
+      "genre": "Electronic",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0006531350482315112,
+      "above_db_max_fraction": 0.00011304260450160771
+    },
+    {
+      "track_id": "085837",
+      "genre": "Electronic",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.006028938906752411
+    },
+    {
+      "track_id": "085837",
+      "genre": "Electronic",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0024994975884244375
+    },
+    {
+      "track_id": "085837",
+      "genre": "Electronic",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.00020096463022508038,
+      "above_db_max_fraction": 0.0020598874598070738
+    },
+    {
+      "track_id": "086793",
+      "genre": "Electronic",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0006908159163987139
+    },
+    {
+      "track_id": "086793",
+      "genre": "Electronic",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 7.536173633440515e-05,
+      "above_db_max_fraction": 0.00021352491961414792
+    },
+    {
+      "track_id": "086793",
+      "genre": "Electronic",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0008289790996784565,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "033221",
+      "genre": "Electronic",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0005400924437299036
+    },
+    {
+      "track_id": "033221",
+      "genre": "Electronic",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0003516881028938907
+    },
+    {
+      "track_id": "033221",
+      "genre": "Electronic",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "120467",
+      "genre": "Electronic",
+      "channel": "Original",
+      "below_db_min_fraction": 0.00021352491961414792,
+      "above_db_max_fraction": 0.0020724477491961416
+    },
+    {
+      "track_id": "120467",
+      "genre": "Electronic",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.001557475884244373,
+      "above_db_max_fraction": 0.001896603697749196
+    },
+    {
+      "track_id": "120467",
+      "genre": "Electronic",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.002851185691318328,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "068407",
+      "genre": "Experimental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.020623995176848875
+    },
+    {
+      "track_id": "068407",
+      "genre": "Experimental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.017383440514469453
+    },
+    {
+      "track_id": "068407",
+      "genre": "Experimental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 2.5120578778135048e-05,
+      "above_db_max_fraction": 0.00013816318327974277
+    },
+    {
+      "track_id": "118496",
+      "genre": "Experimental",
+      "channel": "Original",
+      "below_db_min_fraction": 5.0241157556270096e-05,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "118496",
+      "genre": "Experimental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0005903336012861736,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "118496",
+      "genre": "Experimental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0024869372990353696,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "074378",
+      "genre": "Experimental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.005501406752411575
+    },
+    {
+      "track_id": "074378",
+      "genre": "Experimental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.001821241961414791
+    },
+    {
+      "track_id": "074378",
+      "genre": "Experimental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.00025120578778135047,
+      "above_db_max_fraction": 0.0015449155948553054
+    },
+    {
+      "track_id": "057440",
+      "genre": "Experimental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.010927451768488746
+    },
+    {
+      "track_id": "057440",
+      "genre": "Experimental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.004609626205787781
+    },
+    {
+      "track_id": "057440",
+      "genre": "Experimental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0015197950160771704
+    },
+    {
+      "track_id": "026307",
+      "genre": "Experimental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.00010048231511254019,
+      "above_db_max_fraction": 0.01502210610932476
+    },
+    {
+      "track_id": "026307",
+      "genre": "Experimental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.006807676848874598,
+      "above_db_max_fraction": 0.006958400321543408
+    },
+    {
+      "track_id": "026307",
+      "genre": "Experimental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.015449155948553055,
+      "above_db_max_fraction": 0.00268790192926045
+    },
+    {
+      "track_id": "122001",
+      "genre": "Experimental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00027632636655948553
+    },
+    {
+      "track_id": "122001",
+      "genre": "Experimental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00013816318327974277
+    },
+    {
+      "track_id": "122001",
+      "genre": "Experimental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 3.7680868167202575e-05,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "074302",
+      "genre": "Experimental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.022809485530546625,
+      "above_db_max_fraction": 0.003479200160771704
+    },
+    {
+      "track_id": "074302",
+      "genre": "Experimental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.03185289389067524,
+      "above_db_max_fraction": 0.002399015273311897
+    },
+    {
+      "track_id": "074302",
+      "genre": "Experimental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.03016981511254019,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "036567",
+      "genre": "Experimental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0001632837620578778
+    },
+    {
+      "track_id": "036567",
+      "genre": "Experimental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 2.5120578778135048e-05,
+      "above_db_max_fraction": 0.0001632837620578778
+    },
+    {
+      "track_id": "036567",
+      "genre": "Experimental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0006782556270096464,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "132041",
+      "genre": "Folk",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0005903336012861736,
+      "above_db_max_fraction": 6.280144694533762e-05
+    },
+    {
+      "track_id": "132041",
+      "genre": "Folk",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0015072347266881028,
+      "above_db_max_fraction": 6.280144694533762e-05
+    },
+    {
+      "track_id": "132041",
+      "genre": "Folk",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0019468448553054663,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "003920",
+      "genre": "Folk",
+      "channel": "Original",
+      "below_db_min_fraction": 0.003303356109324759,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "003920",
+      "genre": "Folk",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.006631832797427652,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "003920",
+      "genre": "Folk",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.02723070739549839,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "048808",
+      "genre": "Folk",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "048808",
+      "genre": "Folk",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.00020096463022508038,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "048808",
+      "genre": "Folk",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.002348774115755627,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "130758",
+      "genre": "Folk",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00021352491961414792
+    },
+    {
+      "track_id": "130758",
+      "genre": "Folk",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0001507234726688103
+    },
+    {
+      "track_id": "130758",
+      "genre": "Folk",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0009169011254019293,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "097590",
+      "genre": "Folk",
+      "channel": "Original",
+      "below_db_min_fraction": 2.5120578778135048e-05,
+      "above_db_max_fraction": 0.0043835409967845655
+    },
+    {
+      "track_id": "097590",
+      "genre": "Folk",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.00025120578778135047,
+      "above_db_max_fraction": 0.0037806471061093247
+    },
+    {
+      "track_id": "097590",
+      "genre": "Folk",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0038811294212218648,
+      "above_db_max_fraction": 3.7680868167202575e-05
+    },
+    {
+      "track_id": "085693",
+      "genre": "Folk",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0011555466237942122,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "085693",
+      "genre": "Folk",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.013527431672025723,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "085693",
+      "genre": "Folk",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.04511655948553055,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "136138",
+      "genre": "Folk",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 6.280144694533762e-05
+    },
+    {
+      "track_id": "136138",
+      "genre": "Folk",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 2.5120578778135048e-05
+    },
+    {
+      "track_id": "136138",
+      "genre": "Folk",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "005940",
+      "genre": "Folk",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0003768086816720257,
+      "above_db_max_fraction": 0.00028888665594855304
+    },
+    {
+      "track_id": "005940",
+      "genre": "Folk",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0011053054662379421,
+      "above_db_max_fraction": 0.00012560289389067523
+    },
+    {
+      "track_id": "005940",
+      "genre": "Folk",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.02973020498392283,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "026034",
+      "genre": "Hip-Hop",
+      "channel": "Original",
+      "below_db_min_fraction": 1.2560289389067524e-05,
+      "above_db_max_fraction": 0.009985430064308682
+    },
+    {
+      "track_id": "026034",
+      "genre": "Hip-Hop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 1.2560289389067524e-05,
+      "above_db_max_fraction": 0.006556471061093248
+    },
+    {
+      "track_id": "026034",
+      "genre": "Hip-Hop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.005036676045016077,
+      "above_db_max_fraction": 0.0012685892282958198
+    },
+    {
+      "track_id": "071693",
+      "genre": "Hip-Hop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.05627009646302251,
+      "above_db_max_fraction": 0.007322648713826366
+    },
+    {
+      "track_id": "071693",
+      "genre": "Hip-Hop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.07845156752411575,
+      "above_db_max_fraction": 0.005639569935691318
+    },
+    {
+      "track_id": "071693",
+      "genre": "Hip-Hop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.12919513665594856,
+      "above_db_max_fraction": 0.0011304260450160772
+    },
+    {
+      "track_id": "123645",
+      "genre": "Hip-Hop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.012082998392282959
+    },
+    {
+      "track_id": "123645",
+      "genre": "Hip-Hop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 2.5120578778135048e-05,
+      "above_db_max_fraction": 0.008829883440514469
+    },
+    {
+      "track_id": "123645",
+      "genre": "Hip-Hop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0019468448553054663,
+      "above_db_max_fraction": 0.0022231712218649517
+    },
+    {
+      "track_id": "121319",
+      "genre": "Hip-Hop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.005551647909967846
+    },
+    {
+      "track_id": "121319",
+      "genre": "Hip-Hop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0036299236334405146
+    },
+    {
+      "track_id": "121319",
+      "genre": "Hip-Hop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00012560289389067523
+    },
+    {
+      "track_id": "141164",
+      "genre": "Hip-Hop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0061043006430868164
+    },
+    {
+      "track_id": "141164",
+      "genre": "Hip-Hop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.004433782154340836
+    },
+    {
+      "track_id": "141164",
+      "genre": "Hip-Hop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.008189308681672025,
+      "above_db_max_fraction": 0.0003516881028938907
+    },
+    {
+      "track_id": "146153",
+      "genre": "Hip-Hop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.011329381028938906
+    },
+    {
+      "track_id": "146153",
+      "genre": "Hip-Hop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.007988344051446945
+    },
+    {
+      "track_id": "146153",
+      "genre": "Hip-Hop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0007410570739549839,
+      "above_db_max_fraction": 0.0004144895498392283
+    },
+    {
+      "track_id": "064995",
+      "genre": "Hip-Hop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0013565112540192927
+    },
+    {
+      "track_id": "064995",
+      "genre": "Hip-Hop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0006405747588424437,
+      "above_db_max_fraction": 0.0005526527331189711
+    },
+    {
+      "track_id": "064995",
+      "genre": "Hip-Hop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0006280144694533762,
+      "above_db_max_fraction": 8.792202572347267e-05
+    },
+    {
+      "track_id": "108809",
+      "genre": "Hip-Hop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.005714931672025724
+    },
+    {
+      "track_id": "108809",
+      "genre": "Hip-Hop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.002185490353697749
+    },
+    {
+      "track_id": "108809",
+      "genre": "Hip-Hop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.00017584405144694534,
+      "above_db_max_fraction": 0.00021352491961414792
+    },
+    {
+      "track_id": "114238",
+      "genre": "Instrumental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.02110128617363344,
+      "above_db_max_fraction": 0.006330385852090032
+    },
+    {
+      "track_id": "114238",
+      "genre": "Instrumental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0625,
+      "above_db_max_fraction": 0.006255024115755627
+    },
+    {
+      "track_id": "114238",
+      "genre": "Instrumental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.11016629823151125,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "137173",
+      "genre": "Instrumental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "137173",
+      "genre": "Instrumental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 1.2560289389067524e-05,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "137173",
+      "genre": "Instrumental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.00022608520900321542,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "111229",
+      "genre": "Instrumental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.008239549839228295,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "111229",
+      "genre": "Instrumental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.055516479099678454,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "111229",
+      "genre": "Instrumental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.07063906752411575,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "127496",
+      "genre": "Instrumental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.002348774115755627,
+      "above_db_max_fraction": 0.0063429461414791
+    },
+    {
+      "track_id": "127496",
+      "genre": "Instrumental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0077622588424437295,
+      "above_db_max_fraction": 0.005112037781350482
+    },
+    {
+      "track_id": "127496",
+      "genre": "Instrumental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.019908058681672027,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "114374",
+      "genre": "Instrumental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.010852090032154342
+    },
+    {
+      "track_id": "114374",
+      "genre": "Instrumental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0003768086816720257,
+      "above_db_max_fraction": 0.009256933279742766
+    },
+    {
+      "track_id": "114374",
+      "genre": "Instrumental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.003001909163987138,
+      "above_db_max_fraction": 0.0005903336012861736
+    },
+    {
+      "track_id": "116488",
+      "genre": "Instrumental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.005338122990353697,
+      "above_db_max_fraction": 0.0030521503215434082
+    },
+    {
+      "track_id": "116488",
+      "genre": "Instrumental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.017722568327974277,
+      "above_db_max_fraction": 0.0030521503215434082
+    },
+    {
+      "track_id": "116488",
+      "genre": "Instrumental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.06437148311897106,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "145431",
+      "genre": "Instrumental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0036676045016077173,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "145431",
+      "genre": "Instrumental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.010814409163987139,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "145431",
+      "genre": "Instrumental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.011907154340836014,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "139534",
+      "genre": "Instrumental",
+      "channel": "Original",
+      "below_db_min_fraction": 0.007310088424437299,
+      "above_db_max_fraction": 0.0009043408360128617
+    },
+    {
+      "track_id": "139534",
+      "genre": "Instrumental",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.009420217041800643,
+      "above_db_max_fraction": 0.0006154541800643087
+    },
+    {
+      "track_id": "139534",
+      "genre": "Instrumental",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.013916800643086816,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "134949",
+      "genre": "International",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.002298532958199357
+    },
+    {
+      "track_id": "134949",
+      "genre": "International",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00131883038585209
+    },
+    {
+      "track_id": "134949",
+      "genre": "International",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.00010048231511254019,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "060548",
+      "genre": "International",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "060548",
+      "genre": "International",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.005199959807073955,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "060548",
+      "genre": "International",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.00028888665594855304,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "027194",
+      "genre": "International",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 5.0241157556270096e-05
+    },
+    {
+      "track_id": "027194",
+      "genre": "International",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "027194",
+      "genre": "International",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "043536",
+      "genre": "International",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "043536",
+      "genre": "International",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.005966137459807074,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "043536",
+      "genre": "International",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "056471",
+      "genre": "International",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.001657958199356913
+    },
+    {
+      "track_id": "056471",
+      "genre": "International",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0013816318327974277
+    },
+    {
+      "track_id": "056471",
+      "genre": "International",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0005777733118971061,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "018044",
+      "genre": "International",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 2.5120578778135048e-05
+    },
+    {
+      "track_id": "018044",
+      "genre": "International",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.00045217041800643085,
+      "above_db_max_fraction": 2.5120578778135048e-05
+    },
+    {
+      "track_id": "018044",
+      "genre": "International",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0027507033762057876,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "080765",
+      "genre": "International",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00020096463022508038
+    },
+    {
+      "track_id": "080765",
+      "genre": "International",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 1.2560289389067524e-05,
+      "above_db_max_fraction": 3.7680868167202575e-05
+    },
+    {
+      "track_id": "080765",
+      "genre": "International",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.003403838424437299,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "054482",
+      "genre": "International",
+      "channel": "Original",
+      "below_db_min_fraction": 8.792202572347267e-05,
+      "above_db_max_fraction": 0.004182576366559485
+    },
+    {
+      "track_id": "054482",
+      "genre": "International",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0003140072347266881,
+      "above_db_max_fraction": 0.0039564911575562705
+    },
+    {
+      "track_id": "054482",
+      "genre": "International",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.005714931672025724,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "129392",
+      "genre": "Pop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.001657958199356913
+    },
+    {
+      "track_id": "129392",
+      "genre": "Pop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 5.0241157556270096e-05,
+      "above_db_max_fraction": 0.0009671422829581993
+    },
+    {
+      "track_id": "129392",
+      "genre": "Pop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.004345860128617363,
+      "above_db_max_fraction": 0.0003014469453376206
+    },
+    {
+      "track_id": "127290",
+      "genre": "Pop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.01993317926045016
+    },
+    {
+      "track_id": "127290",
+      "genre": "Pop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.009508139067524115
+    },
+    {
+      "track_id": "127290",
+      "genre": "Pop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 8.792202572347267e-05,
+      "above_db_max_fraction": 0.0012057877813504824
+    },
+    {
+      "track_id": "121593",
+      "genre": "Pop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.004961314308681672
+    },
+    {
+      "track_id": "121593",
+      "genre": "Pop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00258741961414791
+    },
+    {
+      "track_id": "121593",
+      "genre": "Pop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.00023864549839228296,
+      "above_db_max_fraction": 0.00020096463022508038
+    },
+    {
+      "track_id": "062753",
+      "genre": "Pop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.006330385852090032
+    },
+    {
+      "track_id": "062753",
+      "genre": "Pop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.004458902733118971
+    },
+    {
+      "track_id": "062753",
+      "genre": "Pop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 1.2560289389067524e-05,
+      "above_db_max_fraction": 0.0007033762057877814
+    },
+    {
+      "track_id": "047666",
+      "genre": "Pop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.00027632636655948553,
+      "above_db_max_fraction": 0.00027632636655948553
+    },
+    {
+      "track_id": "047666",
+      "genre": "Pop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0006908159163987139,
+      "above_db_max_fraction": 0.00021352491961414792
+    },
+    {
+      "track_id": "047666",
+      "genre": "Pop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.002826065112540193,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "138039",
+      "genre": "Pop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0018086816720257234
+    },
+    {
+      "track_id": "138039",
+      "genre": "Pop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00040192926045016077
+    },
+    {
+      "track_id": "138039",
+      "genre": "Pop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0027381430868167202,
+      "above_db_max_fraction": 0.00020096463022508038
+    },
+    {
+      "track_id": "067363",
+      "genre": "Pop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0007787379421221865
+    },
+    {
+      "track_id": "067363",
+      "genre": "Pop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.004597065916398714,
+      "above_db_max_fraction": 0.00017584405144694534
+    },
+    {
+      "track_id": "067363",
+      "genre": "Pop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0001632837620578778
+    },
+    {
+      "track_id": "052041",
+      "genre": "Pop",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.004885952572347267
+    },
+    {
+      "track_id": "052041",
+      "genre": "Pop",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.002085008038585209,
+      "above_db_max_fraction": 0.0020473271704180064
+    },
+    {
+      "track_id": "052041",
+      "genre": "Pop",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00020096463022508038
+    },
+    {
+      "track_id": "125777",
+      "genre": "Rock",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.006757435691318328
+    },
+    {
+      "track_id": "125777",
+      "genre": "Rock",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.004571945337620579
+    },
+    {
+      "track_id": "125777",
+      "genre": "Rock",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 1.2560289389067524e-05
+    },
+    {
+      "track_id": "114401",
+      "genre": "Rock",
+      "channel": "Original",
+      "below_db_min_fraction": 1.2560289389067524e-05,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "114401",
+      "genre": "Rock",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.005551647909967846,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "114401",
+      "genre": "Rock",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0034540795819935693,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "061493",
+      "genre": "Rock",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.004521704180064309
+    },
+    {
+      "track_id": "061493",
+      "genre": "Rock",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0014444332797427654
+    },
+    {
+      "track_id": "061493",
+      "genre": "Rock",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0013062700964630225
+    },
+    {
+      "track_id": "121251",
+      "genre": "Rock",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0037052853697749195
+    },
+    {
+      "track_id": "121251",
+      "genre": "Rock",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 1.2560289389067524e-05,
+      "above_db_max_fraction": 0.002298532958199357
+    },
+    {
+      "track_id": "121251",
+      "genre": "Rock",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.00042704983922829584,
+      "above_db_max_fraction": 2.5120578778135048e-05
+    },
+    {
+      "track_id": "126294",
+      "genre": "Rock",
+      "channel": "Original",
+      "below_db_min_fraction": 0.002085008038585209,
+      "above_db_max_fraction": 0.0027130225080385854
+    },
+    {
+      "track_id": "126294",
+      "genre": "Rock",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.010274316720257234,
+      "above_db_max_fraction": 0.001343950964630225
+    },
+    {
+      "track_id": "126294",
+      "genre": "Rock",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.01151778536977492,
+      "above_db_max_fraction": 0.0006028938906752412
+    },
+    {
+      "track_id": "149488",
+      "genre": "Rock",
+      "channel": "Original",
+      "below_db_min_fraction": 3.7680868167202575e-05,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "149488",
+      "genre": "Rock",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 3.7680868167202575e-05,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "149488",
+      "genre": "Rock",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0001507234726688103,
+      "above_db_max_fraction": 0.0
+    },
+    {
+      "track_id": "108038",
+      "genre": "Rock",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.005740052250803858
+    },
+    {
+      "track_id": "108038",
+      "genre": "Rock",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.0022608520900321543
+    },
+    {
+      "track_id": "108038",
+      "genre": "Rock",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.001632837620578778
+    },
+    {
+      "track_id": "096399",
+      "genre": "Rock",
+      "channel": "Original",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00903084807073955
+    },
+    {
+      "track_id": "096399",
+      "genre": "Rock",
+      "channel": "Harmonique",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.005539087620578778
+    },
+    {
+      "track_id": "096399",
+      "genre": "Rock",
+      "channel": "Percussif",
+      "below_db_min_fraction": 0.0,
+      "above_db_max_fraction": 0.00025120578778135047
+    }
+  ],
+  "source_sha256": "20c230052d9572a6b72ba98e890c6720e177e1bd194731fde14ea7736e0d738c",
+  "matplotlib_version": "3.11.2",
+  "figure_sha256": {
+    "png": "2069c6a5f3d43196ccd27a8ec4fd93de062f5f0d3cd16542445115ee0cc2b37c",
+    "pdf": "84ced948e0d5649cf2334f63042de911a98a922d07e4cba3dbe6e776da84899c"
+  }
+}

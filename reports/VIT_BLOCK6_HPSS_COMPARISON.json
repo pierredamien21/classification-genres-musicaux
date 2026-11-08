@@ -1,0 +1,52 @@
+{
+  "status": "complete",
+  "candidate_run": {
+    "folder": "runs/vit_block6_hpss-20261027T235406908805Z",
+    "report_sha256": "37fbacf53978bb76b67d37d51a1ba2bb95e477d8d3c6abe469ea306628e3182d"
+  },
+  "comparisons": {
+    "vit_block6": {
+      "reference_run": {
+        "folder": "runs/vit_block6-20261021T062701855205Z",
+        "report_sha256": "27dfbf40411926c918eca4daa8b0f512b80f9f64f204d761a8c1e65945f0db3b"
+      },
+      "macro_f1_difference": 0.019455538943278783,
+      "accuracy_difference": 0.024358974358974383,
+      "corrected": 59,
+      "regressed": 40,
+      "both_correct": 419,
+      "both_wrong": 262
+    },
+    "vit_hpss": {
+      "reference_run": {
+        "folder": "runs/vit_hpss-20261021T115423153046Z",
+        "report_sha256": "fb0708ab14b65de7b8a327141ffdad29c1abaafe73186b952bd54ba8ea6e405c"
+      },
+      "macro_f1_difference": 0.01307016628054325,
+      "accuracy_difference": 0.015384615384615441,
+      "corrected": 56,
+      "regressed": 44,
+      "both_correct": 422,
+      "both_wrong": 258
+    },
+    "vit": {
+      "reference_run": {
+        "folder": "runs/vit-20261020T201146743988Z",
+        "report_sha256": "d0322aeaaba291ca0507ba7b4ef831bdc137ebb381e8dac57540ffe89acfb286"
+      },
+      "macro_f1_difference": 0.05279452301605103,
+      "accuracy_difference": 0.05897435897435899,
+      "corrected": 87,
+      "regressed": 41,
+      "both_correct": 391,
+      "both_wrong": 261
+    }
+  },
+  "test_evaluated": false,
+  "baseline_manifest_sha256": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+  "index_sha256": "74e948e6934001d1fb01ac0583f137106f890aaf3b88ac27e884deea744d8905",
+  "source_sha256": {
+    "scripts/compare_vit_block6_hpss.py": "a087a4102ea612655a78206744f03d8dbd63fd469fc378c5c547dd766a5256b9",
+    "scripts/compare_vit_baseline.py": "c67795c484db54bfba9bc3c0260128d3fcf7e3d6971c55c5788ab98abe11998d"
+  }
+}

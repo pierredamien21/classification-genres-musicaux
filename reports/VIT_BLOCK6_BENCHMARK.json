@@ -1,0 +1,154 @@
+{
+  "cache_key": "8f862946e898652d3e5d5242a08a1b5af92a0393373ed096c5be6e5248ee3789",
+  "provenance": {
+    "config": {
+      "schema_version": 1,
+      "name": "vit_block6_logmel_v1",
+      "sample_rate": 16000,
+      "window_seconds": 10.0,
+      "offsets_seconds": [
+        0.0,
+        10.0,
+        20.0
+      ],
+      "logmel": {
+        "n_fft": 1024,
+        "hop_length": 256,
+        "n_mels": 128,
+        "f_min": 0.0,
+        "window": "hann",
+        "center": false,
+        "power": 2.0,
+        "amin": 1e-10
+      },
+      "db_min": -80.0,
+      "db_max": 20.0,
+      "db_range_policy": "fixed_diagnostic_range_not_tuned_on_validation",
+      "checkpoint_directory": "artifacts/pretrained/vit_tiny",
+      "checkpoint": {
+        "repo_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+        "revision": "7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106",
+        "sha256": {
+          "config.json": "e328e0f3717427f87898184cd8eba835526a8deaaba703b5066b307afea10e80",
+          "model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+          "README.md": "989d20e77ea71e4710ef2e990dece8176bc29882dec9000328539e1fa82b1db3"
+        }
+      },
+      "threads_per_worker": 1,
+      "resize": "bicubic_224x224_antialias_clamp_0_1",
+      "channels": "repeat_grayscale_three_times",
+      "normalization": "checkpoint_mean_std",
+      "pooling": "selected_block_mean_patch_tokens_exclude_prefix",
+      "frozen": true,
+      "feature_block": 6,
+      "terminal_norm": "same_frozen_checkpoint_layernorm_after_selected_block"
+    },
+    "parents": {
+      "logmel": {
+        "folder": "data/features/cnn-logmel-b08e2e3768c5c4d6",
+        "report_sha256": "8fe857bbce9371ebe2eafe2d2ae21ea9c3b1ebd07686b1c7c7744a0f7c68c5e0"
+      },
+      "vit_reference": {
+        "folder": "data/features/vit-ab0098008b9f3d2b",
+        "report_sha256": "f8d417a13e9b635673e0417edb1cd58b14f16ff821848cec31325e4546be0812"
+      }
+    },
+    "manifest_sha256": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+    "labels": [
+      "Electronic",
+      "Experimental",
+      "Folk",
+      "Hip-Hop",
+      "Instrumental",
+      "International",
+      "Pop",
+      "Rock"
+    ],
+    "splits": [
+      "train",
+      "validation"
+    ],
+    "versions": {
+      "numpy": "2.5.4",
+      "torch": "2.14.1+cpu",
+      "timm": "1.0.30",
+      "safetensors": "0.8.0"
+    },
+    "source_sha256": {
+      "scripts/extract_vit_block6.py": "4e4894c5b04a2c2a5401527754fb30c985f3275f6c0d13fc2455c160d9aca351",
+      "src/music_genre/models/vit.py": "2de7f275fc74a1c9919ffeab1147075ffddb0ee33c9dcc4d19737e333df7fe8e",
+      "src/music_genre/models/vit_block.py": "aa33d8744319bb76712726fc311593e0254520b9fa23cf5a9e4b6c48362730bf"
+    }
+  },
+  "sample_count": 64,
+  "sample_split": "train",
+  "row_positions": [
+    3319,
+    14176,
+    17989,
+    13312,
+    10036,
+    10180,
+    3328,
+    15412,
+    7696,
+    14956,
+    8764,
+    6277,
+    2680,
+    15676,
+    8728,
+    3523,
+    18343,
+    463,
+    4966,
+    17977,
+    11449,
+    9988,
+    19147,
+    730,
+    2656,
+    8266,
+    16123,
+    15514,
+    19777,
+    20668,
+    7390,
+    12859,
+    14086,
+    19252,
+    13390,
+    17332,
+    14164,
+    14635,
+    20482,
+    19585,
+    18997,
+    6715,
+    2770,
+    4222,
+    6082,
+    1993,
+    9424,
+    5740,
+    17677,
+    17257,
+    15580,
+    7015,
+    4816,
+    19396,
+    7591,
+    5299,
+    16609,
+    14212,
+    6811,
+    15478,
+    16801,
+    21076,
+    12646,
+    11248
+  ],
+  "median_block6_seconds": 0.04213960000197403,
+  "block12_reference_max_abs_error": 0.0,
+  "test_audio_loaded": false
+}

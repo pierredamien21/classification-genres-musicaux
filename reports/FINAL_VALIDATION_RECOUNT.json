@@ -1,0 +1,851 @@
+{
+  "status": "passed",
+  "created_at": "2026-10-29T19:10:12.344788+00:00",
+  "campaign_sha256": "6d52b705c1fa5fab584baa2714149809a9795b79cc8916f3d71eb81f6c172f51",
+  "completion_sha256": "cbcf2cf3f3fb2731035137905f4d11b078af9a470d60c3be87396331f0870e21",
+  "lock_sha256": "80eccf469a80dff691a02aaca20443eb7bbc6d952ab6516aca7e7a5c4ae446ec",
+  "predictions_verified": 7020,
+  "window_vectors_verified": 21060,
+  "systems": {
+    "descriptor": {
+      "tracks": 780,
+      "windows": 2340,
+      "max_probability_error": 5.551115123125783e-16,
+      "max_fsum_probability_error": 5.551115123125783e-16,
+      "class_disagreements": 0,
+      "confusion_matrix": [
+        [
+          49,
+          6,
+          3,
+          19,
+          10,
+          5,
+          6,
+          1
+        ],
+        [
+          15,
+          47,
+          6,
+          3,
+          16,
+          1,
+          2,
+          10
+        ],
+        [
+          1,
+          0,
+          79,
+          3,
+          5,
+          2,
+          5,
+          4
+        ],
+        [
+          25,
+          1,
+          2,
+          55,
+          0,
+          10,
+          7,
+          0
+        ],
+        [
+          6,
+          19,
+          10,
+          1,
+          27,
+          2,
+          20,
+          8
+        ],
+        [
+          11,
+          12,
+          14,
+          11,
+          3,
+          40,
+          5,
+          2
+        ],
+        [
+          17,
+          18,
+          8,
+          15,
+          10,
+          5,
+          10,
+          11
+        ],
+        [
+          1,
+          5,
+          4,
+          7,
+          2,
+          2,
+          12,
+          64
+        ]
+      ],
+      "macro_f1": 0.4612229344724649,
+      "accuracy": 0.4756410256410256
+    },
+    "vit": {
+      "tracks": 780,
+      "windows": 2340,
+      "max_probability_error": 4.440892098500626e-16,
+      "max_fsum_probability_error": 4.440892098500626e-16,
+      "class_disagreements": 0,
+      "confusion_matrix": [
+        [
+          62,
+          7,
+          1,
+          10,
+          9,
+          4,
+          5,
+          1
+        ],
+        [
+          19,
+          48,
+          5,
+          2,
+          10,
+          4,
+          3,
+          9
+        ],
+        [
+          1,
+          3,
+          63,
+          3,
+          7,
+          3,
+          18,
+          1
+        ],
+        [
+          13,
+          2,
+          1,
+          76,
+          0,
+          5,
+          2,
+          1
+        ],
+        [
+          3,
+          16,
+          6,
+          0,
+          45,
+          3,
+          16,
+          4
+        ],
+        [
+          10,
+          4,
+          4,
+          3,
+          6,
+          64,
+          5,
+          2
+        ],
+        [
+          14,
+          23,
+          7,
+          11,
+          7,
+          9,
+          9,
+          14
+        ],
+        [
+          3,
+          7,
+          2,
+          2,
+          2,
+          4,
+          12,
+          65
+        ]
+      ],
+      "macro_f1": 0.5447091086808501,
+      "accuracy": 0.5538461538461539
+    },
+    "fusion": {
+      "tracks": 780,
+      "windows": 2340,
+      "max_probability_error": 4.440892098500626e-16,
+      "max_fsum_probability_error": 4.440892098500626e-16,
+      "class_disagreements": 0,
+      "confusion_matrix": [
+        [
+          57,
+          9,
+          1,
+          13,
+          9,
+          2,
+          6,
+          2
+        ],
+        [
+          19,
+          46,
+          5,
+          1,
+          15,
+          1,
+          4,
+          9
+        ],
+        [
+          1,
+          1,
+          73,
+          0,
+          7,
+          4,
+          10,
+          3
+        ],
+        [
+          18,
+          0,
+          2,
+          68,
+          1,
+          8,
+          3,
+          0
+        ],
+        [
+          9,
+          15,
+          2,
+          0,
+          41,
+          2,
+          18,
+          6
+        ],
+        [
+          8,
+          3,
+          9,
+          6,
+          5,
+          59,
+          7,
+          1
+        ],
+        [
+          16,
+          22,
+          8,
+          12,
+          9,
+          9,
+          9,
+          9
+        ],
+        [
+          1,
+          3,
+          3,
+          5,
+          2,
+          5,
+          18,
+          60
+        ]
+      ],
+      "macro_f1": 0.5218659499833392,
+      "accuracy": 0.5294871794871795
+    },
+    "vit_block6": {
+      "tracks": 780,
+      "windows": 2340,
+      "max_probability_error": 4.440892098500626e-16,
+      "max_fsum_probability_error": 4.440892098500626e-16,
+      "class_disagreements": 0,
+      "confusion_matrix": [
+        [
+          66,
+          10,
+          1,
+          9,
+          7,
+          2,
+          4,
+          0
+        ],
+        [
+          18,
+          50,
+          4,
+          3,
+          14,
+          3,
+          0,
+          8
+        ],
+        [
+          3,
+          1,
+          69,
+          1,
+          6,
+          4,
+          14,
+          1
+        ],
+        [
+          14,
+          1,
+          1,
+          78,
+          0,
+          4,
+          1,
+          1
+        ],
+        [
+          6,
+          16,
+          5,
+          0,
+          50,
+          2,
+          12,
+          2
+        ],
+        [
+          7,
+          3,
+          3,
+          2,
+          7,
+          70,
+          4,
+          2
+        ],
+        [
+          19,
+          23,
+          12,
+          10,
+          5,
+          6,
+          12,
+          7
+        ],
+        [
+          2,
+          4,
+          5,
+          2,
+          3,
+          4,
+          13,
+          64
+        ]
+      ],
+      "macro_f1": 0.5780480927536223,
+      "accuracy": 0.5884615384615385
+    },
+    "vit_hpss": {
+      "tracks": 780,
+      "windows": 2340,
+      "max_probability_error": 3.3306690738754696e-16,
+      "max_fsum_probability_error": 3.3306690738754696e-16,
+      "class_disagreements": 0,
+      "confusion_matrix": [
+        [
+          64,
+          3,
+          3,
+          10,
+          13,
+          1,
+          4,
+          1
+        ],
+        [
+          15,
+          53,
+          7,
+          3,
+          8,
+          2,
+          4,
+          8
+        ],
+        [
+          0,
+          2,
+          73,
+          3,
+          4,
+          2,
+          14,
+          1
+        ],
+        [
+          19,
+          2,
+          1,
+          71,
+          0,
+          5,
+          1,
+          1
+        ],
+        [
+          3,
+          14,
+          4,
+          0,
+          54,
+          1,
+          9,
+          8
+        ],
+        [
+          11,
+          3,
+          1,
+          3,
+          5,
+          71,
+          2,
+          2
+        ],
+        [
+          16,
+          20,
+          6,
+          13,
+          5,
+          8,
+          12,
+          14
+        ],
+        [
+          4,
+          6,
+          3,
+          2,
+          1,
+          6,
+          7,
+          68
+        ]
+      ],
+      "macro_f1": 0.5844334654163579,
+      "accuracy": 0.5974358974358974
+    },
+    "vit_block6_hpss": {
+      "tracks": 780,
+      "windows": 2340,
+      "max_probability_error": 3.885780586188048e-16,
+      "max_fsum_probability_error": 3.3306690738754696e-16,
+      "class_disagreements": 0,
+      "confusion_matrix": [
+        [
+          68,
+          6,
+          0,
+          10,
+          10,
+          1,
+          1,
+          3
+        ],
+        [
+          18,
+          55,
+          5,
+          1,
+          12,
+          1,
+          1,
+          7
+        ],
+        [
+          0,
+          2,
+          71,
+          3,
+          5,
+          2,
+          14,
+          2
+        ],
+        [
+          17,
+          1,
+          1,
+          77,
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          6,
+          15,
+          9,
+          0,
+          50,
+          3,
+          7,
+          3
+        ],
+        [
+          7,
+          3,
+          3,
+          3,
+          8,
+          70,
+          2,
+          2
+        ],
+        [
+          14,
+          25,
+          8,
+          13,
+          6,
+          7,
+          13,
+          8
+        ],
+        [
+          3,
+          4,
+          2,
+          3,
+          2,
+          4,
+          5,
+          74
+        ]
+      ],
+      "macro_f1": 0.597503631696901,
+      "accuracy": 0.6128205128205129
+    },
+    "cnn20_seed42": {
+      "tracks": 780,
+      "windows": 2340,
+      "max_probability_error": 0.0,
+      "max_fsum_probability_error": 0.0,
+      "class_disagreements": 0,
+      "confusion_matrix": [
+        [
+          48,
+          10,
+          1,
+          13,
+          9,
+          10,
+          6,
+          2
+        ],
+        [
+          5,
+          60,
+          4,
+          2,
+          14,
+          3,
+          2,
+          10
+        ],
+        [
+          0,
+          1,
+          71,
+          1,
+          4,
+          1,
+          19,
+          2
+        ],
+        [
+          15,
+          1,
+          1,
+          72,
+          0,
+          7,
+          2,
+          2
+        ],
+        [
+          4,
+          12,
+          12,
+          0,
+          44,
+          3,
+          15,
+          3
+        ],
+        [
+          7,
+          2,
+          10,
+          6,
+          4,
+          64,
+          4,
+          1
+        ],
+        [
+          16,
+          17,
+          14,
+          11,
+          7,
+          8,
+          8,
+          13
+        ],
+        [
+          0,
+          7,
+          5,
+          0,
+          1,
+          6,
+          7,
+          71
+        ]
+      ],
+      "macro_f1": 0.5464336658181137,
+      "accuracy": 0.5615384615384615
+    },
+    "cnn20_seed43": {
+      "tracks": 780,
+      "windows": 2340,
+      "max_probability_error": 0.0,
+      "max_fsum_probability_error": 0.0,
+      "class_disagreements": 0,
+      "confusion_matrix": [
+        [
+          63,
+          7,
+          1,
+          9,
+          8,
+          3,
+          6,
+          2
+        ],
+        [
+          8,
+          67,
+          2,
+          1,
+          7,
+          4,
+          1,
+          10
+        ],
+        [
+          0,
+          1,
+          61,
+          1,
+          8,
+          4,
+          21,
+          3
+        ],
+        [
+          28,
+          0,
+          0,
+          61,
+          0,
+          5,
+          5,
+          1
+        ],
+        [
+          12,
+          16,
+          3,
+          1,
+          37,
+          1,
+          14,
+          9
+        ],
+        [
+          16,
+          1,
+          1,
+          5,
+          6,
+          61,
+          2,
+          6
+        ],
+        [
+          25,
+          17,
+          5,
+          11,
+          5,
+          8,
+          9,
+          14
+        ],
+        [
+          3,
+          9,
+          1,
+          0,
+          2,
+          4,
+          1,
+          77
+        ]
+      ],
+      "macro_f1": 0.5471261946810383,
+      "accuracy": 0.558974358974359
+    },
+    "cnn20_seed44": {
+      "tracks": 780,
+      "windows": 2340,
+      "max_probability_error": 0.0,
+      "max_fsum_probability_error": 0.0,
+      "class_disagreements": 0,
+      "confusion_matrix": [
+        [
+          51,
+          15,
+          0,
+          14,
+          12,
+          4,
+          2,
+          1
+        ],
+        [
+          6,
+          66,
+          4,
+          2,
+          9,
+          3,
+          1,
+          9
+        ],
+        [
+          0,
+          3,
+          66,
+          0,
+          4,
+          7,
+          17,
+          2
+        ],
+        [
+          16,
+          0,
+          0,
+          71,
+          0,
+          7,
+          4,
+          2
+        ],
+        [
+          1,
+          24,
+          10,
+          1,
+          33,
+          3,
+          18,
+          3
+        ],
+        [
+          6,
+          5,
+          3,
+          12,
+          5,
+          65,
+          1,
+          1
+        ],
+        [
+          13,
+          23,
+          8,
+          14,
+          7,
+          13,
+          5,
+          11
+        ],
+        [
+          1,
+          12,
+          1,
+          0,
+          3,
+          5,
+          5,
+          70
+        ]
+      ],
+      "macro_f1": 0.5286819975288461,
+      "accuracy": 0.5474358974358975
+    }
+  },
+  "evidence_sha256": {
+    "scripts/evaluate_final.py": "b1866348e69da82bb078995bc5cfaa71a5204ff9d9ee049fc5fca6ff754fd498",
+    "src/music_genre/evaluation/final_evaluation.py": "690d2e425f5808d2e40e61eff815788b7012ac3fe19a7799787f17ee6d1a450c",
+    "data/manifests/baseline-20261020T142750008115Z/manifest.csv": "de1e43489ae9f4d335396db98dc7cd050ed44a230d6a5e0df3fc8417310c7171",
+    "reports/COMPARATOR_INFERENCE_CHECK.json": "e863337482c83a0133cd9e09b72743038ba8e865b2217fe90ada0935ed5dfa94",
+    "reports/CNN_INFERENCE_CHECK.json": "321016af78afd0cbd80bed8f01fd1ecb99bbf5f7c7e57529735376d98fbc02a1",
+    "runs/descriptors-20261020T195511254895Z/validation_predictions.csv": "5b4540aeaa424a17bc34017a996d2efc2b402380f2b05db1e718d0c148f244d2",
+    "runs/vit-20261020T201146743988Z/validation_predictions.csv": "f756c387ac7f1c47022f5c8815214947b1849b1c1b440d1a4843cf21701cb700",
+    "runs/fusion-20261020T201803253265Z/validation_predictions.csv": "85cd584f0855e9ecbd809109914d8fb3c2e3d3ca2509f94c0a457932dfa84c52",
+    "runs/vit_block6-20261021T062701855205Z/validation_predictions.csv": "f5bcb7295cfec366be2695db28ca9f2693b8c57282a772661355edaefdb587dd",
+    "runs/vit_hpss-20261021T115423153046Z/validation_predictions.csv": "4ff27123f55a1bd847705236fe9bafc246768fdc4d593e1ff7919e337df288b9",
+    "runs/vit_block6_hpss-20261027T235406908805Z/validation_predictions.csv": "c233013d504dddadf21326fa52e97c3f245510b8de54322752133303a8a4d05f",
+    "runs/cnn20_seed42-20261021T185433222368Z/validation_predictions.csv": "43e1a50f62b59e2e613f14c6bcefb4e52a36e027c1bebdf653aece1be6392e9e",
+    "runs/cnn20_seed43-20261021T190439492087Z/validation_predictions.csv": "525bcb180285d5791264cc7e8e5a50ffddc0b37a774ca84d53c7cc6b05198328",
+    "runs/cnn20_seed44-20261021T190901243607Z/validation_predictions.csv": "ca604420e315ee1d84af1582984255dad45d98b76f93703c8b73ed6eb0b65fb2"
+  },
+  "verification_source_sha256": "6e2564865aa5f7f06553fcf71e316000cff88e806854fe6470b4b43936a02bd5",
+  "method": "stdlib_file_hashes_fsum_window_means_manual_confusions_fixed_labels",
+  "audio_decoded": false,
+  "test_evaluated": false,
+  "scope": "Prediction files and supporting evidence; full dataset integrity checked again by test runner"
+}

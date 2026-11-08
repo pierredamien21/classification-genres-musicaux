@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-06T11:45:00.745471+00:00",
+  "scope": "Delivery files, saved notebook execution, readiness identities and unchanged V1 reports; not full user training",
+  "notebooks": [
+    {
+      "notebook": "00_parcours_projet.ipynb",
+      "code_cells": 8,
+      "embedded_figures": 5,
+      "notebook_sha256": "38fb84fc270a0af1ec77d066e9bb66f4e7844dc1d2b09cf7f2ccb3a76b5ac006",
+      "html_sha256": "ec5d9ecb2205fa35518a0ff007b38c525068c43613c43911549d084395c8d20f"
+    },
+    {
+      "notebook": "02_analyse_audio.ipynb",
+      "code_cells": 8,
+      "embedded_figures": 5,
+      "notebook_sha256": "f14a68174656d4ad4f0fc41ea9eb74fb1d0a601f7dd5af4454f17213bcb85453",
+      "html_sha256": "cdbb3599490f99906f746086d72ae0f6374214ab193c41ba64c7f7030fe6b525"
+    },
+    {
+      "notebook": "05_entrainement_utilisateur.ipynb",
+      "code_cells": 5,
+      "embedded_figures": 0,
+      "notebook_sha256": "df15bb481d50e8435b5f7a9cb8322afe9c3aa26ef5c9bc8aa90ba8b097ff083f",
+      "html_sha256": "3af4bda18f4e43142caa6f92e81540389e7a3405417833cd7f430391dbe2149b"
+    }
+  ],
+  "user_readiness_sha256": "7bdbe91e10ad0c3ad9cfd396672d0343fab48c492ca35c60438f1b3c85309622",
+  "demo_callback_sha256": "31e95d41a787df4feecb4aa741fb2fea5543033438a90850aee06b6a90938e53",
+  "smoke_job_sha256": "7c4e9932307aef7bb033bb0e8e2f59cadc6a5466e21670fdb2741a44ea995120",
+  "full_training_launched": false,
+  "prior_checks": {
+    "test_suite": "271 passed; prior execution recorded in delivery summary",
+    "browser_demo": "WAV upload, overview and FMA modes, empty input, desktop and narrow layout verified",
+    "environment_dependencies": "164 notebook packages and 176 demo packages compatible"
+  },
+  "limitations": [
+    "Fresh network installation on another machine not tested",
+    "HTML exports structurally validated; file:// browser access refused",
+    "Full user training and final synthesis pending",
+    "No recorded video or annotated subjective listening"
+  ],
+  "jupyter_http_check": {
+    "status": 200,
+    "login_redirect": true
+  },
+  "local_document_links": "passed",
+  "demo_source_identities": "passed",
+  "notebook_launch_default": "False"
+}

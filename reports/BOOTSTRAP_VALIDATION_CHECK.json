@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "report": {
+    "report": "reports/BOOTSTRAP_VALIDATION.json",
+    "report_sha256": "911100c7e7b7a6562cf05ebf5caaedaac6df9ce47012ab79ee0671635a90469e"
+  },
+  "verification_source_sha256": "dca6ab85e14f3fb50569496da22027d5c7b6533c87da28a4a23de771c494b849",
+  "replicates_verified": 2000,
+  "metrics_verified": 44000,
+  "max_metric_error": 0.0,
+  "missing_class_replicates": 0,
+  "quantiles_recomputed_by_sorted_interpolation": true,
+  "method": "explicit_tracks_expanded_from_PCG64_artist_draws_sklearn_fixed_eight_labels",
+  "elapsed_seconds": 45.3514462000021,
+  "audio_loaded": false,
+  "test_evaluated": false
+}
