@@ -24,7 +24,7 @@ def test_demo_keeps_fma_predictions_and_pads_short_overview(tmp_path):
     import soundfile as sf
 
     from music_genre.inference.demo import DemoPredictor
-    from music_genre.inference.predict import CandidatePredictor
+    from music_genre.inference.predict import Predictor
 
     root = Path(__file__).resolve().parents[1]
     if not (root / "reports/PREPARATION_EVALUATION_FINALE.json").exists():
@@ -33,7 +33,7 @@ def test_demo_keeps_fma_predictions_and_pads_short_overview(tmp_path):
     path = tmp_path / "short.wav"
     tone = .1 * np.sin(2 * np.pi * 440 * np.arange(4000) / 8000)
     sf.write(path, np.column_stack((tone, tone)), 8000, subtype="FLOAT")
-    fixed = CandidatePredictor.predict_file(predictor, path, mode="fma")
+    fixed = Predictor.predict_file(predictor, path, mode="fma")
     demo = predictor.predict_file(path, mode="overview")
     assert len(demo["windows"]) == 1
     assert demo["windows"][0]["valid_seconds"] == .5

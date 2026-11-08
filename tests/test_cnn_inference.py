@@ -9,7 +9,7 @@ import soundfile as sf
 import torch
 
 from music_genre.data.audit import sha256_file
-from music_genre.inference.cnn_adapter import CnnPredictor
+from music_genre.inference.predict import Predictor
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -25,7 +25,7 @@ def test_cnn_reproduces_saved_track_with_selected_checkpoint(seed, epoch):
     pin = prepared["runs"][f"cnn20_seed{seed}"]
     with (ROOT / pin["run"]["folder"] / "validation_predictions.csv").open(encoding="utf-8", newline="") as stream:
         expected = next(r for r in csv.DictReader(stream) if r["track_id"] == row["track_id"])
-    predictor = CnnPredictor(ROOT, seed)
+    predictor = Predictor(ROOT, f"cnn20_seed{seed}")
     assert predictor.selected_epoch == epoch
     result = predictor.predict_file(ROOT / "data/raw" / row["audio_path"])
     assert result["labels"] == prepared["labels"]
@@ -37,7 +37,7 @@ def test_cnn_reproduces_saved_track_with_selected_checkpoint(seed, epoch):
 def test_short_stereo_file_has_one_vote_and_restores_threads(tmp_path, seed):
     if not (ROOT / "reports/PREPARATION_EVALUATION_FINALE.json").exists():
         pytest.skip("Local export required")
-    predictor = CnnPredictor(ROOT, seed)
+    predictor = Predictor(ROOT, f"cnn20_seed{seed}")
     before = torch.get_num_threads()
     path = tmp_path / "short.wav"
     tone = .1 * np.sin(2 * np.pi * 440 * np.arange(4000) / 8000)
@@ -83,9 +83,9 @@ def test_cnn_rejects_inconsistent_pinned_artifacts(tmp_path, kind):
     (tmp_path / "reports").mkdir()
     (tmp_path / "reports/PREPARATION_EVALUATION_FINALE.json").write_text(json.dumps(prepared), encoding="utf-8")
     with pytest.raises(ValueError):
-        CnnPredictor(tmp_path, 42)
+        Predictor(tmp_path, "cnn20_seed42")
 
 
 def test_unknown_seed_is_rejected():
-    with pytest.raises(ValueError, match="seed"):
-        CnnPredictor(ROOT, 45)
+    with pytest.raises(ValueError, match="Unknown system"):
+        Predictor(ROOT, "cnn20_seed45")

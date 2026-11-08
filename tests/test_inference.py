@@ -7,7 +7,7 @@ import pytest
 import soundfile as sf
 
 from music_genre.data.audit import sha256_file
-from music_genre.inference.predict import CandidatePredictor, validate_audio_file
+from music_genre.inference.predict import Predictor, validate_audio_file
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def predictor():
     if not (ROOT / "reports/PREPARATION_EVALUATION_FINALE.json").exists():
         pytest.skip("Local prepared export required; no download")
-    return CandidatePredictor(ROOT)
+    return Predictor(ROOT)
 
 
 def test_short_stereo_file_returns_one_real_window_and_ordered_scores(tmp_path, predictor):
@@ -105,4 +105,4 @@ def test_loading_rejects_inconsistent_export_before_inference(tmp_path, kind):
     (tmp_path / "reports").mkdir()
     (tmp_path / "reports/PREPARATION_EVALUATION_FINALE.json").write_text(json.dumps(prepared), encoding="utf-8")
     with pytest.raises((ValueError, FileNotFoundError)):
-        CandidatePredictor(tmp_path)
+        Predictor(tmp_path)

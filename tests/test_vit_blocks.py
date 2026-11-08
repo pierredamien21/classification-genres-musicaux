@@ -13,10 +13,9 @@ def test_intermediate_block_matches_full_model_hook_and_last_block():
     import torch
 
     from music_genre.models.vit import FrozenViT
-    from music_genre.models.vit_block import FrozenViTBlock
 
     torch.set_num_threads(2)
-    full, sixth, twelfth = FrozenViT(weights), FrozenViTBlock(weights, 6), FrozenViTBlock(weights, 12)
+    full, sixth, twelfth = FrozenViT(weights), FrozenViT(weights, 6), FrozenViT(weights, 12)
     captured = []
 
     def capture(_module, _inputs, output):
@@ -39,7 +38,7 @@ def test_intermediate_block_matches_full_model_hook_and_last_block():
 
 @pytest.mark.parametrize("block", [0, 13, 6.5, True])
 def test_invalid_block_fails_before_loading_checkpoint(block):
-    from music_genre.models.vit_block import FrozenViTBlock
+    from music_genre.models.vit import FrozenViT
 
     with pytest.raises(ValueError, match="1..12"):
-        FrozenViTBlock(Path("missing-checkpoint"), block)
+        FrozenViT(Path("missing-checkpoint"), block)

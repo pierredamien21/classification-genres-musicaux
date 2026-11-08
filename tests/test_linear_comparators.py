@@ -9,7 +9,8 @@ import soundfile as sf
 from threadpoolctl import threadpool_limits
 
 from music_genre.evaluation.window_geometry import window_sample_geometry
-from music_genre.inference.linear_adapters import AlignedFusion, LinearComparatorPredictor
+from music_genre.features.fusion import AlignedFusion
+from music_genre.inference.predict import Predictor
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -39,7 +40,7 @@ def test_comparator_reproduces_saved_validation_prediction(system):
     pin = prepared["runs"][system]
     with (ROOT / pin["run"]["folder"] / "validation_predictions.csv").open(encoding="utf-8", newline="") as stream:
         expected = next(r for r in csv.DictReader(stream) if r["track_id"] == row["track_id"])
-    result = LinearComparatorPredictor(ROOT, system).predict_file(ROOT / "data/raw" / row["audio_path"])
+    result = Predictor(ROOT, system).predict_file(ROOT / "data/raw" / row["audio_path"])
     assert result["labels"] == prepared["labels"]
     np.testing.assert_allclose(result["scores"], [float(expected[f"p_{label}"]) for label in prepared["labels"]],
                                atol=1e-6, rtol=0)
@@ -84,14 +85,14 @@ def test_loading_rejects_changed_or_escaped_comparator(tmp_path, kind):
     (tmp_path / "reports").mkdir()
     (tmp_path / "reports/PREPARATION_EVALUATION_FINALE.json").write_text(json.dumps(prepared), encoding="utf-8")
     with pytest.raises(ValueError):
-        LinearComparatorPredictor(tmp_path, "descriptor")
+        Predictor(tmp_path, "descriptor")
 
 
 @pytest.mark.parametrize("system", ["descriptor", "vit", "fusion", "vit_hpss"])
 def test_short_stereo_audio_has_one_vote_and_silence_is_rejected(tmp_path, system):
     if not (ROOT / "reports/PREPARATION_EVALUATION_FINALE.json").exists():
         pytest.skip("Local prepared exports required")
-    predictor = LinearComparatorPredictor(ROOT, system)
+    predictor = Predictor(ROOT, system)
     tone = .1 * np.sin(2 * np.pi * 440 * np.arange(4000) / 8000)
     path = tmp_path / "short.wav"
     sf.write(path, np.column_stack((tone, tone)), 8000, subtype="FLOAT")
@@ -116,7 +117,7 @@ def test_vit_inference_matches_cached_windows_with_multithreaded_blas_caller():
     cache = ROOT / prepared["runs"]["vit"]["feature_cache"]
     with (cache / "index.csv").open(encoding="utf-8", newline="") as stream:
         positions = [i for i, r in enumerate(csv.DictReader(stream)) if r["track_id"] == row["track_id"]]
-    predictor = LinearComparatorPredictor(ROOT, "vit")
+    predictor = Predictor(ROOT, "vit")
     matrix = np.load(cache / "features.npy", mmap_mode="r", allow_pickle=False)
     expected = predictor.model.predict_proba(matrix[positions])
     with threadpool_limits(limits=8, user_api="blas"):

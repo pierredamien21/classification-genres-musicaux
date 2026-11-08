@@ -7,7 +7,7 @@ import numpy as np
 import pytest
 import soundfile as sf
 
-from music_genre.inference.adapters import OriginalBlock6Predictor
+from music_genre.inference.predict import Predictor
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -23,7 +23,7 @@ def test_original_block6_reproduces_saved_validation_track():
     with (ROOT / pin["run"]["folder"] / "validation_predictions.csv").open(
             encoding="utf-8", newline="") as stream:
         expected = next(r for r in csv.DictReader(stream) if r["track_id"] == row["track_id"])
-    result = OriginalBlock6Predictor(ROOT).predict_file(ROOT / "data/raw" / row["audio_path"])
+    result = Predictor(ROOT, "vit_block6").predict_file(ROOT / "data/raw" / row["audio_path"])
     assert result["labels"] == prepared["labels"]
     np.testing.assert_allclose(result["scores"],
                                [float(expected[f"p_{label}"]) for label in prepared["labels"]],
@@ -53,7 +53,7 @@ def test_original_adapter_rejects_untrusted_export(tmp_path, kind):
     (tmp_path / "reports/PREPARATION_EVALUATION_FINALE.json").write_text(
         json.dumps(prepared), encoding="utf-8")
     with pytest.raises((ValueError, FileNotFoundError)):
-        OriginalBlock6Predictor(tmp_path)
+        Predictor(tmp_path, "vit_block6")
 
 
 def test_original_adapter_short_file_has_no_duplicate_votes(tmp_path):
@@ -62,7 +62,7 @@ def test_original_adapter_short_file_has_no_duplicate_votes(tmp_path):
     path = tmp_path / "short.wav"
     sf.write(path, .1 * np.sin(2 * np.pi * 440 * np.arange(8000) / 16000),
              16000, subtype="FLOAT")
-    result = OriginalBlock6Predictor(ROOT).predict_file(path)
+    result = Predictor(ROOT, "vit_block6").predict_file(path)
     assert len(result["windows"]) == 1
     assert result["windows"][0]["valid_seconds"] == .5
     assert result["windows"][0]["padded_seconds"] == 9.5

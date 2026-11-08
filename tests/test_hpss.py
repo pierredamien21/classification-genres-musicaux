@@ -47,15 +47,14 @@ def test_repeated_channels_reproduce_original_vit():
     import torch
 
     from music_genre.models.vit import FrozenViT
-    from music_genre.models.vit_channels import FrozenViTChannels
 
     torch.set_num_threads(2)
-    original, multichannel = FrozenViT(weights), FrozenViTChannels(weights)
+    encoder = FrozenViT(weights)
     mel = np.random.default_rng(42).uniform(-100, 30, (128, 622)).astype(np.float32)
     repeated = np.repeat(mel[None], 3, axis=0)
-    np.testing.assert_allclose(multichannel.extract(repeated, -80, 20),
-                               original.extract(mel, -80, 20), rtol=0, atol=1e-6)
-    assert not multichannel.model.training
-    assert not any(p.requires_grad for p in multichannel.model.parameters())
+    np.testing.assert_allclose(encoder.extract(repeated, -80, 20),
+                               encoder.extract(mel, -80, 20), rtol=0, atol=1e-6)
+    assert not encoder.model.training
+    assert not any(p.requires_grad for p in encoder.model.parameters())
     with pytest.raises(ValueError, match="3-channel"):
-        multichannel.extract(mel, -80, 20)
+        encoder.extract(repeated[:2], -80, 20)

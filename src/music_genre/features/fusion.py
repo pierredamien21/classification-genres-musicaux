@@ -31,3 +31,31 @@ def concatenate_features(vit, descriptors, vit_index, descriptor_index,
         raise ValueError("Duplicate feature names")
     families = ["vit"] * len(vit_names) + [descriptor_families[i] for i in selected]
     return np.concatenate((vit, descriptors[:, selected]), axis=1), names, families, selected
+
+
+class AlignedFusion:
+    """Extract both representations from the very same AudioWindow instance.
+
+    The cache concatenator requires train/validation labels; inference must not
+    invent those. Here alignment is by construction, with pinned column metadata.
+    """
+
+    def __init__(self, config, root):
+        from music_genre.features.descriptors import MusicalDescriptors
+        from music_genre.features.vit import MusicalViT
+
+        if (config["operation"] != "concatenate_columns" or config["order"] != ["vit", "descriptors"]
+                or config["excluded_family"] is not None
+                or config["standardization"] != "none_in_cache_train_only_in_classifier"
+                or any(config["vit"][k] != config["descriptors"][k]
+                       for k in ("sample_rate", "window_seconds", "offsets_seconds"))):
+            raise ValueError("Fusion representation order or windows differ")
+        self.descriptors = MusicalDescriptors(config["descriptors"])
+        if config["descriptor_columns"] != list(range(len(self.descriptors.names))):
+            raise ValueError("Fusion descriptor columns differ")
+        self.vit = MusicalViT(config["vit"], root)
+        self.names = self.vit.names + [f"descriptor/{name}" for name in self.descriptors.names]
+        self.families = self.vit.families + self.descriptors.families
+
+    def extract(self, window):
+        return np.concatenate((self.vit.extract(window), self.descriptors.extract(window)))
