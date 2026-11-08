@@ -65,6 +65,16 @@
       "rule": "all 49 remaining eligible Pop artists with a track of metadata duration >= 30 s, ranked with seed 20261109, one track >= 30 s per artist, appended as Pop test spares ranks 80-128 and used by the same audit and replacement rule",
       "files": ["scripts/amend_v2_pop.py", "reports/v2/cohorts_amendment.csv", "reports/v2/amendment.json"],
       "limitation": "added Pop tracks come from a duration-filtered pool; International stays at 53 (no unused artist)"
+    },
+    {
+      "id": 2,
+      "date": "2026-11-08",
+      "before": "lock 2, before any V2 model run",
+      "kind": "observation and descriptive sensitivity analysis; audit rule unchanged",
+      "observation": "36 audited files write libmpg123 frame errors on decoding, 20 in the final cohorts (15 International test tracks); durations are correct and fpcalc reports no diagnostic",
+      "decision": "keep the pre-registered audit rule; no exclusion",
+      "sensitivity": "also report H1 and every system's macro-F1 without these 20 tracks, descriptive only",
+      "files": ["scripts/v2_decoder_messages.py", "reports/v2/decoder_messages.csv"]
     }
   ]
 }

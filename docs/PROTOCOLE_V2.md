@@ -81,3 +81,20 @@ d'origine et selon la même règle d'audit.
 modèle V2 et sans aucune prédiction ni écoute. Limite : les morceaux Pop ajoutés
 proviennent d'un vivier filtré par la durée, contrairement aux autres genres.
 International reste à 53 morceaux : il n'y a plus d'artiste International inutilisé.
+
+### Note d'audit — messages du décodeur (avant le verrou 2)
+
+Après l'audit, 36 fichiers écrivent des messages de libmpg123 au décodage. 20 d'entre
+eux sont dans les cohortes finales, dont 15 morceaux International du test, aux numéros
+consécutifs. Ce sont surtout des trames MP3 rejetées : `part2_3_length … too large`,
+`dequantization failed`. Ces fichiers ont la bonne durée, et fpcalc (ffmpeg) les décode
+sans diagnostic ([liste](../reports/v2/decoder_messages.csv),
+[script](../scripts/v2_decoder_messages.py)).
+
+**Décision.** La règle d'audit préenregistrée ne prévoit pas d'exclusion sur ce critère :
+**on la garde.** Exclure ces fichiers après les avoir vus ferait tomber International
+à 38 morceaux, sans remplaçant disponible.
+
+**Analyse de sensibilité déclarée avant tout résultat.** Elle est descriptive et sans
+valeur de décision. H1 et le macro-F1 de chaque système seront aussi rapportés sans
+ces 20 morceaux.

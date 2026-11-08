@@ -145,6 +145,7 @@ def main():
                 "configs/protocol_v2.json", "docs/PROTOCOLE_V2.md", "reports/v2/selection.json",
                 "reports/v2/cohorts.csv", "reports/v2/cohorts_amendment.csv", "reports/v2/amendment.json",
                 "reports/v2/dev_folds.csv", "reports/v2/power.json", "scripts/amend_v2_pop.py",
+                "reports/v2/decoder_messages.csv", "scripts/v2_decoder_messages.py",
                 "reports/v2/audit.csv", "reports/v2/final_cohorts.csv", "configs/audit.json",
                 "configs/review_policy.json", "scripts/audit_v2_cohorts.py", "scripts/fetch_v2_audio.py")},
             "download_manifests_sha256": {m: sha256_file(ROOT / m) for _, m in SOURCES},

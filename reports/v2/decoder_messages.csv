@@ -1,0 +1,37 @@
+track_id,role,genre,in_final_cohorts,lines,messages
+029347,test,International,True,6,error: partN_N_length (N) too large for available bit count (N)
+054573,test,International,True,2,error: partN_N_length (N) too large for available bit count (N)
+033412,test,International,True,3,error: partN_N_length (N) too large for available bit count (N)
+029356,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+033414,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+054574,test,International,True,1,error: partN_N_length (N) too large for available bit count (N)
+029352,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+054577,test,International,True,2,error: partN_N_length (N) too large for available bit count (N)
+029346,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+033425,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+033423,test,International,True,6,error: partN_N_length (N) too large for available bit count (N)
+033411,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+029345,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+033416,test,International,True,2,error: partN_N_length (N) too large for available bit count (N)
+033419,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+033413,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+054582,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+054575,test,International,True,1,error: partN_N_length (N) too large for available bit count (N)
+029357,test,International,True,3,error: partN_N_length (N) too large for available bit count (N)
+029349,test,International,True,3,error: partN_N_length (N) too large for available bit count (N)
+029354,test,International,True,1,error: partN_N_length (N) too large for available bit count (N)
+054571,test,International,True,1,error: partN_N_length (N) too large for available bit count (N)
+033417,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+054581,test,International,True,2,error: partN_N_length (N) too large for available bit count (N)
+054569,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+029348,test,International,True,10,error: partN_N_length (N) too large for available bit count (N)
+054572,test,International,True,2,error: partN_N_length (N) too large for available bit count (N)
+033418,test,International,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+043896,test,Hip-Hop,True,4,error: dequantization failed!
+033703,test_spare,Hip-Hop,False,2,error: partN_N_length (N) too large for available bit count (N)
+012809,test,Folk,True,2,error: dequantization failed!
+050594,test,Pop,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+026878,test,Instrumental,True,2,error: partN_N_length (N) too large for available bit count (N)
+152064,test_spare,Electronic,True,6,error: partN_N_length (N) too large for available bit count (N)
+063422,ood,Spoken,False,1,"warning: Cannot read next header, a one-frame stream? Duh..."
+152844,ood,Classical,True,5,error: dequantization failed!
