@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "tolerance": 1e-06,
+  "created_at": "2026-11-08T07:19:29.725469+00:00",
+  "split": "validation",
+  "per_genre": 1,
+  "systems": {
+    "descriptor": {
+      "tracks": 8,
+      "max_probability_error": 0.0,
+      "seconds": 3.025184400030412
+    },
+    "vit": {
+      "tracks": 8,
+      "max_probability_error": 0.0,
+      "seconds": 2.7263736000168137
+    },
+    "fusion": {
+      "tracks": 8,
+      "max_probability_error": 0.0,
+      "seconds": 3.5415283999755047
+    },
+    "vit_block6": {
+      "tracks": 8,
+      "max_probability_error": 0.0,
+      "seconds": 1.9819203999941237
+    },
+    "vit_hpss": {
+      "tracks": 8,
+      "max_probability_error": 0.0,
+      "seconds": 10.044755000039004
+    },
+    "vit_block6_hpss": {
+      "tracks": 8,
+      "max_probability_error": 0.0,
+      "seconds": 9.28760780004086
+    },
+    "cnn20_seed42": {
+      "tracks": 8,
+      "max_probability_error": 0.0,
+      "seconds": 1.100823400018271
+    },
+    "cnn20_seed43": {
+      "tracks": 8,
+      "max_probability_error": 0.0,
+      "seconds": 1.0515664999838918
+    },
+    "cnn20_seed44": {
+      "tracks": 8,
+      "max_probability_error": 0.0,
+      "seconds": 1.047290900023654
+    }
+  },
+  "failures": [],
+  "failure_count": 0,
+  "test_audio_loaded": false
+}

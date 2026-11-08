@@ -2,7 +2,7 @@
 
 Projet de portfolio : analyser le timbre, le rythme et l’harmonie, puis mesurer leur complémentarité avec les représentations d’un Vision Transformer.
 
-**Évaluation finale V1 terminée et vérifiée :** ViT bloc 6 + HPSS, sélectionné sur validation, atteint **macro-F1 0,5035 et accuracy 51,16 %** sur 778 morceaux test de 202 artistes. Gain apparié de macro-F1 sur ViT original : **+0,0394**, IC 95 % **[+0,0054 ; +0,0715]**. Validation : 0,5975 ; la baisse sur test reste une limite importante. Les comparaisons secondaires ne montrent pas de gain établi. [Résultats, coûts et preuves](reports/EVALUATION_FINALE.md) · [Fiche du modèle](docs/FICHE_MODELE.md) (instantané figé du 29 octobre, épinglé par les preuves V1 ; la démo locale a été livrée ensuite). Trois notebooks exécutés, démo locale et environnement utilisateur sont disponibles. Suite actuelle : 271 tests réussis (relancée le 8 novembre 2026). Session utilisateur terminée et vérifiée le 7 novembre : CNN, trente époques, meilleure époque 26, macro-F1 validation 0,5707. [Conclusion générale](docs/CONCLUSION_PROJET.md) · [Prendre en main](docs/GUIDE_LIVRAISON.md). Réinstallation réseau sur une autre machine non testée.
+**Évaluation finale V1 terminée et vérifiée :** ViT bloc 6 + HPSS, sélectionné sur validation, atteint **macro-F1 0,5035 et accuracy 51,16 %** sur 778 morceaux test de 202 artistes. Gain apparié de macro-F1 sur ViT original : **+0,0394**, IC 95 % **[+0,0054 ; +0,0715]**. Validation : 0,5975 ; la baisse sur test reste une limite importante. Les comparaisons secondaires ne montrent pas de gain établi. [Résultats, coûts et preuves](reports/EVALUATION_FINALE.md) · [Fiche du modèle](docs/FICHE_MODELE.md) (instantané figé du 29 octobre, épinglé par les preuves V1 ; la démo locale a été livrée ensuite). Trois notebooks exécutés, démo locale et environnement utilisateur sont disponibles. Suite actuelle : 260 tests réussis le 8 novembre 2026 (271 avant le retrait des tests propres aux scripts V1). Session utilisateur terminée et vérifiée le 7 novembre : CNN, trente époques, meilleure époque 26, macro-F1 validation 0,5707. [Conclusion générale](docs/CONCLUSION_PROJET.md) · [Prendre en main](docs/GUIDE_LIVRAISON.md). Réinstallation réseau sur une autre machine non testée.
 
 **Versionnage et suite :** dépôt Git local depuis le 8 novembre 2026 ; l’étiquette `v1-final` fige la V1 livrée. [Critique du projet](docs/CRITIQUE_PROJET.md) · [Plan V2](docs/PLAN_V2.md), prévu, non lancé.
 
@@ -61,18 +61,28 @@ src/music_genre/
   models/                 Références, CNN et adaptateurs de Transformers
   training/               Ajustement, sélection sur validation, reprise
   evaluation/             Métriques par morceau, incertitude, robustesse
-  inference/              Prédiction commune à la démo et aux scripts d’évaluation
-  cli.py                  Entrée en ligne de commande ; doctor uniquement
+  inference/              Prédiction commune (Predictor) : démo, CLI et scripts
+  cli.py                  Ligne de commande : doctor (sans ML) et predict
 app/                      Interface Gradio locale vérifiée
 notebooks/                Analyse et fiches d’expériences pédagogiques
-tests/                    Tests unitaires et contrats (271 réussis au 8 novembre)
+tests/                    Tests unitaires et contrats (260 réussis au 8 novembre, après la phase 1)
 data/                     Données locales et caches, exclus de Git
 artifacts/                Poids téléchargés, checkpoints, exports
 runs/                     Configuration et résultats de chaque expérience
 reports/                  Synthèses, figures et tableaux de comparaison
 docs/                     Bibliographie, plan, architecture et décisions
 docs/resumes/             État condensé et résumé de chaque partie
-scripts/                  Acquisition, inventaire et benchmark
+scripts/                  Données, extraction, entraînement, preuve d’équivalence V1
+```
+
+**Scripts courants.** Données : `acquire_fma`, `check_fma_inventory`, `audit_fma`, `summarize_audit`, `recheck_audit_failures`, `fetch_chromaprint`, `scan_fingerprints`, `validate_fingerprints`, `summarize_review`, `build_baseline_manifest`. Représentations : `fetch_vit`, `extract_features` (toute variante ViT ou descripteurs, `--config`), `extract_cnn_logmel`, `build_fusion_features`. Apprentissage : `train_descriptor_baseline` (classifieurs linéaires), `train_cnn` (`--config`, `--seed`, `--smoke`), `user_session`. Contrôles : `benchmark_cnn`, `benchmark_pipeline`, `check_demo_delivery`, `verify_v1_equivalence`.
+
+**Scripts propres à la V1** (comparaisons, contrôles T1–T7, évaluation verrouillée, prolongation CNN) : retirés de `main` le 8 novembre 2026, intacts dans l’étiquette `v1-final`. Pour les rejouer : `git worktree add ..\v1 v1-final`, puis copier ou lier `data/`, `runs/` et `artifacts/pretrained/` dans ce dossier. `reports/V1_EQUIVALENCE.json` prouve que le code actuel reproduit les 9 exports V1 sur les 780 morceaux de validation.
+
+Prédiction en ligne de commande :
+
+```powershell
+.\.venv\Scripts\python.exe -m music_genre predict morceau.mp3 --root .
 ```
 
 ## Diagnostic sans dépendances ML
@@ -115,7 +125,7 @@ Le package de base ne dépend que de la bibliothèque standard. Les groupes `aud
 - Normalisations apprises sur train uniquement ; sélection sur validation.
 - Test réservé aux expériences finalisées.
 - Poids, données et sorties volumineuses hors du dépôt.
-- Une fonction de prédiction partagée par la démo et les scripts d’évaluation ; la CLI n’a que `doctor` (commande `predict` prévue en phase 1 du plan V2).
+- Une fonction de prédiction (`Predictor`) partagée par la démo, la CLI (`predict`) et les scripts.
 - Les gains supposés dans le plan sont des hypothèses, pas des résultats.
 
 **Bilan local terminé le 7 novembre :** [résultats de la session utilisateur](reports/SESSION_UTILISATEUR.md) et [conclusion](docs/CONCLUSION_PROJET.md). Aucun entraînement à relancer. La V1 reste figée ; cette expérience postérieure au test apporte un résultat de validation, sans nouvelle évaluation indépendante. Publication publique, vidéo et écoute annotée non réalisées.

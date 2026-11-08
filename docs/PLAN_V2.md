@@ -69,6 +69,11 @@ avertissements Ruff). Ils changeront avec la V2 verrouillée.
 restent consultables via l'étiquette `v1-final` ; les contrôles V1 se rejouent sur
 cette étiquette (par exemple dans un `git worktree`), pas sur le code refondu.
 
+**Réalisé le 8 novembre** ([résumé 43](resumes/43_REFONTE_V2.md)) : reproduction exacte
+(écart nul) des 9 exports, des 5 représentations et de l'entraînement CNN. Restent
+ouverts : l'essai ARM64 natif et le verrouillage des dépendances par empreintes, qui
+demandent des téléchargements. Abandonné : le décodage unique de la démo.
+
 ## Phase 2 — Protocole V2, verrouillé avant toute expérience (≈ 2 jours + téléchargement)
 
 1. **Téléchargement de FMA-large (~93 Go), à valider par toi avant lancement.**
