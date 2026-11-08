@@ -63,7 +63,8 @@ def main():
                 if process_matches(previous.get(key)):
                     raise RuntimeError("Une session identifiée est encore active. Aucun doublon lancé.")
         pointer = ROOT / "reports" / f"latest_{name}_training.json"
-        command = [sys.executable, "-u", str(ROOT / "scripts/train_user_cnn.py")]
+        command = [sys.executable, "-u", str(ROOT / "scripts/train_cnn.py"),
+                   "--config", "configs/cnn_user.json"]
         if args.smoke:
             command.append("--smoke")
         folder = None

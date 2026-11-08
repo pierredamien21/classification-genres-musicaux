@@ -1,8 +1,14 @@
-"""Train a bounded CPU CNN; select epochs by track-level validation macro-F1."""
+"""Train a bounded CPU CNN; select epochs by track-level validation macro-F1.
+
+One script for the reference runs (configs/cnn.json, optional --seed) and the user
+session (configs/cnn_user.json, optional --smoke and --stop-after-epoch). Test never loaded.
+The V1 ten-to-twenty epoch extension is replayable from the `v1-final` tag only.
+"""
 
 import argparse
 import csv
 import json
+import sys
 import time
 from datetime import UTC, datetime
 from pathlib import Path
@@ -26,25 +32,49 @@ from music_genre.training.cnn import (
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def main():
-    parser = argparse.ArgumentParser()
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--config", default="configs/cnn.json", help="Project-relative CNN configuration")
+    parser.add_argument("--run-name", help="Run folder and pointer prefix (default from config/seed/smoke)")
     parser.add_argument("--resume", type=Path)
     parser.add_argument("--seed", type=int, help="Repeat the same protocol with another seed")
-    args = parser.parse_args()
-    config_path = ROOT / "configs/cnn.json"
+    parser.add_argument("--smoke", action="store_true", help="Small train/validation subset, two epochs")
+    parser.add_argument("--stop-after-epoch", type=int, help="Graceful pause after a complete epoch")
+    args = parser.parse_args(argv)
+    if args.seed is not None and not 0 <= args.seed < 2**32:
+        parser.error("seed must be in 0..2**32-1")
+    return args
+
+
+def run_name_for(args):
+    if args.run_name:
+        return args.run_name
+    if Path(args.config).stem == "cnn_user":
+        base = "cnn_user"
+    else:
+        base = "cnn" if args.seed is None else f"cnn_seed{args.seed}"
+    return base + ("_smoke" if args.smoke else "")
+
+
+def main(args):
+    config_path = (ROOT / args.config).resolve()
+    if not config_path.is_relative_to((ROOT / "configs").resolve()):
+        raise ValueError("Configuration outside configs")
     config = json.loads(config_path.read_text())
     benchmark_path = ROOT / "reports/CNN_BENCHMARK.json"
     benchmark = json.loads(benchmark_path.read_text())
-    if benchmark["config_sha256"] != sha256_file(config_path):
+    if benchmark["config_sha256"] != sha256_file(ROOT / "configs/cnn.json"):
         raise ValueError("Benchmark this CNN configuration first")
-    if benchmark["estimated_max_epochs_seconds"] > config["budget_seconds"]:
+    if benchmark["estimated_epoch_seconds"] * config["max_epochs"] > config["budget_seconds"]:
         raise ValueError("Benchmark predicts an experiment beyond its time budget")
     if args.seed is not None:
-        if not 0 <= args.seed < 2**32:
-            parser.error("seed must be in 0..2**32-1")
         # The cost benchmark remains valid: only initialization and batch order change.
         config["seed"] = args.seed
-    run_name = "cnn" if args.seed is None else f"cnn_seed{args.seed}"
+    if args.smoke:
+        config.update(max_epochs=2, smoke=True)
+    else:
+        config["smoke"] = False
+    run_name = run_name_for(args)
     pointer = json.loads((ROOT / "data/features/latest_cnn_logmel.json").read_text())
     cache = (ROOT / pointer["folder"]).resolve()
     if (not cache.is_relative_to((ROOT / "data/features").resolve())
@@ -80,6 +110,15 @@ def main():
         raise ValueError("Missing reference tracks")
     positions = {split: np.array([i for i, r in enumerate(index) if r["split"] == split])
                  for split in ("train", "validation")}
+    if args.smoke:
+        for split, split_positions in positions.items():
+            selected = set()
+            for label in range(len(labels)):
+                matching = sorted({index[i]["track_id"] for i in split_positions
+                                   if int(index[i]["label_index"]) == label})
+                selected.update(matching[:2])
+            positions[split] = np.array([i for i in split_positions
+                                        if index[i]["track_id"] in selected])
     train_index = [index[i] for i in positions["train"]]
     val_index = [index[i] for i in positions["validation"]]
     if {r["artist_id"] for r in train_index} & {r["artist_id"] for r in val_index}:
@@ -95,6 +134,7 @@ def main():
     torch.use_deterministic_algorithms(config["deterministic"])
     identity = {
         "config": config, "cache": pointer, "torch_version": str(torch.__version__),
+        "python_executable": sys.executable, "python_version": sys.version,
         "numpy_version": np.__version__, "benchmark_sha256": sha256_file(benchmark_path),
         "source_sha256": {name: sha256_file(ROOT / name) for name in (
             "scripts/train_cnn.py", "src/music_genre/training/cnn.py",
@@ -108,6 +148,8 @@ def main():
         folder = args.resume.resolve()
         if not folder.is_relative_to((ROOT / "runs").resolve()):
             raise ValueError("Resume directory outside runs")
+        if not folder.name.startswith(run_name + "-"):
+            raise ValueError("Resume requires a run of the same name")
         state = load_checkpoint(folder / "checkpoint.pt", identity)
         model.load_state_dict(state["model"])
         optimizer.load_state_dict(state["optimizer"])
@@ -181,6 +223,11 @@ def main():
             print(f"Epoch {epoch}: loss={loss_sum / len(order):.4f}, "
                   f"validation macro-F1={metrics['macro_f1']:.4f}, accuracy={metrics['accuracy']:.4f}, "
                   f"seconds={time.perf_counter() - epoch_start:.1f}", flush=True)
+            if args.stop_after_epoch and epoch >= args.stop_after_epoch:
+                write_json(folder / "progress.json", {"status": "paused", "epoch": epoch,
+                           "history": state["history"], "test_evaluated": False})
+                print(f"Paused at epoch {epoch}; resume with --resume {folder}", flush=True)
+                return
         elapsed = previous_elapsed + time.perf_counter() - began
         if state["best_model"] is None:
             write_json(folder / "progress.json", {"status": "budget_exhausted", "elapsed_seconds": elapsed})
@@ -227,7 +274,7 @@ def main():
         "model_sha256": sha256_file(folder / "model.safetensors"),
         "validation_predictions_sha256": sha256_file(folder / "validation_predictions.csv"),
         "test_loaded": False, "test_evaluated": False,
-        "limitations": ["One development seed; final stochastic repetitions pending.",
+        "limitations": ["One seed per run; compare seeds with summarize_repetitions.",
                         "Epoch selection uses validation; no independent final estimate.",
                         "Native log-Mel CNN from scratch versus resized pretrained image ViT: not an architecture-only ablation."],
     }
@@ -245,4 +292,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    from music_genre.evaluation.final_evaluation import exclusive_campaign
+
+    arguments = parse_args()
+    with exclusive_campaign(ROOT / "data/interim" / f"{run_name_for(arguments)}-training"):
+        main(arguments)
