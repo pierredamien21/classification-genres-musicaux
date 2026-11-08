@@ -59,3 +59,25 @@ prédictions hors pli du développement, jamais sur le test ou le hors domaine.
 1. Ce protocole et les listes de cohortes, avant le téléchargement.
 2. Les empreintes audio auditées et les cohortes finales, avant tout modèle V2 sur elles.
 3. Systèmes, poids, code et environnement, avant l'unique inférence sur le test V2.
+
+## Amendement 1 — remplaçants Pop (8 novembre 2026, avant le verrou 2)
+
+**Constat technique.** L'audit a écarté 45 des 80 morceaux Pop tirés, remplaçants
+compris : ce sont des extraits de 0 à 15 s dans `fma_large`, alors que la V1 exige 29 à
+31 s ([audit](../reports/v2/audit.csv)). Pour 79 de ces 80 morceaux, la durée des
+métadonnées (au moins 30 s) prédisait la réussite ; la seule exception est un MP3
+indécodable. Sans amendement, Pop n'aurait que 35 morceaux.
+
+**Règle ajoutée.** Les 49 artistes Pop encore disponibles (medium/large, absents de
+FMA-small et de toutes les cohortes V2) ayant au moins un morceau d'au moins 30 s
+selon les métadonnées sont classés au hasard avec une nouvelle graine (20261109).
+Pour chaque artiste, un morceau d'au moins 30 s est tiré, avec la même fonction que la
+sélection d'origine ([script](../scripts/amend_v2_pop.py),
+[liste](../reports/v2/cohorts_amendment.csv), [trace](../reports/v2/amendment.json)).
+Ils deviennent des remplaçants Pop de rangs 80 à 128, utilisés après les remplaçants
+d'origine et selon la même règle d'audit.
+
+**Garanties et limite.** La décision repose sur un critère technique, avant tout
+modèle V2 et sans aucune prédiction ni écoute. Limite : les morceaux Pop ajoutés
+proviennent d'un vivier filtré par la durée, contrairement aux autres genres.
+International reste à 53 morceaux : il n'y a plus d'artiste International inutilisé.

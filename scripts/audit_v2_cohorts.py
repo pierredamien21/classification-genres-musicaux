@@ -5,7 +5,8 @@ audit_audio, fpcalc 1.6.2 and find_candidates. No model, prediction or listening
 A track fails on: decode failure, any non-benign audit flag, missing licence, fingerprint
 failure or diagnostic, low-information fingerprint, or an exact/near duplicate of any
 FMA-small track or other V2 track. Failed tracks are replaced by the next passing spare
-of the same role and genre, in rank order (docs/PROTOCOLE_V2.md).
+of the same role and genre, in rank order (docs/PROTOCOLE_V2.md). Amendment 1 adds Pop
+spares ranked after the original ones (scripts/amend_v2_pop.py).
 
 Writes reports/v2/audit.csv, reports/v2/final_cohorts.csv and reports/v2/lock2.json.
 """
@@ -26,6 +27,8 @@ from music_genre.data.fingerprints import find_candidates, informative
 ROOT = Path(__file__).resolve().parents[1]
 BENIGN = {"near_full_scale"}
 PER_GENRE = 64
+SOURCES = (("reports/v2/cohorts.csv", "data/manifests/v2_audio.json"),
+           ("reports/v2/cohorts_amendment.csv", "data/manifests/v2_audio_amendment.json"))
 
 
 def fingerprint(executable, settings, path):
@@ -60,12 +63,14 @@ def main():
     executable = ROOT / policy["executable"]
     if sha256_file(executable) != policy["executable_sha256"]:
         raise ValueError("Unverified fpcalc executable")
-    with (ROOT / "reports/v2/cohorts.csv").open(encoding="utf-8", newline="") as stream:
-        rows = list(csv.DictReader(stream))
-    download = json.loads((ROOT / "data/manifests/v2_audio.json").read_text())
-    if download["cohorts_sha256"] != sha256_file(ROOT / "reports/v2/cohorts.csv"):
-        raise ValueError("Downloaded audio belongs to other cohorts")
-    hashes = {f["zip_member"]: f["sha256"] for f in download["files"]}
+    rows, hashes = [], {}
+    for cohorts, manifest in SOURCES:
+        with (ROOT / cohorts).open(encoding="utf-8", newline="") as stream:
+            rows += list(csv.DictReader(stream))
+        download = json.loads((ROOT / manifest).read_text())
+        if download["cohorts_sha256"] != sha256_file(ROOT / cohorts):
+            raise ValueError(f"Downloaded audio belongs to other cohorts: {manifest}")
+        hashes.update({f["zip_member"]: f["sha256"] for f in download["files"]})
     licences = pd.read_csv(ROOT / "data/raw/fma_metadata/tracks.csv", index_col=0, header=[0, 1],
                            low_memory=False)[("track", "license")]
 
@@ -138,10 +143,11 @@ def main():
             "status": "locked_before_any_v2_model_run",
             "files_sha256": {p: sha256_file(ROOT / p) for p in (
                 "configs/protocol_v2.json", "docs/PROTOCOLE_V2.md", "reports/v2/selection.json",
-                "reports/v2/cohorts.csv", "reports/v2/dev_folds.csv", "reports/v2/power.json",
+                "reports/v2/cohorts.csv", "reports/v2/cohorts_amendment.csv", "reports/v2/amendment.json",
+                "reports/v2/dev_folds.csv", "reports/v2/power.json", "scripts/amend_v2_pop.py",
                 "reports/v2/audit.csv", "reports/v2/final_cohorts.csv", "configs/audit.json",
                 "configs/review_policy.json", "scripts/audit_v2_cohorts.py", "scripts/fetch_v2_audio.py")},
-            "download_manifest_sha256": sha256_file(ROOT / "data/manifests/v2_audio.json"),
+            "download_manifests_sha256": {m: sha256_file(ROOT / m) for _, m in SOURCES},
             "fpcalc": subprocess.check_output([str(executable), "-version"]).decode().strip(),
             "audited_tracks": len(rows), "failed_tracks": sum(not p for p in passed.values()),
             "failure_reasons": dict(sorted(reasons.items())),

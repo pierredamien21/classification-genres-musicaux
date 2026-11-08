@@ -55,4 +55,16 @@
     "re-running the V2 test inference after lock 3 to change a decision",
     "presenting V1 test results as independent of the V1 development"
   ]
+,
+  "amendments": [
+    {
+      "id": 1,
+      "date": "2026-11-08",
+      "before": "lock 2, before any V2 model run",
+      "reason": "45 of 80 Pop tracks are 0-15 s clips in fma_large; Pop spares exhausted at 35 of 64",
+      "rule": "all 49 remaining eligible Pop artists with a track of metadata duration >= 30 s, ranked with seed 20261109, one track >= 30 s per artist, appended as Pop test spares ranks 80-128 and used by the same audit and replacement rule",
+      "files": ["scripts/amend_v2_pop.py", "reports/v2/cohorts_amendment.csv", "reports/v2/amendment.json"],
+      "limitation": "added Pop tracks come from a duration-filtered pool; International stays at 53 (no unused artist)"
+    }
+  ]
 }

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "amendment": 1,
+  "created_at_utc": "2026-11-08T22:49:49.221435+00:00",
+  "reason": "Pop spares exhausted by 0-15 s clips; Pop test kept 35 of 64 tracks",
+  "seed": 20261109,
+  "min_metadata_seconds": 30,
+  "first_rank": 80,
+  "tracks": 49,
+  "metadata_sha256": "f73260fd112b8cd42bcd4f7c8918fc66b19d9d4c7b97f4faedce524b59e95d6b",
+  "cohorts_sha256": "4aa7d48ca9b05b63ea02d712e57005078cc46fe967814a29d691c860bfc10e2d",
+  "script_sha256": "d56487fb001528ae1317c4a66f8d732f81943cb33aa868163c259a13a9cb4d03",
+  "amendment_sha256": "2fca03697462faa5db4f47de957bb1a5cb951abdb2051655c6d95483e2d4fdd5",
+  "audio_loaded": false,
+  "models_run": false,
+  "predictions_loaded": false
+}

@@ -5,6 +5,7 @@ writes data/raw/fma_large/<xxx>/<track>.mp3 atomically and records size and SHA-
 Resumable: files already present with a matching CRC-32 are kept. Standard library only.
 """
 
+import argparse
 import csv
 import urllib.request
 import zipfile
@@ -85,8 +86,12 @@ def fetch_members(archive, members, target):
     return records
 
 
-def main():
-    with (ROOT / "reports/v2/cohorts.csv").open(encoding="utf-8", newline="") as stream:
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--cohorts", default="reports/v2/cohorts.csv")
+    parser.add_argument("--manifest", default="data/manifests/v2_audio.json")
+    args = parser.parse_args(argv)
+    with (ROOT / args.cohorts).open(encoding="utf-8", newline="") as stream:
         members = [r["zip_member"] for r in csv.DictReader(stream)]
     size = int(urllib.request.urlopen(urllib.request.Request(URL, method="HEAD"), timeout=60)
                .headers["Content-Length"])
@@ -99,9 +104,9 @@ def main():
         print(f"{len(members)} members, {sum(archive.getinfo(m).file_size for m in members) / 1e9:.2f} GB",
               flush=True)
         records = fetch_members(archive, members, ROOT / "data/raw/fma_large")
-    write_json(ROOT / "data/manifests/v2_audio.json", {
+    write_json(ROOT / args.manifest, {
         "schema_version": 1, "url": URL, "archive_bytes": size, "fetched_at_utc": datetime.now(UTC).isoformat(),
-        "cohorts_sha256": sha256_file(ROOT / "reports/v2/cohorts.csv"), "files": records})
+        "cohorts_sha256": sha256_file(ROOT / args.cohorts), "files": records})
     print(f"Fetched and verified {len(records)} files", flush=True)
 
 
