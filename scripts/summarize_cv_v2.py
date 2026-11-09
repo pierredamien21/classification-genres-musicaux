@@ -1,7 +1,8 @@
 """Collect the latest runs/v2-cv/<system>-<ts>/report.json per system into reports/v2/cv_results.csv.
 
 Each report's out-of-fold file is re-hashed; the table keeps the report SHA-256 as evidence.
-Systems are sorted by mean outer-fold macro-F1 (the V2 selection statistic).
+Systems are sorted by mean outer-fold macro-F1 (the V2 selection statistic). For the MLP head the
+"c" columns hold its L2 alpha.
 """
 
 import csv
@@ -24,7 +25,7 @@ def main():
     rows = []
     for system, (path, report) in latest.items():
         rows.append({
-            "system": system, "dimensions": report["feature_dimensions"],
+            "system": system, "head": report.get("head", "logistic"), "dimensions": report["feature_dimensions"],
             "mean_fold_macro_f1": f"{report['mean_fold_macro_f1']:.4f}",
             "std_fold_macro_f1": f"{report['std_fold_macro_f1']:.4f}",
             "pooled_oof_macro_f1": f"{report['pooled_oof_macro_f1']:.4f}",
@@ -38,7 +39,8 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
     for row in rows:
-        print(f"{row['system']:24} {row['mean_fold_macro_f1']} ± {row['std_fold_macro_f1']}  C={row['final_c']}")
+        knob = "alpha" if row["head"] == "mlp" else "C"
+        print(f"{row['system']:28} {row['mean_fold_macro_f1']} ± {row['std_fold_macro_f1']}  {knob}={row['final_c']}")
 
 
 if __name__ == "__main__":

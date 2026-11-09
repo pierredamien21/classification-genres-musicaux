@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "name": "v2_development_nested_cv_mlp",
+  "folds": "reports/v2/dev_folds.csv",
+  "head": "mlp",
+  "c_grid": [
+    1.0,
+    10.0,
+    100.0
+  ],
+  "c_grid_meaning": "MLPClassifier L2 alpha (scikit-learn divides it by the batch size); ties pick the smaller alpha",
+  "c_grid_history": "set on 2026-11-09 from a cost-only benchmark (fit time and epochs on folds 1-4, 512 units, no score computed): alpha 100 stops after 20 epochs with a high training loss, 1 after 55",
+  "hidden_units": 256,
+  "batch_size": 256,
+  "learning_rate": 0.001,
+  "max_iter": 500,
+  "tolerance": 0.0001,
+  "n_iter_no_change": 10,
+  "early_stopping": "none: stops when the training loss stalls; a random window split would leak tracks",
+  "seed": 42,
+  "aggregation": "mean_window_probabilities",
+  "fit_scaler_on": "fitting windows only"
+}

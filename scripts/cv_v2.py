@@ -1,9 +1,11 @@
 """Nested 5-fold artist-grouped cross-validation of a cached representation (V2 phase 3).
 
   python scripts/cv_v2.py --features dev_vit_block6_hpss
+  python scripts/cv_v2.py --features dev_maest --family layer12 --config configs/cv_v2_mlp.json --threads 8
 
 Reads data/features/latest_<features>.json (a --development cache: V1 train, validation and
-test), the pre-registered folds (reports/v2/dev_folds.csv) and configs/cv_v2.json. Writes
+test), the pre-registered folds (reports/v2/dev_folds.csv) and a CV config (logistic head by
+default; "head": "mlp" switches to a one-hidden-layer MLP whose grid is its L2 alpha). Writes
 runs/v2-cv/<features>-<timestamp>/ with report.json and the out-of-fold track probabilities.
 No V2 test or out-of-domain audio is involved.
 """
@@ -20,6 +22,7 @@ from pathlib import Path
 import numpy as np
 from sklearn.exceptions import ConvergenceWarning
 from sklearn.linear_model import LogisticRegression
+from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from threadpoolctl import threadpool_limits
@@ -49,16 +52,25 @@ def load_cache(name):
     return pointer, report, index, np.load(cache / "features.npy", allow_pickle=False).astype(np.float64)
 
 
+def classifier(config, value):
+    if config.get("head", "logistic") == "mlp":
+        return MLPClassifier(
+            hidden_layer_sizes=(config["hidden_units"],), alpha=value, batch_size=config["batch_size"],
+            learning_rate_init=config["learning_rate"], max_iter=config["max_iter"], tol=config["tolerance"],
+            n_iter_no_change=config["n_iter_no_change"], early_stopping=False, random_state=config["seed"])
+    return LogisticRegression(C=value, solver=config["solver"], max_iter=config["max_iter"],
+                              tol=config["tolerance"], random_state=config["seed"],
+                              class_weight=config["class_weight"])
+
+
 def make_fit(config, labels):
     def fit_predict(x_fit, y_fit, x_eval, c):
-        pipeline = Pipeline([("scale", StandardScaler()), ("classifier", LogisticRegression(
-            C=c, solver=config["solver"], max_iter=config["max_iter"], tol=config["tolerance"],
-            random_state=config["seed"], class_weight=config["class_weight"]))])
+        pipeline = Pipeline([("scale", StandardScaler()), ("classifier", classifier(config, c))])
         with warnings.catch_warnings(record=True) as captured:
             warnings.simplefilter("always")
             pipeline.fit(x_fit, y_fit)
         if any(issubclass(w.category, ConvergenceWarning) for w in captured):
-            raise RuntimeError(f"C={c} did not converge")
+            raise RuntimeError(f"{c} did not converge")
         if not np.array_equal(pipeline.named_steps["classifier"].classes_, np.arange(len(labels))):
             raise ValueError("Unexpected class order")
         return pipeline.predict_proba(x_eval)
@@ -69,8 +81,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--features", required=True)
     parser.add_argument("--family", help="Keep only the columns of this feature family (e.g. layer6)")
+    parser.add_argument("--config", default=CONFIG)
+    parser.add_argument("--threads", type=int, default=4)
     args = parser.parse_args()
-    config = json.loads((ROOT / CONFIG).read_text(encoding="utf-8"))
+    config = json.loads((ROOT / args.config).read_text(encoding="utf-8"))
+    head = config.get("head", "logistic")
     labels = json.loads((ROOT / "configs/labels.json").read_text())["labels"]
     pointer, report, index, x = load_cache(args.features)
     system = args.features
@@ -79,6 +94,7 @@ def main():
         if not columns:
             raise ValueError(f"No columns in family {args.family}")
         x, system = x[:, columns], f"{args.features}-{args.family}"
+    system += "" if head == "logistic" else f"-{head}"
     if report["provenance"]["labels"] != labels:
         raise ValueError("Class order changed")
     with (ROOT / config["folds"]).open(encoding="utf-8", newline="") as stream:
@@ -95,7 +111,7 @@ def main():
     folds = np.array([int(folds_by_track[t]["fold"]) for t in tracks])
     fit_predict = make_fit(config, labels)
     started = time.perf_counter()
-    with threadpool_limits(limits=4):
+    with threadpool_limits(limits=args.threads):
         oof, records = nested_cv(x, y, folds, tracks, config["c_grid"], fit_predict)
         plain = {}
         for c in config["c_grid"]:
@@ -114,8 +130,8 @@ def main():
                          for t, k, p in zip(track_ids, truth, probabilities, strict=True))
     result = {
         "schema_version": 1, "created_at_utc": datetime.now(UTC).isoformat(), "system": system,
-        "features": args.features, "family": args.family,
-        "config": config, "config_sha256": sha256_file(ROOT / CONFIG),
+        "features": args.features, "family": args.family, "head": head,
+        "config": config, "config_sha256": sha256_file(ROOT / args.config),
         "source_sha256": {p: sha256_file(ROOT / p) for p in (
             "scripts/cv_v2.py", "src/music_genre/evaluation/crossval.py")},
         "folds_sha256": sha256_file(ROOT / config["folds"]), "feature_cache": pointer["folder"],
