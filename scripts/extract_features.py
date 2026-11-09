@@ -7,8 +7,11 @@ The representation is read from --config: a config with `checkpoint_directory` i
   --benchmark N         time N train windows and project the full cost; writes nothing else
   --per-genre N         pilot on the first N train tracks of each genre; never publishes a pointer
   --compare-to CACHE    with --per-genre: compare every window to an existing cache (max error)
+  --development         V2 development: all 7 857 selected FMA-small tracks, V1 test included
+                        (docs/PROTOCOLE_V2.md); default name dev_<config stem>
 
-Test audio is never decoded. Per-track results are resumable and keyed by full provenance.
+Without --development, V1 test audio is never decoded. V2 test audio is never decoded.
+Per-track results are resumable and keyed by full provenance.
 """
 
 import argparse
@@ -52,8 +55,8 @@ def initialize(config):
 
 
 def extract_track(task):
-    row, folder, key = task
-    if row["split"] not in ("train", "validation"):
+    row, folder, key, splits = task
+    if row["split"] not in splits:
         raise ValueError("Test extraction forbidden")
     extractor = WORKER[0]
     path = (ROOT / "data/raw" / row["audio_path"]).resolve()
@@ -84,14 +87,14 @@ def extract_track(task):
     return row, x, starts, valid
 
 
-def selected_rows(labels):
+def selected_rows(labels, splits=("train", "validation")):
     pointer = json.loads((ROOT / "data/manifests/latest_baseline.json").read_text())
     manifest = (ROOT / pointer["folder"] / "manifest.csv").resolve()
     if (not manifest.is_relative_to((ROOT / "data/manifests").resolve())
             or sha256_file(manifest) != pointer["manifest_sha256"]):
         raise ValueError("Baseline manifest changed")
     with manifest.open(encoding="utf-8", newline="") as stream:
-        rows = [r for r in csv.DictReader(stream) if r["split"] in ("train", "validation")]
+        rows = [r for r in csv.DictReader(stream) if r["split"] in splits]
     if any(r["status"] != "valid" or r["decision"] != "keep" for r in rows):
         raise ValueError("Unexpected non-selected track")
     if any(int(r["label_index"]) != labels.index(r["genre"]) for r in rows):
@@ -129,6 +132,7 @@ def main():
     parser.add_argument("--benchmark", type=int, metavar="N")
     parser.add_argument("--per-genre", type=int, metavar="N")
     parser.add_argument("--compare-to", metavar="CACHE")
+    parser.add_argument("--development", action="store_true")
     args = parser.parse_args()
     if not 1 <= args.workers <= 8:
         parser.error("workers must be in 1..8")
@@ -138,12 +142,13 @@ def main():
     if not config_path.is_relative_to((ROOT / "configs").resolve()):
         raise ValueError("Configuration outside configs")
     config = json.loads(config_path.read_text(encoding="utf-8"))
-    name = args.name or config_path.stem
+    name = args.name or ("dev_" if args.development else "") + config_path.stem
     labels = json.loads((ROOT / "configs/labels.json").read_text())["labels"]
-    pointer, rows = selected_rows(labels)
+    splits = ("train", "validation", "test") if args.development else ("train", "validation")
+    pointer, rows = selected_rows(labels, splits)
     libraries = ("numpy", "scipy", "librosa", "soundfile", "torch", "timm", "safetensors")
     provenance = {"config": config, "manifest_sha256": pointer["manifest_sha256"], "labels": labels,
-                  "splits": ["train", "validation"], "python": platform.python_version(),
+                  "splits": list(splits), "python": platform.python_version(),
                   "versions": {lib: version(lib) for lib in libraries},
                   "source_sha256": {path: sha256_file(ROOT / path) for path in SOURCES}}
     key = hashlib.sha256(json.dumps(provenance, sort_keys=True).encode()).hexdigest()
@@ -174,11 +179,11 @@ def main():
     (cache / "tracks").mkdir(parents=True, exist_ok=True)
     started = time.perf_counter()
     os.environ.update(OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1", MKL_NUM_THREADS="1")
-    print(f"Cache: {cache}; tracks: {len(rows)}; test excluded", flush=True)
+    print(f"Cache: {cache}; tracks: {len(rows)}; splits: {', '.join(splits)}", flush=True)
     results = []
     try:
         with ProcessPoolExecutor(max_workers=args.workers, initializer=initialize, initargs=(config,)) as pool:
-            for count, result in enumerate(pool.map(extract_track, ((r, str(cache), key) for r in rows),
+            for count, result in enumerate(pool.map(extract_track, ((r, str(cache), key, splits) for r in rows),
                                                     chunksize=4), start=1):
                 results.append(result)
                 if count % 250 == 0:
@@ -212,7 +217,8 @@ def main():
               "feature_names": extractor.names, "feature_families": extractor.families,
               "elapsed_seconds": time.perf_counter() - started,
               "features_sha256": sha256_file(cache / "features.npy"),
-              "index_sha256": sha256_file(cache / "index.csv"), "test_audio_loaded": False}
+              "index_sha256": sha256_file(cache / "index.csv"),
+              "test_audio_loaded": args.development, "v2_test_audio_loaded": False}
     write_json(cache / "report.json", report)
     write_json(ROOT / f"data/features/latest_{name}.json",
                {"folder": cache.relative_to(ROOT).as_posix(), "report_sha256": sha256_file(cache / "report.json")})
