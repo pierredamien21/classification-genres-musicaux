@@ -1,0 +1,10 @@
+{
+  "name": "dev_panns_cnn14_16k",
+  "cache_key": "e118935a87a4c58e9359a59faee7cb38718bab70e163e15e8924e19d752c520e",
+  "windows_timed": 64,
+  "median_features_seconds_per_window": 1.163656249991618,
+  "train_validation_windows": 23571,
+  "projected_hours_one_worker": 7.6190392968201195,
+  "created_at_utc": "2026-11-09T01:06:44.736147+00:00",
+  "test_audio_loaded": false
+}

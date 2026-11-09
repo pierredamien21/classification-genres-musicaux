@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "model": "maest",
+  "checkpoint_directory": "artifacts/pretrained/maest",
+  "checkpoint_sha256": {
+    "model.safetensors": "4c47fe335a5d6c49beb1ba5b35041aad357ae6d39c2063b782c301547fe34e03",
+    "config.json": "e21caf77bca90afc63f01dbd82343656a6fcf1edc6e2ad6a41b22f7a23b8a849",
+    "preprocessor_config.json": "e6aab106650a5fd60f85ebdff23007e0b8e3b0bc5a9721c07c57dd29bd15858e"
+  },
+  "sample_rate": 16000,
+  "window_seconds": 10.0,
+  "offsets_seconds": [
+    0.0,
+    10.0,
+    20.0
+  ],
+  "short_window_policy": "right_zero_pad",
+  "threads_per_worker": 1,
+  "representation": "[CLS, DIST, mean patch tokens] after block 6 and after the final norm (block 12)",
+  "license": "CC-BY-NC-SA-4.0",
+  "pretraining": "Discogs20 in-house music collection, 400 Discogs style labels; overlap with FMA unknown"
+}

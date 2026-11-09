@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "name": "v2_development_nested_cv_logistic",
+  "folds": "reports/v2/dev_folds.csv",
+  "c_grid": [0.001, 0.01, 0.1, 1.0, 10.0],
+  "selection": "inner leave-one-fold-out track macro-F1, ties to the smaller C",
+  "final_c": "plain 5-fold mean track macro-F1 over the whole development set, ties to the smaller C",
+  "max_iter": 2000,
+  "tolerance": 0.0001,
+  "solver": "lbfgs",
+  "class_weight": null,
+  "seed": 42,
+  "aggregation": "mean_window_probabilities",
+  "fit_scaler_on": "fitting windows only"
+}

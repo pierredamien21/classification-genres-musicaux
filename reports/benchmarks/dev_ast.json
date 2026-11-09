@@ -1,0 +1,10 @@
+{
+  "name": "dev_ast",
+  "cache_key": "8bb147277c8060668f5ae9b67a5ee6085b8fda3300b3a4e09c8a16b395a5ae77",
+  "windows_timed": 64,
+  "median_features_seconds_per_window": 5.314625250000972,
+  "train_validation_windows": 23571,
+  "projected_hours_one_worker": 34.79750882438137,
+  "created_at_utc": "2026-11-09T01:15:16.237714+00:00",
+  "test_audio_loaded": false
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "model": "panns_cnn14_16k",
+  "checkpoint_directory": "artifacts/pretrained/panns_cnn14_16k",
+  "checkpoint_sha256": {
+    "Cnn14_16k_mAP=0.438.pth": "e2ee543a27919542c2ea03eabaa70b24dcd4e6c8e05621de6b67a94e4c5058e6"
+  },
+  "sample_rate": 16000,
+  "window_seconds": 10.0,
+  "offsets_seconds": [
+    0.0,
+    10.0,
+    20.0
+  ],
+  "short_window_policy": "right_zero_pad",
+  "threads_per_worker": 1,
+  "representation": "2048-d fc1 embedding (ReLU)",
+  "license": "CC-BY-4.0",
+  "pretraining": "AudioSet-2M supervised at 16 kHz, 527 sound event classes"
+}

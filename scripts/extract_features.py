@@ -1,7 +1,8 @@
 """Extract one cached representation (any ViT variant or musical descriptors) for train/validation.
 
 Replaces the five V1 scripts extract_vit*.py and extract_descriptors.py (kept at tag v1-final).
-The representation is read from --config: a config with `checkpoint_directory` is a frozen ViT
+The representation is read from --config: a config with `model` is a frozen audio-pretrained
+encoder (AST, MAEST, PANNs CNN14; V2 phase 3), one with `checkpoint_directory` a frozen ViT
 (channels and block from the config), otherwise musical descriptors.
 
   --benchmark N         time N train windows and project the full cost; writes nothing else
@@ -37,10 +38,14 @@ SOURCES = ("scripts/extract_features.py", "src/music_genre/audio/processing.py",
            "src/music_genre/features/descriptors.py", "src/music_genre/features/hpss.py",
            "src/music_genre/features/logmel.py", "src/music_genre/features/vit.py",
            "src/music_genre/models/vit.py")
+PRETRAINED_SOURCES = ("src/music_genre/features/pretrained.py", "src/music_genre/models/audio_pretrained.py")
 WORKER = None
 
 
 def build_extractor(config):
+    if "model" in config:
+        from music_genre.features.pretrained import PretrainedAudio
+        return PretrainedAudio(config, ROOT)
     if "checkpoint_directory" in config:
         from music_genre.features.vit import MusicalViT
         return MusicalViT(config, ROOT)
@@ -147,10 +152,13 @@ def main():
     splits = ("train", "validation", "test") if args.development else ("train", "validation")
     pointer, rows = selected_rows(labels, splits)
     libraries = ("numpy", "scipy", "librosa", "soundfile", "torch", "timm", "safetensors")
+    sources = SOURCES
+    if "model" in config:
+        libraries, sources = (*libraries, "transformers"), (*SOURCES, *PRETRAINED_SOURCES)
     provenance = {"config": config, "manifest_sha256": pointer["manifest_sha256"], "labels": labels,
                   "splits": list(splits), "python": platform.python_version(),
                   "versions": {lib: version(lib) for lib in libraries},
-                  "source_sha256": {path: sha256_file(ROOT / path) for path in SOURCES}}
+                  "source_sha256": {path: sha256_file(ROOT / path) for path in sources}}
     key = hashlib.sha256(json.dumps(provenance, sort_keys=True).encode()).hexdigest()
     if args.benchmark:
         with threadpool_limits(limits=1):

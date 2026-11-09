@@ -106,6 +106,10 @@ Test final : 501 morceaux (International 53), 340 hors domaine, 12 Gospel.
 
 ## Phase 3 — Comparateurs manquants (≈ 1–2 semaines, surtout du calcul CPU)
 
+**État (9 novembre 2026) : en cours.** Point 1 réalisé ; MAEST bloc 12 en tête
+(0,669 en CV contre 0,553 pour la V1). C = 10⁻³ choisi partout pour les modèles
+préentraînés : grille à étendre vers le bas. Détail : [résumé 45](resumes/45_COMPARATEURS_V2.md).
+
 Chaque modèle commence par un benchmark sur 64 fenêtres pour estimer son coût.
 
 1. **Modèles audio préentraînés gelés + sonde linéaire** : AST (AudioSet),

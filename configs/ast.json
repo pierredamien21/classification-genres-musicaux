@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "model": "ast",
+  "checkpoint_directory": "artifacts/pretrained/ast",
+  "checkpoint_sha256": {
+    "model.safetensors": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d",
+    "config.json": "a93d525511d77e8ecc933d09674b85099815bbbb417c228a4edd655e252fb9ff",
+    "preprocessor_config.json": "8d04ba5a9c6fca5d39d0de2b1fd05ecf79deb589fbba279728bbebac39934231"
+  },
+  "sample_rate": 16000,
+  "window_seconds": 10.0,
+  "offsets_seconds": [
+    0.0,
+    10.0,
+    20.0
+  ],
+  "short_window_policy": "right_zero_pad",
+  "threads_per_worker": 1,
+  "representation": "[CLS, DIST, mean patch tokens] after block 6 and after the final norm (block 12)",
+  "license": "BSD-3-Clause",
+  "pretraining": "ImageNet (DeiT) then AudioSet-2M supervised, 527 sound event classes"
+}

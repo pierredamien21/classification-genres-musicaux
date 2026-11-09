@@ -1,0 +1,10 @@
+{
+  "name": "dev_maest",
+  "cache_key": "22e89513e1094ce064255ae641a32a91a50d0f118fd2d2714f674fa71104ab23",
+  "windows_timed": 64,
+  "median_features_seconds_per_window": 2.0967504500295036,
+  "train_validation_windows": 23571,
+  "projected_hours_one_worker": 13.728473571568175,
+  "created_at_utc": "2026-11-09T01:09:15.894920+00:00",
+  "test_audio_loaded": false
+}

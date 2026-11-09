@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "models": {
+    "ast": {
+      "source": "huggingface",
+      "repo_id": "MIT/ast-finetuned-audioset-10-10-0.4593",
+      "revision": "f826b80d28226b62986cc218e5cec390b1096902",
+      "files": ["config.json", "preprocessor_config.json", "README.md", "model.safetensors"],
+      "weights_sha256": {"model.safetensors": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d"},
+      "license": "BSD-3-Clause",
+      "pretraining": "ImageNet (DeiT) then AudioSet-2M supervised, 527 sound event classes"
+    },
+    "maest": {
+      "source": "huggingface",
+      "repo_id": "mtg-upf/discogs-maest-10s-pw-129e",
+      "revision": "54b3b0aa49ab26bc86d973c53d41aa6b28597b06",
+      "files": ["config.json", "preprocessor_config.json", "README.md", "feature_extraction_maest.py", "model.safetensors"],
+      "weights_sha256": {"model.safetensors": "4c47fe335a5d6c49beb1ba5b35041aad357ae6d39c2063b782c301547fe34e03"},
+      "license": "CC-BY-NC-SA-4.0",
+      "pretraining": "Discogs20 in-house music collection, 400 Discogs style labels; overlap with FMA unknown",
+      "remote_code": "feature_extraction_maest.py is read, never executed"
+    },
+    "panns_cnn14_16k": {
+      "source": "zenodo",
+      "url": "https://zenodo.org/records/3987831/files/Cnn14_16k_mAP%3D0.438.pth",
+      "files": ["Cnn14_16k_mAP=0.438.pth"],
+      "weights_md5": {"Cnn14_16k_mAP=0.438.pth": "362fc5ff18f1d6ad2f6d464b45893f2c"},
+      "bytes": {"Cnn14_16k_mAP=0.438.pth": 358668570},
+      "license": "CC-BY-4.0",
+      "pretraining": "AudioSet-2M supervised at 16 kHz, 527 sound event classes",
+      "loading": "torch.load(weights_only=True)"
+    }
+  }
+}
