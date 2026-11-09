@@ -106,9 +106,9 @@ Test final : 501 morceaux (International 53), 340 hors domaine, 12 Gospel.
 
 ## Phase 3 — Comparateurs manquants (≈ 1–2 semaines, surtout du calcul CPU)
 
-**État (9 novembre 2026) : en cours.** Point 1 réalisé ; MAEST bloc 12 en tête
-(0,669 en CV contre 0,553 pour la V1). C = 10⁻³ choisi partout pour les modèles
-préentraînés : grille à étendre vers le bas. Détail : [résumé 45](resumes/45_COMPARATEURS_V2.md).
+**État (9 novembre 2026) : en cours.** Points 1 et 6 réalisés ; grille de C élargie
+à 10⁻⁵–10, optimum intérieur (10⁻⁴ ou 10⁻³) ; MAEST bloc 12 en tête (0,684 en CV
+contre 0,553 pour la V1). Détail : [résumé 45](resumes/45_COMPARATEURS_V2.md).
 
 Chaque modèle commence par un benchmark sur 64 fenêtres pour estimer son coût.
 
@@ -122,7 +122,7 @@ Chaque modèle commence par un benchmark sur 64 fenêtres pour estimer son coût
 4. **Fine-tuning partiel** du ViT-Tiny (derniers blocs), seulement si le benchmark
    le rend faisable sur CPU.
 5. **CNN renforcé** : normalisation de batch, SpecAugment, patience 10, trois graines.
-6. Grille de C élargie (10⁻³ à 10).
+6. Grille de C élargie (10⁻⁵ à 10).
 
 **Sortie :** tous les candidats comparés en validation croisée ; un seul candidat V2
 choisi selon la règle déclarée en phase 2.
