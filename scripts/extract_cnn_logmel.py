@@ -1,4 +1,9 @@
-"""Resume per-track log-Mel extraction, then assemble an on-disk float32 array."""
+"""Resume per-track log-Mel extraction, then assemble an on-disk float32 array.
+
+--development covers the V2 development set (V1 train, validation and test, aligned on the
+dev_descriptors index) and writes data/features/latest_dev_cnn_logmel.json. V2 test audio is
+never decoded.
+"""
 
 import argparse
 import csv
@@ -68,7 +73,10 @@ def extract_track(task):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--development", action="store_true")
     args = parser.parse_args()
+    splits = ("train", "validation", "test") if args.development else ("train", "validation")
+    prefix = "dev_" if args.development else ""
     if not 1 <= args.workers <= 8:
         parser.error("workers must be in 1..8")
     config = json.loads((ROOT / "configs/cnn.json").read_text())
@@ -85,8 +93,8 @@ def main():
             or benchmark["manifest_sha256"] != baseline["manifest_sha256"]):
         raise ValueError("Manifest changed")
     with manifest.open(encoding="utf-8", newline="") as stream:
-        rows = [r for r in csv.DictReader(stream) if r["split"] in ("train", "validation")]
-    pointer = json.loads((ROOT / "data/features/latest_descriptors.json").read_text())
+        rows = [r for r in csv.DictReader(stream) if r["split"] in splits]
+    pointer = json.loads((ROOT / f"data/features/latest_{prefix}descriptors.json").read_text())
     reference = (ROOT / pointer["folder"]).resolve()
     if (not reference.is_relative_to((ROOT / "data/features").resolve())
             or sha256_file(reference / "report.json") != pointer["report_sha256"]):
@@ -99,7 +107,7 @@ def main():
         index = list(csv.DictReader(stream))
     groups = {}
     for i, item in enumerate(index):
-        if item["split"] not in ("train", "validation") or int(item["row_index"]) != i:
+        if item["split"] not in splits or int(item["row_index"]) != i:
             raise ValueError("Unexpected reference index")
         groups.setdefault(item["track_id"], []).append(item)
     if set(groups) != {r["track_id"] for r in rows}:
@@ -113,7 +121,7 @@ def main():
     audio_config = {k: config[k] for k in ("sample_rate", "window_seconds", "offsets_seconds", "logmel")}
     provenance = {
         "config": audio_config, "manifest_sha256": baseline["manifest_sha256"],
-        "reference": pointer, "labels": report["provenance"]["labels"], "splits": ["train", "validation"],
+        "reference": pointer, "labels": report["provenance"]["labels"], "splits": list(splits),
         "versions": {name: version(name) for name in ("numpy", "librosa", "soundfile", "scipy")},
         "source_sha256": {name: sha256_file(ROOT / name) for name in (
             "scripts/extract_cnn_logmel.py", "src/music_genre/features/logmel.py",
@@ -121,7 +129,7 @@ def main():
         )},
     }
     key = hashlib.sha256(json.dumps(provenance, sort_keys=True).encode()).hexdigest()
-    cache = ROOT / "data/features" / f"cnn-logmel-{key[:16]}"
+    cache = ROOT / "data/features" / f"{prefix}cnn-logmel-{key[:16]}"
     (cache / "tracks").mkdir(parents=True, exist_ok=True)
     if (cache / "report.json").exists():
         saved = json.loads((cache / "report.json").read_text())
@@ -130,7 +138,7 @@ def main():
         for filename, checksum in (("features.npy", "features_sha256"), ("index.csv", "index_sha256")):
             if sha256_file(cache / filename) != saved[checksum]:
                 raise ValueError("Assembled cache changed")
-        write_json(ROOT / "data/features/latest_cnn_logmel.json", {
+        write_json(ROOT / f"data/features/latest_{prefix}cnn_logmel.json", {
             "folder": cache.relative_to(ROOT).as_posix(), "report_sha256": sha256_file(cache / "report.json"),
         })
         print("Verified and reused complete CNN log-Mel cache")
@@ -140,7 +148,7 @@ def main():
         raise ValueError("Insufficient free disk for resumable spectrogram cache")
     began = time.perf_counter()
     os.environ.update(OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1", MKL_NUM_THREADS="1")
-    print(f"Extracting {len(rows)} train/validation tracks; cache: {cache}", flush=True)
+    print(f"Extracting {len(rows)} tracks ({', '.join(splits)}); cache: {cache}", flush=True)
     checksums = {}
     with ProcessPoolExecutor(max_workers=args.workers, initializer=initialize, initargs=(audio_config,)) as pool:
         tasks = ((r, groups[r["track_id"]], str(cache)) for r in rows)
@@ -163,10 +171,11 @@ def main():
         "matrix_shape": [len(index), 128, 622], "dtype": "float32", "track_sha256": checksums,
         "elapsed_seconds": time.perf_counter() - began,
         "features_sha256": sha256_file(cache / "features.npy"),
-        "index_sha256": sha256_file(cache / "index.csv"), "test_audio_loaded": False,
+        "index_sha256": sha256_file(cache / "index.csv"), "test_audio_loaded": args.development,
+        "v2_test_audio_loaded": False,
     }
     write_json(cache / "report.json", report)
-    write_json(ROOT / "data/features/latest_cnn_logmel.json", {
+    write_json(ROOT / f"data/features/latest_{prefix}cnn_logmel.json", {
         "folder": cache.relative_to(ROOT).as_posix(), "report_sha256": sha256_file(cache / "report.json"),
     })
     print(json.dumps({k: report[k] for k in ("matrix_shape", "elapsed_seconds")}, indent=2))

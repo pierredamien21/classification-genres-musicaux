@@ -1,7 +1,9 @@
 """Train a bounded CPU CNN; select epochs by track-level validation macro-F1.
 
-One script for the reference runs (configs/cnn.json, optional --seed) and the user
-session (configs/cnn_user.json, optional --smoke and --stop-after-epoch). Test never loaded.
+One script for the reference runs (configs/cnn.json, optional --seed), the user
+session (configs/cnn_user.json, optional --smoke and --stop-after-epoch) and the V2 reinforced
+CNN (configs/cnn_v2.json: batch norm, SpecAugment, fixed artist-grouped fold split of the V2
+development set, V1 test tracks included). V2 test audio is never loaded.
 The V1 ten-to-twenty epoch extension is replayable from the `v1-final` tag only.
 """
 
@@ -21,6 +23,7 @@ from threadpoolctl import threadpool_limits
 from music_genre.data.audit import sha256_file, write_json
 from music_genre.evaluation.metrics import aggregate_tracks, classification_metrics
 from music_genre.models.cnn import SmallAudioCNN
+from music_genre.models.cnn_v2 import ReinforcedAudioCNN, spec_augment
 from music_genre.training.cnn import (
     epoch_order,
     load_checkpoint,
@@ -49,11 +52,33 @@ def parse_args(argv=None):
 def run_name_for(args):
     if args.run_name:
         return args.run_name
-    if Path(args.config).stem == "cnn_user":
+    stem = Path(args.config).stem
+    if stem == "cnn_user":
         base = "cnn_user"
+    elif stem == "cnn_v2":
+        base = stem if args.seed is None else f"{stem}_seed{args.seed}"
     else:
         base = "cnn" if args.seed is None else f"cnn_seed{args.seed}"
     return base + ("_smoke" if args.smoke else "")
+
+
+def build_model(config, classes):
+    model = ReinforcedAudioCNN(classes) if config.get("batch_norm") else SmallAudioCNN(classes)
+    return model.to(memory_format=torch.channels_last)
+
+
+def fold_positions(index, folds_by_track, validation_fold):
+    """Window positions of the training folds and of the held-out fold (artist-disjoint)."""
+    held = []
+    for row in index:
+        fold = folds_by_track[row["track_id"]]
+        if fold["artist_id"] != row["artist_id"]:
+            raise ValueError(f"Cache artist disagrees with the folds: {row['track_id']}")
+        held.append(int(fold["fold"]) == validation_fold)
+    held = np.array(held)
+    if {r["artist_id"] for r, h in zip(index, held) if h} & {r["artist_id"] for r, h in zip(index, held) if not h}:
+        raise ValueError("Shared artist between train and validation")
+    return {"train": np.flatnonzero(~held), "validation": np.flatnonzero(held)}
 
 
 def main(args):
@@ -75,7 +100,9 @@ def main(args):
     else:
         config["smoke"] = False
     run_name = run_name_for(args)
-    pointer = json.loads((ROOT / "data/features/latest_cnn_logmel.json").read_text())
+    folds_config = config.get("development_folds")
+    splits = ("train", "validation", "test") if folds_config else ("train", "validation")
+    pointer = json.loads((ROOT / config.get("feature_pointer", "data/features/latest_cnn_logmel.json")).read_text())
     cache = (ROOT / pointer["folder"]).resolve()
     if (not cache.is_relative_to((ROOT / "data/features").resolve())
             or sha256_file(cache / "report.json") != pointer["report_sha256"]):
@@ -93,9 +120,11 @@ def main(args):
     labels = json.loads((ROOT / "configs/labels.json").read_text())["labels"]
     if features["provenance"]["labels"] != labels:
         raise ValueError("Class order changed")
+    if features["provenance"]["splits"] != list(splits):
+        raise ValueError("Cache covers other splits")
     with manifest.open(encoding="utf-8", newline="") as stream:
         sources = {r["track_id"]: r for r in csv.DictReader(stream)
-                   if r["split"] in ("train", "validation")}
+                   if r["split"] in splits}
     with (cache / "index.csv").open(encoding="utf-8", newline="") as stream:
         index = list(csv.DictReader(stream))
     seen = set()
@@ -108,8 +137,15 @@ def main(args):
         seen.add(key)
     if {r["track_id"] for r in index} != set(sources):
         raise ValueError("Missing reference tracks")
-    positions = {split: np.array([i for i, r in enumerate(index) if r["split"] == split])
-                 for split in ("train", "validation")}
+    if folds_config:
+        with (ROOT / folds_config["csv"]).open(encoding="utf-8", newline="") as stream:
+            folds_by_track = {r["track_id"]: r for r in csv.DictReader(stream)}
+        if set(folds_by_track) != set(sources):
+            raise ValueError("Folds do not cover exactly the development tracks")
+        positions = fold_positions(index, folds_by_track, folds_config["validation_fold"])
+    else:
+        positions = {split: np.array([i for i, r in enumerate(index) if r["split"] == split])
+                     for split in ("train", "validation")}
     if args.smoke:
         for split, split_positions in positions.items():
             selected = set()
@@ -141,7 +177,10 @@ def main(args):
             "src/music_genre/models/cnn.py", "src/music_genre/evaluation/metrics.py",
         )},
     }
-    model = SmallAudioCNN(len(labels)).to(memory_format=torch.channels_last)
+    if config.get("batch_norm") or config.get("augmentation"):
+        identity["source_sha256"]["src/music_genre/models/cnn_v2.py"] = sha256_file(
+            ROOT / "src/music_genre/models/cnn_v2.py")
+    model = build_model(config, len(labels))
     optimizer = torch.optim.AdamW(model.parameters(), lr=config["learning_rate"],
                                  weight_decay=config["weight_decay"])
     if args.resume:
@@ -164,7 +203,7 @@ def main(args):
                  "model": model.state_dict(), "optimizer": optimizer.state_dict(), "rng": torch.get_rng_state()}
         save_checkpoint(folder / "checkpoint.pt", state)
     write_json(ROOT / f"reports/latest_{run_name}_training.json", {"folder": folder.relative_to(ROOT).as_posix()})
-    print(f"Run: {folder}; resume from epoch {state['epoch']}; test excluded", flush=True)
+    print(f"Run: {folder}; resume from epoch {state['epoch']}; {'V2 test' if folds_config else 'test'} excluded", flush=True)
     began = time.perf_counter()
     previous_elapsed = state["elapsed_seconds"]
     stop_reason = "max_epochs"
@@ -176,6 +215,7 @@ def main(args):
             epoch_start = time.perf_counter()
             model.train()
             order = epoch_order(positions["train"], config["seed"], epoch)
+            augment = torch.Generator().manual_seed(config["seed"] * 1000 + epoch)  # resumable per epoch
             loss_sum = 0.0
             budget_reached = False
             for start in range(0, len(order), config["batch_size"]):
@@ -184,6 +224,8 @@ def main(args):
                     break
                 batch_positions = order[start:start + config["batch_size"]]
                 xb = make_batch(matrix, batch_positions, config)
+                if config.get("augmentation"):
+                    xb = spec_augment(xb, config["augmentation"], augment)
                 targets = torch.from_numpy(y[batch_positions])
                 optimizer.zero_grad(set_to_none=True)
                 loss = torch.nn.functional.cross_entropy(model(xb), targets)
@@ -239,7 +281,7 @@ def main(args):
         if validation["macro_f1"] != state["best_score"]:
             raise ValueError("Restored best epoch does not reproduce selection score")
         save_file({k: v.detach().contiguous() for k, v in model.state_dict().items()}, str(folder / "model.safetensors"))
-        restored = SmallAudioCNN(len(labels)).to(memory_format=torch.channels_last)
+        restored = build_model(config, len(labels))
         restored.load_state_dict(load_file(str(folder / "model.safetensors")), strict=True)
         restored_probabilities = predict_windows(restored, matrix, positions["validation"], config)
         export_error = float(np.max(np.abs(restored_probabilities - window_probabilities)))
@@ -273,7 +315,7 @@ def main(args):
         "export_max_probability_error": export_error,
         "model_sha256": sha256_file(folder / "model.safetensors"),
         "validation_predictions_sha256": sha256_file(folder / "validation_predictions.csv"),
-        "test_loaded": False, "test_evaluated": False,
+        "test_loaded": bool(folds_config), "test_evaluated": False, "v2_test_audio_loaded": False,
         "limitations": ["One seed per run; compare seeds with summarize_repetitions.",
                         "Epoch selection uses validation; no independent final estimate.",
                         "Native log-Mel CNN from scratch versus resized pretrained image ViT: not an architecture-only ablation."],
