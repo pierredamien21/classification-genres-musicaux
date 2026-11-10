@@ -143,6 +143,10 @@ def main(args):
         if set(folds_by_track) != set(sources):
             raise ValueError("Folds do not cover exactly the development tracks")
         positions = fold_positions(index, folds_by_track, folds_config["validation_fold"])
+        # V1 split labels were checked above; metrics aggregate one split at a time, so relabel by fold.
+        for name, split_positions in positions.items():
+            for i in split_positions:
+                index[i] = {**index[i], "split": name}
     else:
         positions = {split: np.array([i for i, r in enumerate(index) if r["split"] == split])
                      for split in ("train", "validation")}
