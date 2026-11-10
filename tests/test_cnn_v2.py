@@ -54,6 +54,7 @@ def test_v2_runs_never_reuse_v1_pointer_names():
     assert name("configs/cnn.json", 43) == "cnn_seed43"
     assert name("configs/cnn_user.json") == "cnn_user"
     assert name("configs/cnn_v2.json", 43) == "cnn_v2_seed43"
+    assert name("configs/vit_finetune.json", 42) == "vit_finetune_seed42"
 
 
 def test_fold_split_holds_out_one_fold_and_rejects_shared_artists():

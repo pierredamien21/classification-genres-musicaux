@@ -24,6 +24,7 @@ from music_genre.data.audit import sha256_file, write_json
 from music_genre.evaluation.metrics import aggregate_tracks, classification_metrics
 from music_genre.models.cnn import SmallAudioCNN
 from music_genre.models.cnn_v2 import ReinforcedAudioCNN, spec_augment
+from music_genre.models.vit_native import FineTunedViT
 from music_genre.training.cnn import (
     epoch_order,
     load_checkpoint,
@@ -55,7 +56,7 @@ def run_name_for(args):
     stem = Path(args.config).stem
     if stem == "cnn_user":
         base = "cnn_user"
-    elif stem == "cnn_v2":
+    elif stem in ("cnn_v2", "vit_finetune"):
         base = stem if args.seed is None else f"{stem}_seed{args.seed}"
     else:
         base = "cnn" if args.seed is None else f"cnn_seed{args.seed}"
@@ -63,7 +64,13 @@ def run_name_for(args):
 
 
 def build_model(config, classes):
-    model = ReinforcedAudioCNN(classes) if config.get("batch_norm") else SmallAudioCNN(classes)
+    if config.get("model") == "vit_native_finetune":
+        model = FineTunedViT(ROOT / config["checkpoint_directory"], config["depth"], config["trained_blocks"],
+                             classes)
+    elif config.get("batch_norm"):
+        model = ReinforcedAudioCNN(classes)
+    else:
+        model = SmallAudioCNN(classes)
     return model.to(memory_format=torch.channels_last)
 
 
@@ -184,8 +191,12 @@ def main(args):
     if config.get("batch_norm") or config.get("augmentation"):
         identity["source_sha256"]["src/music_genre/models/cnn_v2.py"] = sha256_file(
             ROOT / "src/music_genre/models/cnn_v2.py")
+    if config.get("model") == "vit_native_finetune":
+        for name in ("src/music_genre/models/vit_native.py", "src/music_genre/models/vit.py",
+                     *(f"{config['checkpoint_directory']}/{f}" for f in ("config.json", "model.safetensors"))):
+            identity["source_sha256"][name] = sha256_file(ROOT / name)
     model = build_model(config, len(labels))
-    optimizer = torch.optim.AdamW(model.parameters(), lr=config["learning_rate"],
+    optimizer = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=config["learning_rate"],
                                  weight_decay=config["weight_decay"])
     if args.resume:
         folder = args.resume.resolve()
@@ -325,7 +336,7 @@ def main(args):
                         "Native log-Mel CNN from scratch versus resized pretrained image ViT: not an architecture-only ablation."],
     }
     write_json(folder / "model.json", {
-        "architecture": "SmallAudioCNN", "config": config, "labels": labels,
+        "architecture": type(model).__name__, "config": config, "labels": labels,
         "model_sha256": report["model_sha256"], "aggregation": "mean_window_probabilities",
         "selected_epoch": state["best_epoch"], "test_evaluated": False,
     })

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "name": "vit_native_finetune_v2",
+  "seed": 42,
+  "sample_rate": 16000,
+  "window_seconds": 10.0,
+  "offsets_seconds": [
+    0.0,
+    10.0,
+    20.0
+  ],
+  "logmel": {
+    "n_fft": 1024,
+    "hop_length": 256,
+    "n_mels": 128,
+    "f_min": 0.0,
+    "window": "hann",
+    "center": false,
+    "power": 2.0,
+    "amin": 1e-10
+  },
+  "db_min": -80.0,
+  "db_max": 20.0,
+  "input_shape": [
+    1,
+    128,
+    622
+  ],
+  "pooling": "mean patch tokens after block 6 through the terminal LayerNorm, then a linear head",
+  "pretraining": "ImageNet-21k then ImageNet-1k (timm augreg); frozen patch embedding, positions and blocks 1-4",
+  "batch_size": 16,
+  "threads": 8,
+  "max_epochs": 30,
+  "patience": 5,
+  "selection": "validation_track_macro_f1_tie_earlier_epoch",
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.05,
+  "augmentation": {
+    "type": "specaugment",
+    "freq_masks": 2,
+    "freq_width": 16,
+    "time_masks": 2,
+    "time_width": 64,
+    "mask_value": "0 after normalization (-30 dB)"
+  },
+  "budget_seconds": 21600,
+  "deterministic": true,
+  "memory_format": "channels_last",
+  "cache_dtype": "float32",
+  "test": "V1 test tracks are development data; V2 test not loaded or evaluated",
+  "feature_pointer": "data/features/latest_dev_cnn_logmel.json",
+  "development_folds": {
+    "csv": "reports/v2/dev_folds.csv",
+    "validation_fold": 0,
+    "choice": "fold 0, same split as the reinforced CNN (fixed 2026-11-10 before any run)"
+  },
+  "model": "vit_native_finetune",
+  "checkpoint_directory": "artifacts/pretrained/vit_tiny",
+  "checkpoint_sha256": {
+    "config.json": "e328e0f3717427f87898184cd8eba835526a8deaaba703b5066b307afea10e80",
+    "model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed"
+  },
+  "checkpoint_source": {
+    "repo_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+    "revision": "7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106"
+  },
+  "positions": "AST: pretrained 14 x 14 grid cut from the middle in frequency (rows 3..10), bilinear in time (14 -> 38)",
+  "depth": 6,
+  "trained_blocks": 2,
+  "seeds_policy": "seed 42 first; seeds 43 and 44 only if seed 42 reaches MAEST block 12 on fold 0 (0.728), fixed on 2026-11-10 before any run"
+}

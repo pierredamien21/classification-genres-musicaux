@@ -18,6 +18,39 @@ from music_genre.models.vit import FrozenViT
 BLOCKS = (6, 12)
 
 
+class FineTunedViT(torch.nn.Module):
+    """Native-grid ViT kept up to `depth` blocks; only the last `trained` blocks, the terminal norm and a
+    linear head learn (phase 3, point 4). Input: (B, 1, 128, T) log-Mel scaled to [-1, 1], which is the
+    checkpoint normalization (mean = std = 0.5) of the gray image repeated on three channels.
+    """
+
+    def __init__(self, directory: Path, depth: int = 6, trained: int = 2, classes: int = 8):
+        super().__init__()
+        if not 1 <= trained <= depth <= 12:
+            raise ValueError("Expected 1 <= trained <= depth <= 12")
+        native = NativeViT(directory)
+        model = native.model
+        if native.mean.flatten().tolist() != [0.5] * 3 or native.std.flatten().tolist() != [0.5] * 3:
+            raise ValueError("Expected the mean = std = 0.5 checkpoint normalization")
+        self.patch = model.patch_embed.proj
+        self.register_buffer("grid", native.grid.detach().clone())
+        self.cls = torch.nn.Parameter(model.cls_token + model.pos_embed[:, :1], requires_grad=False)
+        self.blocks = torch.nn.Sequential(*list(model.blocks)[:depth])
+        self.norm = model.norm
+        self.head = torch.nn.Linear(model.embed_dim, classes)
+        for module in (*self.blocks[depth - trained:], self.norm):
+            module.requires_grad_(True)
+
+    def pooled(self, x):
+        patches = self.patch(x.expand(-1, 3, -1, -1))
+        tokens = patches.flatten(2).transpose(1, 2) + ast_positions(self.grid, *patches.shape[2:])
+        tokens = torch.cat([self.cls.expand(len(tokens), -1, -1), tokens], dim=1)
+        return self.norm(self.blocks(tokens))[:, 1:].mean(dim=1)
+
+    def forward(self, x):
+        return self.head(self.pooled(x))
+
+
 def ast_positions(grid, f_dim, t_dim):
     """(1, D, hw, hw) patch position embeddings -> (1, f_dim * t_dim, D), row-major like the patches."""
     hw = grid.shape[-1]

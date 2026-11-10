@@ -41,3 +41,19 @@ def test_native_vit_matches_v1_blocks_on_a_224_grid_and_accepts_the_native_grid(
         np.testing.assert_allclose(half, FrozenViT(WEIGHTS, block).extract(square, -80.0, 20.0), atol=1e-5)
     wide = native.extract(rng.uniform(-80, 20, (128, 622)).astype(np.float32), -80.0, 20.0)
     assert wide.shape == (384,) and np.isfinite(wide).all()
+
+
+@pytest.mark.skipif(not (WEIGHTS / "model.safetensors").exists(), reason="local ViT weights absent")
+def test_fine_tuned_vit_starts_from_the_frozen_block6_features_and_trains_only_its_top():
+    from music_genre.models.vit_native import FineTunedViT
+    from music_genre.training.cnn import make_batch
+    spectrogram = np.random.default_rng(1).uniform(-80, 20, (1, 128, 622)).astype(np.float32)
+    model = FineTunedViT(WEIGHTS, depth=6, trained=2, classes=8).eval()
+    batch = make_batch(spectrogram, [0], {"db_min": -80.0, "db_max": 20.0})
+    with torch.no_grad():
+        pooled = model.pooled(batch)[0].numpy()
+    np.testing.assert_allclose(pooled, NativeViT(WEIGHTS).extract(spectrogram[0], -80.0, 20.0)[:192], atol=1e-5)
+    trainable = {name.split(".")[0] + ("." + name.split(".")[1] if name.startswith("blocks") else "")
+                 for name, p in model.named_parameters() if p.requires_grad}
+    assert trainable == {"blocks.4", "blocks.5", "norm", "head"}
+    assert model(batch).shape == (1, 8)
