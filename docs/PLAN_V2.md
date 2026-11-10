@@ -106,10 +106,12 @@ Test final : 501 morceaux (International 53), 340 hors domaine, 12 Gospel.
 
 ## Phase 3 — Comparateurs manquants (≈ 1–2 semaines, surtout du calcul CPU)
 
-**État (10 novembre 2026) : en cours.** Points 1, 3 et 6 réalisés ; grille de C élargie
+**État (10 novembre 2026) : en cours.** Points 1, 3, 5 et 6 réalisés ; grille de C élargie
 à 10⁻⁵–10, optimum intérieur (10⁻⁴ ou 10⁻³) ; MAEST bloc 12 en tête (0,684 en CV
 contre 0,553 pour la V1). Tête MLP : 0,668 sur MAEST et 0,650 sur AST, sous la sonde
-linéaire. Restent les points 2, 4 et 5. Détail : [résumé 45](resumes/45_COMPARATEURS_V2.md).
+linéaire. CNN renforcé : 0,618 ± 0,015 sur le pli 0 (trois graines), contre 0,728 pour
+MAEST sur ce pli. Restent les points 2 et 4. Détail : [résumé 45](resumes/45_COMPARATEURS_V2.md),
+[résumé 46](resumes/46_CNN_RENFORCE_V2.md).
 
 Chaque modèle commence par un benchmark sur 64 fenêtres pour estimer son coût.
 
