@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "decided_on": "2026-11-10",
+  "rule": "docs/PROTOCOLE_V2.md: best mean out-of-fold macro-F1 in nested CV on the development set; below 0.002 the cheaper system wins",
+  "candidate": {
+    "system": "dev_maest-layer12",
+    "head": "logistic",
+    "dimensions": "2304",
+    "mean_fold_macro_f1": "0.6835",
+    "std_fold_macro_f1": "0.0272",
+    "final_c": "0.0001",
+    "run": "runs/v2-cv/dev_maest-layer12-20261109T212736039178Z",
+    "report_sha256": "c7c20508b1b520331ed954556bee22e7b5c547e1a6ebbd74b16ca41e54c1b4ec"
+  },
+  "runner_up": {
+    "system": "dev_maest-layer12-mlp",
+    "head": "mlp",
+    "mean_fold_macro_f1": "0.6678"
+  },
+  "gap_to_runner_up": 0.0157,
+  "cv_results_sha256": "b38a02b9b17de269b654857f4eebae6d96d928e49edf7634e7c94518ef2f5861",
+  "systems_in_cv": 15,
+  "fold0_only_systems": {
+    "note": "Trained models scored on fold 0 only, with the epoch chosen on that fold (optimistic); full CV not run.",
+    "maest-layer12_logistic_fold0": 0.7278,
+    "vit_native_finetune_seed42": 0.6609,
+    "cnn_v2_three_seeds_mean": 0.6178
+  },
+  "hypotheses": {
+    "H2": "same model as the V2 candidate (best frozen pretrained encoder)",
+    "H3": "V2 candidate versus reinforced CNN (3 seeds)"
+  },
+  "input_checks": [
+    "tests/test_audio_pretrained.py::test_maest_input_matches_the_original_maest_melspectrogram_inside_the_window",
+    "tests/test_audio_pretrained.py::test_ast_extractor_without_torchaudio_matches_a_kaldi_fbank"
+  ],
+  "open_risks": [
+    "Discogs20 (MAEST pretraining, 3.3 M in-house tracks) is not public: overlap with FMA cannot be checked",
+    "MAEST weights CC-BY-NC-SA-4.0: non-commercial use only"
+  ],
+  "v2_test_audio_loaded": false
+}
