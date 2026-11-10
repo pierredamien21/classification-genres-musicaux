@@ -2,7 +2,7 @@
 
 Replaces the five V1 scripts extract_vit*.py and extract_descriptors.py (kept at tag v1-final).
 The representation is read from --config: a config with `model` is a frozen audio-pretrained
-encoder (AST, MAEST, PANNs CNN14; V2 phase 3), one with `checkpoint_directory` a frozen ViT
+encoder (AST, MAEST, PANNs CNN14, native-grid ViT; V2 phase 3), one with `checkpoint_directory` a frozen ViT
 (channels and block from the config), otherwise musical descriptors.
 
   --benchmark N         time N train windows and project the full cost; writes nothing else
@@ -38,7 +38,8 @@ SOURCES = ("scripts/extract_features.py", "src/music_genre/audio/processing.py",
            "src/music_genre/features/descriptors.py", "src/music_genre/features/hpss.py",
            "src/music_genre/features/logmel.py", "src/music_genre/features/vit.py",
            "src/music_genre/models/vit.py")
-PRETRAINED_SOURCES = ("src/music_genre/features/pretrained.py", "src/music_genre/models/audio_pretrained.py")
+PRETRAINED_SOURCES = ("src/music_genre/features/pretrained.py", "src/music_genre/models/audio_pretrained.py",
+                      "src/music_genre/models/vit_native.py")
 WORKER = None
 
 

@@ -1,0 +1,10 @@
+{
+  "name": "dev_vit_block6",
+  "cache_key": "5cc01d1809dd943515d93fa20b350af6961efc4f8d455ec02c446a4963e7bc98",
+  "windows_timed": 64,
+  "median_features_seconds_per_window": 0.04303449997678399,
+  "train_validation_windows": 23571,
+  "projected_hours_one_worker": 0.2817683885979932,
+  "created_at_utc": "2026-11-10T09:32:30.152127+00:00",
+  "test_audio_loaded": false
+}

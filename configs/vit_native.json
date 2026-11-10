@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "model": "vit_tiny_native",
+  "checkpoint_directory": "artifacts/pretrained/vit_tiny",
+  "checkpoint_sha256": {
+    "config.json": "e328e0f3717427f87898184cd8eba835526a8deaaba703b5066b307afea10e80",
+    "model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed"
+  },
+  "checkpoint_source": {
+    "repo_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+    "revision": "7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106"
+  },
+  "sample_rate": 16000,
+  "window_seconds": 10.0,
+  "offsets_seconds": [
+    0.0,
+    10.0,
+    20.0
+  ],
+  "short_window_policy": "right_zero_pad",
+  "logmel": {
+    "n_fft": 1024,
+    "hop_length": 256,
+    "n_mels": 128,
+    "f_min": 0.0,
+    "window": "hann",
+    "center": false,
+    "power": 2.0,
+    "amin": 1e-10
+  },
+  "db_min": -80.0,
+  "db_max": 20.0,
+  "threads_per_worker": 1,
+  "input": "native 128 x 622 log-Mel, no resize; 8 x 38 non-overlapping 16 x 16 patches (last 14 frames uncovered)",
+  "positions": "AST: pretrained 14 x 14 grid cut from the middle in frequency (rows 3..10), bilinear in time (14 -> 38)",
+  "channels": "repeat_grayscale_three_times",
+  "normalization": "checkpoint_mean_std",
+  "representation": "mean patch tokens after blocks 6 and 12, each through the terminal LayerNorm (families block6, block12)",
+  "compared_to": "dev_vit_block6 and dev_vit (224 x 224 bicubic resize, same checkpoint)",
+  "frozen": true
+}

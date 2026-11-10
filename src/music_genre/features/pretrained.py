@@ -5,9 +5,11 @@ from pathlib import Path
 import torch
 
 from music_genre.data.audit import sha256_file
+from music_genre.features.logmel import log_mel
 from music_genre.models.audio_pretrained import TRANSFORMER_LAYERS, Cnn14Encoder, TransformerEncoder
+from music_genre.models.vit_native import BLOCKS, NativeViT
 
-MODELS = ("ast", "maest", "panns_cnn14_16k")
+MODELS = ("ast", "maest", "panns_cnn14_16k", "vit_tiny_native")
 
 
 class PretrainedAudio:
@@ -22,7 +24,11 @@ class PretrainedAudio:
         for filename, expected in config["checkpoint_sha256"].items():
             if sha256_file(directory / filename) != expected:
                 raise ValueError(f"Pinned checkpoint changed: {filename}")
-        if config["model"] == "panns_cnn14_16k":
+        if config["model"] == "vit_tiny_native":
+            self.encoder = NativeViT(directory)
+            self.names = [f"vit_native_block{b}_{i:03d}" for b in BLOCKS for i in range(192)]
+            self.families = [f"block{b}" for b in BLOCKS for _ in range(192)]
+        elif config["model"] == "panns_cnn14_16k":
             (weights,) = config["checkpoint_sha256"]
             self.encoder = Cnn14Encoder(directory / weights)
             self.names = [f"cnn14_embedding_{i:04d}" for i in range(2048)]
@@ -40,4 +46,7 @@ class PretrainedAudio:
             raise ValueError("Unexpected audio sample rate")
         if len(window.samples) != round(window.sample_rate * self.config["window_seconds"]):
             raise ValueError("Expected fixed-duration padded window")
+        if self.config["model"] == "vit_tiny_native":
+            return self.encoder.extract(log_mel(window, self.config["logmel"]), self.config["db_min"],
+                                        self.config["db_max"])
         return self.encoder.forward(window.samples)[0]
