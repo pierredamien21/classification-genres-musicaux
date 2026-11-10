@@ -10,6 +10,8 @@ encoder (AST, MAEST, PANNs CNN14, native-grid ViT; V2 phase 3), one with `checkp
   --compare-to CACHE    with --per-genre: compare every window to an existing cache (max error)
   --development         V2 development: all 7 857 selected FMA-small tracks, V1 test included
                         (docs/PROTOCOLE_V2.md); default name dev_<config stem>
+  --degradation NAME    V2 phase 4: a condition of configs/degradations_v2.json, or "augmentation"
+                        (one draw per track); enters the cache key; default name suffix _<NAME>
 
 Without --development, V1 test audio is never decoded. V2 test audio is never decoded.
 Per-track results are resumable and keyed by full provenance.
@@ -30,6 +32,7 @@ from pathlib import Path
 import numpy as np
 from threadpoolctl import threadpool_limits
 
+from music_genre.audio.degrade import load_degraded
 from music_genre.audio.processing import load_audio, segment_audio
 from music_genre.data.audit import sha256_file, write_json
 
@@ -76,7 +79,10 @@ def extract_track(task):
             x, starts, valid = saved["x"], saved["starts"], saved["valid"]
     else:
         config = extractor.config
-        audio = load_audio(path, sample_rate=config["sample_rate"])
+        if "degradation" in config:
+            audio = load_degraded(path, config["sample_rate"], config["degradation"], row["track_id"])
+        else:
+            audio = load_audio(path, sample_rate=config["sample_rate"])
         windows = segment_audio(audio, tuple(config["offsets_seconds"]), config["window_seconds"])
         if not windows:
             raise ValueError("No audio windows")
@@ -139,23 +145,35 @@ def main():
     parser.add_argument("--per-genre", type=int, metavar="N")
     parser.add_argument("--compare-to", metavar="CACHE")
     parser.add_argument("--development", action="store_true")
+    parser.add_argument("--degradation", metavar="NAME")
     args = parser.parse_args()
     if not 1 <= args.workers <= 8:
         parser.error("workers must be in 1..8")
     if args.compare_to and not args.per_genre:
         parser.error("--compare-to requires --per-genre")
+    if args.degradation and args.benchmark:
+        parser.error("--benchmark times clean audio only")
     config_path = (ROOT / args.config).resolve()
     if not config_path.is_relative_to((ROOT / "configs").resolve()):
         raise ValueError("Configuration outside configs")
     config = json.loads(config_path.read_text(encoding="utf-8"))
-    name = args.name or ("dev_" if args.development else "") + config_path.stem
+    sources = SOURCES
+    if args.degradation:
+        table = json.loads((ROOT / "configs/degradations_v2.json").read_text(encoding="utf-8"))
+        if args.degradation == "augmentation":
+            config["degradation"] = {"name": "augmentation", **table["augmentation"]}
+        else:
+            config["degradation"] = {"name": args.degradation, "seed": table["evaluation_seed"],
+                                     "spec": table["conditions"][args.degradation]}
+        sources = (*SOURCES, "src/music_genre/audio/degrade.py")  # degrade.py enters degraded keys only
+    name = args.name or (("dev_" if args.development else "") + config_path.stem
+                         + (f"_{args.degradation}" if args.degradation else ""))
     labels = json.loads((ROOT / "configs/labels.json").read_text())["labels"]
     splits = ("train", "validation", "test") if args.development else ("train", "validation")
     pointer, rows = selected_rows(labels, splits)
     libraries = ("numpy", "scipy", "librosa", "soundfile", "torch", "timm", "safetensors")
-    sources = SOURCES
     if "model" in config:
-        libraries, sources = (*libraries, "transformers"), (*SOURCES, *PRETRAINED_SOURCES)
+        libraries, sources = (*libraries, "transformers"), (*sources, *PRETRAINED_SOURCES)
     provenance = {"config": config, "manifest_sha256": pointer["manifest_sha256"], "labels": labels,
                   "splits": list(splits), "python": platform.python_version(),
                   "versions": {lib: version(lib) for lib in libraries},

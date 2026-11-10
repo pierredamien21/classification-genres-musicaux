@@ -51,3 +51,20 @@ def nested_cv(x, y, folds, track_ids, c_grid, fit_predict):
                         "macro_f1": macro_f1(track_ids[held], y[held], oof[held]),
                         "tracks": len(set(track_ids[held].tolist()))})
     return oof, records
+
+
+def refit_outer(x, y, folds, selected_c, fit_predict, evaluate):
+    """Refit each outer fold with its already selected C and predict every aligned matrix.
+
+    evaluate: name -> matrix with the rows of x (e.g. clean and degraded windows). One fit per fold:
+    the held-out rows of all matrices go through a single prediction call.
+    """
+    names = list(evaluate)
+    out = {name: np.full((len(x), len(set(y.tolist()))), np.nan) for name in names}
+    for outer in sorted(set(folds.tolist())):
+        held = folds == outer
+        stacked = np.vstack([evaluate[name][held] for name in names])
+        predicted = fit_predict(x[~held], y[~held], stacked, selected_c[outer])
+        for name, part in zip(names, np.split(predicted, len(names)), strict=True):
+            out[name][held] = part
+    return out

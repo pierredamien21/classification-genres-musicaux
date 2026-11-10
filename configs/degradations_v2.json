@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "fixed_on": "2026-11-10, before any degraded extraction (V2 phase 4)",
+  "evaluation_seed": 20261110,
+  "conditions": {
+    "snr30": {
+      "kind": "white_noise",
+      "snr_db": 30
+    },
+    "snr20": {
+      "kind": "white_noise",
+      "snr_db": 20
+    },
+    "snr10": {
+      "kind": "white_noise",
+      "snr_db": 10
+    },
+    "gainp6": {
+      "kind": "gain",
+      "db": 6
+    },
+    "gainm6": {
+      "kind": "gain",
+      "db": -6
+    },
+    "mp3_64": {
+      "kind": "mp3",
+      "kbps": 64
+    }
+  },
+  "augmentation": {
+    "seed": 20261111,
+    "recipe": {
+      "kinds": [
+        "white_noise",
+        "gain",
+        "mp3"
+      ],
+      "snr_db": [
+        10,
+        30
+      ],
+      "gain_db": [
+        -6,
+        6
+      ],
+      "kbps": 64
+    }
+  },
+  "notes": [
+    "white noise over the whole 16 kHz track, SNR on the whole-track power, draws keyed by seed:track:condition",
+    "digital gain without clipping (float pipeline)",
+    "MP3: mono constant bitrate via libsndfile/LAME at the source rate (22.05 kHz sources via 44.1 kHz), peak-normalized before encoding, then resampled to 16 kHz",
+    "augmentation: one draw per track (kind uniform, parameter uniform), evaluation seed and augmentation seed differ"
+  ]
+}

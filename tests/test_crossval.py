@@ -38,3 +38,27 @@ def test_outer_fold_never_reaches_any_fit_and_ties_pick_the_smaller_c():
     assert sorted(min(held) for _, held in outer_calls) == [0, 1, 2, 3, 4]
     assert all(len(fit) == 3 for fit, _, _ in seen if len(fit) != 4)
     assert len(seen) == 5 * (4 * 2 + 1)
+
+
+def test_refit_outer_reproduces_nested_oof_and_predicts_every_aligned_matrix():
+    from music_genre.evaluation.crossval import refit_outer
+    rng = np.random.default_rng(0)
+    folds = np.repeat(np.arange(5), 12)
+    y = np.tile(np.arange(3), 20)
+    tracks = np.array([f"t{i}" for i in range(60)])
+    x = rng.normal(size=(60, 2)) + y[:, None]
+
+    def fit_predict(x_fit, y_fit, x_eval, c):  # nearest class mean, shrunk by c: deterministic
+        means = np.stack([x_fit[y_fit == k].mean(axis=0) * c for k in range(3)])
+        scores = np.exp(-((x_eval[:, None] - means) ** 2).sum(axis=2))
+        return scores / scores.sum(axis=1, keepdims=True)
+
+    oof, records = nested_cv(x, y, folds, tracks, (0.5, 1.0), fit_predict)
+    shifted = x + 10
+    out = refit_outer(x, y, folds, {r["fold"]: r["selected_c"] for r in records}, fit_predict,
+                      {"clean": x, "shifted": shifted})
+    np.testing.assert_array_equal(out["clean"], oof)
+    for k, record in enumerate(records):
+        held = folds == k
+        expected = fit_predict(x[~held], y[~held], shifted[held], record["selected_c"])
+        np.testing.assert_array_equal(out["shifted"][held], expected)

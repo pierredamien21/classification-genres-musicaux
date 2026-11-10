@@ -136,6 +136,22 @@ choisi selon la règle déclarée en phase 2.
 
 ## Phase 4 — Robustesse et calibration (≈ 3–4 jours)
 
+**Protocole fixé le 10 novembre 2026, avant tout résultat** (choix de l'utilisateur : tout le
+développement, augmentation de MAEST avec règle d'adoption, rejet à 5 %).
+- Conditions ([config](../configs/degradations_v2.json)) : bruit blanc à 30/20/10 dB de SNR sur le
+  morceau entier à 16 kHz ; gain numérique ±6 dB sans écrêtage ; MP3 mono 64 kb/s constant
+  (libsndfile/LAME, débit mesuré à chaque appel) au taux d'origine, après normalisation de crête.
+- Robustesse : les têtes de chaque pli (C déjà choisi) prédisent les 7 857 morceaux dégradés ;
+  écart à l'audio propre par bootstrap apparié par artiste (2 000 tirages).
+- Augmentation : un tirage par morceau (type uniforme, paramètre uniforme dans les mêmes plages,
+  autre graine), ajouté aux ajustements ; choix de C et évaluation sur l'audio propre. **Adoptée
+  seulement si la macro-F1 propre en CV dépasse 0,6855** (0,6835 + 0,002, règle du protocole V2) ;
+  sinon la tête sans augmentation reste le candidat et le CNN n'est pas réentraîné.
+- Calibration par température et seuil de rejet ([config](../configs/calibration_v2.json)) : estimés
+  par ajustement croisé sur les plis, puis fixés sur toutes les prédictions hors pli ; 5 % des
+  morceaux du développement rejetés. Ni test V2 ni hors domaine.
+- Coût estimé : 7 extractions MAEST d'environ 3,8 h (7 processus).
+
 1. Augmentation par bruit, gain et recompression MP3 à l'entraînement des têtes et du CNN.
 2. Robustesse mesurée sur tout le développement, pas sur 64 morceaux :
    SNR 30/20/10 dB, ±6 dB de gain, MP3 64 kb/s.

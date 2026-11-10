@@ -2,6 +2,10 @@
 
   python scripts/cv_v2.py --features dev_vit_block6_hpss
   python scripts/cv_v2.py --features dev_maest --family layer12 --config configs/cv_v2_mlp.json --threads 8
+  python scripts/cv_v2.py --features dev_maest --family layer12 --augment dev_maest_augmentation
+
+--augment (V2 phase 4) adds the aligned augmented windows of the fitting folds to every fit; the
+inner selection and the outer predictions stay on clean windows.
 
 Reads data/features/latest_<features>.json (a --development cache: V1 train, validation and
 test), the pre-registered folds (reports/v2/dev_folds.csv) and a CV config (logistic head by
@@ -63,8 +67,13 @@ def classifier(config, value):
                               class_weight=config["class_weight"])
 
 
-def make_fit(config, labels):
+def make_fit(config, labels, augmented=False):
+    """augmented: columns are [clean | augmented] of the same windows; fit on both, predict from clean."""
     def fit_predict(x_fit, y_fit, x_eval, c):
+        if augmented:
+            half = x_fit.shape[1] // 2
+            x_fit, y_fit = np.vstack([x_fit[:, :half], x_fit[:, half:]]), np.concatenate([y_fit, y_fit])
+            x_eval = x_eval[:, :half]
         pipeline = Pipeline([("scale", StandardScaler()), ("classifier", classifier(config, c))])
         with warnings.catch_warnings(record=True) as captured:
             warnings.simplefilter("always")
@@ -83,6 +92,7 @@ def main():
     parser.add_argument("--family", help="Keep only the columns of this feature family (e.g. layer6)")
     parser.add_argument("--config", default=CONFIG)
     parser.add_argument("--threads", type=int, default=4)
+    parser.add_argument("--augment", metavar="FEATURES", help="Aligned augmented cache added to every fit")
     args = parser.parse_args()
     config = json.loads((ROOT / args.config).read_text(encoding="utf-8"))
     head = config.get("head", "logistic")
@@ -95,6 +105,18 @@ def main():
             raise ValueError(f"No columns in family {args.family}")
         x, system = x[:, columns], f"{args.features}-{args.family}"
     system += "" if head == "logistic" else f"-{head}"
+    dimensions, augment_pointer = x.shape[1], None
+    if args.augment:
+        augment_pointer, augment_report, augment_index, x_augment = load_cache(args.augment)
+        if [(r["track_id"], r["start_seconds"]) for r in augment_index] != [
+                (r["track_id"], r["start_seconds"]) for r in index]:
+            raise ValueError("Augmented cache is not aligned with the clean cache")
+        if args.family:
+            x_augment = x_augment[:, [i for i, f in enumerate(augment_report["feature_families"])
+                                      if f == args.family]]
+        if x_augment.shape != x.shape or not np.isfinite(x_augment).all():
+            raise ValueError("Augmented features do not match the clean features")
+        x, system = np.hstack([x, x_augment]), f"{system}-aug"
     if report["provenance"]["labels"] != labels:
         raise ValueError("Class order changed")
     with (ROOT / config["folds"]).open(encoding="utf-8", newline="") as stream:
@@ -109,7 +131,7 @@ def main():
     tracks = np.array([r["track_id"] for r in index])
     y = np.array([int(r["label_index"]) for r in index])
     folds = np.array([int(folds_by_track[t]["fold"]) for t in tracks])
-    fit_predict = make_fit(config, labels)
+    fit_predict = make_fit(config, labels, augmented=bool(args.augment))
     started = time.perf_counter()
     with threadpool_limits(limits=args.threads):
         oof, records = nested_cv(x, y, folds, tracks, config["c_grid"], fit_predict)
@@ -135,7 +157,9 @@ def main():
         "source_sha256": {p: sha256_file(ROOT / p) for p in (
             "scripts/cv_v2.py", "src/music_genre/evaluation/crossval.py")},
         "folds_sha256": sha256_file(ROOT / config["folds"]), "feature_cache": pointer["folder"],
-        "feature_report_sha256": pointer["report_sha256"], "feature_dimensions": x.shape[1],
+        "feature_report_sha256": pointer["report_sha256"], "feature_dimensions": dimensions,
+        "augment_cache": augment_pointer and augment_pointer["folder"],
+        "augment_report_sha256": augment_pointer and augment_pointer["report_sha256"],
         "windows": len(x), "tracks": len(track_ids),
         "versions": {name: version(name) for name in ("numpy", "scipy", "scikit-learn")},
         "outer_folds": records, "mean_fold_macro_f1": float(np.mean(fold_scores)),

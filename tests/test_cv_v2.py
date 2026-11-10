@@ -34,3 +34,17 @@ def test_mlp_alpha_is_the_regularization_knob():
     fit_predict = cv_v2.make_fit(MLP, ["a", "b", "c"])
     weak, strong = (fit_predict(x, y, x_eval, alpha) for alpha in (0.01, 1000.0))
     assert strong.max() < weak.max()  # heavy weight decay flattens the probabilities
+
+
+LOGISTIC = {"solver": "lbfgs", "max_iter": 2000, "tolerance": 0.0001, "seed": 42, "class_weight": None}
+
+
+def test_augmented_fit_trains_on_clean_and_augmented_rows_and_predicts_from_clean_columns_only():
+    x, y, x_eval, _ = toy()
+    shifted = x + 0.5
+    plain = cv_v2.make_fit(LOGISTIC, ["a", "b", "c"])
+    augmented = cv_v2.make_fit(LOGISTIC, ["a", "b", "c"], augmented=True)
+    expected = plain(np.vstack([x, shifted]), np.concatenate([y, y]), x_eval, 1.0)
+    got = augmented(np.hstack([x, shifted]), y, np.hstack([x_eval, np.full_like(x_eval, 1e6)]), 1.0)
+    np.testing.assert_allclose(got, expected)
+    assert not np.allclose(got, plain(x, y, x_eval, 1.0))

@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "fixed_on": "2026-11-10, before any phase 4 result (user choice: 5 % in-domain rejection)",
+  "rejection_rate_in_domain": 0.05,
+  "ece_bins": 15,
+  "temperature_bounds": [0.05, 20.0]
+}
