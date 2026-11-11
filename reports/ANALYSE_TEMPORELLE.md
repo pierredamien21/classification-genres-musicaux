@@ -70,6 +70,6 @@ Les trois caches, modèles, prédictions enregistrées, sources d’extraction e
 
 La présence d’une fenêtre correcte utilise la vérité terrain : c’est une description a posteriori, pas un sélecteur utilisable à l’inférence ni un gain atteignable démontré. Des désaccords ne prouvent pas un changement réel de genre, un défaut de label ou un problème de prétraitement. Les morceaux d’un artiste ne sont pas indépendants ; aucun intervalle de confiance ni test de significativité n’est revendiqué. La validation reste un jeu de développement. Aucune écoute subjective n’a été réalisée.
 
-[Protocole et interprétation](../docs/ANALYSE_TEMPORELLE.md) · [Rapport numérique et probabilités](TEMPORAL_ANALYSIS.json)
+[Protocole et interprétation](../docs/archive/ANALYSE_TEMPORELLE.md) · [Rapport numérique et probabilités](TEMPORAL_ANALYSIS.json)
 
 Commande : `.venv/Scripts/python.exe scripts/analyze_temporal_validation.py`.

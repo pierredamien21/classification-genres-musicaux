@@ -104,7 +104,7 @@ uv pip install --python .venv-reproduction/Scripts/python.exe -r requirements/no
 Cette reconstruction réseau reste non testée ; les mêmes index et l’architecture
 x86-64 peuvent être nécessaires. Ne pas remplacer un environnement vérifié sans
 les contrôles d’identité. Les caches et poids volumineux sont exclus de Git :
-suivre [les données](REPRODUCTION_REVUE.md), [l’environnement](ENVIRONNEMENT.md),
+suivre [les données](archive/REPRODUCTION_REVUE.md), [l’environnement](archive/ENVIRONNEMENT.md),
 les protocoles d’extraction et le manifeste verrouillé.
 
 ## Dernière étape réalisée

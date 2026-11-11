@@ -71,7 +71,7 @@ La validation a servi à choisir C et à comparer plusieurs systèmes. Les écar
 
 Conserver le ViT seul comme meilleure référence actuelle selon la macro-F1 de validation. Prochain jalon : benchmark du petit CNN prévu au plan, puis entraînement dans le budget CPU si sa faisabilité est confirmée. Le choix final sera verrouillé avant le test.
 
-Voir [le protocole de fusion](../docs/FUSION.md) et [les résultats vérifiables](FUSION_COMPARISON.json).
+Voir [le protocole de fusion](../docs/archive/FUSION.md) et [les résultats vérifiables](FUSION_COMPARISON.json).
 
 - [Descripteurs : rapport d’expérience](../runs/descriptors-20261020T195511254895Z/report.json)
 - [ViT seul : rapport d’expérience](../runs/vit-20261020T201146743988Z/report.json)

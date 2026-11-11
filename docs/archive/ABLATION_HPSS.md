@@ -7,8 +7,8 @@ résultat de développement, légèrement devant le bloc 6 à 0,5780 ; cet écar
 ne constitue pas une preuve de supériorité sur de nouveaux artistes.
 Les F1 de sept genres augmentent contre la référence bloc 12 ; Hip-Hop diminue
 de 0,7343 à 0,6927 et Pop reste faible à 0,1633. Voir le
-[rapport détaillé](../reports/ABLATION_HPSS.md) et la
-[synthèse de toutes les expériences](../reports/SYNTHESE_VALIDATION.md).
+[rapport détaillé](../../reports/ABLATION_HPSS.md) et la
+[synthèse de toutes les expériences](../../reports/SYNTHESE_VALIDATION.md).
 
 ## Protocole fixé avant les résultats
 
@@ -83,9 +83,9 @@ L’exemple est le premier morceau Folk du benchmark fixe, FMA 132041, fenêtre
 10–20 secondes. Les trois panneaux partagent la même échelle dB et sont affichés
 avant redimensionnement ; aucune légende n’est fournie au modèle.
 
-![Canaux HPSS sur un extrait de train](../reports/figures/hpss_channels.png)
+![Canaux HPSS sur un extrait de train](../../reports/figures/hpss_channels.png)
 
-[Figure PDF exportable](../reports/figures/hpss_channels.pdf).
+[Figure PDF exportable](../../reports/figures/hpss_channels.pdf).
 
 ## Reproduction
 

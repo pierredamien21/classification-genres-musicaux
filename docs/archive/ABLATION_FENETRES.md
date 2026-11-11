@@ -46,7 +46,7 @@ correctement le prétraitement requis à l’inférence.
 L’écart observé est de **0,0566** en macro-F1 en faveur des trois fenêtres. La
 référence réussit 86 morceaux manqués par la variante centrale ; celle-ci réussit
 41 morceaux manqués par la référence. Toutes les valeurs de C sont conservées dans
-[le rapport](../reports/ABLATION_FENETRES.md).
+[le rapport](../../reports/ABLATION_FENETRES.md).
 
 Après le résultat principal, un contrôle complémentaire conserve le modèle
 trois fenêtres, y compris son scaler et C, mais l’évalue sur la centrale seule.

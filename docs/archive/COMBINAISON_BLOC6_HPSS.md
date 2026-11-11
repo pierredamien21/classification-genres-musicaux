@@ -8,7 +8,7 @@ L’extraction, l’entraînement et la comparaison sont terminés : 7 079 morce
 21 237 fenêtres, C = 0,1 retenu. Macro-F1 validation **0,5975**, accuracy
 **0,6128** : +0,0131 en macro-F1 face à bloc 12 HPSS et +0,0195 face à bloc 6
 original. Face au premier : 56 corrections et 44 régressions ; certains genres
-régressent. Le test n’a pas été évalué. Voir le [rapport complet](../reports/COMBINAISON_BLOC6_HPSS.md).
+régressent. Le test n’a pas été évalué. Voir le [rapport complet](../../reports/COMBINAISON_BLOC6_HPSS.md).
 
 Extraction : 33,35 minutes à quatre processus dans l’invocation finale, 64
 morceaux repris du pilote ; entraînement : 4,71 s. L’export rechargé reproduit
@@ -100,10 +100,10 @@ poste ; elle ne permet pas d’attribuer tout l’écart à une seule cause.
 
 ## Preuves et suite
 
-- [Rapport détaillé, mesures et empreintes](../reports/VIT_BLOCK6_HPSS_BENCHMARK.json).
-- [Pointeur vérifié](../reports/latest_vit_block6_hpss_benchmark.json).
+- [Rapport détaillé, mesures et empreintes](../../reports/VIT_BLOCK6_HPSS_BENCHMARK.json).
+- [Pointeur vérifié](../../reports/latest_vit_block6_hpss_benchmark.json).
 - [Script du benchmark](../scripts/benchmark_vit_block6_hpss.py).
-- [Tests de la combinaison](../tests/test_hpss_block6.py).
+- [Tests de la combinaison](../../tests/test_hpss_block6.py).
 
 Reproduire depuis la racine, sans lancer d’autres calculs simultanément :
 

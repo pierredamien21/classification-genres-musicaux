@@ -13,7 +13,7 @@ Sur les 780 morceaux de validation, la fusion complète obtient une macro-F1 de
 et sans harmonie (**0,5282**) ne le dépassent pas non plus. L’hypothèse de gain
 n’est pas soutenue dans ce protocole. Les résultats détaillés, y compris les
 essais moins performants, sont conservés dans
-[le rapport comparatif](../reports/COMPARAISON_FUSION.md).
+[le rapport comparatif](../../reports/COMPARAISON_FUSION.md).
 
 ## Construction des vecteurs
 

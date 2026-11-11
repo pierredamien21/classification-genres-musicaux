@@ -8,7 +8,7 @@ soit 57 fenêtres de validation. Aucun entraînement ni changement d’étiquett
 Les MP3 originaux ont été redécodés, puis les fenêtres, log-Mel natifs, embeddings
 des trois ViT et probabilités agrégées ont été recalculés. Les empreintes des
 sources, versions, fichiers audio, caches et modèles sont contrôlées. Les seuils
-étaient fixés dans [la configuration](../configs/audio_diagnostic.json) avant
+étaient fixés dans [la configuration](../../configs/audio_diagnostic.json) avant
 l’exécution : 0,0001 dB, 0,0001 pour les embeddings et 0,00001 pour les probabilités.
 
 | Mesure sur les 57 fenêtres | Résultat |
@@ -54,10 +54,10 @@ musicale n’a été produite. Export des annotations et persistance restent non
 
 ## Preuves et reproduction
 
-- [Rapport par morceau et figures](../reports/DIAGNOSTIC_AUDIO.md).
-- [Mesures, prédictions et empreintes](../reports/AUDIO_DIAGNOSTIC.json).
-- [Pointeur avec empreinte du rapport](../reports/latest_audio_diagnostic.json).
-- [Contrôles unitaires](../tests/test_audio_diagnostic.py) : cinq cas nouveaux ;
+- [Rapport par morceau et figures](../../reports/DIAGNOSTIC_AUDIO.md).
+- [Mesures, prédictions et empreintes](../../reports/AUDIO_DIAGNOSTIC.json).
+- [Pointeur avec empreinte du rapport](../../reports/latest_audio_diagnostic.json).
+- [Contrôles unitaires](../../tests/test_audio_diagnostic.py) : cinq cas nouveaux ;
   suite complète de 99 tests réussie, Ruff réussi.
 
 Depuis la racine du projet, exécuter `.venv/Scripts/python.exe scripts/diagnose_review_audio.py`.

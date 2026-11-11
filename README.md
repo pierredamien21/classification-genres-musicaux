@@ -1,131 +1,77 @@
-# Genres musicaux avec un Vision Transformer
+# Genres musicaux : ViT, modèles audio préentraînés et réplication
 
-Projet de portfolio : analyser le timbre, le rythme et l’harmonie, puis mesurer leur complémentarité avec les représentations d’un Vision Transformer.
+Projet de portfolio. Il classe des extraits de 30 s de la Free Music Archive en 8 genres, puis vérifie sur un test neuf, une seule fois et sous verrou, ce que valaient les conclusions d'une première version.
 
-**Évaluation finale V1 terminée et vérifiée :** ViT bloc 6 + HPSS, sélectionné sur validation, atteint **macro-F1 0,5035 et accuracy 51,16 %** sur 778 morceaux test de 202 artistes. Gain apparié de macro-F1 sur ViT original : **+0,0394**, IC 95 % **[+0,0054 ; +0,0715]**. Validation : 0,5975 ; la baisse sur test reste une limite importante. Les comparaisons secondaires ne montrent pas de gain établi. [Résultats, coûts et preuves](reports/EVALUATION_FINALE.md) · [Fiche du modèle](docs/FICHE_MODELE.md) (instantané figé du 29 octobre, épinglé par les preuves V1 ; la démo locale a été livrée ensuite). Trois notebooks exécutés, démo locale et environnement utilisateur sont disponibles. Suite actuelle : 260 tests réussis le 8 novembre 2026 (271 avant le retrait des tests propres aux scripts V1). Session utilisateur terminée et vérifiée le 7 novembre : CNN, trente époques, meilleure époque 26, macro-F1 validation 0,5707. [Conclusion générale](docs/CONCLUSION_PROJET.md) · [Prendre en main](docs/GUIDE_LIVRAISON.md). Réinstallation réseau sur une autre machine non testée.
+## Résultats (test V2 : 501 morceaux, un par artiste, artistes absents de FMA-small)
 
-**Versionnage et suite :** dépôt Git local depuis le 8 novembre 2026 ; l’étiquette `v1-final` fige la V1 livrée. [Critique du projet](docs/CRITIQUE_PROJET.md) · [Plan V2](docs/PLAN_V2.md), prévu, non lancé.
+| Système | Macro-F1 [IC 95 %] |
+|---|---:|
+| **MAEST bloc 12 gelé + sonde logistique (V2)** | **0,572** [0,534 ; 0,615] |
+| ViT d'images bloc 6 + HPSS (candidat V1) | 0,481 [0,442 ; 0,525] |
+| ViT d'images original | 0,453 [0,418 ; 0,496] |
+| CNN renforcé, 3 graines | 0,444–0,462 |
 
-**Pour reprendre rapidement :** lire [l’index des résumés](docs/resumes/INDEX.md), puis seulement la partie concernée. Chaque étape dispose d’un résumé mis à jour ; la règle est conservée dans [AGENTS.md](AGENTS.md).
+- **H1, réplication de la V1** : +0,028 [−0,007 ; +0,064]. Non concluante : même sens qu'en V1, mais l'intervalle contient 0.
+- **H2 et H3** : MAEST bat le candidat V1 (+0,091) et le CNN (+0,117), p Holm = 0,0003.
+- **Résultats défavorables, rapportés tels quels** :
+  - le score baisse de 11 points entre le développement et le test ;
+  - la calibration ne se transfère pas ;
+  - le rejet des genres inconnus est inefficace.
 
-## Documents de départ
+## Documents
 
-- [Architecture et responsabilités](docs/ARCHITECTURE.md)
-- [Brainstorming : risques, oublis et priorités](docs/BRAINSTORMING.md)
-- [Plan scientifique](docs/PLAN_PROJET.md)
-- [Décisions et pistes à examiner selon les résultats](docs/DECISIONS_EXPERIMENTALES.md)
-- [Revue bibliographique](docs/REVUE_BIBLIOGRAPHIQUE.md)
-- [Contrats des données et des résultats](docs/CONTRATS.md)
-- [Environnement, GPU et benchmark reproductible](docs/ENVIRONNEMENT.md)
-- [Rapport d’audit des données](reports/AUDIT_DONNEES.md)
-- [Revue des anomalies et sélection initiale](reports/REVUE_DONNEES.md)
-- [Reproduire les empreintes et le manifeste](docs/REPRODUCTION_REVUE.md)
-- [Comprendre et reproduire les descripteurs musicaux](docs/DESCRIPTEURS_MUSICAUX.md)
-- [Résultats de la première référence](reports/BASELINE_DESCRIPTEURS.md)
-- [Protocole du ViT gelé](docs/VIT_GELE.md)
-- [Comparaison ViT et descripteurs](reports/COMPARAISON_VIT.md)
-- [Fusion : protocole et reproduction](docs/FUSION.md)
-- [Résultats de la fusion et de ses ablations](reports/COMPARAISON_FUSION.md)
-- [CNN : protocole, cache et reprise](docs/CNN.md)
-- [Résultats et comparaison du CNN](reports/BASELINE_CNN.md)
-- [Ablation des fenêtres : protocole](docs/ABLATION_FENETRES.md)
-- [Résultats : une fenêtre contre trois](reports/ABLATION_FENETRES.md)
-- [Bloc 6 contre bloc 12 : protocole](docs/ABLATION_BLOCS.md)
-- [Résultats de l’ablation de profondeur](reports/ABLATION_BLOCS.md)
-- [HPSS : protocole, analyse des entrées et figure](docs/ABLATION_HPSS.md)
-- [Résultats de l’ablation des canaux](reports/ABLATION_HPSS.md)
-- [Synthèse de toutes les expériences de validation](reports/SYNTHESE_VALIDATION.md)
-- [Protocole des trois graines CNN](docs/REPETITIONS_CNN.md)
-- [Résultats des trois graines CNN et courbes](reports/REPETITIONS_CNN.md)
-- [Extension CNN : comparaison des plafonds dix et vingt](reports/EXTENSION_CNN.md)
-- [Erreurs Pop/Hip-Hop et fiches d’écoute](reports/ERREURS_VALIDATION.md)
-- [Utiliser la revue d’écoute et connaître ses limites](docs/ERREURS_VALIDATION.md)
-- [Diagnostic audio : résultats, limites et reproduction](docs/DIAGNOSTIC_AUDIO.md)
-- [Désaccords temporels : résultats sur les 780 morceaux](docs/ANALYSE_TEMPORELLE.md)
-- [Combinaison bloc 6 + HPSS : protocole et faisabilité](docs/COMBINAISON_BLOC6_HPSS.md)
-- [Corrections et régressions de bloc 6 + HPSS](reports/REGRESSIONS_BLOC6_HPSS.md)
-- [Protocole final préparé et conditions de verrouillage](docs/PROTOCOLE_EVALUATION_FINALE.md)
-- [Tâches de robustesse et d’évaluation finale](tasks/todo.md)
-- [Inférence audio du candidat : utilisation et vérification](docs/INFERENCE_CANDIDAT.md)
-- [Sensibilité au volume et au bruit : résultats et décision](docs/ROBUSTESSE_CANDIDAT.md)
-- [Diagnostic des représentations sous bruit](reports/DIAGNOSTIC_BRUIT.md)
+| Document | Contenu |
+|---|---|
+| [Rapport V2](docs/RAPPORT_V2.md) | Question, protocole, résultats, conclusions |
+| [Fiche des données](docs/FICHE_DONNEES.md) | Cohortes, audit, licences, écarts connus |
+| [Fiche du modèle V2](docs/FICHE_MODELE_V2.md) | Fonctionnement, performances, usages, limites |
+| [Interprétation](docs/INTERPRETATION_V2.md) | Écarts, analyse par artiste et par genre, écoute |
+| [Architecture](docs/ARCHITECTURE.md) | Modules, traçabilité, verrous |
+| [Reproduction](docs/REPRODUCTION.md) | Installation vérifiée, données, poids, chaîne de commandes |
+| [Contrôle final](docs/CONTROLE_FINAL.md) | Chaque critique : corrigée, mesurée ou limite assumée |
+| [Index des résumés](docs/resumes/INDEX.md) | État condensé de chaque étape, pour reprendre le travail |
+
+Le protocole préenregistré est dans [PROTOCOLE_V2.md](docs/PROTOCOLE_V2.md), et le déroulé dans [PLAN_V2.md](docs/PLAN_V2.md).
+
+**Historique V1** :
+- l'étiquette Git `v1-final` ;
+- les documents de [docs/archive/](docs/archive/) ;
+- quelques documents laissés en place parce que des preuves V1 les épinglent : [fiche du modèle V1](docs/FICHE_MODELE.md), [conclusion V1](docs/CONCLUSION_PROJET.md), [guide de livraison V1](docs/GUIDE_LIVRAISON.md), [décisions](docs/DECISIONS_EXPERIMENTALES.md), [revue bibliographique](docs/REVUE_BIBLIOGRAPHIQUE.md) ;
+- les rapports V1 : [évaluation finale V1](reports/EVALUATION_FINALE.md).
+
+## Démarrage rapide
+
+Installation : voir [REPRODUCTION.md](docs/REPRODUCTION.md). Ensuite :
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q                      # 309 tests sur le poste complet
+.\.venv\Scripts\python.exe -m music_genre doctor --root .    # diagnostic, sans ML
+.\.venv\Scripts\python.exe -m music_genre predict morceau.mp3 --root .   # exports V1 locaux requis
+```
+
+La démo Gradio (`app/`) et les notebooks (`notebooks/`) datent de la V1. Ils ont leurs propres fichiers `requirements/`.
 
 ## Organisation
 
 ```text
-configs/                  Configuration de référence et ordre des classes
-src/music_genre/
-  data/                   Métadonnées FMA, manifeste, audit, partitions
-  audio/                  Décodage, mono, rééchantillonnage, segmentation
-  features/               Log-Mel, descripteurs musicaux, embeddings, fusion
-  models/                 Références, CNN et adaptateurs de Transformers
-  training/               Ajustement, sélection sur validation, reprise
-  evaluation/             Métriques par morceau, incertitude, robustesse
-  inference/              Prédiction commune (Predictor) : démo, CLI et scripts
-  cli.py                  Ligne de commande : doctor (sans ML) et predict
-app/                      Interface Gradio locale vérifiée
-notebooks/                Analyse et fiches d’expériences pédagogiques
-tests/                    Tests unitaires et contrats (260 réussis au 8 novembre, après la phase 1)
-data/                     Données locales et caches, exclus de Git
-artifacts/                Poids téléchargés, checkpoints, exports
-runs/                     Configuration et résultats de chaque expérience
-reports/                  Synthèses, figures et tableaux de comparaison
-docs/                     Bibliographie, plan, architecture et décisions
-docs/resumes/             État condensé et résumé de chaque partie
-scripts/                  Données, extraction, entraînement, preuve d’équivalence V1
+src/music_genre/   audio, données, caractéristiques, modèles, entraînement, évaluation, inférence
+scripts/           chaîne V2 (extraction, CV, robustesse, évaluation unique, recomptage) et outils V1
+configs/           une configuration par représentation et par étape ; protocole V2
+reports/           rapports versionnés ; reports/v2/ porte les verrous et les preuves V2
+docs/              documents ci-dessus ; docs/archive/ : historique V1
+tests/             tests unitaires et de contrats
+data/ runs/ artifacts/pretrained/   locaux, jamais versionnés (audio, caches, poids)
 ```
 
-**Scripts courants.** Données : `acquire_fma`, `check_fma_inventory`, `audit_fma`, `summarize_audit`, `recheck_audit_failures`, `fetch_chromaprint`, `scan_fingerprints`, `validate_fingerprints`, `summarize_review`, `build_baseline_manifest`. Représentations : `fetch_vit`, `extract_features` (toute variante ViT ou descripteurs, `--config`), `extract_cnn_logmel`, `build_fusion_features`. Apprentissage : `train_descriptor_baseline` (classifieurs linéaires), `train_cnn` (`--config`, `--seed`, `--smoke`), `user_session`. Contrôles : `benchmark_cnn`, `benchmark_pipeline`, `check_demo_delivery`, `verify_v1_equivalence`.
+## Licences et publication
 
-**Scripts propres à la V1** (comparaisons, contrôles T1–T7, évaluation verrouillée, prolongation CNN) : retirés de `main` le 8 novembre 2026, intacts dans l’étiquette `v1-final`. Pour les rejouer : `git worktree add ..\v1 v1-final`, puis copier ou lier `data/`, `runs/` et `artifacts/pretrained/` dans ce dossier. `reports/V1_EQUIVALENCE.json` prouve que le code actuel reproduit les 9 exports V1 sur les 780 morceaux de validation.
+- **Audio FMA** : licences propres à chaque morceau, à 82–87 % non commerciales. Il n'est jamais versionné.
+- **Poids** :
+  - MAEST : CC-BY-NC-SA-4.0, non commercial ;
+  - AST : BSD-3-Clause ;
+  - PANNs : CC-BY-4.0 ;
+  - ViT tiny : Apache-2.0.
+  Aucun n'est versionné.
+- **Code** : aucune licence n'a encore été choisie ; c'est à l'auteur de le faire avant publication.
 
-Prédiction en ligne de commande :
-
-```powershell
-.\.venv\Scripts\python.exe -m music_genre predict morceau.mp3 --root .
-```
-
-## Diagnostic sans dépendances ML
-
-Depuis la racine du projet, dans PowerShell, avec un interpréteur Python fonctionnel :
-
-```powershell
-$env:PYTHONPATH = (Resolve-Path .\src).Path
-python -m music_genre doctor --root .
-```
-
-Le diagnostic affiche l’interpréteur, l’architecture du processus, les versions des dépendances présentes et l’espace disque. Il ne charge pas PyTorch, ne télécharge rien et ne certifie pas la compatibilité d’un GPU.
-
-Sur le poste actuel, le 20 octobre 2026, l’alias Windows `python` échoue. Le socle a été vérifié avec :
-
-```powershell
-$env:PYTHONPATH = (Resolve-Path .\src).Path
-& "$env:LOCALAPPDATA\Python\bin\python3.13.exe" -m music_genre doctor --root .
-```
-
-Ce Python s’exécute en x86-64 sur un système ARM64. L’environnement `.venv` a maintenant été testé avec les bibliothèques audio/ML. Le GPU Qualcomm Adreno X1-45 est présent ; son utilisation par le projet n’est pas encore validée et il ne prend pas en charge CUDA.
-
-## Installation du socle
-
-Après sélection de l’interpréteur, créer un environnement local :
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e .
-.\.venv\Scripts\python.exe -m music_genre doctor --root .
-git config core.hooksPath .githooks   # Ruff + tests avant chaque commit
-```
-
-Le package de base ne dépend que de la bibliothèque standard. Les groupes `audio`, `ml`, `dev` et `benchmark` sont installés et vérifiés sur ce poste. Matplotlib est également validé pour les figures ; Jupyter et Gradio sont également vérifiés localement dans les environnements décrits par [le guide de livraison](docs/GUIDE_LIVRAISON.md). Pour reproduire les versions CPU utilisées, suivre [la procédure détaillée](docs/ENVIRONNEMENT.md), fondée sur le relevé des dépendances installées.
-
-## Principes
-
-- FMA-small, huit classes d’origine, résultat principal par morceau.
-- Même découpage pour tous les modèles comparés.
-- Normalisations apprises sur train uniquement ; sélection sur validation.
-- Test réservé aux expériences finalisées.
-- Poids, données et sorties volumineuses hors du dépôt.
-- Une fonction de prédiction (`Predictor`) partagée par la démo, la CLI (`predict`) et les scripts.
-- Les gains supposés dans le plan sont des hypothèses, pas des résultats.
-
-**Bilan local terminé le 7 novembre :** [résultats de la session utilisateur](reports/SESSION_UTILISATEUR.md) et [conclusion](docs/CONCLUSION_PROJET.md). Aucun entraînement à relancer. La V1 reste figée ; cette expérience postérieure au test apporte un résultat de validation, sans nouvelle évaluation indépendante. Publication publique, vidéo et écoute annotée non réalisées.
+Environnement de référence : Python 3.13 x86-64, émulé sur Windows ARM64, CPU seul.

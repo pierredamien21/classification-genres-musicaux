@@ -42,7 +42,7 @@ dossier daté. Le constructeur contrôle les empreintes avant de produire :
 - `report.json` : politique, effectifs, versions de sources et provenance.
 
 La synthèse ajoute `pending_review.csv` et `fingerprint_candidates.csv` et produit
-[`reports/REVUE_DONNEES.md`](../reports/REVUE_DONNEES.md).
+[`reports/REVUE_DONNEES.md`](../../reports/REVUE_DONNEES.md).
 Les décisions sont `keep`, `hold` ou `exclude`. `hold` est une quarantaine réversible.
 `exclude` peut désigner une répétition redondante, pas uniquement un fichier défectueux.
 La paire 057371 / 072149 est isolée pour conflit de genres sur un signal exact.

@@ -40,7 +40,7 @@ Le vérificateur secondaire recalcule les moyennes des fenêtres, les écarts au
 .\.venv\Scripts\python.exe scripts/verify_comparator_inference.py
 ```
 
-[Résultats et provenance](COMPARATOR_INFERENCE_CHECK.json) · [Recalcul](COMPARATOR_INFERENCE_RECOUNT.json) · [API et limites](../docs/INFERENCE_COMPARATEURS.md)
+[Résultats et provenance](COMPARATOR_INFERENCE_CHECK.json) · [Recalcul](COMPARATOR_INFERENCE_RECOUNT.json) · [API et limites](../docs/archive/INFERENCE_COMPARATEURS.md)
 
 ## Suite
 

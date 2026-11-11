@@ -56,7 +56,7 @@ Les scores restent des résultats de développement sur FMA-small filtré. La va
 
 ## Preuves et suite
 
-Voir [le protocole de l’ablation](../docs/ABLATION_FENETRES.md).
+Voir [le protocole de l’ablation](../docs/archive/ABLATION_FENETRES.md).
 
 - [Rapport trois fenêtres](../runs/vit-20261020T201146743988Z/report.json)
 - [Rapport centrale](../runs/vit_central-20261021T061356952398Z/report.json)

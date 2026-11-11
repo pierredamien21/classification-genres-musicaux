@@ -1,7 +1,7 @@
 # Inférence des trois références CNN
 
 État au 29 octobre 2026 : T5 vérifiée, 207 tests réussis.
-[Résultats et preuves](../reports/INFERENCE_CNN.md).
+[Résultats et preuves](../../reports/INFERENCE_CNN.md).
 
 `CnnPredictor` charge un export sélectionné de `SmallAudioCNN`, sans entraînement
 et sans sélection supplémentaire. Graines autorisées : 42, 43 et 44. Les époques
@@ -20,7 +20,7 @@ result = predictor.predict_file(root / "data/interim/mon_extrait.wav", mode="fma
 print(result["top3"])
 ```
 
-Le contrat audio et la sortie sont ceux de [l’API du candidat](INFERENCE_CANDIDAT.md) :
+Le contrat audio et la sortie sont ceux de [l’API du candidat](../INFERENCE_CANDIDAT.md) :
 fichier borné avant décodage, refus du silence, fenêtres FMA 0/10/20 secondes,
 complément à droite, omission des positions hors signal, scores par fenêtre et
 moyenne par morceau. L’API ne reçoit aucune étiquette ni identité d’artiste.

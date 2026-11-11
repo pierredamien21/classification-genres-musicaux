@@ -1,7 +1,7 @@
 # CNN : prolongation contrôlée jusqu’à vingt époques
 
 Protocole fixé le 21 octobre 2026 avant les nouvelles époques. Résultats initiaux :
-[trois graines à dix époques](../reports/REPETITIONS_CNN.md).
+[trois graines à dix époques](../../reports/REPETITIONS_CNN.md).
 
 ## Question et comparaison
 
@@ -64,7 +64,7 @@ Les temps `additional_training_validation_seconds` et
 et son checkpoint de départ ; après plusieurs reprises, le temps total se lit
 dans `training_validation_seconds`.
 
-Les trois prolongations sont terminées et leur [synthèse vérifiée](../reports/EXTENSION_CNN.md)
+Les trois prolongations sont terminées et leur [synthèse vérifiée](../../reports/EXTENSION_CNN.md)
 est publiée : macro-F1 moyenne 0,5407 ± 0,0105, gain moyen +0,0054 porté par la
 seule graine 42. Arrêts anticipés aux époques 18/13/11, époques retenues 15/10/8.
 Le jeu de test reste réservé à la version finalisée.

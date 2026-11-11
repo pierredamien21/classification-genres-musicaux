@@ -72,7 +72,7 @@ Le choix de C utilise la validation : ces scores servent au développement et ne
 
 ## Reproduction et preuves
 
-Voir [le protocole ViT](../docs/VIT_GELE.md).
+Voir [le protocole ViT](../docs/archive/VIT_GELE.md).
 
 - [Rapport descripteurs](../runs/descriptors-20261020T195511254895Z/report.json)
 - [Rapport ViT](../runs/vit-20261020T201146743988Z/report.json)

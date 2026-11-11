@@ -38,6 +38,6 @@ Les fichiers test sont seulement hachés, sans décodage ni prédiction. La frag
 
 Le premier lancement via `Start-Process` a disparu sans sortie. La session persistante 21880 a terminé avec succès le chronométrage puis la relecture des empreintes. La cause exacte de l’arrêt initial n’est pas établie. Références : `FINAL_LOCK_JOB.json` et `FINAL_LOCK_PROGRESS.json`.
 
-[Procédure détaillée](../docs/VERROUILLAGE_EVALUATION.md).
+[Procédure détaillée](../docs/archive/VERROUILLAGE_EVALUATION.md).
 
 Empreinte du manifeste validé : `80eccf469a80dff691a02aaca20443eb7bbc6d952ab6516aca7e7a5c4ae446ec`. [Pointeur vérifié](latest_final_evaluation_lock.json).

@@ -77,7 +77,7 @@ La validation a servi au choix de C et aux comparaisons ; aucun gain statistique
 
 ## Reproduction et preuves
 
-Voir [le protocole et sa source HPSS](../docs/ABLATION_HPSS.md).
+Voir [le protocole et sa source HPSS](../docs/archive/ABLATION_HPSS.md).
 
 - [Rapport original](../runs/vit-20261020T201146743988Z/report.json)
 - [Rapport HPSS](../runs/vit_hpss-20261021T115423153046Z/report.json)

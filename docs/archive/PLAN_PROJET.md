@@ -1,18 +1,18 @@
 # Plan révisé — classification musicale informée par l’analyse audio
 
-**État final au 7 novembre 2026 :** campagne V1, notebooks, démo locale et session autonome vérifiés ; bilan général rédigé. CNN utilisateur : 0,5707 de macro-F1 validation, époque 26 sur 30. Voir [la conclusion](CONCLUSION_PROJET.md). Les paragraphes datés ci-dessous conservent les étapes historiques ; réinstallation réseau, publication publique, vidéo et écoute annotée non réalisées.
+**État final au 7 novembre 2026 :** campagne V1, notebooks, démo locale et session autonome vérifiés ; bilan général rédigé. CNN utilisateur : 0,5707 de macro-F1 validation, époque 26 sur 30. Voir [la conclusion](../CONCLUSION_PROJET.md). Les paragraphes datés ci-dessous conservent les étapes historiques ; réinstallation réseau, publication publique, vidéo et écoute annotée non réalisées.
 
-Version 2 — 19 octobre 2026. Ce document remplace le premier plan sur les choix qu’il révise. Base scientifique : [revue bibliographique](REVUE_BIBLIOGRAPHIQUE.md).
+Version 2 — 19 octobre 2026. Ce document remplace le premier plan sur les choix qu’il révise. Base scientifique : [revue bibliographique](../REVUE_BIBLIOGRAPHIQUE.md).
 
-Avancement au 29 octobre 2026 : références descripteurs/ViT/CNN, fusion, ablations et combinaison bloc 6 + HPSS réalisées. Voir [l’index des résumés](resumes/INDEX.md) et la [synthèse vérifiée](../reports/SYNTHESE_VALIDATION.md). Le candidat principal est **bloc 6 + HPSS : macro-F1 0,5975, accuracy 0,6128** sur validation, devant bloc 12 HPSS (0,5844) et bloc 6 original (0,5780). CNN plafond vingt : 0,5407 ± 0,0105 sur trois graines. La fusion initiale n’apporte pas de gain sur validation.
+Avancement au 29 octobre 2026 : références descripteurs/ViT/CNN, fusion, ablations et combinaison bloc 6 + HPSS réalisées. Voir [l’index des résumés](../resumes/INDEX.md) et la [synthèse vérifiée](../../reports/SYNTHESE_VALIDATION.md). Le candidat principal est **bloc 6 + HPSS : macro-F1 0,5975, accuracy 0,6128** sur validation, devant bloc 12 HPSS (0,5844) et bloc 6 original (0,5780). CNN plafond vingt : 0,5407 ± 0,0105 sur trois graines. La fusion initiale n’apporte pas de gain sur validation.
 
-La [revue des régressions](../reports/REGRESSIONS_BLOC6_HPSS.md) confirme 56 corrections et 44 régressions face à bloc 12 HPSS. Pop reste faible (13/94 corrects), Instrumental recule. Le [diagnostic ciblé](DIAGNOSTIC_AUDIO.md) et l’[analyse temporelle](ANALYSE_TEMPORELLE.md) portent sur les trois ViT antérieurs ; ils ne sont pas une nouvelle analyse temporelle de la combinaison. Les [19 fiches d’écoute](ERREURS_VALIDATION.md) restent sans observations subjectives.
+La [revue des régressions](../../reports/REGRESSIONS_BLOC6_HPSS.md) confirme 56 corrections et 44 régressions face à bloc 12 HPSS. Pop reste faible (13/94 corrects), Instrumental recule. Le [diagnostic ciblé](DIAGNOSTIC_AUDIO.md) et l’[analyse temporelle](ANALYSE_TEMPORELLE.md) portent sur les trois ViT antérieurs ; ils ne sont pas une nouvelle analyse temporelle de la combinaison. Les [19 fiches d’écoute](ERREURS_VALIDATION.md) restent sans observations subjectives.
 
-Le jalon 9, l’évaluation finale V1, est terminé et vérifié. T1–T6 sont vérifiées : inférence des neuf exports, sensibilité au bruit examinée, bootstrap par artiste contrôlé et [manifeste final verrouillé](../reports/VERROUILLAGE_FINAL.md). Le candidat HPSS est conservé avec sa fragilité au bruit explicitement acceptée ; aucun gagnant global en robustesse n’a été établi. Aucun nouvel entraînement ni extension spécialisée n’est lancé.
+Le jalon 9, l’évaluation finale V1, est terminé et vérifié. T1–T6 sont vérifiées : inférence des neuf exports, sensibilité au bruit examinée, bootstrap par artiste contrôlé et [manifeste final verrouillé](../../reports/VERROUILLAGE_FINAL.md). Le candidat HPSS est conservé avec sa fragilité au bruit explicitement acceptée ; aucun gagnant global en robustesse n’a été établi. Aucun nouvel entraînement ni extension spécialisée n’est lancé.
 
-T7 terminée : neuf modèles sur 778 morceaux test, 7 002 prédictions contrôlées et 2 000 tirages vérifiés. Candidat : macro-F1 0,5035, accuracy 51,16 % ; gain principal apparié +0,0394, IC [+0,0054 ; +0,0715]. Durée réelle d’inférence 51 min 50 s. [Bilan complet](../reports/EVALUATION_FINALE.md), [fiche modèle](FICHE_MODELE.md). Livraison vérifiée au 6 novembre : trois notebooks exécutés, démo locale, environnements isolés et trame orale portfolio. Restent la session complète utilisateur et son bilan ; réinstallation réseau sur une autre machine, vidéo et écoute annotée non réalisées. [Guide de livraison](GUIDE_LIVRAISON.md). La session utilisateur doit précéder la conclusion générale. [Registre des décisions](DECISIONS_EXPERIMENTALES.md).
+T7 terminée : neuf modèles sur 778 morceaux test, 7 002 prédictions contrôlées et 2 000 tirages vérifiés. Candidat : macro-F1 0,5035, accuracy 51,16 % ; gain principal apparié +0,0394, IC [+0,0054 ; +0,0715]. Durée réelle d’inférence 51 min 50 s. [Bilan complet](../../reports/EVALUATION_FINALE.md), [fiche modèle](../FICHE_MODELE.md). Livraison vérifiée au 6 novembre : trois notebooks exécutés, démo locale, environnements isolés et trame orale portfolio. Restent la session complète utilisateur et son bilan ; réinstallation réseau sur une autre machine, vidéo et écoute annotée non réalisées. [Guide de livraison](../GUIDE_LIVRAISON.md). La session utilisateur doit précéder la conclusion générale. [Registre des décisions](../DECISIONS_EXPERIMENTALES.md).
 
-FMA-small et ses métadonnées sont désormais téléchargés, vérifiés et extraits. Consulter [l’index de reprise](resumes/INDEX.md) et le [résumé des données](resumes/04_DONNEES.md) pour les preuves et les prochaines actions.
+FMA-small et ses métadonnées sont désormais téléchargés, vérifiés et extraits. Consulter [l’index de reprise](../resumes/INDEX.md) et le [résumé des données](../resumes/04_DONNEES.md) pour les preuves et les prochaines actions.
 
 ## Objectif
 
@@ -29,7 +29,7 @@ de deux extractions d’ablation est consommé ; il n’interdit pas une extensi
 justifiée. Avant une nouvelle expérience, documenter l’observation qui la motive,
 l’hypothèse, la comparaison contrôlée, le coût estimé et le critère de décision.
 Conserver aussi les résultats négatifs et l’historique des choix.
-Le [registre des décisions et pistes](DECISIONS_EXPERIMENTALES.md) relie les
+Le [registre des décisions et pistes](../DECISIONS_EXPERIMENTALES.md) relie les
 observations aux expériences envisageables, sans les présenter comme réalisées.
 
 L’extension CNN à vingt époques, motivée par les époques initiales 9/10/8, est
@@ -103,7 +103,7 @@ Macro-F1 par morceau comme critère principal ; accuracy, F1 par genre, confusio
 
 Tests : intégrité des partitions, normalisations limitées à train, gestion stéréo/fréquences variables/courts extraits/silence/fichiers corrompus, sauvegarde–rechargement, ordre des classes et cohérence entre commande et interface.
 
-Démo Gradio locale (à réaliser ; suivre la [fiche modèle](FICHE_MODELE.md)) : WAV/MP3, maximum 50 Mo et 5 minutes ; trois fenêtres début/milieu/fin pour les longs morceaux, positions affichées. Montrer audio, spectrogramme, top-3 des huit classes, durée de calcul et version. Une fonction commune fournit aussi un JSON. Aucun score affiché comme certitude ; aucune prétention à reconnaître les genres hors vocabulaire. Supprimer les fichiers temporaires après traitement.
+Démo Gradio locale (à réaliser ; suivre la [fiche modèle](../FICHE_MODELE.md)) : WAV/MP3, maximum 50 Mo et 5 minutes ; trois fenêtres début/milieu/fin pour les longs morceaux, positions affichées. Montrer audio, spectrogramme, top-3 des huit classes, durée de calcul et version. Une fonction commune fournit aussi un JSON. Aucun score affiché comme certitude ; aucune prétention à reconnaître les genres hors vocabulaire. Supprimer les fichiers temporaires après traitement.
 
 La livraison finale comporte les commandes de reproduction, configurations, manifeste, résultats, limites, références et une vidéo de 2–3 minutes. L’hébergement public reste distinct du fonctionnement local et dépendra du budget retenu.
 
@@ -120,4 +120,4 @@ entraînement par époques ; son affinage serait une expérience différente.
 et mettre à jour le notebook avant la conclusion générale. Si le test V1 a déjà
 été consulté, conserver cette extension comme développement complémentaire, sans
 revendiquer une nouvelle évaluation indépendante sur ce même test.
-Voir [le déroulement et les sorties prévues](SESSION_ENTRAINEMENT_UTILISATEUR.md).
+Voir [le déroulement et les sorties prévues](../SESSION_ENTRAINEMENT_UTILISATEUR.md).

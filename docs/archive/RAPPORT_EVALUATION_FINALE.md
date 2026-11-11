@@ -71,7 +71,7 @@ Cinq tests spécifiques vérifient notamment le majoritaire train, la moyenne
 des métriques CNN plutôt qu’un ensemble, une différence connue et le refus
 de cohortes ou protocoles incompatibles. Suite complète : 257 tests réussis.
 Les résultats de l’essai réel sont consignés dans
-[le résumé de partie](resumes/36_RAPPORT_STATISTIQUE.md).
+[le résumé de partie](../resumes/36_RAPPORT_STATISTIQUE.md).
 
 Les intervalles sont conditionnels aux modèles fixés, sans rééchantillonnage
 de l’apprentissage ni des graines, et sans correction pour tests simultanés.
@@ -93,4 +93,4 @@ l’empreinte du rapport brut. Celui-ci conserve son état historique `pending`
 à la génération : ne pas le réécrire après contrôle. 7 002 prédictions et
 2 000 tirages vérifiés, 44 000 métriques identiques. Le pointeur
 `reports/latest_final_test_report.json` relie les artefacts vérifiés.
-[Interprétation finale](../reports/EVALUATION_FINALE.md).
+[Interprétation finale](../../reports/EVALUATION_FINALE.md).

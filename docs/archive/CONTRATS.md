@@ -2,7 +2,7 @@
 
 Ces contrats guident l’implémentation progressive. Au 28 octobre 2026, les fonctions
 audio, manifestes, caches, exports et comparaisons de validation descripteurs/ViT/CNN/fusion
-existent. L’[inférence du candidat](INFERENCE_CANDIDAT.md) depuis un fichier audio
+existent. L’[inférence du candidat](../INFERENCE_CANDIDAT.md) depuis un fichier audio
 est implémentée et vérifiée sur 64 morceaux ; les autres adaptateurs, l’évaluation
 test et la démo restent à produire. Le [protocole final préparé](PROTOCOLE_EVALUATION_FINALE.md)
 précise les contrôles préalables et le futur verrouillage ; il n’est pas encore exécuté.

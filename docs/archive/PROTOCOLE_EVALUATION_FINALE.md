@@ -1,12 +1,12 @@
 # Préparation de l’évaluation finale — version 1
 
-Préparation : 28 octobre 2026 ; suivi mis à jour le 29 octobre. **Protocole final verrouillé ; campagne test et contrôles indépendants terminés.** [Résultats V1](../reports/EVALUATION_FINALE.md).
+Préparation : 28 octobre 2026 ; suivi mis à jour le 29 octobre. **Protocole final verrouillé ; campagne test et contrôles indépendants terminés.** [Résultats V1](../../reports/EVALUATION_FINALE.md).
 Avancement : T1 est vérifiée depuis cette préparation, sur 64 morceaux et
-192 fenêtres (écart maximal 5,18 × 10⁻⁷). Voir [l’inférence](INFERENCE_CANDIDAT.md).
+192 fenêtres (écart maximal 5,18 × 10⁻⁷). Voir [l’inférence](../INFERENCE_CANDIDAT.md).
 T2 est également exécutée : le bruit provoque une perte de macro-F1 de 0,1831
-et 26/64 changements, dépassant les deux seuils de revue. T2a/T2b sont terminées : l’original perd moins de F1 mais change plus de classes. Aucun gagnant global ; HPSS conservé avec sensibilité acceptée comme limite. T3 est vérifiée sur validation ; T4 reproduit les six systèmes linéaires. T5 est vérifiée depuis le 29 octobre : les trois CNN reproduisent le panel et la validation complète. T6 est terminée : 7 985 artefacts vérifiés, manifeste publié et coût mesuré sur train. T7 a vérifié son évaluateur sur les 780 morceaux de validation, avec recomptage indépendant ; la campagne test et son contrôle indépendant sont terminés. Voir [le bilan](resumes/37_EVALUATION_FINALE.md). Voir [le verrouillage](VERROUILLAGE_EVALUATION.md) et [son rapport](../reports/VERROUILLAGE_FINAL.md).
-Voir le [diagnostic](../reports/DIAGNOSTIC_BRUIT.md).
-Le [bootstrap](../reports/INCERTITUDE_VALIDATION.md) est implémenté et vérifié : 2 000 tirages sur 219 artistes, 261 tests réussis dans la suite actuelle et recalcul indépendant exact. Les résultats restent conditionnels aux modèles sélectionnés sur cette validation.
+et 26/64 changements, dépassant les deux seuils de revue. T2a/T2b sont terminées : l’original perd moins de F1 mais change plus de classes. Aucun gagnant global ; HPSS conservé avec sensibilité acceptée comme limite. T3 est vérifiée sur validation ; T4 reproduit les six systèmes linéaires. T5 est vérifiée depuis le 29 octobre : les trois CNN reproduisent le panel et la validation complète. T6 est terminée : 7 985 artefacts vérifiés, manifeste publié et coût mesuré sur train. T7 a vérifié son évaluateur sur les 780 morceaux de validation, avec recomptage indépendant ; la campagne test et son contrôle indépendant sont terminés. Voir [le bilan](../resumes/37_EVALUATION_FINALE.md). Voir [le verrouillage](VERROUILLAGE_EVALUATION.md) et [son rapport](../../reports/VERROUILLAGE_FINAL.md).
+Voir le [diagnostic](../../reports/DIAGNOSTIC_BRUIT.md).
+Le [bootstrap](../../reports/INCERTITUDE_VALIDATION.md) est implémenté et vérifié : 2 000 tirages sur 219 artistes, 261 tests réussis dans la suite actuelle et recalcul indépendant exact. Les résultats restent conditionnels aux modèles sélectionnés sur cette validation.
 Les paramètres machine sont dans `configs/final_evaluation_protocol.json`.
 Cette étape formalise la décision de la partie 22. Elle n’annonce ni une
 robustesse acquise, ni une estimation finale des performances.
@@ -181,6 +181,6 @@ comparaisons appariées, coût, provenance et limites, y compris résultats nég
 La revue subjective des 19 fiches reste non réalisée ; ce complément sera signalé
 comme manquant s’il n’est pas disponible, sans fabriquer d’observation d’écoute.
 
-Ordre d’implémentation et critères vérifiables : [plan](../tasks/plan.md) et
-[tâches](../tasks/todo.md). Les scripts mentionnés dans les tâches comme futurs
+Ordre d’implémentation et critères vérifiables : [plan](../../tasks/plan.md) et
+[tâches](../../tasks/todo.md). Les scripts mentionnés dans les tâches comme futurs
 ne sont pas encore des commandes disponibles.

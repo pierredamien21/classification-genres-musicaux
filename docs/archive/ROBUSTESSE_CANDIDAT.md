@@ -8,9 +8,9 @@ et `reports/ROBUSTESSE_VALIDATION.md`.
 
 ## Résultats vérifiés le 28 octobre 2026
 
-Suite réalisée : [T2a](../reports/DIAGNOSTIC_BRUIT.md) reproduit les résultats
+Suite réalisée : [T2a](../../reports/DIAGNOSTIC_BRUIT.md) reproduit les résultats
 et mesure les déplacements des représentations sans établir une cause unique.
-[T2b est terminée](../reports/COMPARAISON_ROBUSTESSE_BLOC6.md) : perte F1 moindre pour l’original mais davantage de changements. Aucun gagnant global ; candidat HPSS conservé avec sensibilité acceptée comme limite. T3 à T5 sont depuis vérifiées ; prochaine action T6, manifeste de verrouillage.
+[T2b est terminée](../../reports/COMPARAISON_ROBUSTESSE_BLOC6.md) : perte F1 moindre pour l’original mais davantage de changements. Aucun gagnant global ; candidat HPSS conservé avec sensibilité acceptée comme limite. T3 à T5 sont depuis vérifiées ; prochaine action T6, manifeste de verrouillage.
 La décision T2 ci-dessous conserve le contexte qui avait motivé T2a.
 
 Les 64 morceaux ont été traités dans les trois conditions : 576 fenêtres au
@@ -54,8 +54,8 @@ aucun réglage des seuils et aucune ouverture du test. Ses résultats détermine
 si une expérience corrective est justifiée ou si cette sensibilité doit être
 conservée explicitement comme limite de la première version.
 
-[Rapport chiffré](../reports/ROBUSTESSE_VALIDATION.md) ·
-[Résultats détaillés](../reports/ROBUSTNESS_PANEL.json)
+[Rapport chiffré](../../reports/ROBUSTESSE_VALIDATION.md) ·
+[Résultats détaillés](../../reports/ROBUSTNESS_PANEL.json)
 
 ## Données et transformations
 

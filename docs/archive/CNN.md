@@ -3,7 +3,7 @@
 Expérience terminée : **macro-F1 0,5301**, accuracy **0,5577** sur les 780 morceaux
 de validation, à l’époque 9 parmi dix époques effectuées. Le ViT reste premier selon
 la macro-F1 (0,5447), malgré une accuracy légèrement inférieure (0,5538).
-Voir [le rapport et l’historique complet](../reports/BASELINE_CNN.md).
+Voir [le rapport et l’historique complet](../../reports/BASELINE_CNN.md).
 
 ## Question et choix fixés avant les résultats
 
@@ -47,7 +47,7 @@ Mesure initiale : environ **61,5 secondes de calcul par époque**, soit 10,3 min
 pour dix époques, hors lectures du cache, métriques, sauvegardes et extraction.
 La mémoire RSS maximale observée aux points d’échantillonnage est de 593 MiB ;
 ce n’est pas une mesure exhaustive du pic mémoire. Rapport :
-[`CNN_BENCHMARK.json`](../reports/CNN_BENCHMARK.json).
+[`CNN_BENCHMARK.json`](../../reports/CNN_BENCHMARK.json).
 
 Temps effectivement observés : extraction du cache 3,72 minutes ; dix époques avec
 validation 11,60 minutes ; 12,07 minutes en incluant export et évaluation du train.

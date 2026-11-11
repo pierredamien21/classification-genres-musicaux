@@ -12,7 +12,7 @@ cas. La nouvelle analyse porte donc sur toute la validation, sans nouvelle
 extraction, entraînement ou optimisation. Les probabilités sont recalculées à
 partir des embeddings vérifiés et des classificateurs exportés.
 
-La [configuration](../configs/temporal_analysis.json), écrite avant exécution,
+La [configuration](../../configs/temporal_analysis.json), écrite avant exécution,
 fixe la cohorte, les trois modèles, les positions 0/10/20 s et une tolérance
 absolue de 0,00001 pour retrouver les probabilités historiques. Les modèles sont
 toujours ceux entraînés sur trois fenêtres ; les résultats par position ne sont
@@ -80,10 +80,10 @@ pour sélectionner les modèles. Les artistes ne sont pas indépendants morceau
 par morceau ; aucun intervalle ni résultat significatif n’est annoncé. Les
 désaccords ne constituent ni une écoute ni une preuve de changement de genre.
 
-- [Tableaux complets et figure](../reports/ANALYSE_TEMPORELLE.md).
-- [Mesures et probabilités par morceau](../reports/TEMPORAL_ANALYSIS.json).
-- [Pointeur avec empreinte](../reports/latest_temporal_analysis.json).
-- [Code des comptages](../src/music_genre/evaluation/temporal.py).
+- [Tableaux complets et figure](../../reports/ANALYSE_TEMPORELLE.md).
+- [Mesures et probabilités par morceau](../../reports/TEMPORAL_ANALYSIS.json).
+- [Pointeur avec empreinte](../../reports/latest_temporal_analysis.json).
+- [Code des comptages](../../src/music_genre/evaluation/temporal.py).
 
 Reproduction depuis la racine :
 

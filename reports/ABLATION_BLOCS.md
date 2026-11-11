@@ -80,7 +80,7 @@ Prochaine ablation prévue : canaux log-Mel original/harmonique/percussif contre
 
 ## Reproduction et preuves
 
-Voir [le protocole](../docs/ABLATION_BLOCS.md).
+Voir [le protocole](../docs/archive/ABLATION_BLOCS.md).
 
 - [Rapport bloc 12](../runs/vit-20261020T201146743988Z/report.json)
 - [Rapport bloc 6](../runs/vit_block6-20261021T062701855205Z/report.json)

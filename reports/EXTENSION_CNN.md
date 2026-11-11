@@ -54,7 +54,7 @@ Le plafond est vingt époques ; la patience reste trois. Un arrêt anticipé ne 
 
 Parents, checkpoints, configurations, sources, poids et prédictions contrôlés par empreintes. Métriques recalculées ; historique initial, règle d’arrêt, époque choisie et rechargement des exports vérifiés.
 
-Voir [le protocole](../docs/EXTENSION_CNN.md), [la référence à dix époques](REPETITIONS_CNN.md) et [la synthèse globale](SYNTHESE_VALIDATION.md).
+Voir [le protocole](../docs/archive/EXTENSION_CNN.md), [la référence à dix époques](REPETITIONS_CNN.md) et [la synthèse globale](SYNTHESE_VALIDATION.md).
 
 Commande : `.\.venv\Scripts\python.exe scripts/summarize_cnn_extension.py`.
 

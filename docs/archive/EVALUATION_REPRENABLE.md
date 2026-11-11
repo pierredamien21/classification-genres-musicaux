@@ -24,7 +24,7 @@ Après réussite et contrôle de la validation, la commande test est :
 ```
 
 Cette commande a été lancée le 29 octobre après le contrôle indépendant de
-validation : [suivi de la campagne test](resumes/35_CAMPAGNE_TEST.md). Elle exige le
+validation : [suivi de la campagne test](../resumes/35_CAMPAGNE_TEST.md). Elle exige le
 manifeste verrouillé, les mêmes sources d’évaluation et un dossier de validation
 complet dont les empreintes sont encore valides.
 

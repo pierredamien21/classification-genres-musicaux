@@ -6,7 +6,7 @@ Le bloc 6 était le meilleur résultat à cette étape ; la variante HPSS au blo
 atteint depuis 0,5844, voir [l’ablation des canaux](ABLATION_HPSS.md). Les F1 par genre
 augmentent dans cette expérience, mais Pop reste faible (0,1558).
 Extraction complète : 3,97 minutes depuis les log-Mel en cache. Voir
-[les résultats détaillés](../reports/ABLATION_BLOCS.md).
+[les résultats détaillés](../../reports/ABLATION_BLOCS.md).
 
 ## Hypothèse et convention fixée avant les scores
 
@@ -74,7 +74,7 @@ Depuis la racine, avec les caches ViT et log-Mel CNN disponibles :
 
 Configurations : `configs/vit_block6.json`, `configs/baseline_vit_block6.json`.
 Pointeurs : `data/features/latest_vit_block6.json`, `reports/latest_vit_block6_run.json`.
-Résultats : [rapport comparatif](../reports/ABLATION_BLOCS.md).
+Résultats : [rapport comparatif](../../reports/ABLATION_BLOCS.md).
 
 L’extraction sur log-Mel en cache n’inclut pas les coûts de décodage et de calcul
 des spectrogrammes de l’expérience originale : les temps globaux ne sont donc pas

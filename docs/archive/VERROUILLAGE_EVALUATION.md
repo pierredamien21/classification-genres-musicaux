@@ -78,4 +78,4 @@ refus : protocole fermé, empreintes modifiées, source absente, preuve incompl�
 version différente, chemin hors projet, modèles incohérents, revue non résolue,
 fuite entre partitions, labels ou identifiants incorrects et requêtes partielles.
 Les résultats effectifs de la campagne T6 sont suivis dans
-[le résumé de partie](resumes/31_VERROUILLAGE_FINAL.md).
+[le résumé de partie](../resumes/31_VERROUILLAGE_FINAL.md).

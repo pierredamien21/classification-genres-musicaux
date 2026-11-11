@@ -144,11 +144,11 @@ d’embeddings et marges. Ces mécanismes sont des hypothèses, sans cause encor
 établie. Budget dix minutes de calcul, pas d’entraînement, pas de changement
 des seuils ni de sélection supplémentaire selon les erreurs. Le diagnostic
 déterminera si une extension corrective est justifiée ou si la sensibilité
-reste une limite explicite. [Résultats et analyse](ROBUSTESSE_CANDIDAT.md).
+reste une limite explicite. [Résultats et analyse](archive/ROBUSTESSE_CANDIDAT.md).
 
 ### Préparation finale du 28 octobre 2026
 
-Le [protocole préparatoire](PROTOCOLE_EVALUATION_FINALE.md) recense neuf exports
+Le [protocole préparatoire](archive/PROTOCOLE_EVALUATION_FINALE.md) recense neuf exports
 vérifiés pour sept systèmes appris, plus le majoritaire. Ils restent entraînés
 sur train seul : pas de réentraînement train + validation ni de nouvelle
 sélection d’époque CNN. Ce choix facilite la reproduction exacte des modèles

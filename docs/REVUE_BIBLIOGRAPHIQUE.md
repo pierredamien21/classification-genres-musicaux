@@ -98,7 +98,7 @@ filtres 31/31, masques doux de puissance 2 et marges 1/1, fixés avant les score
 La séparation précède les filtres Mel ; l’ordre des entrées est original/H/P.
 Les trois canaux conservent une référence dB commune. Cette convention ne
 reproduit pas toutes les variantes des articles et ne prétend pas optimiser
-la séparation. Voir le [protocole HPSS](ABLATION_HPSS.md) et la
+la séparation. Voir le [protocole HPSS](archive/ABLATION_HPSS.md) et la
 [documentation de l’implémentation](https://librosa.org/doc/0.11.0/generated/librosa.decompose.hpss.html).
 
 ## 4. Ce que nous proposons d’étudier
@@ -133,6 +133,6 @@ Parcours prioritaire : Tzanetakis–Cook et FMP → Sturm et FMA → ViT → AST
 
 Chaque fiche de lecture approfondie devra contenir : référence et version ; question ; données et partitions ; représentation et paramètres audio ; architecture et préentraînement ; protocole ; résultat utile ; limites ; décision pour notre projet ; expérience reproductible associée. Les affirmations tirées des articles resteront distinctes de nos hypothèses.
 
-Le [plan révisé](PLAN_PROJET.md) traduit cette revue en jalons. Les propositions
+Le [plan révisé](archive/PLAN_PROJET.md) traduit cette revue en jalons. Les propositions
 de la revue restent des hypothèses : les expériences réalisées depuis sa rédaction
 et leurs résultats vérifiés sont référencés dans [l’index des résumés](resumes/INDEX.md).

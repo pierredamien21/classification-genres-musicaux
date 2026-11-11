@@ -1,7 +1,7 @@
 # Inférence des comparateurs linéaires
 
 État au 28 octobre 2026 : T4 vérifiée, 196 tests réussis.
-[Résultats et preuves](../reports/INFERENCE_COMPARATEURS.md).
+[Résultats et preuves](../../reports/INFERENCE_COMPARATEURS.md).
 
 Les quatre adaptateurs ajoutés en T4 utilisent les exports déjà entraînés :
 descripteurs (125 dimensions), ViT bloc 12 original (192), fusion (317) et
@@ -26,7 +26,7 @@ Pour `vit_block6`, utiliser `OriginalBlock6Predictor` dans `inference/adapters.p
 pour `vit_block6_hpss`, utiliser `CandidatePredictor` dans `inference/predict.py`.
 
 Le contrat de fichier, les limites de décodage, le refus du silence, la segmentation
-FMA et le format de résultat sont ceux de [l’inférence du candidat](INFERENCE_CANDIDAT.md).
+FMA et le format de résultat sont ceux de [l’inférence du candidat](../INFERENCE_CANDIDAT.md).
 Les extracteurs utilisent les configurations des rapports de caractéristiques
 épinglés, et non des configurations courantes susceptibles d’avoir changé.
 L’API demande ces rapports, les exports et les poids ViT éventuels ; elle ne

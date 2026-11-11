@@ -22,14 +22,14 @@ séparation HPSS sur la STFT complexe, trois canaux original/harmonique/percussi
 bornage −80/+20 dB, redimensionnement bicubique en 224 × 224, ViT-Tiny ImageNet
 gelé tronqué au bloc 6, moyenne des tokens de patches (192 dimensions),
 standardisation et régression logistique (C ∈ {0,1 ; 1 ; 10}), moyenne des
-probabilités des fenêtres. Voir [hpss.py](../src/music_genre/features/hpss.py),
+probabilités des fenêtres. Voir [hpss.py](../../src/music_genre/features/hpss.py),
 [vit_channels.py](../src/music_genre/models/vit_channels.py),
-[train_descriptor_baseline.py](../scripts/train_descriptor_baseline.py).
+[train_descriptor_baseline.py](../../scripts/train_descriptor_baseline.py).
 
 ## Points forts
 
 - **Hygiène d'évaluation exemplaire pour un portfolio** : disjonction des artistes
-  vérifiée par le code ([final_protocol.py](../src/music_genre/evaluation/final_protocol.py)),
+  vérifiée par le code ([final_protocol.py](../../src/music_genre/evaluation/final_protocol.py)),
   normalisation apprise sur train uniquement, test ouvert une seule fois après
   verrouillage par empreintes, bootstrap apparié **par artiste**.
 - **Honnêteté** : la fusion qui n'aide pas, la chute sur test, la fragilité au
@@ -46,7 +46,7 @@ probabilités des fenêtres. Voir [hpss.py](../src/music_genre/features/hpss.py)
 ### 1. La question « ViT » n'est pas vraiment testée
 
 Le ViT n'est jamais affiné, et aucun modèle préentraîné **sur de l'audio** n'est
-comparé. La [revue bibliographique](REVUE_BIBLIOGRAPHIQUE.md) désigne pourtant AST
+comparé. La [revue bibliographique](../REVUE_BIBLIOGRAPHIQUE.md) désigne pourtant AST
 comme « le comparateur naturel » et une « extension prioritaire » ; PANNs, MAEST,
 MERT y sont discutés mais jamais mesurés. Sans ce point de comparaison, on ne peut
 pas dire si 0,50 est bon pour une représentation gelée : on sait seulement que ce
@@ -90,7 +90,7 @@ Les rapports qui disent « cause non établie » peuvent être précisés.
 
 ### 3. Les intervalles de bootstrap du macro-F1 sont décalés
 
-Dans [bootstrap_draws.npz](../reports/final-test-report-v1/bootstrap_draws.npz),
+Dans [bootstrap_draws.npz](../../reports/final-test-report-v1/bootstrap_draws.npz),
 la moyenne des tirages du macro-F1 est **inférieure d'environ 2,3 points** à la
 valeur ponctuelle pour chaque modèle, et 74 % des tirages sont en dessous
 (candidat : 0,5035 ponctuel, 0,4803 en moyenne). D'où des intervalles
@@ -105,7 +105,7 @@ mal centrés. Un intervalle BCa ou la mention explicite du biais corrigerait cel
 
 ### 4. Le CNN de comparaison est trop faible pour conclure
 
-[SmallAudioCNN](../src/music_genre/models/cnn.py) : trois convolutions 16/32/64,
+[SmallAudioCNN](../../src/music_genre/models/cnn.py) : trois convolutions 16/32/64,
 environ 24 000 paramètres, sans normalisation de batch, sans dropout, sans
 augmentation, patience 3 sur une validation qui oscille de ±2 points d'une époque
 à l'autre. La session utilisateur l'a confirmé : avec patience 5 et 30 époques,
@@ -147,14 +147,14 @@ officiel impossible, ce qui est aussi signalé.
   Quatre scripts `extract_vit*.py` et trois `train_*cnn*.py` sont presque des
   copies. Les variantes passent par des sous-classes qui vérifient des chaînes de
   configuration et tronquent le modèle après coup ;
-  [hpss_block6.py](../src/music_genre/features/hpss_block6.py) transmet même une
+  [hpss_block6.py](../../src/music_genre/features/hpss_block6.py) transmet même une
   fausse valeur de `pooling` à la classe parente. Un extracteur paramétré
   (canaux, bloc) suffirait.
 - **Documentation trop abondante et parfois contradictoire.** 35 documents,
   40 résumés, 142 fichiers dans `reports/`. Exemples d'incohérences :
-  le [README](../README.md) annonce 261 puis 271 tests dans le même paragraphe ;
-  la [fiche du modèle](FICHE_MODELE.md) dit « interface non livrée » alors que la
-  démo existe ; l'[index](resumes/INDEX.md) affiche « Mis à jour : 29 octobre »
+  le [README](../../README.md) annonce 261 puis 271 tests dans le même paragraphe ;
+  la [fiche du modèle](../FICHE_MODELE.md) dit « interface non livrée » alors que la
+  démo existe ; l'[index](../resumes/INDEX.md) affiche « Mis à jour : 29 octobre »
   pour un contenu du 7 novembre, et des lignes vides cassent son tableau ;
   plusieurs `__init__.py` disent encore « à implémenter ». Un relecteur de
   portfolio aura du mal à trouver l'essentiel.
@@ -163,9 +163,9 @@ officiel impossible, ce qui est aussi signalé.
   est un instantané daté, pas une erreur ; ils restent inchangés jusqu'à une V2
   verrouillée. README et index sont corrigés.*
 - **Principe non tenu.** Le README promet « une fonction de prédiction partagée
-  par l'interface et la CLI », mais la [CLI](../src/music_genre/cli.py) n'a que
+  par l'interface et la CLI », mais la [CLI](../../src/music_genre/cli.py) n'a que
   `doctor`.
-- **Démo** ([app/main.py](../app/main.py)) : l'audio est décodé deux fois par
+- **Démo** ([app/main.py](../../app/main.py)) : l'audio est décodé deux fois par
   requête. Mineur pour un usage local. *Correction du 8 novembre : une première
   version de cette critique disait que les fichiers envoyés n'étaient jamais
   nettoyés. C'est faux : `delete_cache=(600, 3600)` les purge.*

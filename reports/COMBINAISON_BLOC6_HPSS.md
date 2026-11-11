@@ -48,4 +48,4 @@ Extraction : 33.35 minutes dans l’invocation finale, 64 morceaux repris ; ce t
 
 Caches, modèles, prédictions, cohorte et index sont vérifiés ; les métriques sont recalculées. Aucun avertissement d’ajustement. La validation sert à sélectionner C et à comparer les variantes : ces scores ne sont pas une estimation indépendante ni une preuve de significativité.
 
-[Rapport numérique](VIT_BLOCK6_HPSS_COMPARISON.json) · [Protocole](../docs/COMBINAISON_BLOC6_HPSS.md)
+[Rapport numérique](VIT_BLOCK6_HPSS_COMPARISON.json) · [Protocole](../docs/archive/COMBINAISON_BLOC6_HPSS.md)

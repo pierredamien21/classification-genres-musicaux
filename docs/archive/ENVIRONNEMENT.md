@@ -2,7 +2,7 @@
 
 Vérifié le 20 octobre 2026. Python 3.13.16 x86-64 dans `.venv`, sur le poste Windows ARM64.
 Les versions effectivement installées sont conservées dans
-[`requirements/windows-cpu-py313.txt`](../requirements/windows-cpu-py313.txt).
+[`requirements/windows-cpu-py313.txt`](../../requirements/windows-cpu-py313.txt).
 Ce relevé concerne cet environnement précis ; il ne garantit pas les autres plateformes.
 
 ## Matériel et accélération
@@ -75,7 +75,7 @@ sur training/validation ; aucune optimisation n’a utilisé le test.
 Résultat : 64 sorties finies, médiane de 0,112 s par morceau traité, dont 0,027 s pour
 le ViT. Les temps excluent imports, chargement du modèle et initialisation.
 Il s’agit d’une faisabilité d’inférence CPU ; aucun classifieur de genres n’a été entraîné.
-Voir le [rapport détaillé](../reports/environment_benchmark.json).
+Voir le [rapport détaillé](../../reports/environment_benchmark.json).
 
 Une alerte native mpg123 (`part2_3_length ... too large for available bit count`) est
 apparue malgré les 64 sorties. Le benchmark ne capture pas ces alertes par fichier :

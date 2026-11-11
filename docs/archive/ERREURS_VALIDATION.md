@@ -1,7 +1,7 @@
 # Analyse des erreurs et revue d’écoute
 
 Mis à jour : 26 octobre 2026. L’analyse quantitative est réalisée ; les observations
-d’écoute restent à recueillir. Voir le [rapport](../reports/ERREURS_VALIDATION.md).
+d’écoute restent à recueillir. Voir le [rapport](../../reports/ERREURS_VALIDATION.md).
 
 ## Pourquoi cette étape
 
@@ -86,7 +86,7 @@ Confirmation utilisateur consignée le 26 octobre 2026 : « ca marche », en ré
 La structure HTML, les 19 contenus audio intégrés, la diversité des artistes,
 les champs initialement vides, les étiquettes masquées par défaut et la syntaxe
 JavaScript ont été contrôlés. Preuves :
-[`ERROR_REVIEW_CHECKS.json`](../reports/ERROR_REVIEW_CHECKS.json).
+[`ERROR_REVIEW_CHECKS.json`](../../reports/ERROR_REVIEW_CHECKS.json).
 
 L’ouverture automatisée a été refusée par la politique du navigateur intégré,
 qui n’autorise pas le protocole `file://`. Ce refus de l’automatisation reste distinct

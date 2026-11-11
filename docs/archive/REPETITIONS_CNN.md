@@ -4,7 +4,7 @@
 
 Graines : **42, 43 et 44**, sans recherche de la meilleure graine. Le run de
 développement 42 est réutilisé et identifié par son empreinte ; deux entraînements
-supplémentaires sont terminés et vérifiés. Le [rapport](../reports/REPETITIONS_CNN.md)
+supplémentaires sont terminés et vérifiés. Le [rapport](../../reports/REPETITIONS_CNN.md)
 présente chaque score et la moyenne avec
 l’écart-type d’échantillon (division par n − 1), sans remplacer la moyenne par
 le meilleur run. Trois graines donnent une indication limitée de la variabilité,

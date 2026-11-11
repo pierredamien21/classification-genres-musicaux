@@ -1,69 +1,58 @@
 # Architecture du projet
 
-État au 20 octobre 2026 : structure créée, diagnostic exécutable, modules métier réservés. Les responsabilités ci-dessous décrivent la cible ; elles ne signifient pas que le pipeline est implémenté.
+Mis à jour : 11 novembre 2026 (état réel, V1 et V2). La version du 20 octobre décrivait une cible ; elle reste consultable dans l'historique Git.
 
-## 1. Organisation retenue
+## 1. Organisation
 
-Un package Python unique, `music_genre`, regroupe le code réutilisable. CLI, notebooks et Gradio l’appelleront. Pas de services distribués, de base de données applicative ou d’API web séparée pour cette version.
+Un seul package Python, `music_genre`, dans `src/`, porte le code réutilisable. Les scripts de `scripts/` l'orchestrent ; la démo (`app/`), la CLI et les notebooks l'appellent. Il n'y a ni service, ni base de données, ni API web.
 
 ```mermaid
 flowchart TD
-    A[Audio et métadonnées FMA] --> B[data : audit et manifeste]
-    B --> C[audio : signal et fenêtres]
-    C --> D[features : descripteurs et spectrogrammes]
-    D --> E[models : extraction ViT]
-    D --> F[training : références et fusion]
-    E --> F
-    F --> G[evaluation : validation puis test final]
-    F --> H[Export du modèle et de son prétraitement]
-    I[Fichier utilisateur] --> J[inference : même préparation audio]
-    H --> J
-    J --> K[CLI ou interface Gradio]
+    A[Audio et métadonnées FMA] --> B[data : audit, empreintes, cohortes]
+    B --> C[audio : décodage, mono, 16 kHz, fenêtres, dégradations]
+    C --> D[features : log-Mel, descripteurs, ViT, MAEST/AST/PANNs]
+    D --> E[cache par morceau, clé = source + configuration + code]
+    E --> F[validation croisée imbriquée par artiste, têtes linéaires]
+    C --> G[training : CNN et ViT affiné]
+    F --> H[evaluation : métriques, bootstrap, calibration, robustesse]
+    G --> H
+    F --> I[tête finale et exports]
+    G --> I
+    I --> J[inference : prédicteurs V1 et V2 figés]
+    J --> K[évaluation unique sous verrou, démo, CLI]
 ```
 
-L’extraction d’embeddings est pilotée par `features` avec un adaptateur dans `models`. Ce diagramme représente le flux des données, pas des imports circulaires.
+## 2. Modules
 
-## 2. Responsabilités
-
-| Module | Responsable de | Ne doit pas faire |
+| Module | Contenu principal | Ne fait pas |
 |---|---|---|
-| data | Acquisition future, métadonnées, audit, partitions, manifeste | Décider des classes à partir du nom d’un fichier |
-| audio | Lire le signal, rééchantillonner, segmenter et conserver les temps valides | Ajuster une normalisation statistique du dataset |
-| features | Calculer les descripteurs, préparer les entrées, extraire/cacher les embeddings, aligner la fusion | Ajuster des paramètres sur validation/test |
-| models | Construire les références et encapsuler les checkpoints | Télécharger des poids implicitement à l’import du package |
-| training | Ajuster scalers/classificateurs, sélectionner sur validation, sauvegarder/reprendre | Sélectionner avec les scores du test |
-| evaluation | Agréger par morceau, calculer métriques, incertitudes et robustesse | Réentraîner un modèle |
-| inference | Charger un export complet et produire une prédiction traçable | Accéder au corpus d’entraînement |
-| app | Présenter les résultats et gérer l’interaction | Dupliquer la logique audio ou apprendre un scaler |
+| `data` | Audit audio, empreintes Chromaprint, revue des doublons | Réétiqueter |
+| `audio` | `processing` (décodage, segmentation ; épinglé V1), `degrade` (bruit, gain, MP3) | Normaliser selon le corpus |
+| `features` | Log-Mel, HPSS, descripteurs, ViT d'images, `pretrained` (MAEST, AST, PANNs, ViT natif), cache par morceau | Ajuster quoi que ce soit sur des étiquettes |
+| `models` | Modèle linéaire exportable, CNN V1 et CNN renforcé, ViT affiné, adaptateurs préentraînés | Télécharger des poids à l'import |
+| `training` | Lots, prédiction par fenêtres, points de reprise du CNN | Utiliser le test |
+| `evaluation` | Métriques, bootstrap apparié par artiste, `crossval`, `calibration`, `final_v2` (BCa, Holm, hors domaine) | Réentraîner |
+| `inference` | `predict` (9 exports V1), `predict_v2` (MAEST + tête finale, CNN V2), démo | Lire le corpus d'entraînement |
 
-Les bibliothèques lourdes seront chargées seulement dans les parcours qui en ont besoin. `doctor` doit fonctionner sans PyTorch, librosa ou Gradio.
+## 3. Traçabilité
 
-## 3. Traçabilité de bout en bout
-
-Le [contrat de données](CONTRATS.md) fixe les identifiants qui relient morceaux, fenêtres, caractéristiques et prédictions. Un cache utilisera une clé dérivée de la source, du prétraitement, du modèle, de sa couche et de ses statistiques de normalisation. Un simple nom de fichier ne suffit pas.
-
-Chaque exécution conservera sa configuration résolue. L’ordre des classes est unique, dans `configs/labels.json`, puis copié dans l’export. Les références à des fichiers d’une autre expérience doivent porter une empreinte.
-
-Les originaux restent dans `data/raw`. Les caches sont recréables. Les checkpoints permettent la reprise ; l’export contient uniquement ce qui est nécessaire pour la prédiction et sa provenance. Les rapports publics sont sélectionnés explicitement.
+- **Caches** : la clé d'un cache réunit la source audio, la configuration et l'empreinte du code d'extraction. Un pointeur `data/features/latest_<nom>.json` désigne le cache en vigueur.
+- **Exécutions** : chaque exécution écrit sa configuration résolue, les empreintes de ses entrées et ses prédictions (`runs/`, local).
+- **Rapports** : les rapports versionnés (`reports/`) citent ces empreintes.
+- **Verrous** :
+  - le verrou V1 (29 octobre) fige la V1 ;
+  - les verrous 1, 2 et 3 V2 (`reports/v2/`) figent, dans l'ordre, le protocole, l'audio audité, puis les systèmes, le code et l'environnement.
+  - `scripts/evaluate_v2.py --final` refuse de tourner si un des 122 fichiers épinglés ou l'un des 171 paquets a changé.
+- **Fichiers épinglés** : ils ne sont jamais modifiés. Les évolutions passent par de nouveaux modules, par exemple `predict_v2`, `degrade` ou `final_v2`.
 
 ## 4. Configuration et environnement
 
-`configs/reference.toml` est une description initiale du protocole ViT, pas un pipeline déjà opérationnel. Les paramètres audio encore ouverts sont explicitement signalés. La lecture TOML utilisera la bibliothèque standard ; le choix d’un framework de configuration n’est pas nécessaire.
+- `configs/` contient une configuration JSON par représentation et par étape V2 : `maest.json`, `cv_v2.json`, `degradations_v2.json`, `calibration_v2.json`, `evaluation_v2.json`, `protocol_v2.json`.
+- L'ordre des classes est unique (`configs/labels.json`).
+- `requirements/` fige les versions exactes. La procédure est décrite dans [REPRODUCTION.md](REPRODUCTION.md).
 
-`pyproject.toml` sépare le socle des dépendances audio, ML, démo et notebooks. Les versions exactes seront verrouillées après validation du fonctionnement sur Windows ARM64. Les versions Python x86-64 détectées ne prouvent ni la compatibilité native ARM ni la disponibilité d’un accélérateur.
+## 5. Commandes
 
-Aucune licence du code n’a été choisie au nom de l’auteur. La provenance et les licences du corpus, des poids et des extraits de démonstration devront être documentées avant publication.
-
-## 5. Commandes et progression
-
-Disponible : `music-genre doctor --root .`.
-
-À implémenter dans cet ordre : audit de l’environnement audio ; préparation/audit FMA ; extraction des caractéristiques ; entraînement ; évaluation ; prédiction ; interface. Les commandes correspondantes seront ajoutées lorsque leur comportement sera réellement implémenté.
-
-Les trois premiers jalons techniques sont :
-1. décoder un exemple autorisé et mesurer une extraction/une passe ViT ;
-2. produire un manifeste audité et des partitions stables ;
-3. obtenir la référence à descripteurs, avec un résultat par morceau.
-
-Les notebooks sont des supports de raisonnement ; le pipeline doit pouvoir s’exécuter sans lancer Jupyter.
-
+- CLI : `python -m music_genre doctor` (sans ML) et `predict` (exports V1).
+- Démo Gradio : `app/`.
+- Chaîne V2 : voir [REPRODUCTION.md](REPRODUCTION.md), section 4.

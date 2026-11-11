@@ -84,7 +84,7 @@ Prochain jalon : ablation ViT fenêtre centrale seule contre trois fenêtres, en
 
 ## Reproduction et preuves
 
-Voir [le protocole CNN](../docs/CNN.md).
+Voir [le protocole CNN](../docs/archive/CNN.md).
 
 - [Rapport CNN complet](../runs/cnn-20261020T202753531958Z/report.json)
 - [Modèle exporté](../runs/cnn-20261020T202753531958Z/model.safetensors)

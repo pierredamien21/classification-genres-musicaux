@@ -37,7 +37,7 @@ Appels concurrents dans un même processus non testés. L’inférence exige enc
 .\.venv\Scripts\python.exe scripts/verify_cnn_inference.py
 ```
 
-[Résultats et provenance](CNN_INFERENCE_CHECK.json) · [Recalcul indépendant](CNN_INFERENCE_RECOUNT.json) · [API](../docs/INFERENCE_CNN.md)
+[Résultats et provenance](CNN_INFERENCE_CHECK.json) · [Recalcul indépendant](CNN_INFERENCE_RECOUNT.json) · [API](../docs/archive/INFERENCE_CNN.md)
 
 ## Prochaine action
 

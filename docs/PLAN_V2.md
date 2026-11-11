@@ -1,7 +1,7 @@
 # Plan V2 — combler les lacunes identifiées
 
 8 novembre 2026. État : **prévu, rien n'est lancé.** Ce plan répond point par point à
-[CRITIQUE_PROJET.md](CRITIQUE_PROJET.md). La V1 reste figée : elle n'est ni modifiée
+[CRITIQUE_PROJET.md](archive/CRITIQUE_PROJET.md). La V1 reste figée : elle n'est ni modifiée
 ni réévaluée comme si son test était encore neuf.
 
 ## Objectif réaliste
@@ -185,6 +185,10 @@ l'utilisateur.
 3. Comparaison V1/V2 présentée comme une réplication, pas comme un gain sur le test V1.
 
 ## Phase 7 — Livraison (≈ 2–3 jours, en partie toi)
+
+**Points 1, 2 (sur ce poste) et 4 faits le 11 novembre 2026** ([résumé](resumes/54_LIVRAISON_V2.md),
+[contrôle final](CONTROLE_FINAL.md)). Restent à l'utilisateur : licence du code, publication, vidéo,
+réinstallation sur un autre poste.
 
 1. Documentation réduite à : README, fiche des données, fiche du modèle, rapport V2,
    architecture, reproduction, index. L'historique V1 va dans `docs/archive/`,

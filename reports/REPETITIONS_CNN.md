@@ -50,7 +50,7 @@ Le test reste non évalué. Un point de décision sur validation précède tout 
 
 ## Reproduction
 
-Voir [le protocole](../docs/REPETITIONS_CNN.md).
+Voir [le protocole](../docs/archive/REPETITIONS_CNN.md).
 
 - [Rapport graine 42](../runs/cnn-20261020T202753531958Z/report.json)
 - [Rapport graine 43](../runs/cnn_seed43-20261021T182143235893Z/report.json)

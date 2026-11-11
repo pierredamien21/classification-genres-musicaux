@@ -29,4 +29,4 @@ Avec huit morceaux par genre, ces scores sont descriptifs. Ils n’établissent 
 
 Reproduction : `.\.venv\Scripts\python.exe scripts/evaluate_robustness.py`.
 
-[Résultats détaillés et empreintes](ROBUSTNESS_PANEL.json) · [Protocole](../docs/PROTOCOLE_EVALUATION_FINALE.md)
+[Résultats détaillés et empreintes](ROBUSTNESS_PANEL.json) · [Protocole](../docs/archive/PROTOCOLE_EVALUATION_FINALE.md)

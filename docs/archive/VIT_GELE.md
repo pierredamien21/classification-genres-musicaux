@@ -84,7 +84,7 @@ processus et un fil numérique par processus. Les temps incluent le décodage et
 les écritures ; une reprise depuis le cache sera plus rapide qu’un calcul initial.
 Le benchmark doit être refait si la clé du cache change.
 
-Résultats : [comparaison](../reports/COMPARAISON_VIT.md),
+Résultats : [comparaison](../../reports/COMPARAISON_VIT.md),
 `reports/latest_vit_run.json` et `data/features/latest_vit.json`.
 La prochaine expérience est la concaténation ViT + descripteurs avec la même
 grille, sans présumer un gain. Le CNN, les ablations, le verrouillage final et la
