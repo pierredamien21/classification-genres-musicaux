@@ -36,7 +36,18 @@
   ],
   "open_risks": [
     "Discogs20 (MAEST pretraining, 3.3 M in-house tracks) is not public: overlap with FMA cannot be checked",
-    "MAEST weights CC-BY-NC-SA-4.0: non-commercial use only"
+    "MAEST weights CC-BY-NC-SA-4.0: non-commercial use only",
+    "Clean head is fragile to strong white noise: macro-F1 0.684 -> 0.490 at 10 dB SNR (development, out of fold)"
   ],
-  "v2_test_audio_loaded": false
+  "v2_test_audio_loaded": false,
+  "phase4": {
+    "decided_on": "2026-11-11",
+    "results": "reports/v2/phase4.json",
+    "results_sha256": "77e3bdd1864f2d280d1b9e2c2120e86754157a69b109530ce155a3165e959ae3",
+    "augmentation_adopted": false,
+    "decision": "Pre-registered rule kept by the user: augmented head (clean CV 0.6808 < 0.6855) not adopted, despite +0.159 macro-F1 at 10 dB SNR; CNN not retrained.",
+    "temperature": 0.8243792827971207,
+    "rejection_threshold_top_probability": 0.3374424722389236,
+    "rejection_rate_in_domain": 0.05
+  }
 }

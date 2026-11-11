@@ -138,8 +138,8 @@ choisi selon la règle déclarée en phase 2.
 
 **État : terminée le 11 novembre 2026** ([résumé](resumes/50_PHASE4_V2.md),
 [résultats](../reports/v2/phase4.json)). Augmentation non adoptée par la règle (0,681) ; elle
-résiste pourtant bien mieux au bruit (+0,16 à 10 dB) : adoption éventuelle à décider comme écart
-a posteriori. Température 0,824, seuil 0,337.
+résiste pourtant bien mieux au bruit (+0,16 à 10 dB) ; l'utilisateur a choisi de garder la règle,
+la fragilité au bruit fort est une limite déclarée. Température 0,824, seuil 0,337.
 
 
 **Protocole fixé le 10 novembre 2026, avant tout résultat** (choix de l'utilisateur : tout le
