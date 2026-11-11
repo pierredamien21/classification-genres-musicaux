@@ -55,4 +55,4 @@ via `file://` a été refusée par le navigateur intégré de l’assistant : le
 dans ce navigateur n’est pas annoncé comme testé. Les figures sont également
 exportées en PNG/SVG dans `reports/notebooks-v1/figures`.
 
-[Guide de livraison](../docs/GUIDE_LIVRAISON.md) · [Conception](../docs/CONCEPTION_NOTEBOOKS.md).
+[Guide de livraison](../docs/GUIDE_LIVRAISON.md) · [Conception](../docs/archive/CONCEPTION_NOTEBOOKS.md).

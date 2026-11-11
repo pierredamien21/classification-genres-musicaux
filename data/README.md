@@ -47,7 +47,7 @@ Les entrées `needs_review` attendent une décision explicite avant l’entraîn
 ## Sélection pour les premières expériences
 
 La revue automatisée est disponible : voir
-[`docs/REPRODUCTION_REVUE.md`](../docs/REPRODUCTION_REVUE.md) et
+[`docs/REPRODUCTION_REVUE.md`](../docs/archive/REPRODUCTION_REVUE.md) et
 [`reports/REVUE_DONNEES.md`](../reports/REVUE_DONNEES.md).
 `manifests/latest_baseline.json` indique le manifeste versionné à utiliser
 (7 857 lignes), son empreinte et le journal complet des 8 000 décisions.
