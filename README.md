@@ -1,137 +1,150 @@
-# Classification des genres musicaux : ViT, encodeurs audio préentraînés et réplication préenregistrée
+# Music genre classification — image ViTs, pretrained audio encoders and a preregistered replication
 
-Ce projet classe des extraits de 30 s de la [Free Music Archive](https://github.com/mdeff/fma) en 8 genres. Il s'est fait en deux temps :
+*[Version française plus bas](#version-française)*
 
-- **V1, sur FMA-small.** Un ViT d'images gelé, appliqué à des spectrogrammes (bloc 6, entrée HPSS), battait le ViT d'origine.
-- **V2, réplication préenregistrée.** La conclusion de la V1 est remise à l'épreuve sur un test neuf : 501 artistes absents de FMA-small. Ce test n'est évalué **qu'une seule fois**, après le gel des systèmes par empreintes. La V2 compare aussi des encodeurs audio préentraînés.
+Eight-genre classification of 30-second clips from the [Free Music Archive](https://github.com/mdeff/fma), in two stages.
 
-## Résultats principaux
+- **V1 (FMA-small).** A frozen image Vision Transformer applied to spectrograms (block 6, HPSS input) beat the original ViT.
+- **V2 (preregistered replication).**
+  - **Goal**: put that claim to a new test of 501 artists absent from FMA-small.
+  - **Rule**: that test is scored **exactly once**, after every system, weight, line of code and package version is frozen by SHA-256 hashes.
+  - **Comparison**: V2 also compares pretrained audio encoders.
 
-Test V2 : 501 morceaux, un par artiste. Macro-F1 au niveau du morceau ; intervalles de confiance BCa à 95 % (5 000 tirages).
+![V2 test results](docs/figures/test_v2_macro_f1.png)
 
-| Système | Macro-F1 | IC 95 % | Accuracy |
-|---|---:|---:|---:|
-| **MAEST bloc 12 gelé + sonde logistique** | **0,572** | [0,534 ; 0,615] | 57,9 % |
-| ViT d'images bloc 6 + HPSS (candidat V1) | 0,481 | [0,442 ; 0,525] | 49,1 % |
-| ViT d'images bloc 6 | 0,477 | [0,441 ; 0,523] | 48,7 % |
-| ViT d'images bloc 12 | 0,453 | [0,418 ; 0,496] | 46,9 % |
-| CNN renforcé (3 graines) | 0,444–0,462 | — | 45,9–47,9 % |
+## Highlights
 
-| Hypothèse préenregistrée | Différence | IC 95 % | Conclusion |
+| Preregistered hypothesis | Macro-F1 difference | BCa 95 % CI | Outcome |
 |---|---:|---:|---|
-| H1 (primaire) : réplication du gain V1 (bloc 6 + HPSS − ViT) | +0,028 | [−0,007 ; +0,064] | Non concluante (p = 0,12 ; puissance ≈ 56 %) |
-| H2 : MAEST − candidat V1 | +0,091 | [+0,049 ; +0,134] | Confirmée (p Holm = 0,0003) |
-| H3 : MAEST − CNN renforcé | +0,117 | [+0,083 ; +0,154] | Confirmée (p Holm = 0,0003) |
+| H1 (primary): V1 gain replicates (ViT block 6 + HPSS − ViT) | +0.028 | [−0.007, +0.064] | Inconclusive (p = 0.12, power ≈ 56 %) |
+| H2: MAEST − V1 candidate | +0.091 | [+0.049, +0.134] | Supported (Holm p = 0.0003) |
+| H3: MAEST − reinforced CNN (3 seeds) | +0.117 | [+0.083, +0.154] | Supported (Holm p = 0.0003) |
 
-**Ce qu'il faut retenir**
+- **A frozen pretrained audio encoder wins clearly.** MAEST reaches a track macro-F1 of **0.572** [0.534, 0.615], against 0.481 for the best V1 system and 0.444–0.462 for a CNN trained from scratch.
+- **The V1 gain keeps its sign but is no longer significant** on a fresh test. The V1 validation-to-test drop of 9 points comes from how artists are spread across the splits, not from selection overfitting: heads that were never selected on the V1 validation set reproduce it.
+- **Artist-grouped cross-validation still overestimates performance on new artists by about 11 points.** Instrumental and Electronic tracks drift towards Experimental.
+- **Calibration and rejection tuned on the development set do not transfer.** Test ECE rises from 0.045 to 0.085, and 89 % of out-of-domain tracks are accepted. These unfavourable results are reported as such.
 
-- **Un encodeur audio préentraîné gelé (MAEST) fait nettement mieux** que le ViT d'images et qu'un CNN entraîné de zéro.
-- **Le gain de la V1 se retrouve dans le même sens** sur le test neuf, mais il n'y est plus significatif.
-- **La validation croisée surestime la performance d'environ 11 points** sur de nouveaux artistes, même groupée par artiste. Sur le test, Instrumental et Electronic sont souvent classés Experimental.
-- **La calibration et le rejet ne se transfèrent pas** du développement au test : l'ECE se dégrade, et 89 % des morceaux de genres inconnus sont acceptés.
-
-Le [rapport V2](docs/RAPPORT_V2.md) présente toutes les analyses, y compris les défavorables.
-
-## Méthode
+## Method
 
 ```mermaid
 flowchart LR
-    A[FMA-small : 7 857 morceaux<br/>5 plis groupés par artiste] --> B[Sélection par validation<br/>croisée imbriquée]
-    B --> C[Robustesse et calibration<br/>hors pli]
-    C --> D[Verrou 3 : systèmes, poids,<br/>code, environnement]
-    E[Test V2 : 501 artistes neufs<br/>+ 352 hors domaine] --> F[Inférence unique]
+    A[FMA-small: 7,857 tracks<br/>5 artist-grouped folds] --> B[Nested cross-validation<br/>model selection]
+    B --> C[Out-of-fold robustness<br/>and calibration]
+    C --> D[Lock 3: systems, weights,<br/>code, environment]
+    E[V2 test: 501 new artists<br/>+ 352 out-of-domain] --> F[Single inference]
     D --> F
-    F --> G[Recomptage indépendant]
+    F --> G[Independent recount]
 ```
 
-- **Protocole préenregistré** avant le téléchargement des données de test ([PROTOCOLE_V2.md](docs/PROTOCOLE_V2.md)).
-- **Trois verrous par empreintes SHA-256** ([reports/v2/](reports/v2/)). Le script d'évaluation refuse de tourner si un fichier ou un paquet épinglé a changé.
-- **Classification** : sonde logistique sur les représentations gelées de trois fenêtres de 10 s, puis moyenne des probabilités par morceau.
-- **Comparateurs** :
-  - AST et PANNs CNN14 ;
-  - MAEST ;
-  - ViT d'images, redimensionné, à résolution native ou affiné ;
-  - descripteurs musicaux ;
-  - CNN renforcé.
+- **Preregistration.** The protocol was written before the test audio was downloaded ([PROTOCOLE_V2.md](docs/PROTOCOLE_V2.md)).
+- **Three hash locks** ([reports/v2/](reports/v2/)). The evaluation script refuses to run if any pinned file or package changed.
+- **Pipeline.** Frozen representations of three 10-second windows feed a logistic probe; window probabilities are averaged per track.
+- **Statistics.** BCa intervals (5,000 resamples), Holm correction for the secondary hypotheses, and an independent recount with scikit-learn and SciPy.
+- **Systems compared.**
+  - pretrained audio encoders: AST, PANNs CNN14, MAEST;
+  - image ViT, resized, at native resolution or fine-tuned;
+  - handcrafted musical descriptors;
+  - reinforced CNN.
 
-## Documentation
+## Documentation (in French)
 
-| Document | Contenu |
+| Document | Content |
 |---|---|
-| [Rapport V2](docs/RAPPORT_V2.md) | Question, protocole, résultats, conclusions, limites |
-| [Fiche des données](docs/FICHE_DONNEES.md) | Cohortes, audit, licences, écarts connus |
-| [Fiche du modèle V2](docs/FICHE_MODELE_V2.md) | Fonctionnement, performances, usages, limites |
-| [Interprétation](docs/INTERPRETATION_V2.md) | Écart de la V1, analyse par artiste et par genre, écoute des erreurs |
-| [Architecture](docs/ARCHITECTURE.md) | Modules, traçabilité, verrous |
-| [Reproduction](docs/REPRODUCTION.md) | Installation vérifiée, données, poids, chaîne de commandes |
-| [Contrôle final](docs/CONTROLE_FINAL.md) | Critiques de la V1 et traitement de chacune |
-| [Plan V2](docs/PLAN_V2.md) | Déroulé des phases et décisions datées |
+| [Rapport V2](docs/RAPPORT_V2.md) | Question, protocol, results, conclusions, limits |
+| [Fiche des données](docs/FICHE_DONNEES.md) | Cohorts, audit, licences, known shifts |
+| [Fiche du modèle V2](docs/FICHE_MODELE_V2.md) | Model card: how it works, performance, intended use, limits |
+| [Interprétation](docs/INTERPRETATION_V2.md) | V1 gap, per-artist and per-genre analysis, listening review |
+| [Architecture](docs/ARCHITECTURE.md) | Modules, traceability, locks |
+| [Reproduction](docs/REPRODUCTION.md) | Verified installation, data, weights, command chain |
+| [Contrôle final](docs/CONTROLE_FINAL.md) | Each criticism of V1 and how it was handled |
 
-**Historique de la V1**
+The V1 is tagged `v1-final`. Its documents are in [docs/archive/](docs/archive/), and its final evaluation is in [reports/EVALUATION_FINALE.md](reports/EVALUATION_FINALE.md).
 
-- L'étiquette Git `v1-final` fige la V1 livrée.
-- Les documents de la V1 sont dans [docs/archive/](docs/archive/), et son évaluation finale dans [reports/EVALUATION_FINALE.md](reports/EVALUATION_FINALE.md).
-- Quelques documents de la V1 restent à leur place d'origine (fiche du modèle V1, conclusion V1, notebooks), car des fichiers de preuve les épinglent par chemin et par empreinte.
+## Quick start
 
-## Démarrage rapide
-
-Il faut Python 3.13 et [`uv`](https://github.com/astral-sh/uv). Les versions des dépendances sont figées dans `requirements/`.
+You need Python 3.13 and [`uv`](https://github.com/astral-sh/uv). Exact versions are pinned in `requirements/`.
 
 ```powershell
 uv venv --python 3.13 .venv
 uv pip install --python .venv\Scripts\python.exe --torch-backend cpu -r requirements/windows-cpu-py313.txt
 uv pip install --python .venv\Scripts\python.exe --no-deps -e .
 .\.venv\Scripts\python.exe -m pytest -q
-```
-
-Sans les données, les poids et les exports locaux, les tests qui en ont besoin sont **ignorés**, avec leur raison affichée. Pour obtenir ces éléments, voir [REPRODUCTION.md](docs/REPRODUCTION.md).
-
-Recalculer tous les chiffres du test V2 à partir des prédictions archivées :
-
-```powershell
 .\.venv\Scripts\python.exe scripts/recount_v2.py --evaluation reports/v2/final_evaluation
 ```
 
-## Organisation
+Without the local data, weights and exports, the tests that need them are **skipped**, and the reason is shown. The last command recomputes every V2 test figure from the archived predictions.
 
-```text
-src/music_genre/    audio, données, caractéristiques, modèles, entraînement, évaluation, inférence
-scripts/            chaîne V2 (extraction, CV, robustesse, évaluation unique, recomptage) et outils V1
-configs/            une configuration par représentation et par étape ; protocole V2
-reports/            rapports et preuves ; reports/v2/ : verrous et évaluation finale
-docs/               documentation ci-dessus ; docs/archive/ : historique V1
-notebooks/          notebooks pédagogiques de la V1, avec leurs exports HTML
-app/                démonstration Gradio locale (V1)
-tests/              tests unitaires et de contrats
-```
+## Repository layout
 
-`data/`, `runs/` et `artifacts/pretrained/` sont locaux et ne sont jamais versionnés. Certains rapports de la V1 renvoient vers ces dossiers : leurs liens ne fonctionnent qu'après reproduction.
-
-## Données, poids et licences
-
-- **Code** : licence [MIT](LICENSE).
-- **Audio FMA** : non inclus. Chaque morceau a sa propre licence Creative Commons, non commerciale pour 82 à 87 % d'entre eux.
-- **Poids préentraînés** : non inclus. Ils se téléchargent avec leurs empreintes.
-
-| Poids | Licence |
+| Path | Content |
 |---|---|
-| MAEST | CC-BY-NC-SA-4.0, non commercial |
-| AST | BSD-3-Clause |
-| PANNs | CC-BY-4.0 |
-| ViT tiny | Apache-2.0 |
+| `src/music_genre/` | Audio, data, features, models, training, evaluation, inference |
+| `scripts/` | V2 pipeline (extraction, CV, robustness, single evaluation, recount, figures) and V1 tools |
+| `configs/` | One configuration per representation and per step; V2 protocol |
+| `reports/` | Reports and evidence; `reports/v2/` holds the locks and the final evaluation |
+| `docs/` | Documentation; `docs/archive/` holds the V1 history |
+| `notebooks/`, `app/` | V1 teaching notebooks (with HTML exports) and local Gradio demo |
+| `tests/` | Unit and contract tests |
 
-Le modèle V2 repose sur MAEST : il hérite donc de sa restriction non commerciale.
+`data/`, `runs/` and `artifacts/pretrained/` are local and never versioned. Some V1 reports link to them, so those links only resolve after reproduction.
 
-## Limites
+## Data, weights and licences
 
-- Un seul test indépendant, avec une puissance modeste pour H1.
-- Les étiquettes de FMA n'ont pas été vérifiées.
-- La robustesse n'est mesurée que sur des dégradations synthétiques.
-- On ne peut pas vérifier si les données de préentraînement de MAEST recoupent FMA.
-- Tout a tourné sur CPU seul, avec un Python x86-64 émulé sur Windows ARM64.
+| Item | Licence | In this repository |
+|---|---|---|
+| Code | [MIT](LICENSE) | Yes |
+| FMA audio | Per-track Creative Commons, 82–87 % non-commercial | No |
+| MAEST weights | CC-BY-NC-SA-4.0, non-commercial | No |
+| AST weights | BSD-3-Clause | No |
+| PANNs weights | CC-BY-4.0 | No |
+| ViT tiny weights | Apache-2.0 | No |
 
-Le détail est dans la [fiche du modèle](docs/FICHE_MODELE_V2.md) et le [rapport](docs/RAPPORT_V2.md).
+Weights are downloaded with their hashes. The V2 model inherits MAEST's non-commercial restriction.
 
-## Citer
+## Limitations
 
-Voir [CITATION.cff](CITATION.cff).
+- One independent test set, and modest power for H1.
+- FMA labels are not verified.
+- Robustness is measured on synthetic degradations only.
+- MAEST's pretraining data may overlap with FMA; this cannot be checked.
+- Everything ran CPU-only, on emulated x86-64 Python under Windows ARM64.
+
+## Citation
+
+See [CITATION.cff](CITATION.cff).
+
+---
+
+## Version française
+
+Classification de 8 genres sur des extraits de 30 s de la [Free Music Archive](https://github.com/mdeff/fma), en deux temps.
+
+- **V1 (FMA-small).** Un ViT d'images gelé, appliqué à des spectrogrammes (bloc 6, entrée HPSS), battait le ViT d'origine.
+- **V2 (réplication préenregistrée).**
+  - **Objectif** : soumettre cette conclusion à un test neuf de 501 artistes absents de FMA-small.
+  - **Règle** : ce test n'est évalué **qu'une seule fois**, après le gel de chaque système, poids, ligne de code et version de paquet par empreintes SHA-256.
+  - **Comparaison** : la V2 compare aussi des encodeurs audio préentraînés.
+
+### Résultats principaux
+
+| Hypothèse préenregistrée | Différence de macro-F1 | IC 95 % (BCa) | Conclusion |
+|---|---:|---:|---|
+| H1 (primaire) : réplication du gain V1 (bloc 6 + HPSS − ViT) | +0,028 | [−0,007 ; +0,064] | Non concluante (p = 0,12, puissance ≈ 56 %) |
+| H2 : MAEST − candidat V1 | +0,091 | [+0,049 ; +0,134] | Confirmée (p Holm = 0,0003) |
+| H3 : MAEST − CNN renforcé (3 graines) | +0,117 | [+0,083 ; +0,154] | Confirmée (p Holm = 0,0003) |
+
+- **Un encodeur audio préentraîné gelé l'emporte nettement.** MAEST atteint **0,572** [0,534 ; 0,615], contre 0,481 pour le meilleur système V1 et 0,444–0,462 pour un CNN entraîné de zéro.
+- **Le gain de la V1 garde son sens, mais n'est plus significatif** sur le test neuf. Sa baisse de 9 points entre validation et test venait de la répartition des artistes, pas d'un surapprentissage de la sélection.
+- **La validation croisée surestime d'environ 11 points** la performance sur de nouveaux artistes, même groupée par artiste. Instrumental et Electronic basculent vers Experimental.
+- **La calibration et le rejet ne se transfèrent pas** : l'ECE passe de 0,045 à 0,085, et 89 % des morceaux hors domaine sont acceptés.
+
+### Documentation, reproduction et licences
+
+- **Documentation** : le [rapport V2](docs/RAPPORT_V2.md) est le point d'entrée. Les autres documents sont listés dans le tableau en anglais ci-dessus.
+- **Installation** : voir [REPRODUCTION.md](docs/REPRODUCTION.md).
+- **Licences** :
+  - code : MIT ;
+  - audio FMA et poids préentraînés : non inclus ;
+  - MAEST : licence non commerciale.
+- **Limites** : un seul test indépendant ; étiquettes FMA non vérifiées ; dégradations synthétiques ; recouvrement possible entre les données de préentraînement de MAEST et FMA ; calcul sur CPU seul.
