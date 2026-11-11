@@ -73,7 +73,7 @@ Une explication reste plausible sans être établie. Pour des artistes peu écou
 frontière entre Instrumental, Electronic et Experimental serait plus floue, que ce soit par le
 style ou par l'annotation. Seule l'écoute peut éclairer ce point.
 
-## 4. Écoute annotée (faite par l'utilisateur le 11 novembre)
+## 4. Écoute annotée (faite par l'auteur le 11 novembre)
 
 Les 18 extraits ont été écoutés et notés **avant** l'affichage des étiquettes. Les observations
 sont dans [`reports/v2/listening/observations.json`](../reports/v2/listening/observations.json)

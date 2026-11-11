@@ -24,7 +24,7 @@ Après réussite et contrôle de la validation, la commande test est :
 ```
 
 Cette commande a été lancée le 29 octobre après le contrôle indépendant de
-validation : [suivi de la campagne test](../resumes/35_CAMPAGNE_TEST.md). Elle exige le
+validation : suivi de la campagne test. Elle exige le
 manifeste verrouillé, les mêmes sources d’évaluation et un dossier de validation
 complet dont les empreintes sont encore valides.
 
@@ -70,7 +70,7 @@ hors empreintes et comparaison finale. Elle vient de huit morceaux train et
 peut varier avec la charge et la chauffe de la machine. Le compteur porte sur
 7 020 couples modèle/morceau, soit 21 060 vecteurs de fenêtres.
 
-Une surveillance horaire avait été configurée dans cette conversation : notification
+Une surveillance horaire avait été configurée : notification
 uniquement à la fin, en cas d’échec ou si une action est requise. Elle a été supprimée après la réussite du 29 octobre à 17 h 02 (Paris). Elle n’a pas lancé
 le test. Les fichiers de progression permettent aussi une lecture sur demande.
 Une absence de mise à jour doit être examinée avec le processus et les journaux :

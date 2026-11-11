@@ -128,7 +128,7 @@ budget trente minutes. Rapporter pertes de F1, changements et compromis avec
 les scores propres ; aucun réentraînement ni sélection sur test. Le rôle spécifique
 du système HPSS reste une question, pas une conclusion. Une correction éventuelle
 sera définie séparément. [Mesures](../reports/DIAGNOSTIC_BRUIT.md) et
-[critères T2b](../tasks/todo.md).
+critères T2b.
 
 ### Revue de sensibilité — T2, 28 octobre 2026
 
@@ -157,7 +157,7 @@ déjà comparés, au prix possible d’un gain lié à davantage de données.
 Le panel de sensibilité est fixé avant ses résultats : 64 morceaux de validation,
 huit par genre et un par artiste, sélection sans prédictions. Les essais sont
 terminés et déclenchent T2a ; le bootstrap reste à réaliser. L’inférence commune
-du candidat ([T1](../tasks/todo.md)) est vérifiée sur 64 morceaux/192 fenêtres
+du candidat (T1) est vérifiée sur 64 morceaux/192 fenêtres
 à 10⁻⁶. Le recensement n’est pas
 un verrouillage et le test reste désactivé dans la configuration préparatoire.
 

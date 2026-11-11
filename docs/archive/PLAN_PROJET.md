@@ -4,7 +4,7 @@
 
 Version 2 — 19 octobre 2026. Ce document remplace le premier plan sur les choix qu’il révise. Base scientifique : [revue bibliographique](../REVUE_BIBLIOGRAPHIQUE.md).
 
-Avancement au 29 octobre 2026 : références descripteurs/ViT/CNN, fusion, ablations et combinaison bloc 6 + HPSS réalisées. Voir [l’index des résumés](../resumes/INDEX.md) et la [synthèse vérifiée](../../reports/SYNTHESE_VALIDATION.md). Le candidat principal est **bloc 6 + HPSS : macro-F1 0,5975, accuracy 0,6128** sur validation, devant bloc 12 HPSS (0,5844) et bloc 6 original (0,5780). CNN plafond vingt : 0,5407 ± 0,0105 sur trois graines. La fusion initiale n’apporte pas de gain sur validation.
+Avancement au 29 octobre 2026 : références descripteurs/ViT/CNN, fusion, ablations et combinaison bloc 6 + HPSS réalisées. Voir l’index des résumés et la [synthèse vérifiée](../../reports/SYNTHESE_VALIDATION.md). Le candidat principal est **bloc 6 + HPSS : macro-F1 0,5975, accuracy 0,6128** sur validation, devant bloc 12 HPSS (0,5844) et bloc 6 original (0,5780). CNN plafond vingt : 0,5407 ± 0,0105 sur trois graines. La fusion initiale n’apporte pas de gain sur validation.
 
 La [revue des régressions](../../reports/REGRESSIONS_BLOC6_HPSS.md) confirme 56 corrections et 44 régressions face à bloc 12 HPSS. Pop reste faible (13/94 corrects), Instrumental recule. Le [diagnostic ciblé](DIAGNOSTIC_AUDIO.md) et l’[analyse temporelle](ANALYSE_TEMPORELLE.md) portent sur les trois ViT antérieurs ; ils ne sont pas une nouvelle analyse temporelle de la combinaison. Les [19 fiches d’écoute](ERREURS_VALIDATION.md) restent sans observations subjectives.
 
@@ -12,7 +12,7 @@ Le jalon 9, l’évaluation finale V1, est terminé et vérifié. T1–T6 sont v
 
 T7 terminée : neuf modèles sur 778 morceaux test, 7 002 prédictions contrôlées et 2 000 tirages vérifiés. Candidat : macro-F1 0,5035, accuracy 51,16 % ; gain principal apparié +0,0394, IC [+0,0054 ; +0,0715]. Durée réelle d’inférence 51 min 50 s. [Bilan complet](../../reports/EVALUATION_FINALE.md), [fiche modèle](../FICHE_MODELE.md). Livraison vérifiée au 6 novembre : trois notebooks exécutés, démo locale, environnements isolés et trame orale portfolio. Restent la session complète utilisateur et son bilan ; réinstallation réseau sur une autre machine, vidéo et écoute annotée non réalisées. [Guide de livraison](../GUIDE_LIVRAISON.md). La session utilisateur doit précéder la conclusion générale. [Registre des décisions](../DECISIONS_EXPERIMENTALES.md).
 
-FMA-small et ses métadonnées sont désormais téléchargés, vérifiés et extraits. Consulter [l’index de reprise](../resumes/INDEX.md) et le [résumé des données](../resumes/04_DONNEES.md) pour les preuves et les prochaines actions.
+FMA-small et ses métadonnées sont désormais téléchargés, vérifiés et extraits. Consulter l’index de reprise et le résumé des données pour les preuves et les prochaines actions.
 
 ## Objectif
 

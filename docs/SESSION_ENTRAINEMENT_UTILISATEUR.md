@@ -26,8 +26,8 @@ Les choix ci-dessus remplacent les options qui y étaient encore ouvertes.
 ## But et place dans le projet
 
 Permettre à l’utilisateur de lancer lui-même une expérience depuis un notebook,
-de suivre l’apprentissage et de revenir une fois les calculs terminés. L’assistant
-relira alors les sorties sauvegardées, vérifiera leur provenance et intégrera
+de suivre l’apprentissage et de revenir une fois les calculs terminés. Les sorties
+sauvegardées sont ensuite relues, leur provenance vérifiée, et l’analyse intègre
 les résultats, y compris un éventuel échec ou une absence d’amélioration.
 
 Cette session complète la campagne V1 verrouillée ; elle ne remplace ni ses
@@ -96,7 +96,7 @@ le navigateur se ferme. Aucun lancement de plusieurs heures par inadvertance
 depuis le notebook principal. Donner les commandes de lancement et de reprise
 et les indications pour maintenir la machine disponible pendant le calcul.
 
-## Sorties attendues pour la reprise par l’assistant
+## Sorties attendues pour la reprise de l’analyse
 
 Un nouveau dossier d’expérience contiendra : configuration résolue, versions et
 interpréteur, empreintes du code/données/parents, graines, matériel, journal,
@@ -131,7 +131,7 @@ attachées à leurs modèles verrouillés.
 2. Préparer et vérifier l’environnement et le notebook d’entraînement autonome.
 3. Fixer la recette complémentaire et le budget avant tout lancement.
 4. L’utilisateur lance, puis indique la fin ; les fichiers assurent la continuité.
-5. L’assistant vérifie et exploite les sorties ; le notebook distingue les deux campagnes.
+5. Les sorties sont vérifiées et exploitées ; le notebook distingue les deux campagnes.
 6. Rédiger ensuite la conclusion générale, avec coûts, limites et résultats négatifs.
 
 L’existence d’un meilleur score n’est pas une condition de réussite de cette

@@ -4,7 +4,7 @@
 expérimental. Ce qui suit conserve les notes de conception du 29 octobre.
 
 **Livraison du 6 novembre :** trois notebooks créés et exécutés, sorties HTML et
-dix figures disponibles. Voir [le résumé 38](../resumes/38_NOTEBOOKS_LIVRAISON.md)
+dix figures disponibles. Voir le résumé 38
 et [le guide](../GUIDE_LIVRAISON.md) pour l’état actuel et le lancement autonome.
 
 ## Public, objectif et fil conducteur
@@ -171,10 +171,10 @@ Ajout demandé par l’utilisateur : une [session d’entraînement autonome](..
 avec environnement isolé et notebook dédié sera préparée après les travaux en
 cours, avant la conclusion générale. Plafond proposé de trente époques et patience
 à figer ; les CNN ont déjà été prolongés jusqu’à un plafond vingt. L’utilisateur
-lancera l’expérience, puis l’assistant vérifiera et exploitera les sorties
+lancera l’expérience, puis les sorties seront vérifiées et exploitées,
 sauvegardées. Cette extension ne réécrit pas la campagne verrouillée.
 
 - [Bibliographie](../REVUE_BIBLIOGRAPHIQUE.md), [plan](PLAN_PROJET.md), [décisions](../DECISIONS_EXPERIMENTALES.md).
 - [Descripteurs](../DESCRIPTEURS_MUSICAUX.md), [ViT gelé](VIT_GELE.md), [HPSS](ABLATION_HPSS.md), [CNN](CNN.md).
 - [Synthèse de validation](../../reports/SYNTHESE_VALIDATION.md), [protocole final](PROTOCOLE_EVALUATION_FINALE.md).
-- [Évaluation reprenable](EVALUATION_REPRENABLE.md), [index des preuves](../resumes/INDEX.md).
+- [Évaluation reprenable](EVALUATION_REPRENABLE.md), index des preuves.

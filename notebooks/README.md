@@ -46,12 +46,12 @@ et un embedding gelé. Aucun entraînement, téléchargement ni décodage test d
 ```
 
 Ne pas réexécuter la dernière commande en laissant `LANCER=True`. Jupyter nécessite
-des connexions locales, à autoriser dans le bac à sable de l’assistant, sans
+des connexions locales, à autoriser dans un environnement isolé, sans
 serveur public. Les exécutables globaux `jupyter-*` du poste ont montré une
 incompatibilité ; cibler directement les modules des environnements ci-dessus.
 
 Les exports HTML sont créés et leur contenu contrôlé sur disque. Leur ouverture
-via `file://` a été refusée par le navigateur intégré de l’assistant : leur rendu
+via `file://` a été refusée par le navigateur de test utilisé : leur rendu
 dans ce navigateur n’est pas annoncé comme testé. Les figures sont également
 exportées en PNG/SVG dans `reports/notebooks-v1/figures`.
 

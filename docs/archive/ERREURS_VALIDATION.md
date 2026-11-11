@@ -60,13 +60,9 @@ humaines n’est encore implémenté.
 
 ## Vérifications et limites
 
-Nouveau test demandé par l’utilisateur et tenté le **24 octobre 2026** :
-`cua.createBrowserTab("iab", "file:///E:/projet/vision%20transformer/data/interim/error-review-20261021T233320701672Z/index.html", { visible: true })`.
-Résultat : `The requested URL protocol is not allowed. Allowed protocols: "http:", "https:".`
-La navigation est refusée avant tout accès au lecteur. Ce résultat ne constitue
-pas un test du décodage MP3, de la sortie sonore ou du JavaScript de la page.
-Le serveur Chrome DevTools MCP requis par le skill dédié n’est pas disponible
-dans les outils exposés de cette session. Aucun contournement du refus n’a été tenté.
+Le 24 octobre 2026, une ouverture automatisée de la fiche dans un navigateur de test a été
+refusée : ce navigateur n’autorise pas le protocole `file://`. Ce refus ne constitue pas un test
+du décodage MP3, de la sortie sonore ou du JavaScript de la page.
 
 Ordre retenu pour le diagnostic ciblé :
 
@@ -81,7 +77,7 @@ Ordre retenu pour le diagnostic ciblé :
 4. Énoncer une hypothèse fondée sur ces observations, puis comparer une seule
    modification à la référence. Ne pas relancer tous les entraînements à l’identique.
 
-Confirmation utilisateur consignée le 26 octobre 2026 : « ca marche », en réponse à la vérification de l’affichage et du son du premier extrait. Ces deux points sont validés manuellement par l’utilisateur. Pause, déplacement, persistance, export et autres extraits ne sont pas confirmés ; aucune annotation musicale n’a été reçue.
+Confirmation de l’auteur consignée le 26 octobre 2026 : « ca marche », en réponse à la vérification de l’affichage et du son du premier extrait. Ces deux points sont validés manuellement par l’auteur. Pause, déplacement, persistance, export et autres extraits ne sont pas confirmés ; aucune annotation musicale n’a été reçue.
 
 La structure HTML, les 19 contenus audio intégrés, la diversité des artistes,
 les champs initialement vides, les étiquettes masquées par défaut et la syntaxe

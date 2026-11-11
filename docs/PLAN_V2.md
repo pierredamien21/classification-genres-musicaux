@@ -47,7 +47,7 @@ la phase 7 sert de liste de contrôle.
 
 **Sortie :** dépôt propre, 271 tests verts, aucune contradiction documentaire.
 
-**Réalisé le 8 novembre** ([résumé 42](resumes/42_FONDATIONS_V2.md)). Laissés
+**Réalisé le 8 novembre.** Laissés
 volontairement intacts, car épinglés par empreinte dans les preuves V1 : la fiche du
 modèle, les `__init__.py` (docstrings « à implémenter ») et les notebooks (16
 avertissements Ruff). Ils changeront avec la V2 verrouillée.
@@ -69,14 +69,14 @@ avertissements Ruff). Ils changeront avec la V2 verrouillée.
 restent consultables via l'étiquette `v1-final` ; les contrôles V1 se rejouent sur
 cette étiquette (par exemple dans un `git worktree`), pas sur le code refondu.
 
-**Réalisé le 8 novembre** ([résumé 43](resumes/43_REFONTE_V2.md)) : reproduction exacte
+**Réalisé le 8 novembre** ([équivalence V1](../reports/V1_EQUIVALENCE.json)) : reproduction exacte
 (écart nul) des 9 exports, des 5 représentations et de l'entraînement CNN. Restent
 ouverts : l'essai ARM64 natif et le verrouillage des dépendances par empreintes, qui
 demandent des téléchargements. Abandonné : le décodage unique de la démo.
 
 ## Phase 2 — Protocole V2, verrouillé avant toute expérience (≈ 2 jours + téléchargement)
 
-1. **Téléchargement de FMA-large (~93 Go), à valider par toi avant lancement.**
+1. **Téléchargement de FMA-large (~93 Go), validé par l'auteur avant lancement.**
 2. **Test V2** : tiré au hasard (graine fixée) parmi les artistes absents de FMA-small,
    **un morceau par artiste**, 64 artistes par genre, soit 512 morceaux et 512 artistes
    (International limite à 67). Audit technique seulement, sans écoute ni regard sur
@@ -98,7 +98,7 @@ demandent des téléchargements. Abandonné : le décodage unique de la démo.
 
 **Sortie :** manifeste V2 verrouillé ; aucun modèle V2 encore entraîné.
 
-**Réalisée le 8 novembre** — [protocole préenregistré](PROTOCOLE_V2.md), [résumé 44](resumes/44_PROTOCOLE_V2.md).
+**Réalisée le 8 novembre** — [protocole préenregistré](PROTOCOLE_V2.md), [verrou 2](../reports/v2/lock2.json).
 Ajustements : hors domaine plafonné par les artistes disponibles (340 et non 8 × 64) ;
 H1 seule primaire (puissance environ 56 %) ; téléchargement partiel par lectures HTTP
 `Range` (≈ 1 Go au lieu de 93 Go) ; amendement 1 (remplaçants Pop) avant le verrou 2.
@@ -113,9 +113,9 @@ linéaire. CNN renforcé : 0,618 ± 0,015 sur le pli 0 (trois graines), contre 0
 MAEST sur ce pli. ViT natif (sans redimensionnement) : bloc 6 à 0,569 contre 0,553.
 Fine-tuning partiel (blocs 5–6, une graine) : 0,661 sur le pli 0, sous MAEST.
 Candidat V2 : MAEST bloc 12 + sonde logistique
-([fiche](../reports/v2/candidate.json)). Détail : [résumé 45](resumes/45_COMPARATEURS_V2.md),
-[résumé 46](resumes/46_CNN_RENFORCE_V2.md), [résumé 47](resumes/47_VIT_NATIF_V2.md),
-[résumé 48](resumes/48_VIT_AFFINE_V2.md), [résumé 49](resumes/49_CLOTURE_PHASE3_V2.md).
+([fiche](../reports/v2/candidate.json)). Détail : [comparateurs](../reports/v2/cv_results.csv),
+[CNN](../reports/v2/cnn_v2_seeds.csv), [ViT natif](../reports/v2/cv_results.csv),
+[ViT affiné](../reports/latest_vit_finetune_seed42_training.json), [candidat](../reports/v2/candidate.json).
 
 Chaque modèle commence par un benchmark sur 64 fenêtres pour estimer son coût.
 
@@ -136,13 +136,13 @@ choisi selon la règle déclarée en phase 2.
 
 ## Phase 4 — Robustesse et calibration (≈ 3–4 jours)
 
-**État : terminée le 11 novembre 2026** ([résumé](resumes/50_PHASE4_V2.md),
+**État : terminée le 11 novembre 2026** ([phase 4](../reports/v2/phase4.json),
 [résultats](../reports/v2/phase4.json)). Augmentation non adoptée par la règle (0,681) ; elle
-résiste pourtant bien mieux au bruit (+0,16 à 10 dB) ; l'utilisateur a choisi de garder la règle,
+résiste pourtant bien mieux au bruit (+0,16 à 10 dB) ; l'auteur a choisi de garder la règle,
 la fragilité au bruit fort est une limite déclarée. Température 0,824, seuil 0,337.
 
 
-**Protocole fixé le 10 novembre 2026, avant tout résultat** (choix de l'utilisateur : tout le
+**Protocole fixé le 10 novembre 2026, avant tout résultat** (choix de l'auteur : tout le
 développement, augmentation de MAEST avec règle d'adoption, rejet à 5 %).
 - Conditions ([config](../configs/degradations_v2.json)) : bruit blanc à 30/20/10 dB de SNR sur le
   morceau entier à 16 kHz ; gain numérique ±6 dB sans écrêtage ; MP3 mono 64 kb/s constant
@@ -166,39 +166,39 @@ développement, augmentation de MAEST avec règle d'adoption, rejet à 5 %).
 
 ## Phase 5 — Évaluation finale V2, une seule fois (≈ 1 jour)
 
-**Verrou 3 posé le 11 novembre 2026** ([résumé](resumes/51_VERROU3_V2.md),
-[verrou](../reports/v2/lock3.json)). **Terminée le 11 novembre 2026** ([résumé](resumes/52_EVALUATION_FINALE_V2.md),
+**Verrou 3 posé le 11 novembre 2026** ([verrou 3](../reports/v2/lock3.json),
+[verrou](../reports/v2/lock3.json)). **Terminée le 11 novembre 2026** ([évaluation](../reports/v2/final_evaluation/report.json),
 [résultats](../reports/v2/final_evaluation/report.json)) : H1 non répliquée, H2 et H3 confirmées ;
 recomptage indépendant concordant. Ne plus relancer `--final`.
 
 Inférence unique sur le test V2 et l'ensemble hors domaine, recomptage indépendant,
 rapport des trois hypothèses, y compris les résultats défavorables.
 
-## Phase 6 — Interprétation (≈ 2–3 jours, en partie toi)
+## Phase 6 — Interprétation (≈ 2–3 jours)
 
 **Terminée le 11 novembre 2026** ([rapport](INTERPRETATION_V2.md),
-[résumé](resumes/53_INTERPRETATION_V2.md)) : analyse, réplication et écoute de 18 extraits par
+[interprétation](INTERPRETATION_V2.md)) : analyse, réplication et écoute de 18 extraits par
 l'utilisateur.
 
 1. Analyse par artiste et par genre, et explication de l'écart V1 validation/test.
-2. **Toi seul** : écoute annotée des erreurs avec la fiche existante.
+2. Écoute annotée, par l'auteur, des erreurs avec la fiche existante.
 3. Comparaison V1/V2 présentée comme une réplication, pas comme un gain sur le test V1.
 
-## Phase 7 — Livraison (≈ 2–3 jours, en partie toi)
+## Phase 7 — Livraison (≈ 2–3 jours)
 
-**Points 1, 2 (sur ce poste) et 4 faits le 11 novembre 2026** ([résumé](resumes/54_LIVRAISON_V2.md),
-[contrôle final](CONTROLE_FINAL.md)). Restent à l'utilisateur : licence du code, publication, vidéo,
+**Points 1, 2 (sur ce poste) et 4 faits le 11 novembre 2026** ([contrôle final](CONTROLE_FINAL.md),
+[contrôle final](CONTROLE_FINAL.md)). Restent à l'auteur : licence du code, publication, vidéo,
 réinstallation sur un autre poste.
 
 1. Documentation réduite à : README, fiche des données, fiche du modèle, rapport V2,
    architecture, reproduction, index. L'historique V1 va dans `docs/archive/`,
    sans suppression.
 2. Réinstallation testée depuis zéro sur un autre compte ou un autre poste.
-3. **Toi seul** : publication du dépôt (code et rapports, jamais l'audio FMA ;
+3. Publication du dépôt (code et rapports, jamais l'audio FMA ;
    licences des poids vérifiées) et vidéo de démonstration.
 4. Tableau final de contrôle : chaque point de la critique → corrigé, mesuré ou limite assumée.
 
-## Ce qui dépend de toi
+## Ce qui dépend de l'auteur
 
 - Accord pour télécharger environ 93 Go (phase 2).
 - Accepter plusieurs heures de calcul CPU par modèle (phase 3), ou prévoir un GPU distant.

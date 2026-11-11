@@ -135,4 +135,4 @@ Chaque fiche de lecture approfondie devra contenir : référence et version ; qu
 
 Le [plan révisé](archive/PLAN_PROJET.md) traduit cette revue en jalons. Les propositions
 de la revue restent des hypothèses : les expériences réalisées depuis sa rédaction
-et leurs résultats vérifiés sont référencés dans [l’index des résumés](resumes/INDEX.md).
+et leurs résultats vérifiés sont présentés dans le [rapport V2](RAPPORT_V2.md).

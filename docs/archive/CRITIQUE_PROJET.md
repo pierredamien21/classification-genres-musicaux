@@ -154,7 +154,7 @@ officiel impossible, ce qui est aussi signalé.
   40 résumés, 142 fichiers dans `reports/`. Exemples d'incohérences :
   le [README](../../README.md) annonce 261 puis 271 tests dans le même paragraphe ;
   la [fiche du modèle](../FICHE_MODELE.md) dit « interface non livrée » alors que la
-  démo existe ; l'[index](../resumes/INDEX.md) affiche « Mis à jour : 29 octobre »
+  démo existe ; l'index affiche « Mis à jour : 29 octobre »
   pour un contenu du 7 novembre, et des lignes vides cassent son tableau ;
   plusieurs `__init__.py` disent encore « à implémenter ». Un relecteur de
   portfolio aura du mal à trouver l'essentiel.

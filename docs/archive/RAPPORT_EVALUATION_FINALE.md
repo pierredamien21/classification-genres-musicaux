@@ -71,7 +71,7 @@ Cinq tests spécifiques vérifient notamment le majoritaire train, la moyenne
 des métriques CNN plutôt qu’un ensemble, une différence connue et le refus
 de cohortes ou protocoles incompatibles. Suite complète : 257 tests réussis.
 Les résultats de l’essai réel sont consignés dans
-[le résumé de partie](../resumes/36_RAPPORT_STATISTIQUE.md).
+le résumé de partie.
 
 Les intervalles sont conditionnels aux modèles fixés, sans rééchantillonnage
 de l’apprentissage ni des graines, et sans correction pour tests simultanés.

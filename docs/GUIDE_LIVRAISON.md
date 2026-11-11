@@ -41,7 +41,7 @@ Aucun lien public créé. Les copies téléversées restent dans
 plus d’une heure pendant que le serveur fonctionne. Une fermeture anticipée
 peut laisser des copies locales. Cette démo n’est pas préparée comme service public.
 
-## Lancer ta session autonome
+## Lancer une session autonome
 
 ```powershell
 .\scripts\ouvrir_notebooks.ps1

@@ -44,13 +44,13 @@ La V2 pose trois hypothèses, préenregistrées avant tout téléchargement ([pr
 | ViT bloc 12 original | 0,520 |
 | Descripteurs musicaux | 0,469 |
 
-Les encodeurs audio préentraînés dominent nettement. Le ViT d'images, affiné sur ses blocs 5 et 6, n'atteint que 0,661, et le CNN renforcé 0,618 : ces deux scores viennent du pli 0 seul, qui est un pli facile. Résumés : [45](resumes/45_COMPARATEURS_V2.md) à [49](resumes/49_CLOTURE_PHASE3_V2.md).
+Les encodeurs audio préentraînés dominent nettement. Le ViT d'images, affiné sur ses blocs 5 et 6, n'atteint que 0,661, et le CNN renforcé 0,618 : ces deux scores viennent du pli 0 seul, qui est un pli facile. Preuves : [cv_results.csv](../reports/v2/cv_results.csv), [candidate.json](../reports/v2/candidate.json).
 
 ## Robustesse et calibration (développement, phase 4)
 
 - **Robustesse de MAEST** : il résiste au gain (±6 dB, −0,006) et au MP3 à 64 kb/s (−0,004). Il cède au bruit blanc fort : −0,19 à 10 dB.
-- **Augmentation** : elle comblait presque cet écart (+0,16 à 10 dB). Elle n'a pas été adoptée, car la règle fixée d'avance portait sur l'audio propre (0,681 < 0,6855). L'utilisateur a maintenu la règle.
-- **Calibration** : température 0,824. Seuil de rejet 0,337, qui écarte 5 % du développement. Résumé : [50](resumes/50_PHASE4_V2.md).
+- **Augmentation** : elle comblait presque cet écart (+0,16 à 10 dB). Elle n'a pas été adoptée, car la règle fixée d'avance portait sur l'audio propre (0,681 < 0,6855). L'auteur a maintenu la règle.
+- **Calibration** : température 0,824. Seuil de rejet 0,337, qui écarte 5 % du développement. Preuves : [phase4.json](../reports/v2/phase4.json).
 
 ## Résultats sur le test V2 (inférence unique)
 
@@ -79,7 +79,7 @@ Les encodeurs audio préentraînés dominent nettement. Le ViT d'images, affiné
   - 3 à 4 points viennent de la pondération par artiste ;
   - les métadonnées n'en expliquent presque rien ;
   - Instrumental et Electronic basculent vers Experimental, chez tous les modèles.
-- **Écoute de 18 extraits par l'utilisateur** : elle mêle trois cas :
+- **Écoute de 18 extraits par l'auteur** : elle mêle trois cas :
   - des morceaux peu typés, que l'auditeur décrit lui aussi sans repères ;
   - des erreurs franches ;
   - quelques étiquettes discutables.

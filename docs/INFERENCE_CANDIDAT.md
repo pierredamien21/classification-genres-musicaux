@@ -76,4 +76,4 @@ pointeur avec empreinte ; un échec interrompt le script sans publier de nouveau
 rapport de succès. Vérifier les empreintes de sources d’un ancien rapport
 avant de le réutiliser. Ce contrôle ne mesure pas encore la sensibilité au
 volume ou au bruit, et n’ouvre pas le test. Voir les tâches T2 et suivantes
-dans [le suivi](../tasks/todo.md).
+dans le suivi.

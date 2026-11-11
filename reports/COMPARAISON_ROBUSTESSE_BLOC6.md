@@ -59,4 +59,4 @@ Commandes :
 
 Une seule perturbation de bruit blanc, un SNR et une graine par morceau ; aucun bruit réel, codec ou autre corpus testé. Panel limité, pas d’intervalle ni de significativité revendiqués. Résultats déjà consultés sur validation : pas de généralisation indépendante. La revue subjective reste à compléter. La robustesse générale du modèle n’est pas démontrée.
 
-[Résultats et provenance](BLOCK6_ROBUSTNESS_COMPARISON.json) · [Diagnostic préalable](DIAGNOSTIC_BRUIT.md) · [Plan](../tasks/todo.md)
+[Résultats et provenance](BLOCK6_ROBUSTNESS_COMPARISON.json) · [Diagnostic préalable](DIAGNOSTIC_BRUIT.md) · Plan

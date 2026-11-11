@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Si vous utilisez ce travail, merci de le citer comme suit."
+title: "Classification des genres musicaux : ViT, encodeurs audio préentraînés et réplication préenregistrée"
+type: software
+authors:
+  - family-names: Nadjak
+    given-names: Pierre Damien
+version: "2.0"
+date-released: 2026-11-11
+license: MIT
+keywords:
+  - music genre classification
+  - Free Music Archive
+  - audio representation learning
+  - MAEST
+  - vision transformer
+  - preregistration
+  - replication
+abstract: >-
+  Classification de 8 genres sur la Free Music Archive. Réplication préenregistrée,
+  sur un test indépendant de 501 artistes, d'un gain obtenu avec un ViT d'images gelé
+  (non concluante), et comparaison avec des encodeurs audio préentraînés : MAEST gelé
+  atteint une macro-F1 de 0,572 contre 0,481 pour le meilleur système de la V1.

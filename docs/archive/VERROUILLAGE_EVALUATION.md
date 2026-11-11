@@ -66,10 +66,9 @@ brutale peut laisser `running` : vérifier alors aussi le processus et le journa
 Le PID seul ne prouve pas une réussite.
 
 Ce traitement n’entraîne aucun nouveau modèle. Pour les prochaines campagnes
-longues : communiquer une durée estimée, lancer sans bloquer la conversation,
+longues : communiquer une durée estimée, lancer en arrière-plan,
 conserver les résultats intermédiaires, puis consulter l’état sur demande ou avec
-une surveillance espacée. Une surveillance par assistant peut consommer des tokens
-à chaque réveil ; les journaux locaux continuent sans interaction avec l’assistant.
+une surveillance espacée ; les journaux locaux suffisent à suivre l’avancement.
 
 ## Vérifications disponibles
 
@@ -78,4 +77,4 @@ refus : protocole fermé, empreintes modifiées, source absente, preuve incompl�
 version différente, chemin hors projet, modèles incohérents, revue non résolue,
 fuite entre partitions, labels ou identifiants incorrects et requêtes partielles.
 Les résultats effectifs de la campagne T6 sont suivis dans
-[le résumé de partie](../resumes/31_VERROUILLAGE_FINAL.md).
+le résumé de partie.

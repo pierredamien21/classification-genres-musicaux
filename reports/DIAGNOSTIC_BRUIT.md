@@ -95,7 +95,7 @@ ou partagée avec la référence à canaux répétés. Les classificateurs assoc
 ont été ajustés séparément sur train : la comparaison porte sur ces pipelines,
 pas sur l’effet causal d’un canal isolé.
 
-Le protocole T2b est précisé dans [le suivi](../tasks/todo.md). Une correction
+Le protocole T2b est précisé dans le suivi. Une correction
 éventuelle devra ensuite faire l’objet d’une expérience distincte ; la décision
 de verrouillage reste ouverte et le test fermé.
 
