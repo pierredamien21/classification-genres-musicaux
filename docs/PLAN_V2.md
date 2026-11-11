@@ -166,6 +166,9 @@ développement, augmentation de MAEST avec règle d'adoption, rejet à 5 %).
 
 ## Phase 5 — Évaluation finale V2, une seule fois (≈ 1 jour)
 
+**Verrou 3 posé le 11 novembre 2026** ([résumé](resumes/51_VERROU3_V2.md),
+[verrou](../reports/v2/lock3.json)) : lancer `scripts/evaluate_v2.py --final` une seule fois.
+
 Inférence unique sur le test V2 et l'ensemble hors domaine, recomptage indépendant,
 rapport des trois hypothèses, y compris les résultats défavorables.
 
