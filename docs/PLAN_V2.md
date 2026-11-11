@@ -176,6 +176,10 @@ rapport des trois hypothèses, y compris les résultats défavorables.
 
 ## Phase 6 — Interprétation (≈ 2–3 jours, en partie toi)
 
+**En cours depuis le 11 novembre 2026** ([rapport](INTERPRETATION_V2.md),
+[résumé](resumes/53_INTERPRETATION_V2.md)) : points 1 et 3 faits ; point 2 (écoute de 18 extraits)
+en attente.
+
 1. Analyse par artiste et par genre, et explication de l'écart V1 validation/test.
 2. **Toi seul** : écoute annotée des erreurs avec la fiche existante.
 3. Comparaison V1/V2 présentée comme une réplication, pas comme un gain sur le test V1.

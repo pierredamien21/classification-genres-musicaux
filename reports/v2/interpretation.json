@@ -1,0 +1,504 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-11T14:41:45.414199+00:00",
+  "final_report_sha256": "45bf929842a83acb95191b4b4b0565ea74431d18eb3dfa0f5ae02572cd24f03f",
+  "cv_runs": {
+    "maest_layer12": {
+      "run": "runs/v2-cv/dev_maest-layer12-20261109T212736039178Z",
+      "report_sha256": "c7c20508b1b520331ed954556bee22e7b5c547e1a6ebbd74b16ca41e54c1b4ec"
+    },
+    "vit_block6_hpss": {
+      "run": "runs/v2-cv/dev_vit_block6_hpss-20261109T211716619642Z",
+      "report_sha256": "2d9ca80d01b69d221777a08c38fd5dbea7b64f4960ad8e2a201328e1326c8760"
+    },
+    "vit": {
+      "run": "runs/v2-cv/dev_vit-20261109T212849167407Z",
+      "report_sha256": "117f4f57fb633c877adbbedfacb4483dc1f12028fe362bb01618770c54345b89"
+    }
+  },
+  "by_genre": {
+    "maest_layer12": {
+      "Electronic": {
+        "development_oof": 0.7393364928909952,
+        "v2_test": 0.5964912280701754,
+        "change": -0.14284526482081983
+      },
+      "Experimental": {
+        "development_oof": 0.597165991902834,
+        "v2_test": 0.4888888888888889,
+        "change": -0.10827710301394516
+      },
+      "Folk": {
+        "development_oof": 0.6666666666666666,
+        "v2_test": 0.591304347826087,
+        "change": -0.07536231884057965
+      },
+      "Hip-Hop": {
+        "development_oof": 0.8512396694214877,
+        "v2_test": 0.9076923076923077,
+        "change": 0.05645263827082003
+      },
+      "Instrumental": {
+        "development_oof": 0.5956989247311828,
+        "v2_test": 0.27184466019417475,
+        "change": -0.32385426453700805
+      },
+      "International": {
+        "development_oof": 0.816591704147926,
+        "v2_test": 0.6857142857142857,
+        "change": -0.1308774184336403
+      },
+      "Pop": {
+        "development_oof": 0.4766666666666667,
+        "v2_test": 0.35514018691588783,
+        "change": -0.12152647975077885
+      },
+      "Rock": {
+        "development_oof": 0.7252427184466019,
+        "v2_test": 0.6756756756756757,
+        "change": -0.04956704277092627
+      }
+    },
+    "vit_block6_hpss": {
+      "Electronic": {
+        "development_oof": 0.5751196172248804,
+        "v2_test": 0.512396694214876,
+        "change": -0.06272292301000437
+      },
+      "Experimental": {
+        "development_oof": 0.46051167964404893,
+        "v2_test": 0.39490445859872614,
+        "change": -0.0656072210453228
+      },
+      "Folk": {
+        "development_oof": 0.618421052631579,
+        "v2_test": 0.5166666666666667,
+        "change": -0.10175438596491226
+      },
+      "Hip-Hop": {
+        "development_oof": 0.7010816125860374,
+        "v2_test": 0.8059701492537313,
+        "change": 0.10488853666769393
+      },
+      "Instrumental": {
+        "development_oof": 0.5358062854198866,
+        "v2_test": 0.24074074074074073,
+        "change": -0.2950655446791459
+      },
+      "International": {
+        "development_oof": 0.6273136568284142,
+        "v2_test": 0.5333333333333333,
+        "change": -0.0939803234950809
+      },
+      "Pop": {
+        "development_oof": 0.2794486215538847,
+        "v2_test": 0.28,
+        "change": 0.0005513784461153026
+      },
+      "Rock": {
+        "development_oof": 0.6296992481203008,
+        "v2_test": 0.5633802816901409,
+        "change": -0.06631896643015989
+      }
+    },
+    "vit": {
+      "Electronic": {
+        "development_oof": 0.5559289486317811,
+        "v2_test": 0.37398373983739835,
+        "change": -0.18194520879438275
+      },
+      "Experimental": {
+        "development_oof": 0.4505310229178312,
+        "v2_test": 0.3974358974358974,
+        "change": -0.05309512548193379
+      },
+      "Folk": {
+        "development_oof": 0.5569007263922519,
+        "v2_test": 0.5344827586206896,
+        "change": -0.02241796777156224
+      },
+      "Hip-Hop": {
+        "development_oof": 0.674852652259332,
+        "v2_test": 0.7801418439716312,
+        "change": 0.10528919171229922
+      },
+      "Instrumental": {
+        "development_oof": 0.4691358024691358,
+        "v2_test": 0.16822429906542055,
+        "change": -0.3009115034037152
+      },
+      "International": {
+        "development_oof": 0.5873715124816447,
+        "v2_test": 0.5950413223140496,
+        "change": 0.00766980983240495
+      },
+      "Pop": {
+        "development_oof": 0.2608695652173913,
+        "v2_test": 0.20202020202020202,
+        "change": -0.05884936319718928
+      },
+      "Rock": {
+        "development_oof": 0.6035994462390402,
+        "v2_test": 0.5755395683453237,
+        "change": -0.028059877893716445
+      }
+    },
+    "maest_confusions_that_grew": [
+      {
+        "true": "Instrumental",
+        "predicted": "Experimental",
+        "rate_change": 0.2572916666666667
+      },
+      {
+        "true": "Electronic",
+        "predicted": "Experimental",
+        "rate_change": 0.23966784989858012
+      },
+      {
+        "true": "International",
+        "predicted": "Folk",
+        "rate_change": 0.14130021302495438
+      },
+      {
+        "true": "Instrumental",
+        "predicted": "Rock",
+        "rate_change": 0.0998397435897436
+      },
+      {
+        "true": "Pop",
+        "predicted": "Experimental",
+        "rate_change": 0.09555785123966942
+      },
+      {
+        "true": "Experimental",
+        "predicted": "Instrumental",
+        "rate_change": 0.07952825428859737
+      }
+    ]
+  },
+  "artists": {
+    "maest_layer12": {
+      "development_track_weighted": 0.6835761043592952,
+      "development_artist_weighted": 0.6544162679421801,
+      "v2_test_one_track_per_artist": 0.5715939476221854
+    },
+    "vit_block6_hpss": {
+      "development_track_weighted": 0.5534252217511291,
+      "development_artist_weighted": 0.5176513112000846,
+      "v2_test_one_track_per_artist": 0.4809240405622769
+    },
+    "vit": {
+      "development_track_weighted": 0.519898709576051,
+      "development_artist_weighted": 0.4888715753497616,
+      "v2_test_one_track_per_artist": 0.45335870395132655
+    },
+    "maest_accuracy_by_artist_tracks_in_development": {
+      "1-1": {
+        "tracks": 1197,
+        "accuracy": 0.6532999164578112
+      },
+      "2-3": {
+        "tracks": 1168,
+        "accuracy": 0.702054794520548
+      },
+      "4-9": {
+        "tracks": 2587,
+        "accuracy": 0.7089292616930808
+      },
+      "10-1000000": {
+        "tracks": 2905,
+        "accuracy": 0.6753872633390706
+      }
+    }
+  },
+  "v1_gap": {
+    "maest_layer12": {
+      "oof_v1_validation": 0.6693575389081433,
+      "oof_v1_test": 0.6511095162247325,
+      "oof_gap": 0.01824802268341086,
+      "oof_gap_interval_95": [
+        -0.07027104406381621,
+        0.10291029147401459
+      ],
+      "v1_official_validation": null,
+      "v1_official_test": null
+    },
+    "vit_block6_hpss": {
+      "oof_v1_validation": 0.5948569943793165,
+      "oof_v1_test": 0.5011977175391438,
+      "oof_gap": 0.09365927684017272,
+      "oof_gap_interval_95": [
+        0.0009945493008292287,
+        0.1876111631673694
+      ],
+      "v1_official_validation": 0.597503631696901,
+      "v1_official_test": 0.5035093369333523
+    },
+    "vit": {
+      "oof_v1_validation": 0.5451643584939527,
+      "oof_v1_test": 0.4620087060229652,
+      "oof_gap": 0.08315565247098755,
+      "oof_gap_interval_95": [
+        -0.012403096014071958,
+        0.17997383939566086
+      ],
+      "v1_official_validation": 0.5447091086808501,
+      "v1_official_test": 0.46411196806300514
+    },
+    "method": "V2 CV heads never selected on the V1 validation; artist-cluster bootstrap over the V1 validation and test artists, 2000 draws, seed 20261111, percentile interval"
+  },
+  "covariates_maest": {
+    "accuracy": {
+      "development_oof": 0.6870306732849688,
+      "v2_test": 0.5788423153692615
+    },
+    "method": "development accuracy by quartile bin, reweighted to the V2 test bin shares",
+    "listens": {
+      "median_development": 2493.0,
+      "median_v2_test": 374.0,
+      "bins": [
+        "(11.999, 1134.0]",
+        "(1134.0, 2340.0]",
+        "(2340.0, 4708.0]",
+        "(4708.0, 543252.0]"
+      ],
+      "development_accuracy": [
+        0.6633,
+        0.6822,
+        0.697,
+        0.7011
+      ],
+      "v2_test_accuracy": [
+        0.558,
+        0.7115,
+        0.7,
+        0.5333
+      ],
+      "v2_test_share": [
+        0.8263,
+        0.1038,
+        0.0399,
+        0.0299
+      ],
+      "development_accuracy_reweighted_to_test": 0.6677292642174293
+    },
+    "bit_rate": {
+      "median_development": 263361.0,
+      "median_v2_test": 256000.0,
+      "bins": [
+        "(-1.001, 210999.0]",
+        "(210999.0, 261610.5]",
+        "(261610.5, 320000.0]",
+        "(320000.0, 322541.0]"
+      ],
+      "development_accuracy": [
+        0.6536,
+        0.7201,
+        0.6871,
+        0.6
+      ],
+      "v2_test_accuracy": [
+        0.5769,
+        0.5652,
+        0.5867,
+        0.5
+      ],
+      "v2_test_share": [
+        0.3633,
+        0.1836,
+        0.4491,
+        0.004
+      ],
+      "development_accuracy_reweighted_to_test": 0.6806479569364491
+    },
+    "year_created": {
+      "median_development": 2013.0,
+      "median_v2_test": 2011.0,
+      "bins": [
+        "(2007.999, 2011.0]",
+        "(2011.0, 2013.0]",
+        "(2013.0, 2015.0]",
+        "(2015.0, 2017.0]"
+      ],
+      "development_accuracy": [
+        0.6562,
+        0.691,
+        0.6985,
+        0.7201
+      ],
+      "v2_test_accuracy": [
+        0.5741,
+        0.5977,
+        0.5506,
+        0.6182
+      ],
+      "v2_test_share": [
+        0.5389,
+        0.1737,
+        0.1776,
+        0.1098
+      ],
+      "development_accuracy_reweighted_to_test": 0.6767789742584268
+    },
+    "genres_all": {
+      "median_development": 2.0,
+      "median_v2_test": 2.0,
+      "bins": [
+        "(0.999, 2.0]",
+        "(2.0, 3.0]",
+        "(3.0, 8.0]"
+      ],
+      "development_accuracy": [
+        0.644,
+        0.8033,
+        0.7321
+      ],
+      "v2_test_accuracy": [
+        0.6,
+        0.4086,
+        0.75
+      ],
+      "v2_test_share": [
+        0.7186,
+        0.1856,
+        0.0958
+      ],
+      "development_accuracy_reweighted_to_test": 0.6820039593004874
+    },
+    "artist_tracks_in_fma": {
+      "median_development": 15.0,
+      "median_v2_test": 2.0,
+      "bins": [
+        "(0.999, 6.0]",
+        "(6.0, 13.0]",
+        "(13.0, 40.0]",
+        "(40.0, 745.0]"
+      ],
+      "development_accuracy": [
+        0.703,
+        0.7207,
+        0.7052,
+        0.6235
+      ],
+      "v2_test_accuracy": [
+        0.5809,
+        0.5479,
+        0.6,
+        0.6364
+      ],
+      "v2_test_share": [
+        0.7525,
+        0.1457,
+        0.0798,
+        0.022
+      ],
+      "development_accuracy_reweighted_to_test": 0.7040445466535723
+    }
+  },
+  "replication": {
+    "systems": {
+      "vit_block6_hpss": {
+        "v1_validation": 0.597503631696901,
+        "v1_test": 0.5035093369333523,
+        "v2_test": 0.4809240405622769,
+        "v2_test_interval_95": [
+          0.44240765347102,
+          0.5252802632287543
+        ]
+      },
+      "vit": {
+        "v1_validation": 0.5447091086808501,
+        "v1_test": 0.46411196806300514,
+        "v2_test": 0.45335870395132655,
+        "v2_test_interval_95": [
+          0.41822920235349414,
+          0.49603637890164426
+        ]
+      },
+      "vit_block6": {
+        "v1_validation": 0.5780480927536223,
+        "v1_test": 0.4882681577717218,
+        "v2_test": 0.4774422227689983,
+        "v2_test_interval_95": [
+          0.44074788991695946,
+          0.5225895610030759
+        ]
+      },
+      "cnn20_seed42": {
+        "v1_validation": 0.5464336658181137,
+        "v1_test": 0.4539422054451757,
+        "v2_test": 0.456093928838524,
+        "v2_test_interval_95": [
+          0.4169788727969453,
+          0.49981352784557564
+        ]
+      },
+      "cnn20_seed43": {
+        "v1_validation": 0.5471261946810383,
+        "v1_test": 0.4424078781867614,
+        "v2_test": 0.4177577195782798,
+        "v2_test_interval_95": [
+          0.3825223072617787,
+          0.4574075033453775
+        ]
+      },
+      "cnn20_seed44": {
+        "v1_validation": 0.5286819975288461,
+        "v1_test": 0.3995416881468654,
+        "v2_test": 0.42132700428043846,
+        "v2_test_interval_95": [
+          0.38322412381727383,
+          0.4628139828996287
+        ]
+      }
+    },
+    "H1": {
+      "v1_test": {
+        "point": 0.0394,
+        "interval_95": [
+          0.0054,
+          0.0715
+        ],
+        "source": "reports/EVALUATION_FINALE.md"
+      },
+      "v2_test": {
+        "point": 0.02756533661095034,
+        "interval_95": [
+          -0.0065011202146633106,
+          0.06394164869037142
+        ],
+        "p_value": 0.11826645695419702
+      }
+    },
+    "reading": "same frozen V1 exports on a new, independent test: a replication, not a gain on the V1 test"
+  },
+  "listening": {
+    "folder": "data/interim/error-review-v2-20261111T144209718257Z",
+    "seed": 20261111,
+    "per_stratum": 3,
+    "available": {
+      "confident_error": 53,
+      "pop_error": 45,
+      "instrumental_error": 50,
+      "false_experimental": 72,
+      "correct_control": 290,
+      "accepted_out_of_domain": 304
+    },
+    "selected": {
+      "confident_error": 3,
+      "pop_error": 3,
+      "instrumental_error": 3,
+      "false_experimental": 3,
+      "correct_control": 3,
+      "accepted_out_of_domain": 3
+    },
+    "files_sha256": {
+      "index.html": "d217bde71709c994ce551350576751ed67586730cc65c1198a5645b1543e8baa",
+      "queue.json": "cdb94e3fc9c2ad23b5386509e6308587d698c456338d1438d89680d5bd6bac54",
+      "annotations_template.json": "0604f822a6d002921f36d919eb6823bf5eedd9804eaeeb7054ffb8b35b722e4d"
+    },
+    "rule": "rare strata first; SHA256(seed:stratum:track_id); one track per artist overall; listen before opening labels"
+  },
+  "source_sha256": "ec24b49e27005a5813057647a79ccb70c360448382709c065aef48e965f8334f",
+  "decisions_changed": false
+}
