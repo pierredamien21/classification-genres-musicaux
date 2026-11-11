@@ -75,6 +75,14 @@ uv pip install --python .venv\Scripts\python.exe --no-deps -e .
 
 Without the local data, weights and exports, the tests that need them are **skipped**, and the reason is shown. The last command recomputes every V2 test figure from the archived predictions.
 
+For a guided tour of the results, open [`notebooks/resultats_v2.ipynb`](notebooks/resultats_v2.ipynb) (in French). It reads only the evidence in `reports/v2/`, so it runs in seconds right after cloning, with no audio, no weights and no GPU. It covers:
+- the hypotheses;
+- every system with its confidence interval;
+- an independent recount;
+- per-genre scores and the confusion matrix;
+- the gap between development and test;
+- calibration and out-of-domain rejection.
+
 ## Repository layout
 
 | Path | Content |
@@ -84,7 +92,8 @@ Without the local data, weights and exports, the tests that need them are **skip
 | `configs/` | One configuration per representation and per step; V2 protocol |
 | `reports/` | Reports and evidence; `reports/v2/` holds the locks and the final evaluation |
 | `docs/` | Documentation; `docs/archive/` holds the V1 history |
-| `notebooks/`, `app/` | V1 teaching notebooks (with HTML exports) and local Gradio demo |
+| `notebooks/` | `resultats_v2.ipynb` (V2 results from the evidence); V1 teaching notebooks with HTML exports |
+| `app/` | Local Gradio demo (V1) |
 | `tests/` | Unit and contract tests |
 
 `data/`, `runs/` and `artifacts/pretrained/` are local and never versioned. Some V1 reports link to them, so those links only resolve after reproduction.
@@ -142,6 +151,7 @@ Classification de 8 genres sur des extraits de 30 s de la [Free Music Archive](h
 ### Documentation, reproduction et licences
 
 - **Documentation** : le [rapport V2](docs/RAPPORT_V2.md) est le point d'entrée. Les autres documents sont listés dans le tableau en anglais ci-dessus.
+- **Visite guidée** : le notebook [`notebooks/resultats_v2.ipynb`](notebooks/resultats_v2.ipynb) relit les résultats à partir des seules preuves versionnées. Il s'exécute en quelques secondes, sans audio ni poids.
 - **Installation** : voir [REPRODUCTION.md](docs/REPRODUCTION.md).
 - **Licences** :
   - code : MIT ;
