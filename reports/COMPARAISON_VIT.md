@@ -74,7 +74,7 @@ Le choix de C utilise la validation : ces scores servent au développement et ne
 
 Voir [le protocole ViT](../docs/archive/VIT_GELE.md).
 
-- [Rapport descripteurs](../runs/descriptors-20261020T195511254895Z/report.json)
-- [Rapport ViT](../runs/vit-20261020T201146743988Z/report.json)
+- Rapport descripteurs (`runs/descriptors-20261020T195511254895Z/report.json`, non versionné)
+- Rapport ViT (`runs/vit-20261020T201146743988Z/report.json`, non versionné)
 - [Comparaison vérifiable](VIT_COMPARISON.json)
 - [Benchmark de 64 fenêtres](VIT_BENCHMARK.json)

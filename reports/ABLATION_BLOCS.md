@@ -82,7 +82,7 @@ Prochaine ablation prévue : canaux log-Mel original/harmonique/percussif contre
 
 Voir [le protocole](../docs/archive/ABLATION_BLOCS.md).
 
-- [Rapport bloc 12](../runs/vit-20261020T201146743988Z/report.json)
-- [Rapport bloc 6](../runs/vit_block6-20261021T062701855205Z/report.json)
+- Rapport bloc 12 (`runs/vit-20261020T201146743988Z/report.json`, non versionné)
+- Rapport bloc 6 (`runs/vit_block6-20261021T062701855205Z/report.json`, non versionné)
 - [Comparaison vérifiable](VIT_BLOCKS_COMPARISON.json)
 - [Benchmark](VIT_BLOCK6_BENCHMARK.json)

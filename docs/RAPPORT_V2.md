@@ -24,6 +24,7 @@ La V2 pose trois hypothèses, préenregistrées avant tout téléchargement ([pr
   1. le protocole et les listes, avant le téléchargement ;
   2. l'audio audité et les cohortes, avant tout modèle ;
   3. les systèmes, les poids, le code et l'environnement, avant l'unique inférence ([verrou 3](../reports/v2/lock3.json)).
+- **Datation** : chaque protocole est commité avant les calculs qu'il encadre. Exemple : la phase 4 est fixée par le commit `0cc8b5f` (10 novembre, 19 h 37). `phase4.json`, figé par le verrou 3, cite ce commit sous son identifiant antérieur à une réécriture de l'historique (`2cff310`) ; le contenu est le même.
 - **Sélection** : validation croisée imbriquée sur le développement uniquement. La meilleure macro-F1 moyenne hors pli l'emporte ; en dessous de 0,002 d'écart, le système le moins coûteux gagne.
 - **Statistiques** :
   - BCa sur 5 000 tirages ;

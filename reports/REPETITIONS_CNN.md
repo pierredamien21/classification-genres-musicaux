@@ -36,9 +36,9 @@ Piste prioritaire issue de ces résultats : préparer une comparaison avec un pl
 
 ## Courbes d’apprentissage
 
-![Courbes des trois graines](figures/cnn_repetitions.png)
+*Figure non versionnée : `reports/figures/cnn_repetitions.png`*
 
-[Figure PDF](figures/cnn_repetitions.pdf). Les étoiles indiquent les époques sélectionnées.
+Figure PDF (`reports/figures/cnn_repetitions.pdf`, non versionné). Les étoiles indiquent les époques sélectionnées.
 
 ## Contrôles et limites
 
@@ -52,7 +52,7 @@ Le test reste non évalué. Un point de décision sur validation précède tout 
 
 Voir [le protocole](../docs/archive/REPETITIONS_CNN.md).
 
-- [Rapport graine 42](../runs/cnn-20261020T202753531958Z/report.json)
-- [Rapport graine 43](../runs/cnn_seed43-20261021T182143235893Z/report.json)
-- [Rapport graine 44](../runs/cnn_seed44-20261021T183501483565Z/report.json)
+- Rapport graine 42 (`runs/cnn-20261020T202753531958Z/report.json`, non versionné)
+- Rapport graine 43 (`runs/cnn_seed43-20261021T182143235893Z/report.json`, non versionné)
+- Rapport graine 44 (`runs/cnn_seed44-20261021T183501483565Z/report.json`, non versionné)
 - [Résumé numérique](CNN_REPETITIONS.json)

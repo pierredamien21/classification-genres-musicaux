@@ -79,7 +79,7 @@ La validation a servi au choix de C et aux comparaisons ; aucun gain statistique
 
 Voir [le protocole et sa source HPSS](../docs/archive/ABLATION_HPSS.md).
 
-- [Rapport original](../runs/vit-20261020T201146743988Z/report.json)
-- [Rapport HPSS](../runs/vit_hpss-20261021T115423153046Z/report.json)
+- Rapport original (`runs/vit-20261020T201146743988Z/report.json`, non versionné)
+- Rapport HPSS (`runs/vit_hpss-20261021T115423153046Z/report.json`, non versionné)
 - [Comparaison vérifiable](VIT_HPSS_COMPARISON.json)
 - [Benchmark](VIT_HPSS_BENCHMARK.json)

@@ -58,9 +58,9 @@ Les scores restent des résultats de développement sur FMA-small filtré. La va
 
 Voir [le protocole de l’ablation](../docs/archive/ABLATION_FENETRES.md).
 
-- [Rapport trois fenêtres](../runs/vit-20261020T201146743988Z/report.json)
-- [Rapport centrale](../runs/vit_central-20261021T061356952398Z/report.json)
-- [Prédictions du diagnostic](../runs/vit_central-20261021T061356952398Z/diagnostic_three_train_central_eval.csv)
+- Rapport trois fenêtres (`runs/vit-20261020T201146743988Z/report.json`, non versionné)
+- Rapport centrale (`runs/vit_central-20261021T061356952398Z/report.json`, non versionné)
+- Prédictions du diagnostic (`runs/vit_central-20261021T061356952398Z/diagnostic_three_train_central_eval.csv`, non versionné)
 - [Comparaison vérifiable](VIT_WINDOWS_COMPARISON.json)
 
 Prochain jalon : comparaison du bloc 6 et du bloc 12 du ViT, avec le même prétraitement, les trois fenêtres et la même grille. Benchmark préalable ; au maximum deux extractions supplémentaires pour les ablations, conformément au plan.

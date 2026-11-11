@@ -83,9 +83,9 @@ L’exemple est le premier morceau Folk du benchmark fixe, FMA 132041, fenêtre
 10–20 secondes. Les trois panneaux partagent la même échelle dB et sont affichés
 avant redimensionnement ; aucune légende n’est fournie au modèle.
 
-![Canaux HPSS sur un extrait de train](../../reports/figures/hpss_channels.png)
+*Figure non versionnée : `reports/figures/hpss_channels.png`*
 
-[Figure PDF exportable](../../reports/figures/hpss_channels.pdf).
+Figure PDF exportable (`reports/figures/hpss_channels.pdf`, non versionné).
 
 ## Reproduction
 

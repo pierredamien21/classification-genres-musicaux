@@ -6,9 +6,9 @@ Exécuté le 2026-10-20 ; durée 6.4 minutes.
 
 Les fichiers originaux et les partitions officielles sont conservés. « Sans alerte » ne garantit ni l’absence de défaut audible ni l’absence de doublon perceptuel.
 
-- [Manifeste complet](../data/manifests/audit-20261020T075240326780Z/manifest.csv)
-- [File de revue, exclusions comprises](../data/manifests/audit-20261020T075240326780Z/review_queue.csv)
-- [Provenance et résultats détaillés](../data/manifests/audit-20261020T075240326780Z/report.json)
+- Manifeste complet (`data/manifests/audit-20261020T075240326780Z/manifest.csv`, non versionné)
+- File de revue, exclusions comprises (`data/manifests/audit-20261020T075240326780Z/review_queue.csv`, non versionné)
+- Provenance et résultats détaillés (`data/manifests/audit-20261020T075240326780Z/report.json`, non versionné)
 
 SHA-256 du manifeste : `97afd9f768020d76c451e0a96e71b6c4270122105162ad699b3405d01324ee95`.
 
@@ -65,7 +65,7 @@ Durées décodées : minimum 29.965 s, médiane 29.977 s, maximum 30.003 s. La d
 | 133297 | decode_failed |
 
 Les 6 échecs ont été reproduits en lecture séquentielle. Les fichiers existent et leurs octets correspondent à l’archive d’origine. Le message « File does not exist » de libsndfile ne décrit donc pas ici une absence réelle de fichier. Cela ne prouve pas qu’aucun autre décodeur puisse récupérer un signal.
-[Vérification détaillée](../data/manifests/audit-20261020T075240326780Z/failure_recheck.json).
+Vérification détaillée (`data/manifests/audit-20261020T075240326780Z/failure_recheck.json`, non versionné).
 
 Morceaux du premier benchmark avec diagnostic natif : 054568.
 

@@ -40,9 +40,9 @@ Temps cumulés des invocations d’apprentissage après le checkpoint parent, ho
 
 ## Courbes
 
-![Courbes prolongées](figures/cnn_extension.png)
+*Figure non versionnée : `reports/figures/cnn_extension.png`*
 
-[Figure PDF](figures/cnn_extension.pdf). Les dix premières époques sont héritées et vérifiées à l’identique.
+Figure PDF (`reports/figures/cnn_extension.pdf`, non versionné). Les dix premières époques sont héritées et vérifiées à l’identique.
 
 ## Interprétation et limites
 
@@ -59,6 +59,6 @@ Voir [le protocole](../docs/archive/EXTENSION_CNN.md), [la référence à dix é
 Commande : `.\.venv\Scripts\python.exe scripts/summarize_cnn_extension.py`.
 
 - [Résumé numérique](CNN_EXTENSION.json)
-- [Rapport graine 42](../runs/cnn20_seed42-20261021T185433222368Z/report.json)
-- [Rapport graine 43](../runs/cnn20_seed43-20261021T190439492087Z/report.json)
-- [Rapport graine 44](../runs/cnn20_seed44-20261021T190901243607Z/report.json)
+- Rapport graine 42 (`runs/cnn20_seed42-20261021T185433222368Z/report.json`, non versionné)
+- Rapport graine 43 (`runs/cnn20_seed43-20261021T190439492087Z/report.json`, non versionné)
+- Rapport graine 44 (`runs/cnn20_seed44-20261021T190901243607Z/report.json`, non versionné)

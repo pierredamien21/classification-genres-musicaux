@@ -54,13 +54,13 @@ Recalcul depuis les MP3 originaux sur validation uniquement ; aucun entraînemen
 
 Une piste par catégorie, première dans la sélection préexistante. Ces figures révèlent les labels : les consulter après l’écoute indépendante.
 
-- [064630 — hiphop_hpss_correction](../reports/figures/audio-diagnostic-20261025T231532303942Z/064630.png)
-- [005191 — pop_rescued_block6](../reports/figures/audio-diagnostic-20261025T231532303942Z/005191.png)
-- [089195 — hiphop_hpss_regression](../reports/figures/audio-diagnostic-20261025T231532303942Z/089195.png)
-- [051261 — pop_hpss_correct](../reports/figures/audio-diagnostic-20261025T231532303942Z/051261.png)
-- [086680 — hiphop_both_wrong](../reports/figures/audio-diagnostic-20261025T231532303942Z/086680.png)
-- [009560 — pop_false_positive](../reports/figures/audio-diagnostic-20261025T231532303942Z/009560.png)
-- [120201 — pop_shared_vit_error](../reports/figures/audio-diagnostic-20261025T231532303942Z/120201.png)
+- 064630 — hiphop_hpss_correction (`reports/figures/audio-diagnostic-20261025T231532303942Z/064630.png`, non versionné)
+- 005191 — pop_rescued_block6 (`reports/figures/audio-diagnostic-20261025T231532303942Z/005191.png`, non versionné)
+- 089195 — hiphop_hpss_regression (`reports/figures/audio-diagnostic-20261025T231532303942Z/089195.png`, non versionné)
+- 051261 — pop_hpss_correct (`reports/figures/audio-diagnostic-20261025T231532303942Z/051261.png`, non versionné)
+- 086680 — hiphop_both_wrong (`reports/figures/audio-diagnostic-20261025T231532303942Z/086680.png`, non versionné)
+- 009560 — pop_false_positive (`reports/figures/audio-diagnostic-20261025T231532303942Z/009560.png`, non versionné)
+- 120201 — pop_shared_vit_error (`reports/figures/audio-diagnostic-20261025T231532303942Z/120201.png`, non versionné)
 
 ## Portée
 

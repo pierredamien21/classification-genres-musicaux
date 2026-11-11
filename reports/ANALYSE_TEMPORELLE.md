@@ -12,7 +12,7 @@
 
 Un désaccord signifie que les trois argmax ne sont pas identiques. Une majorité unique exige au moins deux votes identiques ; trois genres distincts n’en ont pas. Les égalités d’argmax suivent l’ordre des classes. Aucun score d’un nouveau vote majoritaire n’est sélectionné.
 
-![Comptages par nombre de fenêtres correctes](../reports/figures/temporal-20261025T232823735697Z/temporal_counts.png)
+*Figure non versionnée : `reports/figures/temporal-20261025T232823735697Z/temporal_counts.png`*
 
 ## Même classificateur, passages différents
 

@@ -143,7 +143,9 @@ la fragilité au bruit fort est une limite déclarée. Température 0,824, seuil
 
 
 **Protocole fixé le 10 novembre 2026, avant tout résultat** (choix de l'auteur : tout le
-développement, augmentation de MAEST avec règle d'adoption, rejet à 5 %).
+développement, augmentation de MAEST avec règle d'adoption, rejet à 5 %). Commit du protocole :
+`0cc8b5f`, le 10 novembre à 19 h 37, une minute avant le premier calcul de la phase. `reports/v2/phase4.json`,
+figé par le verrou 3, le cite sous son identifiant antérieur à la réécriture de l'historique (`2cff310`).
 - Conditions ([config](../configs/degradations_v2.json)) : bruit blanc à 30/20/10 dB de SNR sur le
   morceau entier à 16 kHz ; gain numérique ±6 dB sans écrêtage ; MP3 mono 64 kb/s constant
   (libsndfile/LAME, débit mesuré à chaque appel) au taux d'origine, après normalisation de crête.

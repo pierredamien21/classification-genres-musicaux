@@ -73,8 +73,8 @@ Conserver le ViT seul comme meilleure référence actuelle selon la macro-F1 de 
 
 Voir [le protocole de fusion](../docs/archive/FUSION.md) et [les résultats vérifiables](FUSION_COMPARISON.json).
 
-- [Descripteurs : rapport d’expérience](../runs/descriptors-20261020T195511254895Z/report.json)
-- [ViT seul : rapport d’expérience](../runs/vit-20261020T201146743988Z/report.json)
-- [Fusion complète : rapport d’expérience](../runs/fusion-20261020T201803253265Z/report.json)
-- [Fusion sans rythme : rapport d’expérience](../runs/fusion_no_rhythm-20261020T201813274845Z/report.json)
-- [Fusion sans harmonie : rapport d’expérience](../runs/fusion_no_harmony-20261020T201822268410Z/report.json)
+- Descripteurs : rapport d’expérience (`runs/descriptors-20261020T195511254895Z/report.json`, non versionné)
+- ViT seul : rapport d’expérience (`runs/vit-20261020T201146743988Z/report.json`, non versionné)
+- Fusion complète : rapport d’expérience (`runs/fusion-20261020T201803253265Z/report.json`, non versionné)
+- Fusion sans rythme : rapport d’expérience (`runs/fusion_no_rhythm-20261020T201813274845Z/report.json`, non versionné)
+- Fusion sans harmonie : rapport d’expérience (`runs/fusion_no_harmony-20261020T201822268410Z/report.json`, non versionné)

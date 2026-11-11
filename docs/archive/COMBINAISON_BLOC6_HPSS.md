@@ -102,7 +102,7 @@ poste ; elle ne permet pas d’attribuer tout l’écart à une seule cause.
 
 - [Rapport détaillé, mesures et empreintes](../../reports/VIT_BLOCK6_HPSS_BENCHMARK.json).
 - [Pointeur vérifié](../../reports/latest_vit_block6_hpss_benchmark.json).
-- [Script du benchmark](../scripts/benchmark_vit_block6_hpss.py).
+- Script du benchmark (`scripts/benchmark_vit_block6_hpss.py`, retiré de `main`, disponible dans l'étiquette `v1-final`).
 - [Tests de la combinaison](../../tests/test_hpss_block6.py).
 
 Reproduire depuis la racine, sans lancer d’autres calculs simultanément :

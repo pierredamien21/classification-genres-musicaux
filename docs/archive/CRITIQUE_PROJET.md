@@ -23,7 +23,7 @@ bornage −80/+20 dB, redimensionnement bicubique en 224 × 224, ViT-Tiny ImageN
 gelé tronqué au bloc 6, moyenne des tokens de patches (192 dimensions),
 standardisation et régression logistique (C ∈ {0,1 ; 1 ; 10}), moyenne des
 probabilités des fenêtres. Voir [hpss.py](../../src/music_genre/features/hpss.py),
-[vit_channels.py](../src/music_genre/models/vit_channels.py),
+vit_channels.py (`src/music_genre/models/vit_channels.py`, retiré de `main`, disponible dans l'étiquette `v1-final`),
 [train_descriptor_baseline.py](../../scripts/train_descriptor_baseline.py).
 
 ## Points forts

@@ -68,11 +68,11 @@ Lignes : genre réel ; colonnes : genre prédit. Comptages par morceau.
 - Caractéristiques : 21,237 fenêtres × 125 valeurs, toutes finies ; extraction en 11.7 minutes sur CPU.
 - Entraînement, sélection et export : 3.6 secondes.
 - Export numérique rechargé : différence maximale de probabilité 0.00e+00 par rapport à scikit-learn.
-- [Provenance et résultats complets](../runs/descriptors-20261020T195511254895Z/report.json)
-- [Prédictions de validation](../runs/descriptors-20261020T195511254895Z/validation_predictions.csv)
-- [Configuration du modèle](../runs/descriptors-20261020T195511254895Z/model.json)
-- [Export numérique sans pickle](../runs/descriptors-20261020T195511254895Z/model.npz)
-- [Statistiques des caractéristiques sur train](../runs/descriptors-20261020T195511254895Z/train_feature_statistics.json)
+- Provenance et résultats complets (`runs/descriptors-20261020T195511254895Z/report.json`, non versionné)
+- Prédictions de validation (`runs/descriptors-20261020T195511254895Z/validation_predictions.csv`, non versionné)
+- Configuration du modèle (`runs/descriptors-20261020T195511254895Z/model.json`, non versionné)
+- Export numérique sans pickle (`runs/descriptors-20261020T195511254895Z/model.npz`, non versionné)
+- Statistiques des caractéristiques sur train (`runs/descriptors-20261020T195511254895Z/train_feature_statistics.json`, non versionné)
 
 ## Limites et suite
 

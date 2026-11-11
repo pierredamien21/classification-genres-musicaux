@@ -6,11 +6,11 @@ Sur 8 000 morceaux : **7857 retenus**, **126 en quarantaine réversible**, **17 
 
 Il s’agit d’une revue automatisée suivant une politique documentée. Aucune écoute humaine ni résolution subjective des genres n’est revendiquée.
 
-- [Manifeste pour les expériences](../data/manifests/baseline-20261020T142750008115Z/manifest.csv)
-- [Journal des 8 000 décisions](../data/manifests/baseline-20261020T142750008115Z/decisions.csv)
-- [Cas encore en attente](../data/manifests/baseline-20261020T142750008115Z/pending_review.csv)
-- [Paires candidates détaillées](../data/manifests/baseline-20261020T142750008115Z/fingerprint_candidates.csv)
-- [Provenance complète](../data/manifests/baseline-20261020T142750008115Z/report.json)
+- Manifeste pour les expériences (`data/manifests/baseline-20261020T142750008115Z/manifest.csv`, non versionné)
+- Journal des 8 000 décisions (`data/manifests/baseline-20261020T142750008115Z/decisions.csv`, non versionné)
+- Cas encore en attente (`data/manifests/baseline-20261020T142750008115Z/pending_review.csv`, non versionné)
+- Paires candidates détaillées (`data/manifests/baseline-20261020T142750008115Z/fingerprint_candidates.csv`, non versionné)
+- Provenance complète (`data/manifests/baseline-20261020T142750008115Z/report.json`, non versionné)
 
 ## Politique appliquée
 

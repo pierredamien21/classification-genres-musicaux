@@ -46,9 +46,9 @@ Deux modèles peuvent se tromper avec des classes différentes : un désaccord n
 | Pop | 16 | 20 | 6 | 13 | 5 | 8 | 12 | 14 |
 | Hip-Hop | 19 | 2 | 1 | 71 | 0 | 5 | 1 | 1 |
 
-![Confusions ViT](figures/validation_confusions.png)
+*Figure non versionnée : `reports/figures/validation_confusions.png`*
 
-[Figure PDF](figures/validation_confusions.pdf). Couleurs normalisées par genre réel, nombres bruts dans les cellules.
+Figure PDF (`reports/figures/validation_confusions.pdf`, non versionné). Couleurs normalisées par genre réel, nombres bruts dans les cellules.
 
 ## Échantillon de revue
 
@@ -64,9 +64,9 @@ Deux modèles peuvent se tromper avec des classes différentes : un désaccord n
 | Faux positif Pop sous HPSS | 41 | 3 | 0 |
 | Pop manquée par les trois ViT | 71 | 3 | 0 |
 
-- [Ouvrir les fiches d’écoute](../data/interim/error-review-20261021T233320701672Z/index.html)
-- [Sélection et provenance](../data/interim/error-review-20261021T233320701672Z/queue.json)
-- [Modèle d’annotations vierge](../data/interim/error-review-20261021T233320701672Z/annotations_template.json)
+- Ouvrir les fiches d’écoute (`data/interim/error-review-20261021T233320701672Z/index.html`, non versionné)
+- Sélection et provenance (`data/interim/error-review-20261021T233320701672Z/queue.json`, non versionné)
+- Modèle d’annotations vierge (`data/interim/error-review-20261021T233320701672Z/annotations_template.json`, non versionné)
 
 Sélection déterministe par empreinte avec graine fixe, catégories rares d’abord et au plus un morceau par artiste. Les cas sont ciblés pour comprendre des phénomènes ; ils ne constituent pas un échantillon représentatif des taux d’erreur. La catégorie « manquée par les trois ViT » n’exige pas qu’ils prédisent tous le même mauvais genre.
 
