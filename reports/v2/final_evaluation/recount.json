@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "evaluation": "runs/v2-final-evaluation",
+  "report_sha256": "45bf929842a83acb95191b4b4b0565ea74431d18eb3dfa0f5ae02572cd24f03f",
+  "mode": "final",
+  "source_sha256": "84910a2917186e555f27222e7d3e2d7ff645d3d8f9931346592545d0d3d2ce99",
+  "status": "agrees",
+  "warnings": [],
+  "point_tolerance": 1e-09,
+  "bound_tolerance": 0.01,
+  "max_point_difference": 0.0,
+  "max_bound_difference": 0.0034991378531554207,
+  "decisions": {
+    "H1": {
+      "recount_excludes_zero": false,
+      "report_excludes_zero": false,
+      "recount_interval": [
+        -0.006501120214663311,
+        0.06394164869037142
+      ]
+    },
+    "H2": {
+      "recount_excludes_zero": true,
+      "report_excludes_zero": true,
+      "recount_interval": [
+        0.04732625121795457,
+        0.1305717109418518
+      ]
+    },
+    "H3": {
+      "recount_excludes_zero": true,
+      "report_excludes_zero": true,
+      "recount_interval": [
+        0.08272099256925788,
+        0.15327727850029227
+      ]
+    }
+  },
+  "test_tracks": 501
+}
