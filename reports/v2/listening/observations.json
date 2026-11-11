@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "packet": "error-review-v2-20261111T144209718257Z",
+  "exported_at": "2026-11-11T15:02:31.642Z",
+  "annotations": [
+    {
+      "track_id": "051264",
+      "status": "reviewed",
+      "observations": "baterie , piano, guitare electronique"
+    },
+    {
+      "track_id": "026409",
+      "status": "reviewed",
+      "observations": "bisarre j'entends pas grand chose de distingable"
+    },
+    {
+      "track_id": "124596",
+      "status": "reviewed",
+      "observations": "guitare, baterie, piano un rythme qui fait danser"
+    },
+    {
+      "track_id": "057434",
+      "status": "reviewed",
+      "observations": "rien n'est distinguable"
+    },
+    {
+      "track_id": "038151",
+      "status": "reviewed",
+      "observations": "guitare, tam tam"
+    },
+    {
+      "track_id": "151644",
+      "status": "reviewed",
+      "observations": "violon ou piano"
+    },
+    {
+      "track_id": "148432",
+      "status": "reviewed",
+      "observations": "chanson calme , en espagnol comme les chanson de feuiton la"
+    },
+    {
+      "track_id": "060635",
+      "status": "reviewed",
+      "observations": "aucune idée"
+    },
+    {
+      "track_id": "152280",
+      "status": "reviewed",
+      "observations": "aucune idée mais on entend une voix"
+    },
+    {
+      "track_id": "041753",
+      "status": "reviewed",
+      "observations": "une personne qui parle dans une langue bizarre avec une guitare electrique qui accompagne"
+    },
+    {
+      "track_id": "071807",
+      "status": "reviewed",
+      "observations": "des claquements tout le long de la chanson"
+    },
+    {
+      "track_id": "038176",
+      "status": "reviewed",
+      "observations": "un peu l'anbiance dans les bar"
+    },
+    {
+      "track_id": "062030",
+      "status": "reviewed",
+      "observations": "du rap"
+    },
+    {
+      "track_id": "079854",
+      "status": "reviewed",
+      "observations": "guitare qui joue une melodie calme "
+    },
+    {
+      "track_id": "018202",
+      "status": "reviewed",
+      "observations": "du rap"
+    },
+    {
+      "track_id": "116536",
+      "status": "reviewed",
+      "observations": "une guitare electrique a fond"
+    },
+    {
+      "track_id": "020735",
+      "status": "reviewed",
+      "observations": "un piano a fond "
+    },
+    {
+      "track_id": "066696",
+      "status": "reviewed",
+      "observations": "du violon et du piano comme et d'autre instrument mais sans baterie"
+    }
+  ]
+}

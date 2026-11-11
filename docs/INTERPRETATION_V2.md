@@ -73,9 +73,40 @@ Une explication reste plausible sans être établie. Pour des artistes peu écou
 frontière entre Instrumental, Electronic et Experimental serait plus floue, que ce soit par le
 style ou par l'annotation. Seule l'écoute peut éclairer ce point.
 
-## 4. Écoute annotée (à faire par l'utilisateur)
+## 4. Écoute annotée (faite par l'utilisateur le 11 novembre)
 
-Fiche : `data/interim/error-review-v2-20261111T144209718257Z/index.html`.
+Les 18 extraits ont été écoutés et notés **avant** l'affichage des étiquettes. Les observations
+sont dans [`reports/v2/listening/observations.json`](../reports/v2/listening/observations.json)
+et la sélection dans [`queue.json`](../reports/v2/listening/queue.json).
+
+Il y a un seul auditeur, non spécialiste, et l'échantillon est ciblé. Ce qui suit est donc
+qualitatif : aucune étiquette n'est modifiée et aucune fréquence n'est estimée.
+
+- **Contrôles cohérents (3 sur 3).** Les deux morceaux Hip-Hop sont décrits comme « du rap ».
+  Le morceau Folk est décrit comme une « guitare qui joue une mélodie calme ».
+- **« Experimental » attire les morceaux sans repères nets.** Quatre erreurs envoyées vers
+  Experimental, souvent avec une forte confiance, sont décrites ainsi : « rien n'est
+  distinguable », « bizarre », « aucune idée ». Il s'agit de Pop à 0,94, Instrumental à 0,61 et
+  0,78, et Electronic à 0,91. Le modèle et l'auditeur y perçoivent la même absence de marqueurs
+  de genre. C'est cohérent avec la bascule observée sur le test V2.
+- **Des erreurs franches du modèle.** Trois morceaux Instrumental sans voix sont prédits
+  Experimental. L'auditeur entend « guitare, tam-tam », « violon ou piano », « ambiance de bar ».
+  L'étiquette FMA y paraît plausible.
+- **Des étiquettes discutables.**
+  - Un morceau « Instrumental » contient une voix parlée sur une guitare électrique.
+  - Un morceau « Classical » (hors domaine) est décrit comme « une guitare électrique à fond ».
+- **Un chevauchement de la taxonomie.** Un morceau International est une chanson calme en
+  espagnol, prédite Folk à 0,87 par les deux candidats. Les deux étiquettes se défendent.
+- **Un hors domaine évident, mais accepté.** Un morceau Classical joué au violon et au piano,
+  sans batterie, passe le seuil de rejet avec une confiance de 0,47 (seuil 0,337). Le seuil
+  réglé sur le développement est trop permissif pour un modèle qui ne connaît pas la musique
+  classique.
+
+**Lecture.** L'écoute ne contredit pas l'explication de la section 3. Le flou de la frontière
+Instrumental / Electronic / Experimental mêle des erreurs du modèle, des morceaux peu typés et
+quelques étiquettes discutables. Ces observations ne permettent pas de les compter.
+
+La fiche se trouve dans `data/interim/error-review-v2-20261111T144209718257Z/index.html`.
 
 Elle contient 18 extraits de 18 artistes, en six groupes de trois :
 - erreurs dont le modèle est sûr ;
@@ -101,4 +132,4 @@ modifiée.
 - Toutes ces analyses sont descriptives, faites après le test et non préenregistrées.
 - Les têtes de validation croisée ont appris sur 80 % du développement, contre 100 % pour les modèles V1.
 - L'analyse des métadonnées ne porte que sur MAEST.
-- L'écoute n'est pas encore faite.
+- L'écoute repose sur un seul auditeur non spécialiste et 18 extraits ciblés. Elle ne mesure aucune fréquence.

@@ -1,0 +1,398 @@
+[
+  {
+    "stratum": "pop_error",
+    "track_id": "051264",
+    "role": "test",
+    "label": "Pop",
+    "artist_id": "11475",
+    "audio_path": "data/raw/fma_large/051/051264.mp3",
+    "source_sha256": "62e658d192b3e77e54e4d43c995d52dad4d10e57ae2c9b72c28fd22dae3e923a",
+    "license": "Attribution-NonCommercial-NoDerivatives (aka Music Sharing) 3.0 International",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Electronic",
+        "probability": 0.5556118020591276
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Electronic",
+        "probability": 0.458713751745506
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "pop_error",
+    "track_id": "026409",
+    "role": "test",
+    "label": "Pop",
+    "artist_id": "6127",
+    "audio_path": "data/raw/fma_large/026/026409.mp3",
+    "source_sha256": "da28c3c7926d2713c66428f80595ed69cc2da7325b56858cf9520b0c3fee608e",
+    "license": "Attribution-NonCommercial 3.0 International",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.9373004447364198
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Electronic",
+        "probability": 0.3940027954897828
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "pop_error",
+    "track_id": "124596",
+    "role": "test",
+    "label": "Pop",
+    "artist_id": "20728",
+    "audio_path": "data/raw/fma_large/124/124596.mp3",
+    "source_sha256": "3cdcad3192ed0cb64cbb4e1a49cd8f3bf2ee61ef9c6916cdb38726d1000ce7d3",
+    "license": "Attribution-NonCommercial",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "International",
+        "probability": 0.6741332101295172
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "International",
+        "probability": 0.5301797491332452
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "instrumental_error",
+    "track_id": "057434",
+    "role": "test",
+    "label": "Instrumental",
+    "artist_id": "12471",
+    "audio_path": "data/raw/fma_large/057/057434.mp3",
+    "source_sha256": "569e8451bace5f8c139a3060058f372bf888d5d2120fbacab45feeecd26a63dd",
+    "license": "Attribution-NonCommercial-NoDerivatives (aka Music Sharing) 3.0 International",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.6106673975245062
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Experimental",
+        "probability": 0.5650553478951024
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "instrumental_error",
+    "track_id": "038151",
+    "role": "test",
+    "label": "Instrumental",
+    "artist_id": "9017",
+    "audio_path": "data/raw/fma_large/038/038151.mp3",
+    "source_sha256": "1101768f81f8eb0bb207eb2d5751b00a17c74ea543184d207f513d97ecf171cc",
+    "license": "Attribution-NonCommercial-ShareAlike 3.0 International",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.7876847458458419
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Experimental",
+        "probability": 0.4705167044657565
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "instrumental_error",
+    "track_id": "151644",
+    "role": "test",
+    "label": "Instrumental",
+    "artist_id": "22411",
+    "audio_path": "data/raw/fma_large/151/151644.mp3",
+    "source_sha256": "48f3dafedb162b3eb278922058eb79fdbacd1ccdba919867ba97a5926893d13f",
+    "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.2899692926553584
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Rock",
+        "probability": 0.2892729933187939
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "confident_error",
+    "track_id": "148432",
+    "role": "test",
+    "label": "International",
+    "artist_id": "23580",
+    "audio_path": "data/raw/fma_large/148/148432.mp3",
+    "source_sha256": "5fa35a7b24d0471f81b77993feb4ff6020e351a5cfca1de016ca4a4df662e09f",
+    "license": "Attribution-Noncommercial-Share Alike 3.0 United States",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Folk",
+        "probability": 0.8744928993509892
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Folk",
+        "probability": 0.8046597485736163
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "confident_error",
+    "track_id": "060635",
+    "role": "test",
+    "label": "Instrumental",
+    "artist_id": "11720",
+    "audio_path": "data/raw/fma_large/060/060635.mp3",
+    "source_sha256": "c28dd15eb76fcbfbd370f4500143a8919bd08702c0af8f5cc240664a48e50c05",
+    "license": "Attribution-NonCommercial-NoDerivatives (aka Music Sharing) 3.0 International",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.7796474908456248
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Experimental",
+        "probability": 0.627516797359371
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "confident_error",
+    "track_id": "152280",
+    "role": "test",
+    "label": "Electronic",
+    "artist_id": "24070",
+    "audio_path": "data/raw/fma_large/152/152280.mp3",
+    "source_sha256": "72c5331b1a9f28795f5e9c068d389cbf89f1ef32bf87ee9103d8501421216fd6",
+    "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.9144819383563025
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Experimental",
+        "probability": 0.3427415884274712
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "false_experimental",
+    "track_id": "041753",
+    "role": "test",
+    "label": "Instrumental",
+    "artist_id": "9826",
+    "audio_path": "data/raw/fma_large/041/041753.mp3",
+    "source_sha256": "e83c281eac51fa2b41612301399d487a3ac48ef737f31f69b5686bb19b743f7e",
+    "license": "Attribution-NonCommercial-NoDerivatives (aka Music Sharing) 3.0 International",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.699352412372028
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Experimental",
+        "probability": 0.5555873593698272
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "false_experimental",
+    "track_id": "071807",
+    "role": "test",
+    "label": "Electronic",
+    "artist_id": "14620",
+    "audio_path": "data/raw/fma_large/071/071807.mp3",
+    "source_sha256": "b0e5b31d6421d3151eafe7507d4e24174381d636be83f8f392e9bb90eb6675da",
+    "license": "Creative Commons Attribution",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.6610357788568847
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Electronic",
+        "probability": 0.5800132681537332
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "false_experimental",
+    "track_id": "038176",
+    "role": "test",
+    "label": "Instrumental",
+    "artist_id": "9050",
+    "audio_path": "data/raw/fma_large/038/038176.mp3",
+    "source_sha256": "5b1e00da4c067bd060e2e8922696deb8611738c9a0e0ab55c97638b7e719daf1",
+    "license": "Attribution-NonCommercial-ShareAlike 3.0 International",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.2979167501619295
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Instrumental",
+        "probability": 0.2405405252776321
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "correct_control",
+    "track_id": "062030",
+    "role": "test",
+    "label": "Hip-Hop",
+    "artist_id": "13201",
+    "audio_path": "data/raw/fma_large/062/062030.mp3",
+    "source_sha256": "ed74c26d6f1d95df0d36ae463ffacb9ff1d0d4d06c98e563dc878efbb858fb84",
+    "license": "Attribution-Noncommercial-Share Alike 3.0 United States",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Hip-Hop",
+        "probability": 0.785031307579818
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Hip-Hop",
+        "probability": 0.2658551855635839
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "correct_control",
+    "track_id": "079854",
+    "role": "test",
+    "label": "Folk",
+    "artist_id": "15734",
+    "audio_path": "data/raw/fma_large/079/079854.mp3",
+    "source_sha256": "ab0c8e0930296b0858e082490cd66c3660d56548787e08fa75fa3f124a6ab73b",
+    "license": "Attribution",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Folk",
+        "probability": 0.4408897653902098
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "International",
+        "probability": 0.4089499394964864
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "correct_control",
+    "track_id": "018202",
+    "role": "test",
+    "label": "Hip-Hop",
+    "artist_id": "4972",
+    "audio_path": "data/raw/fma_large/018/018202.mp3",
+    "source_sha256": "e0ce90a59a0311ee167940e7df7af3e103fa0be0fa4aff3ac9bab1854c629f97",
+    "license": "Attribution",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Hip-Hop",
+        "probability": 0.993275115384069
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Hip-Hop",
+        "probability": 0.8896523320081298
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "accepted_out_of_domain",
+    "track_id": "116536",
+    "role": "ood",
+    "label": "Classical",
+    "artist_id": "19816",
+    "audio_path": "data/raw/fma_large/116/116536.mp3",
+    "source_sha256": "7dd82ceac6b18bd1a78636b703beef806f2d443150fbea5fa191eff14c70b158",
+    "license": "CC0 1.0 Universal",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "Experimental",
+        "probability": 0.4042169765521974
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Rock",
+        "probability": 0.4971655033152671
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "accepted_out_of_domain",
+    "track_id": "020735",
+    "role": "ood",
+    "label": "Old-Time / Historic",
+    "artist_id": "5476",
+    "audio_path": "data/raw/fma_large/020/020735.mp3",
+    "source_sha256": "53fabd3110e496bc488362615f8e7e2f3d2a3e1daae0a176c9495bd66cd8dbe8",
+    "license": "Public Domain / Sound Recording Common Law Protection",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "International",
+        "probability": 0.5571630610524755
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Experimental",
+        "probability": 0.4289032107390183
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  },
+  {
+    "stratum": "accepted_out_of_domain",
+    "track_id": "066696",
+    "role": "ood",
+    "label": "Classical",
+    "artist_id": "10642",
+    "audio_path": "data/raw/fma_large/066/066696.mp3",
+    "source_sha256": "6872a4f8077a455066f6de644f1f27d755e6353e259cb099c9ce78a0d031e4b9",
+    "license": "Attribution-Noncommercial-No Derivative Works 3.0 United States",
+    "predictions": {
+      "MAEST bloc 12 (candidat V2, calibré)": {
+        "label": "International",
+        "probability": 0.47040759577121144
+      },
+      "ViT bloc 6 + HPSS (candidat V1)": {
+        "label": "Folk",
+        "probability": 0.3936450401511262
+      }
+    },
+    "review_status": "pending",
+    "observations": ""
+  }
+]
