@@ -136,6 +136,12 @@ choisi selon la règle déclarée en phase 2.
 
 ## Phase 4 — Robustesse et calibration (≈ 3–4 jours)
 
+**État : terminée le 11 novembre 2026** ([résumé](resumes/50_PHASE4_V2.md),
+[résultats](../reports/v2/phase4.json)). Augmentation non adoptée par la règle (0,681) ; elle
+résiste pourtant bien mieux au bruit (+0,16 à 10 dB) : adoption éventuelle à décider comme écart
+a posteriori. Température 0,824, seuil 0,337.
+
+
 **Protocole fixé le 10 novembre 2026, avant tout résultat** (choix de l'utilisateur : tout le
 développement, augmentation de MAEST avec règle d'adoption, rejet à 5 %).
 - Conditions ([config](../configs/degradations_v2.json)) : bruit blanc à 30/20/10 dB de SNR sur le
